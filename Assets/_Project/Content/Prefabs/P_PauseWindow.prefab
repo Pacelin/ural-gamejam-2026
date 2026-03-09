@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 7120488929436329714}
   - component: {fileID: 2598337272499310286}
   - component: {fileID: 9166677005415968201}
+  - component: {fileID: 3062781227026472699}
+  - component: {fileID: 8632557195900942402}
   m_Layer: 5
   m_Name: ResumeButton
   m_TagString: Untagged
@@ -37,7 +39,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 300, y: 50}
+  m_SizeDelta: {x: 280, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7120488929436329714
 CanvasRenderer:
@@ -96,7 +98,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 0
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 0}
     m_HighlightedColor: {r: 1, g: 1, b: 1, a: 0.015686275}
@@ -121,6 +123,34 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &3062781227026472699
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 396546676482081454}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d22b4ebeb3094f3682bbd71b2d9dbe0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Plugins.Extras.ButtonSound
+--- !u!114 &8632557195900942402
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 396546676482081454}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77231cf5180443298b0c367d7f52404d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Plugins.Extras.Animations.ButtonAnimation
+  _renderer: {fileID: 7120488929436329714}
+  _defaultColor: {r: 1, g: 1, b: 1, a: 0}
+  _hoverColor: {r: 1, g: 1, b: 1, a: 0.025}
+  _downColor: {r: 1, g: 1, b: 1, a: 0.05}
 --- !u!1 &824926323175577920
 GameObject:
   m_ObjectHideFlags: 0
@@ -270,6 +300,8 @@ GameObject:
   - component: {fileID: 5359789724422943687}
   - component: {fileID: 9093412524548939947}
   - component: {fileID: 6707254981995068976}
+  - component: {fileID: 7440970176590628789}
+  - component: {fileID: 1988411488921483115}
   m_Layer: 5
   m_Name: QuitButton
   m_TagString: Untagged
@@ -295,7 +327,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 240, y: 50}
+  m_SizeDelta: {x: 320, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5359789724422943687
 CanvasRenderer:
@@ -354,7 +386,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 0
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 0}
     m_HighlightedColor: {r: 1, g: 1, b: 1, a: 0.015686275}
@@ -379,6 +411,34 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &7440970176590628789
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1033617175746673274}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d22b4ebeb3094f3682bbd71b2d9dbe0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Plugins.Extras.ButtonSound
+--- !u!114 &1988411488921483115
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1033617175746673274}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77231cf5180443298b0c367d7f52404d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Plugins.Extras.Animations.ButtonAnimation
+  _renderer: {fileID: 5359789724422943687}
+  _defaultColor: {r: 1, g: 1, b: 1, a: 0}
+  _hoverColor: {r: 1, g: 1, b: 1, a: 0.025}
+  _downColor: {r: 1, g: 1, b: 1, a: 0.05}
 --- !u!1 &2556981607363159111
 GameObject:
   m_ObjectHideFlags: 0
@@ -877,7 +937,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 300, y: 170}
+  m_SizeDelta: {x: 320, y: 170}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &5702332843757656494
 MonoBehaviour:
@@ -917,6 +977,8 @@ GameObject:
   - component: {fileID: 14129042754086015}
   - component: {fileID: 7872684924331629605}
   - component: {fileID: 2769107829430348808}
+  - component: {fileID: 7162298873039259186}
+  - component: {fileID: 1634621095735952803}
   m_Layer: 5
   m_Name: RestartButton
   m_TagString: Untagged
@@ -942,7 +1004,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 280, y: 50}
+  m_SizeDelta: {x: 320, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &14129042754086015
 CanvasRenderer:
@@ -1001,7 +1063,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 0
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 0}
     m_HighlightedColor: {r: 1, g: 1, b: 1, a: 0.015686275}
@@ -1026,6 +1088,34 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &7162298873039259186
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7122446109034501590}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d22b4ebeb3094f3682bbd71b2d9dbe0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Plugins.Extras.ButtonSound
+--- !u!114 &1634621095735952803
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7122446109034501590}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77231cf5180443298b0c367d7f52404d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Plugins.Extras.Animations.ButtonAnimation
+  _renderer: {fileID: 14129042754086015}
+  _defaultColor: {r: 1, g: 1, b: 1, a: 0}
+  _hoverColor: {r: 1, g: 1, b: 1, a: 0.025}
+  _downColor: {r: 1, g: 1, b: 1, a: 0.05}
 --- !u!1 &8629699084758985075
 GameObject:
   m_ObjectHideFlags: 0

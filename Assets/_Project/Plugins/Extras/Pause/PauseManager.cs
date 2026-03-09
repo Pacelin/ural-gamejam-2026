@@ -9,6 +9,7 @@ namespace Plugins.Extras
     public class PauseManager : ManagerBase
     {
         [SerializeField] private PauseWindow _pauseWindowPrefab;
+        [SerializeField] private KeyCode _pauseKey = KeyCode.Escape;
         
         public static event Action RestartRequest
         {
@@ -17,11 +18,23 @@ namespace Plugins.Extras
         }
 
         public static IReadOnlyAsyncReactiveProperty<EPauseState> CurrentState => _pauseState;
+        public static bool HandlePauseByKey { get; set; }
 
         private static AsyncReactiveProperty<EPauseState> _pauseState;
         private static HashSet<EPauseState> _pausesRequests;
         private static PauseWindow _pauseWindow;
         private static bool _pauseWindowShowed;
+
+        private void Update()
+        {
+            if (!HandlePauseByKey)
+                return;
+            if (Input.GetKeyDown(_pauseKey))
+            {
+                bool pausedNow = _pausesRequests.Contains(EPauseState.PausedByUser);
+                SetPause(EPauseState.PausedByUser, !pausedNow);
+            }
+        }
 
         public static void SetPause(EPauseState state, bool status)
         {

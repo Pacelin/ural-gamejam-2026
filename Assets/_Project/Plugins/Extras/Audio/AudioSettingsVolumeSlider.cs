@@ -14,7 +14,7 @@ namespace Plugins.Extras
         private void OnEnable()
         {
             var value = AudioSystem.Volumes.GetVolume(_busIndex);
-            _slider.value = value;
+            _slider.SetValueWithoutNotify(value);
             _slider.onValueChanged.AddListener(OnSliderValueChanged);
             foreach (var gradientTarget in _gradientTargets)
                 gradientTarget.color = _gradient.Evaluate(value);
