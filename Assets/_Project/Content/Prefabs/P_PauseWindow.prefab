@@ -654,6 +654,7 @@ GameObject:
   - component: {fileID: 2803240252379977325}
   - component: {fileID: 3864072742007754092}
   - component: {fileID: 4268290584220640920}
+  - component: {fileID: 2910301275773639051}
   m_Layer: 5
   m_Name: P_PauseWindow
   m_TagString: Untagged
@@ -691,7 +692,7 @@ Canvas:
   m_GameObject: {fileID: 4304100847226712455}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
+  m_RenderMode: 1
   m_Camera: {fileID: 0}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
@@ -761,6 +762,19 @@ MonoBehaviour:
   _restartButton: {fileID: 2769107829430348808}
   _quitButton: {fileID: 6707254981995068976}
   _enableRestart: 0
+--- !u!114 &2910301275773639051
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4304100847226712455}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8901dcd5b39c47c4add4f2b02bd2cc3a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Plugins.Extras.SetCanvasCamera
+  _canvas: {fileID: 3686263685461842273}
 --- !u!1 &4607266464003578992
 GameObject:
   m_ObjectHideFlags: 0

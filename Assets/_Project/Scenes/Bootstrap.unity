@@ -419,6 +419,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Plugins.Extras.PauseManager
   _pauseWindowPrefab: {fileID: 4268290584220640920, guid: b325715c0cc8d774f9babff8dffbe284, type: 3}
+  _pauseKey: 27
 --- !u!1 &1259251001
 GameObject:
   m_ObjectHideFlags: 0

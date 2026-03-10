@@ -88,6 +88,7 @@ GameObject:
   - component: {fileID: 2822604912100097110}
   - component: {fileID: 5490751073767095285}
   - component: {fileID: 6731013530889177043}
+  - component: {fileID: 3613440980624312935}
   m_Layer: 5
   m_Name: P_LoadingWindow
   m_TagString: Untagged
@@ -124,7 +125,7 @@ Canvas:
   m_GameObject: {fileID: 7302232947946334286}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
+  m_RenderMode: 1
   m_Camera: {fileID: 0}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
@@ -190,3 +191,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ace2061d72204ce2b9c63105d5ad0f60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Plugins.Extras.LoadingWindow
+--- !u!114 &3613440980624312935
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7302232947946334286}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8901dcd5b39c47c4add4f2b02bd2cc3a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Plugins.Extras.SetCanvasCamera
+  _canvas: {fileID: 6583177844454902435}
