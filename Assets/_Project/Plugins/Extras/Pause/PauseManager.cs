@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Threading;
 using Cysharp.Threading.Tasks;
+using Plugins.Audio;
 using UnityEngine;
 
 namespace Plugins.Extras
@@ -60,11 +61,13 @@ namespace Plugins.Extras
             {
                 _pauseWindow.Show();
                 _pauseWindowShowed = true;
+                AudioSystem.Global.SetPauseState(AudioSystem.Global.ELabel_PauseState.OnPause);
             }
             else if (!result.HasFlag(EPauseState.PausedByUser) && _pauseWindowShowed)
             {
                 _pauseWindow.Hide();
                 _pauseWindowShowed = false;
+                AudioSystem.Global.SetPauseState(AudioSystem.Global.ELabel_PauseState.NotOnPause);
             }
         }
         

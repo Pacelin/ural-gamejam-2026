@@ -6,14 +6,14 @@ namespace Plugins.Extras
 {
     public class AudioSettingsVolumeSlider : MonoBehaviour
     {
-        [SerializeField] private int _busIndex;
+        [SerializeField] private int[] _busIndex;
         [SerializeField] private Slider _slider;
         [SerializeField] private Gradient _gradient;
         [SerializeField] private Image[] _gradientTargets;
 
         private void OnEnable()
         {
-            var value = AudioSystem.Volumes.GetVolume(_busIndex);
+            var value = AudioSystem.Volumes.GetVolume(_busIndex[0]);
             _slider.SetValueWithoutNotify(value);
             _slider.onValueChanged.AddListener(OnSliderValueChanged);
             foreach (var gradientTarget in _gradientTargets)
@@ -26,8 +26,9 @@ namespace Plugins.Extras
         } 
 
         private void OnSliderValueChanged(float value)
-        {
-            AudioSystem.Volumes.SetVolume(_busIndex, value);
+        {   
+            foreach (var busIndex in _busIndex)
+                AudioSystem.Volumes.SetVolume(busIndex, value);
             foreach (var gradientTarget in _gradientTargets)
                 gradientTarget.color = _gradient.Evaluate(value);
         }

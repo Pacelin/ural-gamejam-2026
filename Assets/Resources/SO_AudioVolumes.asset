@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Plugins.Audio::Plugins.Audio.AudioVolumes
   _masterBusPath: bus:/
   _busesPaths:
-  - bus:/Music
-  - bus:/Sounds
+  - bus:/PausableGroup/Music
+  - bus:/UISounds
+  - bus:/PausableGroup/Sounds
   _defaultMasterVolume: 0.8
   _defaultVolume: 0.8
