@@ -1,7 +1,9 @@
 ﻿using System;
 using JetBrains.Annotations;
+using Plugins.Audio;
 using Project.Achievements;
 using Project.Core;
+using Project.Core.Audio;
 using UnityEngine.SceneManagement;
 using VContainer.Unity;
 
@@ -34,6 +36,8 @@ namespace Project.MainMenu
             _achievementsButtonController.Initialize();
             UpdatePlayButtonState();
             _achievementsButtonController.UpdateState();
+            
+            MusicController.SetMusic(AudioSystem.Music_BGM);
         }
 
         public void Dispose()
