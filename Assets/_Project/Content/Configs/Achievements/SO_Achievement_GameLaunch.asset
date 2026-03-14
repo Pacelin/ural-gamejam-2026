@@ -13,7 +13,6 @@ MonoBehaviour:
   m_Name: SO_Achievement_GameLaunch
   m_EditorClassIdentifier: Assembly-CSharp::Project.Achievements.AchievementConfig
   _id: gameLaunch
-  _order: 0
   _icon: {fileID: 21300000, guid: 46331bdec19264544954e4d3a67a85bb, type: 3}
   _caption: "\u0417\u0430\u043F\u0443\u0441\u0442\u0438\u0442\u0435 \u0438\u0433\u0440\u0443"
   _description: "\u041D\u0430\u0434\u043E \u0436\u0435 \u0441 \u0447\u0435\u0433\u043E-\u0442\u043E
@@ -24,6 +23,7 @@ MonoBehaviour:
     _text: "\u0412\u044B\u043F\u043E\u043B\u043D\u0438\u0442\u0435 \u0443\u0441\u043B\u043E\u0432\u0438\u0435"
   _rewards:
   - rid: 8417189544202076223
+  - rid: 8417189550447394881
   - rid: 8417189544202076224
   references:
     version: 2
@@ -39,3 +39,9 @@ MonoBehaviour:
         _icon: {fileID: 21300000, guid: de6790c284a5cae47829b81fa3db696e, type: 3}
         _text: "\u041D\u043E\u0432\u044B\u0435 \u0434\u043E\u0441\u0442\u0438\u0436\u0435\u043D\u0438\u044F"
         _achievements: []
+    - rid: 8417189550447394881
+      type: {class: EmptyReward, ns: Project.Core, asm: Assembly-CSharp}
+      data:
+        _icon: {fileID: 21300000, guid: 46331bdec19264544954e4d3a67a85bb, type: 3}
+        _text: "\u041A\u043D\u043E\u043F\u043A\u0430 \"\u0412\u044B\u0439\u0442\u0438
+          \u0438\u0437 \u0438\u0433\u0440\u044B\""

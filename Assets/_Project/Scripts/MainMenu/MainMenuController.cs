@@ -53,7 +53,7 @@ namespace Project.MainMenu
 #if UNITY_EDITOR
             UnityEditor.EditorApplication.ExitPlaymode();
 #else
-            Application.Quit();
+            UnityEngine.Application.Quit();
 #endif
         }
 
@@ -62,6 +62,7 @@ namespace Project.MainMenu
         private void UpdatePlayButtonState()
         {
             _mainMenuWindow.PlayButton.gameObject.SetActive(_gameModel.PlayButtonAvailable);
+            _mainMenuWindow.QuitButton.gameObject.SetActive(_gameModel.PlayButtonAvailable);
         }
     }
 }

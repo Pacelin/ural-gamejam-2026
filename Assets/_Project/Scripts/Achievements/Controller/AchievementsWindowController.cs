@@ -35,12 +35,16 @@ namespace Project.Achievements
         {
             _listController.Initialize();
             _infoController.Initialize();
+            
+            Window.CloseButton.onClick.AddListener(Hide);
         }
 
         public void Dispose()
         {
             _listController.Dispose();
             _infoController.Dispose();
+            
+            Window.CloseButton.onClick.RemoveListener(Hide);
         }
 
         public void Show(AchievementConfig achievement)

@@ -7,9 +7,11 @@ namespace Project.Achievements
 {
     public class AchievementsWindowView : MonoBehaviour, IEscapeWindow
     {
+        public Button CloseButton => _closeButton;
         public AchievementsListView ListView => _listView;
         public AchievementsInfoView InfoView => _infoView;
-        
+
+        [SerializeField] private Button _closeButton;
         [SerializeField] private AchievementsListView _listView;
         [SerializeField] private AchievementsInfoView _infoView;
 
