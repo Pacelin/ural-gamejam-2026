@@ -33,16 +33,12 @@ namespace Project.Achievements
         
         public void Initialize()
         {
-            Window.BackButton.onClick.AddListener(Hide);
-            
             _listController.Initialize();
             _infoController.Initialize();
         }
 
         public void Dispose()
         {
-            Window.BackButton.onClick.RemoveListener(Hide);
-            
             _listController.Dispose();
             _infoController.Dispose();
         }

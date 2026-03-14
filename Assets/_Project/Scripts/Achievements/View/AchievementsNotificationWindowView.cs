@@ -35,7 +35,7 @@ namespace Project.Achievements
                         _canvasGroup.alpha = 1;
                     })
                     .Append(_blinkImage.DOFade(0, 0.1f))
-                    .AppendInterval(1f)
+                    .AppendInterval(3f)
                     .Append(_canvasGroup.DOFade(0, 0.3f))
                     .AppendCallback(() =>
                     {
