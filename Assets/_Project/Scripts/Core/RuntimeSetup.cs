@@ -1,5 +1,4 @@
 ﻿using JetBrains.Annotations;
-using Project.Achievements;
 using Project.Core.Misc;
 using UnityEngine;
 
@@ -9,13 +8,11 @@ namespace Project.Core
     public class RuntimeSetup
     {
         private readonly GameModel _gameModel;
-        private readonly PurposesModel _purposesModel;
         private readonly SaveBool _firstLaunch;
         
-        public RuntimeSetup(GameModel gameModel, PurposesModel purposesModel)
+        public RuntimeSetup(GameModel gameModel)
         {
             _gameModel = gameModel;
-            _purposesModel = purposesModel;
             _firstLaunch = new SaveBool("firstLaunch", false);
         }
         
@@ -26,8 +23,6 @@ namespace Project.Core
                 _firstLaunch.Value = true;
                 
                 var setup = Resources.Load<RuntimeSetupConfig>("SO_RuntimeSetup");
-                _gameModel.UnlockAchievements(setup.InitialAchievements);
-                _purposesModel.ApplyPurposeProgress(EPurpose.GameLaunch, 1);
             }
         }
     }
