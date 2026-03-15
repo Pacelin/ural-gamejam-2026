@@ -42,7 +42,6 @@ namespace Project.Core
             
             builder.RegisterEntryPoint<AchievementsWindowController>().AsSelf();
             builder.RegisterEntryPoint<AchievementsNotificationsWindowController>().AsSelf();
-            builder.RegisterEntryPoint<AchievementsClaimer>();
             
             builder.RegisterBuildCallback(o =>
             {

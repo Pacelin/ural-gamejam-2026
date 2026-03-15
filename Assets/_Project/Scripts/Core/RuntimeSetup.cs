@@ -26,7 +26,6 @@ namespace Project.Core
                 _firstLaunch.Value = true;
                 
                 var setup = Resources.Load<RuntimeSetupConfig>("SO_RuntimeSetup");
-                _gameModel.UnlockAchievements(setup.InitialAchievements);
                 _purposesModel.ApplyPurposeProgress(EPurpose.GameLaunch, 1);
             }
         }

@@ -30,16 +30,12 @@ namespace Project.Achievements
 
         public void Initialize()
         {
-            _achievements.OnAchievementBecomeAvailable += OnAchievementBecomeAvailable;
             _achievements.OnAchievementCompleted += OnAchievementCompleted;
-            _achievements.OnClaimReward += OnClaimReward;
         }
 
         public void Dispose()
         {
-            _achievements.OnAchievementBecomeAvailable -= OnAchievementBecomeAvailable;
             _achievements.OnAchievementCompleted -= OnAchievementCompleted;
-            _achievements.OnClaimReward -= OnClaimReward;
             
             foreach (var itemDisposable in _itemsDisposables)
                 itemDisposable.Dispose();
@@ -74,7 +70,7 @@ namespace Project.Achievements
 
         private void FetchActiveAchievements()
         {
-            foreach (var achievement in _achievements.GetAvailableAchievements())
+            foreach (var achievement in _achievements.Achievements)
                 if (!_activeAchievements.Contains(achievement))
                     _activeAchievements.Add(achievement);
         }
@@ -110,14 +106,10 @@ namespace Project.Achievements
                 item.SetSelected(i == _selectedIndex);
                 item.SetCaption(achievement.Caption);
                 item.SetIcon(achievement.Icon);
-                item.SetState(
-                    _achievements.IsAchievementCompleted(achievement.Id), 
-                    _achievements.IsRewardsClaimed(achievement.Id));
+                item.SetState(_achievements.IsAchievementCompleted(achievement.Id));
             }
         }
 
-        private void OnClaimReward(string id) => UpdateList(false);
         private void OnAchievementCompleted(string id) => UpdateList(false);
-        private void OnAchievementBecomeAvailable(string id) => UpdateList(false);
     }
 }
