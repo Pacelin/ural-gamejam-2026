@@ -133,6 +133,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Project.Achievements.AchievementWindowView
   _closeButton: {fileID: 1104003740892106288}
+  _achievementsText: {fileID: 1296329746209090804}
   _listView: {fileID: 3380019726154301577}
   _infoView: {fileID: 4597446859594818024}
 --- !u!1 &128518419248685120

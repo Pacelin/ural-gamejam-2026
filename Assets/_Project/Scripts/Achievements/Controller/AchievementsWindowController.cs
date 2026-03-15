@@ -36,6 +36,7 @@ namespace Project.Achievements
             _listController.Initialize();
             _infoController.Initialize();
             
+            _achievements.OnAchievementCompleted += OnAchievementCompleted;
             Window.CloseButton.onClick.AddListener(Hide);
         }
 
@@ -44,6 +45,7 @@ namespace Project.Achievements
             _listController.Dispose();
             _infoController.Dispose();
             
+            _achievements.OnAchievementCompleted -= OnAchievementCompleted;
             Window.CloseButton.onClick.RemoveListener(Hide);
         }
 
@@ -53,6 +55,7 @@ namespace Project.Achievements
             _listController.UpdateList(true);
             _infoController.UpdateSelection(true);
             _pauseController.SetPause(EPauseState.PausedByAchievements, true);
+            Window.SetAchievementsCount(_achievements.CompletedAchievementsCount, _achievements.AchievementCount);
             base.Show();
         }
 
@@ -62,7 +65,14 @@ namespace Project.Achievements
             _listController.UpdateList(true);
             _infoController.UpdateSelection(true);
             _pauseController.SetPause(EPauseState.PausedByAchievements, false);
+            Window.SetAchievementsCount(_achievements.CompletedAchievementsCount, _achievements.AchievementCount);
             base.Show();
+        }
+
+        private void OnAchievementCompleted(string id)
+        {
+            if (Window.gameObject.activeInHierarchy)
+                Window.SetAchievementsCount(_achievements.CompletedAchievementsCount, _achievements.AchievementCount);
         }
     }
 }

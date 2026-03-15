@@ -13,6 +13,9 @@ namespace Project.Achievements
         public event System.Action<string> OnClaimReward;
         public event System.Action<string> OnAchievementBecomeAvailable;
 
+        public int AchievementCount => _allAchievements.Count;
+        public int CompletedAchievementsCount => _allAchievements.Count(pair => _dataDictionary[pair.Key].Completed);
+        
         private readonly Dictionary<string, AchievementConfig> _allAchievements;
         private readonly Dictionary<string, AchievementData> _dataDictionary;
         private readonly PurposesModel _purposes;
