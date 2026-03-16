@@ -11,13 +11,11 @@ namespace Project.Achievements
         public string Caption => _caption;
         public string Description => _description;
         public IReadOnlyList<PurposeTarget> PurposeTargets => _purposeTargets;
-        public IReadOnlyList<RewardConfig> Rewards => _rewards;
 
         [SerializeField] private string _id;
         [SerializeField] private Sprite _icon;
         [SerializeField] private string _caption;
         [SerializeField] private string _description;
         [SerializeField] private PurposeTarget[] _purposeTargets;
-        [SerializeReference, SerializeReferenceDropdown] private RewardConfig[] _rewards;
     }
 }

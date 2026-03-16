@@ -13,29 +13,22 @@ namespace Project.MainMenu
     public class MainMenuController : IInitializable, IDisposable
     {
         private readonly MainMenuWindow _mainMenuWindow;
-        private readonly GameModel _gameModel;
         private readonly AchievementsButtonController _achievementsButtonController;
         
         public MainMenuController(MainMenuWindow window, 
             AchievementsWindowController achievementsWindowController,
-            AchievementsModel achievements,
-            GameModel gameModel)
+            AchievementsModel achievements)
         {
             _mainMenuWindow = window;
-            _gameModel = gameModel;
-
-            _achievementsButtonController = new AchievementsButtonController(window.AchievementsButton,
-                achievements, achievementsWindowController);
+            _achievementsButtonController = new AchievementsButtonController(
+                window.AchievementsButton, achievementsWindowController);
         }
         
         public void Initialize()
         {
             _mainMenuWindow.PlayButton.onClick.AddListener(OnPlayClicked);
             _mainMenuWindow.QuitButton.onClick.AddListener(OnQuitClicked);
-            _gameModel.OnPlayButtonStateChanged += UpdatePlayButtonState;
             _achievementsButtonController.Initialize();
-            UpdatePlayButtonState();
-            _achievementsButtonController.UpdateState();
             
             MusicController.SetMusic(AudioSystem.Music_BGM);
         }
@@ -44,7 +37,6 @@ namespace Project.MainMenu
         {
             _mainMenuWindow.PlayButton.onClick.RemoveListener(OnPlayClicked);
             _mainMenuWindow.QuitButton.onClick.RemoveListener(OnQuitClicked);
-            _gameModel.OnPlayButtonStateChanged -= UpdatePlayButtonState;
             _achievementsButtonController.Dispose();
         }
 
@@ -58,11 +50,5 @@ namespace Project.MainMenu
         }
 
         private void OnPlayClicked() => SceneManager.LoadScene(2);
-
-        private void UpdatePlayButtonState()
-        {
-            _mainMenuWindow.PlayButton.gameObject.SetActive(_gameModel.PlayButtonAvailable);
-            _mainMenuWindow.QuitButton.gameObject.SetActive(_gameModel.PlayButtonAvailable);
-        }
     }
 }

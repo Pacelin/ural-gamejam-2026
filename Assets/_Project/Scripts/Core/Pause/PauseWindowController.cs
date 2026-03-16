@@ -13,13 +13,12 @@ namespace Project.Core.Pause
         private readonly AchievementsButtonController _achievementsButtonController;
         
         public PauseWindowController(PauseWindow window, EscapeController escapeController,
-            PauseController pauseController,
-            AchievementsModel achievements, AchievementsWindowController achievementsWindow) :
+            PauseController pauseController, AchievementsWindowController achievementsWindow) :
             base (window, escapeController)
         {
             _pauseController = pauseController;
             _achievementsButtonController = new AchievementsButtonController(
-                Window.AchievementsButton, achievements, achievementsWindow);
+                Window.AchievementsButton, achievementsWindow);
         }
         
         public void Initialize()
@@ -43,7 +42,6 @@ namespace Project.Core.Pause
         public override void Show()
         {
             _pauseController.SetPause(EPauseState.PausedByUser, true);
-            _achievementsButtonController.UpdateState();
             base.Show();
         }
 

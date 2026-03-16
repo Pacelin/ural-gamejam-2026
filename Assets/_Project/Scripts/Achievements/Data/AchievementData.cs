@@ -4,8 +4,6 @@
     public class AchievementData
     {
         public string Id;
-        public bool Available;
         public bool Completed;
-        public bool RewardsClaimed;
     }
 }

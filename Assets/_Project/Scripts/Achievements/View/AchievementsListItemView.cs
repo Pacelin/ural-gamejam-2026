@@ -11,7 +11,6 @@ namespace Project.Achievements
         
         [SerializeField] private Button _selectButton;
         [SerializeField] private GameObject _selectedMark;
-        [SerializeField] private GameObject _rewardsAvailableMark;
         [SerializeField] private GameObject _completedMark;
         [SerializeField] private Image _icon;
         [SerializeField] private TMP_Text _caption;
@@ -26,10 +25,9 @@ namespace Project.Achievements
             _selectSound.enabled = !selected;
         }
 
-        public void SetState(bool completed, bool rewardsClaimed)
+        public void SetState(bool completed)
         {
-            _rewardsAvailableMark.SetActive(completed && !rewardsClaimed);
-            _completedMark.SetActive(completed && rewardsClaimed);
+            _completedMark.SetActive(completed);
         }
     }
 }

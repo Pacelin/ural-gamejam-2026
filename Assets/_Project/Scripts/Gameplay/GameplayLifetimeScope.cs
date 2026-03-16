@@ -1,5 +1,4 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 using VContainer;
 using VContainer.Unity;
 
@@ -13,19 +12,6 @@ namespace Project.Gameplay
         {
             foreach (var installer in _installers)
                 installer.Install(builder);
-        }
-    }
-
-    public class FirstLaunchSetup : IInitializable, IDisposable
-    {
-        public void Initialize()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Dispose()
-        {
-            throw new NotImplementedException();
         }
     }
 }
