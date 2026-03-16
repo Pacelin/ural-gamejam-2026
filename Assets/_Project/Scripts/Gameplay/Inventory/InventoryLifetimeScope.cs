@@ -1,11 +1,10 @@
-﻿using Project.Gameplay.Inventory;
-using UnityEngine;
+﻿using UnityEngine;
 using VContainer;
 using VContainer.Unity;
 
-namespace Project.Gameplay
+namespace Project.Gameplay.Inventory
 {
-    public class GameplayLifetimeScope : LifetimeScope
+    public class InventoryLifetimeScope : LifetimeScope
     {
         [SerializeField] private InventoryItemConfig[] _initialItems;
         [SerializeField] private InventoryView _inventoryViewPrefab;

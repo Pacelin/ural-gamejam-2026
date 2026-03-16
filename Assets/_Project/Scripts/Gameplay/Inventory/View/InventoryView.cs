@@ -5,6 +5,9 @@ namespace Project.Gameplay.Inventory
 {
     public class InventoryView : MonoBehaviour
     {
+        public InventoryDragView DragView => _dragView;
+        
+        [SerializeField] private InventoryDragView _dragView;
         [SerializeField] private RectTransform _itemsContainer;
         [SerializeField] private InventoryItemView _itemPrefab;
         [SerializeField] private TMP_Text _text;

@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using JetBrains.Annotations;
 
 namespace Project.Gameplay.Inventory
@@ -6,61 +7,37 @@ namespace Project.Gameplay.Inventory
     [UsedImplicitly]
     public class InventoryModel
     {
-        public event System.Action<int> OnAddItem;
-        public event System.Action<int> OnRemoveItem;
-        public event System.Action<int, int> OnSelectionChanged;
+        public event System.Action<InventoryItemEntry> OnAddItem;
+        public event System.Action<InventoryItemEntry> OnRemoveItem;
 
-        public int SelectedIndex => _selectedIndex;
-        public IReadOnlyList<InventoryItemConfig> Items => _items;
+        public IReadOnlyList<InventoryItemEntry> Items => _items;
 
-        private int _selectedIndex;
-        
-        private readonly List<InventoryItemConfig> _items;
+        private readonly List<InventoryItemEntry> _items;
 
         public InventoryModel(InventoryItemConfig[] initialItems)
         {
-            _items = new List<InventoryItemConfig>(initialItems);
-        }
-        
-        public void ResetSelection()
-        {
-            var prevValue = _selectedIndex;
-            _selectedIndex = -1;
-            OnSelectionChanged?.Invoke(prevValue, _selectedIndex);
-        }
-
-        public void SetSelected(int index)
-        {
-            var prevValue = _selectedIndex;
-            _selectedIndex = index;
-            OnSelectionChanged?.Invoke(prevValue, _selectedIndex);
+            _items = new List<InventoryItemEntry>(initialItems.Select(c => new InventoryItemEntry(c)));
         }
         
         public void AddItem(InventoryItemConfig item)
         {
-            _items.Add(item);
-            OnAddItem?.Invoke(_items.Count - 1);
+            var itemEntry = new InventoryItemEntry(item);
+            _items.Add(itemEntry);
+            OnAddItem?.Invoke(itemEntry);
         }
 
-        public void RemoveAt(int index)
-        {
-            if (_selectedIndex == index)
-                ResetSelection();
-            else if (_selectedIndex > index)
-                _selectedIndex--;
-            _items.RemoveAt(index);
-            OnRemoveItem?.Invoke(index);
-        }
+        public void RemoveAt(int index) => RemoveItem(_items[index]);
         
-        public void RemoveItem(InventoryItemConfig item)
+        public void RemoveItem(InventoryItemEntry inventoryItem)
         {
-            var index = _items.IndexOf(item);
-            RemoveAt(index);
+            var index = _items.IndexOf(inventoryItem);
+            RemoveAt(index);;
+            OnRemoveItem?.Invoke(inventoryItem);
         }
 
         public bool HasItem(InventoryItemConfig item)
         {
-            return _items.Contains(item);
+            return _items.Any(i => i.Config == item);
         }
     }
 }
