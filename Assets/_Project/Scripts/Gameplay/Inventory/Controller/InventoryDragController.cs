@@ -68,11 +68,9 @@ namespace Project.Gameplay.Inventory
             _dragView.SetImage(_draggingItem.Icon);
             _dragView.gameObject.SetActive(true);
 
-            var itemScreenPoint = RectTransformUtility.WorldToScreenPoint(_dragView.Canvas.worldCamera, 
-                _draggingItemTransform.position);
-
-            _dragOffset = eventData.position - itemScreenPoint;
+            _dragOffset = eventData.position - eventData.position;
             _eventPointPosition = eventData.position;
+            
             UpdatePosition();
             _textController.SetHold(_draggingItem);
             _cursorService.EnableCursorState(ECursorState.HoldInventoryItem);
@@ -141,11 +139,7 @@ namespace Project.Gameplay.Inventory
         private void UpdatePosition()
         {
             var targetScreenPosition = _eventPointPosition - _dragOffset;
-            if (RectTransformUtility.ScreenPointToLocalPointInRectangle(_dragViewParentTransform,
-                    targetScreenPosition, _dragView.Canvas.worldCamera, out var localPoint))
-            {
-                _dragViewTransform.anchoredPosition = localPoint;
-            }
+            _dragViewTransform.position = targetScreenPosition;
         }
         
         private IInventoryItemDropTarget FindDropTarget(PointerEventData eventData)
