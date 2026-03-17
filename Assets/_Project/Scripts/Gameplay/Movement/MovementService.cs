@@ -7,7 +7,7 @@ using VContainer.Unity;
 namespace Project.Gameplay.Movement
 {
     [UsedImplicitly]
-    public class MovementService : IInitializable
+    public class MovementService : IInitializable, IStartable
     {
         private MovementPoint _activePoint;
 
@@ -33,6 +33,10 @@ namespace Project.Gameplay.Movement
         public void Initialize()
         {
             _controlView.Setup(this, _cursorService);
+        }
+
+        public void Start()
+        {
             UpdateControlsAndCamera();
         }
 
@@ -42,7 +46,6 @@ namespace Project.Gameplay.Movement
         
         public void Move(MovementPoint point)
         {
-            _activePoint = point;
             UniTask.Void(async cancellationToken =>
             {
                 await _fadeView.FadeIn();
@@ -50,6 +53,12 @@ namespace Project.Gameplay.Movement
                 await UniTask.Delay(System.TimeSpan.FromSeconds(_movementDuration),
                     cancellationToken: cancellationToken);
                 cancellationToken.ThrowIfCancellationRequested();
+                
+                if (_activePoint)
+                    foreach (var obj in _activePoint.ActiveWhenOnPoint)
+                        obj.SetActive(false);
+                _activePoint = point;
+                
                 UpdateControlsAndCamera();
                 await _fadeView.FadeOut();
             }, _fadeView.gameObject.GetCancellationTokenOnDestroy());
@@ -57,6 +66,9 @@ namespace Project.Gameplay.Movement
 
         private void UpdateControlsAndCamera()
         {
+            foreach (var obj in _activePoint.ActiveWhenOnPoint)
+                obj.SetActive(true);
+            
             _controlView.UpdateControlsFor(_activePoint);
 
             var cameraTransform = _camera.transform;

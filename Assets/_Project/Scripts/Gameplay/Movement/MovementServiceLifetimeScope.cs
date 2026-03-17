@@ -19,7 +19,8 @@ namespace Project.Gameplay.Movement
                 .WithParameter(_fadeView)
                 .WithParameter(_controlView)
                 .WithParameter(_initialMovementPoint)
-                .WithParameter(_movementDuration);
+                .WithParameter(_movementDuration)
+                .AsSelf();
         }
     }
 }

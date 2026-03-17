@@ -22,7 +22,7 @@ namespace Project.Gameplay.Interactables
             _activeCursor = ECursorState.None;
         }
 
-        protected virtual void OnDestroy()
+        protected virtual void OnDisable()
         {
             _down = false;
             _hover = false;
