@@ -4,7 +4,7 @@ using VContainer;
 
 namespace Project.Gameplay.Interactables
 {
-    public abstract class InteractableObject : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler, IPointerExitHandler
+    public abstract class InteractableObject : MonoBehaviour, IPointerClickHandler
     {
         [SerializeField] private InteractablesManager _manager;
 
@@ -19,11 +19,7 @@ namespace Project.Gameplay.Interactables
         protected abstract void Initialize(IObjectResolver resolver);
 
         protected abstract void OnInteract();
-        protected abstract void OnInteractorEnter();
-        protected abstract void OnInteractorExit();
 
         public void OnPointerClick(PointerEventData eventData) => OnInteract();
-        public void OnPointerEnter(PointerEventData eventData) => OnInteractorEnter();
-        public void OnPointerExit(PointerEventData eventData) => OnInteractorExit();
     }
 }

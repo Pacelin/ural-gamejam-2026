@@ -11,5 +11,9 @@ namespace Project.Gameplay.Misc
         public CursorData Walk;
         public CursorData Question;
         public CursorData Pointer;
+        public CursorData DownPointer;
+        public CursorData RotateLeft;
+        public CursorData RotateRight;
+        public CursorData MoveBack;
     }
 }

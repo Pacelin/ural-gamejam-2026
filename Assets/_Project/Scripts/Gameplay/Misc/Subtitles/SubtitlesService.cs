@@ -7,7 +7,6 @@
         public SubtitlesService(SubtitlesView view)
         {
             _view = view;
-            _view.Setup();
         } 
 
         public SubtitleSequence Sequence() => new SubtitleSequence(this);

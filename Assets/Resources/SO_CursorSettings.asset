@@ -27,3 +27,15 @@ MonoBehaviour:
   Pointer:
     Hotspot: {x: 0, y: 0}
     CursorTexture: {fileID: 2800000, guid: 7bb97a69301511845b8f1112da3b5592, type: 3}
+  DownPointer:
+    Hotspot: {x: 3, y: 3}
+    CursorTexture: {fileID: 2800000, guid: 675b80c2c6b705a4bad928a8d631cf58, type: 3}
+  RotateLeft:
+    Hotspot: {x: 32, y: 32}
+    CursorTexture: {fileID: 2800000, guid: bdcb246850c6fe54495c2a9f5e420a91, type: 3}
+  RotateRight:
+    Hotspot: {x: 32, y: 32}
+    CursorTexture: {fileID: 2800000, guid: 4083f76b974b40343b06f79fd1a05516, type: 3}
+  MoveBack:
+    Hotspot: {x: 32, y: 32}
+    CursorTexture: {fileID: 2800000, guid: 5a014fcfaab04e74880ef291769ee4da, type: 3}

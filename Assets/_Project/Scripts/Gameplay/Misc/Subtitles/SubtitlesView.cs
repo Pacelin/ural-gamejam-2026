@@ -17,8 +17,6 @@ namespace Project.Gameplay.Misc
             DOTween.Kill(this);
         }
 
-        public void Setup() => _text.gameObject.SetActive(false);
-        
         public void Stop()
         {
             DOTween.Kill(this);

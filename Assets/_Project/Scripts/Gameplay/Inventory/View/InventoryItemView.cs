@@ -20,7 +20,12 @@ namespace Project.Gameplay.Inventory
         public void SetVisible(bool isVisible) => _icon.enabled = isVisible;
 
         private void OnDestroy() => _icon.rectTransform.DOKill();
-        public void Impact() => _icon.rectTransform.DOShakeRotation(0.6f, Vector3.forward * 5f);
+
+        public void Impact()
+        {
+            _icon.rectTransform.DOKill(true);
+            _icon.rectTransform.DOShakeRotation(0.6f, Vector3.forward * 5f);
+        } 
 
         public void OnPointerEnter(PointerEventData eventData) => OnPointerEnterEvent?.Invoke(eventData);
         public void OnPointerExit(PointerEventData eventData) => OnPointerExitEvent?.Invoke(eventData);

@@ -6,16 +6,18 @@ using VContainer;
 
 namespace Project.Gameplay.Interactables
 {
-    public class PickupItemInteractable : InteractableObject
+    public class PickupItemInteractable : InteractableObjectWithCursor
     {
         [SerializeField] private InventoryItemConfig _itemConfig;
 
-        private CursorService _cursorService;
         private InventoryModel _inventory;
-        
+
+        protected override ECursorState HoverCursorState => ECursorState.HoverPickup;
+        protected override ECursorState DownCursorState => ECursorState.None;
+
         protected override void Initialize(IObjectResolver resolver)
         {
-            _cursorService = resolver.Resolve<CursorService>();
+            base.Initialize(resolver);
             _inventory = resolver.Resolve<InventoryModel>();
         }
 
@@ -25,8 +27,5 @@ namespace Project.Gameplay.Interactables
             AudioSystem.Game_PickupItem.PlayOneShot();
             Destroy(gameObject);
         }
-
-        protected override void OnInteractorEnter() => _cursorService.EnableCursorState(ECursorState.HoverPickup);
-        protected override void OnInteractorExit() => _cursorService.DisableCursorState(ECursorState.HoverPickup);
     }
 }

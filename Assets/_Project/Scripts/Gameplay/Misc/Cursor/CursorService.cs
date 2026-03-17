@@ -68,8 +68,16 @@ namespace Project.Gameplay.Misc
                 SetCustom(_settings.Question);
             else if (_currentState.HasFlag(ECursorState.HoverWalkObject))
                 SetCustom(_settings.Walk);
+            else if (_currentState.HasFlag(ECursorState.DownPointer))
+                SetCustom(_settings.DownPointer);
             else if (_currentState.HasFlag(ECursorState.HoverPointer))
                 SetCustom(_settings.Pointer);
+            else if (_currentState.HasFlag(ECursorState.RotateLeft))
+                SetCustom(_settings.RotateLeft);
+            else if (_currentState.HasFlag(ECursorState.RotateRight))
+                SetCustom(_settings.RotateRight);
+            else if (_currentState.HasFlag(ECursorState.MoveBack))
+                SetCustom(_settings.MoveBack);
         }
 
         private void SetCustom(CursorData cursorData)

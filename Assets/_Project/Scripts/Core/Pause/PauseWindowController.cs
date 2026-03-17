@@ -22,6 +22,7 @@ namespace Project.Core.Pause
         {
             _pauseController = pauseController;
             _acceptPopup = acceptPopup;
+            
             _achievementsButtonController = new AchievementsButtonController(
                 Window.AchievementsButton, achievementsWindow);
         }
