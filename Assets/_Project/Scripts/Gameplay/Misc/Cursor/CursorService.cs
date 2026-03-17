@@ -1,20 +1,40 @@
-﻿using UnityEngine;
+﻿using JetBrains.Annotations;
+using Project.Core.Pause;
+using UnityEngine;
+using VContainer.Unity;
 
 namespace Project.Gameplay.Misc
 {
-    public class CursorService : System.IDisposable
+    [UsedImplicitly]
+    public class CursorService : IInitializable, System.IDisposable
     {
         private readonly CursorSettings _settings;
+        private readonly PauseController _pauseController;
 
         private ECursorState _currentState;
+        private System.IDisposable _pauseDisposable;
         
-        public CursorService(CursorSettings settings)
+        public CursorService(CursorSettings settings, PauseController pauseController)
         {
             _settings = settings;
+            _pauseController = pauseController;
             _currentState = ECursorState.None;
         }
 
-        public void Dispose() => SetDefault();
+        public void Initialize()
+        {
+            _pauseDisposable = _pauseController.SubscribeAnyPause(isPause =>
+            {
+                if (isPause)
+                    SetDefault();
+            });
+        }
+
+        public void Dispose()
+        {
+            _pauseDisposable.Dispose();
+            SetDefault();
+        }
 
         public void EnableCursorState(ECursorState state)
         {

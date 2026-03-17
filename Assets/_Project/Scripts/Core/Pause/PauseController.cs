@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using Cysharp.Threading.Tasks;
+using Cysharp.Threading.Tasks.Linq;
 using Plugins.Audio;
 using UnityEngine;
 using VContainer.Unity;
@@ -49,6 +50,17 @@ namespace Project.Core.Pause
                 AudioSystem.Global.SetPauseState(AudioSystem.Global.ELabel_PauseState.OnPause);
             else
                 AudioSystem.Global.SetPauseState(AudioSystem.Global.ELabel_PauseState.NotOnPause);
+        }
+
+        public IDisposable SubscribeAnyPause(Action<bool> observer)
+        {
+            return _pauseState.Subscribe(state =>
+            {
+                if (state == EPauseState.None)
+                    observer.Invoke(false);
+                else
+                    observer.Invoke(true);
+            });
         }
 
         private void OnApplicationFocusChanged(bool focus) => SetPause(EPauseState.PausedByApplication, !focus);

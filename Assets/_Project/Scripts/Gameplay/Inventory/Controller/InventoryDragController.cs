@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using Project.Core.Pause;
 using Project.Gameplay.Misc;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -13,19 +14,22 @@ namespace Project.Gameplay.Inventory
         private InventoryItemView _draggingItemView;
         private Vector2 _dragOffset;
         private Vector2 _eventPointPosition;
+        private System.IDisposable _pauseDisposable;
         
         private readonly InventoryDragView _dragView;
         private readonly RectTransform _dragViewTransform;
         private readonly RectTransform _dragViewParentTransform;
         private readonly InventoryTextController _textController;
         private readonly CursorService _cursorService;
+        private readonly PauseController _pauseController;
         
         public InventoryDragController(InventoryDragView dragView, InventoryTextController textController,
-            CursorService cursorService)
+            CursorService cursorService, PauseController pauseController)
         {
             _dragView = dragView;
             _textController = textController;
             _cursorService = cursorService;
+            _pauseController = pauseController;
             
             _dragViewTransform = _dragView.transform as RectTransform;
             _dragViewParentTransform = _dragViewTransform!.parent as RectTransform;
@@ -35,11 +39,17 @@ namespace Project.Gameplay.Inventory
         public void Initialize()
         {
             _dragView.OnUpdate += OnUpdate;
+            _pauseDisposable = _pauseController.SubscribeAnyPause(isPause =>
+            {
+                if (isPause)
+                    StopDrag();
+            });
         }
         
         public void Dispose()
         {
             _dragView.OnUpdate -= OnUpdate;
+            _pauseDisposable.Dispose();
         }
 
         public void OnBeginDrag(InventoryItemView itemView, InventoryItemEntry item, PointerEventData eventData)
@@ -106,6 +116,22 @@ namespace Project.Gameplay.Inventory
 
             _dragOffset = Vector2.MoveTowards(_dragOffset, Vector2.zero, _dragView.CentricSpeed * Time.deltaTime);
             UpdatePosition();
+        }
+
+        private void StopDrag()
+        {
+            if (!_isDragging)
+                return;
+
+            _dragView.gameObject.SetActive(false);
+            _draggingItemView.SetVisible(true);
+            
+            _draggingItem = null;
+            _draggingItemView = null;
+            _draggingItemTransform = null;
+            _isDragging = false;
+            _textController.SetHold(null);
+            _cursorService.DisableCursorState(ECursorState.HoldInventoryItem);
         }
 
         private void UpdatePosition()

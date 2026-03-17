@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using JetBrains.Annotations;
+using Project.Core.Pause;
 using Project.Gameplay.Misc;
 using VContainer.Unity;
 
@@ -14,12 +15,12 @@ namespace Project.Gameplay.Inventory
         private readonly InventoryDragController _dragController;
         private readonly List<InventoryItemController> _itemsControllers;
         
-        public InventoryController(InventoryView view, InventoryModel model, CursorService cursorService)
+        public InventoryController(InventoryView view, InventoryModel model, CursorService cursorService, PauseController pauseController)
         {
             _view = view;
             _model = model;
             _textController = new InventoryTextController(_view);
-            _dragController = new InventoryDragController(_view.DragView, _textController, cursorService);
+            _dragController = new InventoryDragController(_view.DragView, _textController, cursorService, pauseController);
             _itemsControllers = new List<InventoryItemController>();
         }
         
