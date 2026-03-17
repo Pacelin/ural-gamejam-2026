@@ -10,14 +10,17 @@ namespace Project.Gameplay.Inventory
         private readonly InventoryItemEntry _item;
         private readonly InventoryView _view;
         private readonly InventoryItemView _itemView;
+        private readonly InventoryTextController _textController;
         private readonly InventoryItemDragController _itemDragController;
         
         public InventoryItemController(InventoryItemEntry item, 
-             InventoryView view, InventoryItemView itemView, InventoryDragController dragController)
+             InventoryView view, InventoryItemView itemView,
+             InventoryTextController textController, InventoryDragController dragController)
         {
             _item = item;
             _view = view;
             _itemView = itemView;
+            _textController = textController;
             _itemDragController = new InventoryItemDragController(item, itemView, dragController);
         }
 
@@ -38,17 +41,12 @@ namespace Project.Gameplay.Inventory
             _itemDragController.Dispose();
         }
 
-        public void DestroyItem() => Object.Destroy(_view.gameObject);
-        
-        private void OnExitItem(PointerEventData eventData)
+        public void DestroyItem()
         {
-            _view.SetTextActive(false);
-        }
-
-        private void OnEnterItem(PointerEventData eventData)
-        {
-            _view.SetTextActive(true);
-            _view.SetText(_item.Text);
-        }
+            _textController.OnDestroyItem(_item);
+            Object.Destroy(_view.gameObject);
+        } 
+        private void OnExitItem(PointerEventData eventData) => _textController.SetHover(null);
+        private void OnEnterItem(PointerEventData eventData) => _textController.SetHover(_item);
     }
 }

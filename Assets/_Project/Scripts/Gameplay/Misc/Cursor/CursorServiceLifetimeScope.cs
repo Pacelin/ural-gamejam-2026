@@ -6,11 +6,9 @@ namespace Project.Gameplay.Misc
 {
     public class CursorServiceLifetimeScope : LifetimeScope
     {
-        [SerializeField] private CursorSettings _settings;
-
         protected override void Configure(IContainerBuilder builder)
         {
-            builder.RegisterInstance(_settings);
+            builder.RegisterInstance(Resources.Load<CursorSettings>("SO_CursorSettings"));
             builder.RegisterEntryPoint<CursorService>().AsSelf();
         }
     }

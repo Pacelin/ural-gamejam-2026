@@ -17,14 +17,18 @@ namespace Project.Gameplay.Inventory
         private readonly InventoryDragView _dragView;
         private readonly RectTransform _dragViewTransform;
         private readonly RectTransform _dragViewParentTransform;
+        private readonly InventoryTextController _textController;
         private readonly CursorService _cursorService;
         
-        public InventoryDragController(InventoryDragView dragView, CursorService cursorService)
+        public InventoryDragController(InventoryDragView dragView, InventoryTextController textController,
+            CursorService cursorService)
         {
             _dragView = dragView;
+            _textController = textController;
+            _cursorService = cursorService;
+            
             _dragViewTransform = _dragView.transform as RectTransform;
             _dragViewParentTransform = _dragViewTransform!.parent as RectTransform;
-            _cursorService = cursorService;
             _dragView.gameObject.SetActive(false);
         }
 
@@ -59,7 +63,8 @@ namespace Project.Gameplay.Inventory
             _dragOffset = eventData.position - itemScreenPoint;
             _eventPointPosition = eventData.position;
             UpdatePosition();
-            _cursorService.SetInventoryItemHold(true);
+            _textController.SetHold(_draggingItem);
+            _cursorService.EnableCursorState(ECursorState.HoldInventoryItem);
         }
 
         public void OnDrag(PointerEventData eventData)
@@ -87,7 +92,8 @@ namespace Project.Gameplay.Inventory
             _draggingItemView = null;
             _draggingItemTransform = null;
             _isDragging = false;
-            _cursorService.SetInventoryItemHold(false);
+            _textController.SetHold(null);
+            _cursorService.DisableCursorState(ECursorState.HoldInventoryItem);
         }
 
         private void OnUpdate()
@@ -125,7 +131,7 @@ namespace Project.Gameplay.Inventory
             return null;
         }
 
-        public void OnItemEnter() => _cursorService.SetInventoryItemHover(true);
-        public void OnItemExit() => _cursorService.SetInventoryItemHover(false);
+        public void OnItemEnter() => _cursorService.EnableCursorState(ECursorState.HoverInventoryItem);
+        public void OnItemExit() => _cursorService.DisableCursorState(ECursorState.HoverInventoryItem);
     }
 }

@@ -10,6 +10,7 @@ namespace Project.Gameplay.Inventory
     {
         private readonly InventoryView _view;
         private readonly InventoryModel _model;
+        private readonly InventoryTextController _textController;
         private readonly InventoryDragController _dragController;
         private readonly List<InventoryItemController> _itemsControllers;
         
@@ -17,14 +18,13 @@ namespace Project.Gameplay.Inventory
         {
             _view = view;
             _model = model;
-            _dragController = new InventoryDragController(_view.DragView, cursorService);
+            _textController = new InventoryTextController(_view);
+            _dragController = new InventoryDragController(_view.DragView, _textController, cursorService);
             _itemsControllers = new List<InventoryItemController>();
         }
         
         public void Initialize()
         {
-            _view.SetTextActive(false);
-            
             _model.OnAddItem += OnAddItem;
             _model.OnRemoveItem += OnRemoveItem;
             
@@ -44,11 +44,11 @@ namespace Project.Gameplay.Inventory
             
             _dragController.Dispose();
         }
-
+        
         private void OnAddItem(InventoryItemEntry item)
         {
             var itemView = _view.CreateItem();
-            var itemController = new InventoryItemController(item, _view, itemView, _dragController);
+            var itemController = new InventoryItemController(item, _view, itemView, _textController, _dragController);
             itemController.Initialize();
             
             _itemsControllers.Add(itemController);
