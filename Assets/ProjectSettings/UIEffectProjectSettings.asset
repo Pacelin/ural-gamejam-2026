@@ -11,7 +11,11 @@ ShaderVariantCollection:
   - first: {fileID: 4800000, guid: 96246b1ead49a4c5a996fd477bc5a117, type: 3}
     second:
       variants:
+      - keywords: 
+        passType: 0
       - keywords: COLOR_FILTER
+        passType: 0
+      - keywords: COLOR_FILTER DETAIL_MULTIPLY
         passType: 0
       - keywords: DETAIL_MASKING
         passType: 0

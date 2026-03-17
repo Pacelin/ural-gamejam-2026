@@ -328,6 +328,7 @@ MonoBehaviour:
   autoRun: 1
   autoInjectGameObjects: []
   _windowPrefab: {fileID: 4268290584220640920, guid: b325715c0cc8d774f9babff8dffbe284, type: 3}
+  _acceptExitPopupPrefab: {fileID: 2436214144568172168, guid: b9d983e169ffca94b884f38713bf385b, type: 3}
 --- !u!1 &1543383544
 GameObject:
   m_ObjectHideFlags: 0

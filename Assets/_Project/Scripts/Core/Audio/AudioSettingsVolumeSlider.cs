@@ -8,16 +8,12 @@ namespace Project.Core.Audio
     {
         [SerializeField] private int[] _busIndex;
         [SerializeField] private Slider _slider;
-        [SerializeField] private Gradient _gradient;
-        [SerializeField] private Image[] _gradientTargets;
 
         private void OnEnable()
         {
             var value = AudioSystem.Volumes.GetVolume(_busIndex[0]);
             _slider.SetValueWithoutNotify(value);
             _slider.onValueChanged.AddListener(OnSliderValueChanged);
-            foreach (var gradientTarget in _gradientTargets)
-                gradientTarget.color = _gradient.Evaluate(value);
         }
 
         private void OnDisable()
@@ -29,8 +25,6 @@ namespace Project.Core.Audio
         {   
             foreach (var busIndex in _busIndex)
                 AudioSystem.Volumes.SetVolume(busIndex, value);
-            foreach (var gradientTarget in _gradientTargets)
-                gradientTarget.color = _gradient.Evaluate(value);
         }
     }
 }

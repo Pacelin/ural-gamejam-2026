@@ -1,7 +1,7 @@
 ﻿using System;
+using Cysharp.Threading.Tasks;
 using Project.Achievements;
 using Project.Core.Misc;
-using UnityEngine;
 using UnityEngine.SceneManagement;
 using VContainer.Unity;
 
@@ -11,12 +11,15 @@ namespace Project.Core.Pause
     {
         private readonly PauseController _pauseController;
         private readonly AchievementsButtonController _achievementsButtonController;
+        private readonly AcceptPopup _acceptPopup;
         
         public PauseWindowController(PauseWindow window, EscapeController escapeController,
-            PauseController pauseController, AchievementsWindowController achievementsWindow) :
+            PauseController pauseController, AchievementsWindowController achievementsWindow,
+            AcceptPopup acceptPopup) :
             base (window, escapeController)
         {
             _pauseController = pauseController;
+            _acceptPopup = acceptPopup;
             _achievementsButtonController = new AchievementsButtonController(
                 Window.AchievementsButton, achievementsWindow);
         }
@@ -53,8 +56,14 @@ namespace Project.Core.Pause
 
         private void QuitToMainMenu()
         {
-            _pauseController.SetPause(EPauseState.PausedByUser, false);
-            SceneManager.LoadScene(1);
+            UniTask.Void(async () =>
+            {
+                if (await _acceptPopup.Show(EscapeController))
+                {
+                    _pauseController.SetPause(EPauseState.PausedByUser, false);
+                    SceneManager.LoadScene(1);
+                }
+            });
         }
     }
 }

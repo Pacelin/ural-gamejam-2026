@@ -9,6 +9,8 @@ namespace Project.Core.Misc
     {
         public event Action OnEscapeWithEmptyStack;
 
+        private bool _locked;
+
         private readonly Stack<(GameObject Go, IEscapeWindowController Window)> _stack = new();
 
         public void PushWindow(GameObject gameObject, IEscapeWindowController escapeWindow)
@@ -23,6 +25,9 @@ namespace Project.Core.Misc
         
         public void Tick()
         {
+            if (_locked)
+                return;
+            
             if (Input.GetKeyDown(KeyCode.Escape))
             {
                 bool success = false;
@@ -43,5 +48,8 @@ namespace Project.Core.Misc
                     OnEscapeWithEmptyStack?.Invoke();
             }
         }
+
+        public void Lock() => _locked = true;
+        public void Unlock() => _locked = false;
     }
 }

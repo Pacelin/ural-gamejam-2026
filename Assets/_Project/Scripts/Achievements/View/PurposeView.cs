@@ -20,7 +20,7 @@ namespace Project.Achievements
         {
             if (current < target)
             {
-                _progressText.text = current + " / " + target;
+                _progressText.text = current + " <size=32>из</size> " + target;
                 _canvasGroup.alpha = 1;
                 _progressText.gameObject.SetActive(true);
                 _completedMark.gameObject.SetActive(false);
