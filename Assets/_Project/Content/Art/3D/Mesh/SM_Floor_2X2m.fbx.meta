@@ -3,7 +3,12 @@ guid: 79d1b227c0e961c4284e99a7f0e3b47b
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: T_Floor_Tile_Kitchen
+    second: {fileID: 2100000, guid: 01c2b45fb4a802b4ab8753fc33087a48, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

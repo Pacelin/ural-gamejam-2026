@@ -51,6 +51,7 @@ namespace Project.Gameplay.Inventory
             var itemView = _view.CreateItem();
             var itemController = new InventoryItemController(item, _view, itemView, _textController, _dragController);
             itemController.Initialize();
+            itemView.Impact();
             
             _itemsControllers.Add(itemController);
         }
