@@ -26,7 +26,10 @@ namespace Project.Gameplay.Misc
             _pauseDisposable = _pauseController.SubscribeAnyPause(isPause =>
             {
                 if (isPause)
+                {
+                    _currentState = ECursorState.None;
                     SetDefault();
+                }
             });
         }
 
