@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="AudioFile" id="{f59dfa8b-13f9-4921-9342-0c5544f06aac}">
+		<property name="assetPath">
+			<value>UI__skinning-animal-3.ogg</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>1</value>
+		</property>
+		<property name="length">
+			<value>0.16368750000000001</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{45c282e8-9be0-47d3-ab7a-b976823d5327}</destination>
+		</relationship>
+	</object>
+</objects>
