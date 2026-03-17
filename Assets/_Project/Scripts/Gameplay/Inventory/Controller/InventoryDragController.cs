@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using Plugins.Audio;
 using Project.Core.Pause;
 using Project.Gameplay.Misc;
 using UnityEngine;
@@ -75,6 +76,7 @@ namespace Project.Gameplay.Inventory
             UpdatePosition();
             _textController.SetHold(_draggingItem);
             _cursorService.EnableCursorState(ECursorState.HoldInventoryItem);
+            AudioSystem.Game_GrabInventory.PlayOneShot();
         }
 
         public void OnDrag(PointerEventData eventData)
@@ -93,6 +95,7 @@ namespace Project.Gameplay.Inventory
 
             _dragView.gameObject.SetActive(false);
             _draggingItemView.SetVisible(true);
+            _draggingItemView.Impact();
             
             var dropTarget = FindDropTarget(eventData);
             if (dropTarget != null && dropTarget.CanDrop(_draggingItem))
@@ -104,6 +107,7 @@ namespace Project.Gameplay.Inventory
             _isDragging = false;
             _textController.SetHold(null);
             _cursorService.DisableCursorState(ECursorState.HoldInventoryItem);
+            AudioSystem.Game_DropInventory.PlayOneShot();
         }
 
         private void OnUpdate()

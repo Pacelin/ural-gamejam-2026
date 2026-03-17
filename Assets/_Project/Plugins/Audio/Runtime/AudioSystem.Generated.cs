@@ -35,6 +35,10 @@ namespace Plugins.Audio
 		public static SoundEvent_Music_BGM Music_BGM { get; } = new();
 		public static SoundEvent_UI_Achievement UI_Achievement { get; } = new();
 		public static SoundEvent_UI_Select UI_Select { get; } = new();
+		public static SoundEvent_Game_PickupItem Game_PickupItem { get; } = new();
+		public static SoundEvent_Game_GrabInventory Game_GrabInventory { get; } = new();
+		public static SoundEvent_Game_DropInventory Game_DropInventory { get; } = new();
+		public static SoundEvent_Music_BGMBunker Music_BGMBunker { get; } = new();
     }
 
 	public class SoundEvent_UI_Click : ISoundEvent
@@ -124,7 +128,7 @@ namespace Plugins.Audio
 	public class SoundEvent_UI_Achievement : ISoundEvent
 	{
 		public bool IsOneShot => true;
-		public float Length => 0;
+		public float Length => 3703;
 
 		private static readonly FMOD.GUID _guid = new FMOD.GUID() { Data1 = 417531457, Data2 = 1174842995, Data3 = 12922296, Data4 = -1204432844 };
 
@@ -145,9 +149,93 @@ namespace Plugins.Audio
 	public class SoundEvent_UI_Select : ISoundEvent
 	{
 		public bool IsOneShot => true;
-		public float Length => 0;
+		public float Length => 85;
 
 		private static readonly FMOD.GUID _guid = new FMOD.GUID() { Data1 = -1762932299, Data2 = 1150821187, Data3 = 710381722, Data4 = 49048003 };
+
+		public void PlayOneShot() => RuntimeManager.PlayOneShot(_guid);
+		public void PlayOneShotAttached(GameObject attachTo) => RuntimeManager.PlayOneShotAttached(_guid, attachTo);
+		public void PlayOneShotInPoint(Vector3 point) => RuntimeManager.PlayOneShot(_guid, point);
+
+		public Instance CreateInstance() => new Instance(RuntimeManager.CreateInstance(_guid));
+		ISoundEventInstance ISoundEvent.CreateInstance() => CreateInstance();
+
+		public class Instance : SoundEventInstance
+		{
+			public Instance(FMOD.Studio.EventInstance eventInstance) : base(eventInstance) { }
+
+		}
+	}
+
+	public class SoundEvent_Game_PickupItem : ISoundEvent
+	{
+		public bool IsOneShot => true;
+		public float Length => 1162;
+
+		private static readonly FMOD.GUID _guid = new FMOD.GUID() { Data1 = -1574593495, Data2 = 1196419271, Data3 = 580173476, Data4 = -783740866 };
+
+		public void PlayOneShot() => RuntimeManager.PlayOneShot(_guid);
+		public void PlayOneShotAttached(GameObject attachTo) => RuntimeManager.PlayOneShotAttached(_guid, attachTo);
+		public void PlayOneShotInPoint(Vector3 point) => RuntimeManager.PlayOneShot(_guid, point);
+
+		public Instance CreateInstance() => new Instance(RuntimeManager.CreateInstance(_guid));
+		ISoundEventInstance ISoundEvent.CreateInstance() => CreateInstance();
+
+		public class Instance : SoundEventInstance
+		{
+			public Instance(FMOD.Studio.EventInstance eventInstance) : base(eventInstance) { }
+
+		}
+	}
+
+	public class SoundEvent_Game_GrabInventory : ISoundEvent
+	{
+		public bool IsOneShot => true;
+		public float Length => 532;
+
+		private static readonly FMOD.GUID _guid = new FMOD.GUID() { Data1 = -864594576, Data2 = 1284085227, Data3 = 880672160, Data4 = -1526129930 };
+
+		public void PlayOneShot() => RuntimeManager.PlayOneShot(_guid);
+		public void PlayOneShotAttached(GameObject attachTo) => RuntimeManager.PlayOneShotAttached(_guid, attachTo);
+		public void PlayOneShotInPoint(Vector3 point) => RuntimeManager.PlayOneShot(_guid, point);
+
+		public Instance CreateInstance() => new Instance(RuntimeManager.CreateInstance(_guid));
+		ISoundEventInstance ISoundEvent.CreateInstance() => CreateInstance();
+
+		public class Instance : SoundEventInstance
+		{
+			public Instance(FMOD.Studio.EventInstance eventInstance) : base(eventInstance) { }
+
+		}
+	}
+
+	public class SoundEvent_Game_DropInventory : ISoundEvent
+	{
+		public bool IsOneShot => true;
+		public float Length => 403;
+
+		private static readonly FMOD.GUID _guid = new FMOD.GUID() { Data1 = -170419075, Data2 = 1140003302, Data3 = -1628494947, Data4 = -1718260067 };
+
+		public void PlayOneShot() => RuntimeManager.PlayOneShot(_guid);
+		public void PlayOneShotAttached(GameObject attachTo) => RuntimeManager.PlayOneShotAttached(_guid, attachTo);
+		public void PlayOneShotInPoint(Vector3 point) => RuntimeManager.PlayOneShot(_guid, point);
+
+		public Instance CreateInstance() => new Instance(RuntimeManager.CreateInstance(_guid));
+		ISoundEventInstance ISoundEvent.CreateInstance() => CreateInstance();
+
+		public class Instance : SoundEventInstance
+		{
+			public Instance(FMOD.Studio.EventInstance eventInstance) : base(eventInstance) { }
+
+		}
+	}
+
+	public class SoundEvent_Music_BGMBunker : ISoundEvent
+	{
+		public bool IsOneShot => false;
+		public float Length => 64062;
+
+		private static readonly FMOD.GUID _guid = new FMOD.GUID() { Data1 = 440895534, Data2 = 1106836941, Data3 = -968104016, Data4 = 856815534 };
 
 		public void PlayOneShot() => RuntimeManager.PlayOneShot(_guid);
 		public void PlayOneShotAttached(GameObject attachTo) => RuntimeManager.PlayOneShotAttached(_guid, attachTo);

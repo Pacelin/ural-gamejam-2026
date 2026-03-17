@@ -6,10 +6,18 @@ namespace Project.Gameplay.Interactables
 {
     public abstract class InteractableObject : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler, IPointerExitHandler
     {
-        protected IObjectResolver Resolver => _resolver;
-        
-        [Inject] private IObjectResolver _resolver;
-        
+        [SerializeField] private InteractablesManager _manager;
+
+        protected virtual void OnValidate()
+        {
+            if (!_manager)
+                _manager = FindFirstObjectByType<InteractablesManager>();
+        }
+
+        protected virtual void Awake() => Initialize(_manager.Resolver);
+
+        protected abstract void Initialize(IObjectResolver resolver);
+
         protected abstract void OnInteract();
         protected abstract void OnInteractorEnter();
         protected abstract void OnInteractorExit();

@@ -1,5 +1,6 @@
 ﻿using System;
 using Cysharp.Threading.Tasks;
+using JetBrains.Annotations;
 using Project.Achievements;
 using Project.Core.Misc;
 using UnityEngine.SceneManagement;
@@ -7,6 +8,7 @@ using VContainer.Unity;
 
 namespace Project.Core.Pause
 {
+    [UsedImplicitly]
     public class PauseWindowController : EscapeWindowController<PauseWindow>, IInitializable, IDisposable
     {
         private readonly PauseController _pauseController;

@@ -1,4 +1,5 @@
 ﻿using System;
+using Plugins.Audio;
 using VContainer.Unity;
 
 namespace Project.Achievements
@@ -37,6 +38,7 @@ namespace Project.Achievements
 
         private void OnAchievementCompleted(string id)
         {
+            AudioSystem.UI_Achievement.PlayOneShot();
             _view.Notify(id);
         }
     }

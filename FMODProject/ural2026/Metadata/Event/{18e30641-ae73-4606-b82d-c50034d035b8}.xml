@@ -64,6 +64,9 @@
 		</relationship>
 	</object>
 	<object class="EventMixerMaster" id="{d0d4adb0-5c6f-4690-85a7-7b4a883b9477}">
+		<property name="volume">
+			<value>-3.5</value>
+		</property>
 		<relationship name="effectChain">
 			<destination>{6e3bb8b0-8d50-4e2d-abd5-2bf0ce76eb96}</destination>
 		</relationship>
@@ -76,11 +79,14 @@
 	</object>
 	<object class="SingleSound" id="{70fdd928-d1c8-495e-bba6-0f85dd5dbb54}">
 		<property name="length">
-			<value>3.7031216361679231</value>
+			<value>3.603121636167923</value>
 		</property>
 		<property name="timelockedOffset">
-			<value>0.096878363832077499</value>
+			<value>0.19687836383207755</value>
 		</property>
+		<relationship name="fadeInCurve">
+			<destination>{76e35a49-4d7c-4a2a-88f4-44c5257d7cb1}</destination>
+		</relationship>
 		<relationship name="audioFile">
 			<destination>{204c5fd3-2203-4813-bda1-0dae92b3ab31}</destination>
 		</relationship>
@@ -97,6 +103,33 @@
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{cd9087ae-2b16-4366-8ba6-228e82079fa2}" />
+	<object class="FadeCurve" id="{76e35a49-4d7c-4a2a-88f4-44c5257d7cb1}">
+		<relationship name="startPoint">
+			<destination>{848dbbbe-ee0a-4af1-b720-90c36b70e9a3}</destination>
+		</relationship>
+		<relationship name="endPoint">
+			<destination>{20ef4b07-c7b9-457a-98ff-6cb0f2255a9e}</destination>
+		</relationship>
+	</object>
 	<object class="MixerBusFader" id="{a666b5e8-83dc-46bf-b3c2-0cd826b80808}" />
 	<object class="MixerBusFader" id="{a712b166-0023-466f-8756-c853497e48cf}" />
+	<object class="AutomationPoint" id="{848dbbbe-ee0a-4af1-b720-90c36b70e9a3}">
+		<property name="position">
+			<value>0</value>
+		</property>
+		<property name="value">
+			<value>0</value>
+		</property>
+		<property name="curveShape">
+			<value>-1.00000048</value>
+		</property>
+	</object>
+	<object class="AutomationPoint" id="{20ef4b07-c7b9-457a-98ff-6cb0f2255a9e}">
+		<property name="position">
+			<value>0.10000000000000001</value>
+		</property>
+		<property name="value">
+			<value>1</value>
+		</property>
+	</object>
 </objects>
