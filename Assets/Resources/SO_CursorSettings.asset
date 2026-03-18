@@ -19,8 +19,8 @@ MonoBehaviour:
     Hotspot: {x: 11, y: 11}
     CursorTexture: {fileID: 2800000, guid: f3c9f3e5c27f942489bc6654cebfe55e, type: 3}
   Walk:
-    Hotspot: {x: 10, y: 10}
-    CursorTexture: {fileID: 2800000, guid: ebec62dfed8a9cd439c19266e53f7001, type: 3}
+    Hotspot: {x: 15, y: 15}
+    CursorTexture: {fileID: 2800000, guid: 80d8d3bd932161c4a862ef42f326e448, type: 3}
   Question:
     Hotspot: {x: 10, y: 10}
     CursorTexture: {fileID: 2800000, guid: 615eedbffc4507846a59f9d6b2aa2477, type: 3}
@@ -31,11 +31,14 @@ MonoBehaviour:
     Hotspot: {x: 3, y: 3}
     CursorTexture: {fileID: 2800000, guid: 675b80c2c6b705a4bad928a8d631cf58, type: 3}
   RotateLeft:
-    Hotspot: {x: 32, y: 32}
+    Hotspot: {x: 15, y: 15}
     CursorTexture: {fileID: 2800000, guid: bdcb246850c6fe54495c2a9f5e420a91, type: 3}
   RotateRight:
-    Hotspot: {x: 32, y: 32}
+    Hotspot: {x: 15, y: 15}
     CursorTexture: {fileID: 2800000, guid: 4083f76b974b40343b06f79fd1a05516, type: 3}
   MoveBack:
-    Hotspot: {x: 32, y: 32}
+    Hotspot: {x: 15, y: 15}
     CursorTexture: {fileID: 2800000, guid: 5a014fcfaab04e74880ef291769ee4da, type: 3}
+  Eye:
+    Hotspot: {x: 10, y: 10}
+    CursorTexture: {fileID: 2800000, guid: 54700ea4ef06a78458fe9f8c6fc10949, type: 3}

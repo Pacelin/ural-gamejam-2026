@@ -15,5 +15,6 @@ namespace Project.Gameplay.Misc
         public CursorData RotateLeft;
         public CursorData RotateRight;
         public CursorData MoveBack;
+        public CursorData Eye;
     }
 }

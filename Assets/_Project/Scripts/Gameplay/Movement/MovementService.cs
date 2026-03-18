@@ -1,4 +1,5 @@
-﻿using System.Threading;
+﻿using System;
+using System.Threading;
 using Cysharp.Threading.Tasks;
 using JetBrains.Annotations;
 using Plugins.Audio;
@@ -39,8 +40,7 @@ namespace Project.Gameplay.Movement
 
         public void Start()
         {
-            foreach (var obj in _activePoint.ActiveWhenOnPoint)
-                obj.SetActive(true);
+            _activePoint.gameObject.SetActive(true);
             
             _controlView.UpdateControlsFor(_activePoint);
 
@@ -60,14 +60,13 @@ namespace Project.Gameplay.Movement
                 _cursorService.EnableCursorState(ECursorState.Transition);
                 _blockView.Block();
                 
-                foreach (var obj in _activePoint.ActiveWhenOnPoint)
-                    obj.SetActive(false);
-                foreach (var obj in point.ActiveWhenOnPoint)
-                    obj.SetActive(true);
+                _activePoint.gameObject.SetActive(false);
+                point.gameObject.SetActive(true);
                 
                 _controlView.UpdateControlsFor(point);
 
-                await MoveTo(point, cancellationToken);
+                var pointTransform = point.transform;
+                await MoveTo(pointTransform.position, pointTransform.rotation, cancellationToken);
 
                 cancellationToken.ThrowIfCancellationRequested();
                 _activePoint = point;
@@ -76,19 +75,69 @@ namespace Project.Gameplay.Movement
             }, _blockView.gameObject.GetCancellationTokenOnDestroy());
         }
 
-        private async UniTask MoveTo(MovementPoint point, CancellationToken cancellationToken)
+        public void MoveInDoor(MovementPoint point, Vector3 doorPoint)
+        {
+            UniTask.Void(async cancellationToken =>
+            {
+                cancellationToken.ThrowIfCancellationRequested();
+                _cursorService.EnableCursorState(ECursorState.Transition);
+                _blockView.Block();
+                
+                _activePoint.gameObject.SetActive(false);
+                point.gameObject.SetActive(true);
+                
+                _controlView.UpdateControlsFor(point);
+
+                var pointTransform = point.transform;
+                var moveTask = MoveTo(pointTransform.position, pointTransform.rotation, doorPoint, cancellationToken);
+                
+                await UniTask.Delay(TimeSpan.FromSeconds(0.2f), cancellationToken: cancellationToken);
+                AudioSystem.Game_Door_OpenClose.PlayOneShotInPoint(doorPoint);
+                cancellationToken.ThrowIfCancellationRequested();
+                await _blockView.FadeIn();
+                cancellationToken.ThrowIfCancellationRequested();
+                await UniTask.Delay(TimeSpan.FromSeconds(1f), cancellationToken: cancellationToken);
+                cancellationToken.ThrowIfCancellationRequested();
+                await _blockView.FadeOut();
+                cancellationToken.ThrowIfCancellationRequested();
+
+                await moveTask;
+                
+                cancellationToken.ThrowIfCancellationRequested();
+                _activePoint = point;
+                _blockView.Unblock();
+                _cursorService.DisableCursorState(ECursorState.Transition);
+            }, _blockView.gameObject.GetCancellationTokenOnDestroy());
+        }
+
+        private async UniTask MoveTo(Vector3 position, Quaternion rotation, CancellationToken cancellationToken)
         {
             var cameraPosition = _cameraController.GetPosition();
-            var newPointTransform = point.transform;
 
-            var distance = Vector3.Distance(cameraPosition, newPointTransform.position);
-            if (distance > 0.2f)
-                AudioSystem.Game_Walk.PlayOneShot();
-
+            var distance = Vector3.Distance(cameraPosition, position);
             var duration = Mathf.Clamp(distance * _movementConfig.MoveDurationPerMeter,
                 _movementConfig.MinMoveDuration, _movementConfig.MaxMoveDuration);
             
-            await _cameraController.MoveTo(newPointTransform.position, newPointTransform.rotation, duration,
+            if (distance > 0.2f)
+            {
+                _cameraController.MakeMoveImpulse(duration);
+                AudioSystem.Game_Walk.PlayOneShot();
+            }
+            await _cameraController.MoveTo(position, rotation, duration,
+                cancellationToken);
+        }
+        
+        private async UniTask MoveTo(Vector3 position, Quaternion rotation, Vector3 doorPosition,
+            CancellationToken cancellationToken)
+        {
+            var cameraPosition = _cameraController.GetPosition();
+
+            var distance = Vector3.Distance(cameraPosition, position);
+            var duration = Mathf.Clamp(distance * _movementConfig.MoveDurationPerMeter,
+                _movementConfig.MinMoveDuration, _movementConfig.MaxMoveDuration);
+            
+            _cameraController.MakeMoveImpulse(duration);
+            await _cameraController.MoveTo(position, rotation, duration, doorPosition,
                 cancellationToken);
         }
     }

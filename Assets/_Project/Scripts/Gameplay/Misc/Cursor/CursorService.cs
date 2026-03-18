@@ -66,6 +66,8 @@ namespace Project.Gameplay.Misc
             else if (_currentState.HasFlag(ECursorState.HoverInventoryItem) ||
                      _currentState.HasFlag(ECursorState.HoverPickup))
                 SetCustom(_settings.GrabItem);
+            else if (_currentState.HasFlag(ECursorState.Eye))
+                SetCustom(_settings.Eye);
             else if (_currentState.HasFlag(ECursorState.HoverQuestion))
                 SetCustom(_settings.Question);
             else if (_currentState.HasFlag(ECursorState.HoverWalkObject))

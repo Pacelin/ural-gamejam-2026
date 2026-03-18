@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace Project.Gameplay.Movement
 {
@@ -10,19 +8,12 @@ namespace Project.Gameplay.Movement
         public MovementPoint LeftPoint => _leftPoint;
         public MovementPoint BackPoint => _backPoint;
 
-        public IReadOnlyList<GameObject> ActiveWhenOnPoint => _activeWhenOnPoint;
-        
         [SerializeField] private MovementPoint _rightPoint;
         [SerializeField] private MovementPoint _leftPoint;
         [SerializeField] private MovementPoint _backPoint;
-        [SerializeField] private GameObject[] _activeWhenOnPoint;
 
-        private void Awake()
-        {
-            foreach (var obj in _activeWhenOnPoint)
-                obj.SetActive(false);
-        }
-        
+        private void Awake() => gameObject.SetActive(false);
+
 #if UNITY_EDITOR
         private void OnDrawGizmos()
         {

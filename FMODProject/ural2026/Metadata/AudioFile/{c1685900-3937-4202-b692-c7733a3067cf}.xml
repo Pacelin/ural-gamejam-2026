@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="AudioFile" id="{c1685900-3937-4202-b692-c7733a3067cf}">
+		<property name="assetPath">
+			<value>341303__pp87__door-locked-03.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>1.2463265306122449</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{45c282e8-9be0-47d3-ab7a-b976823d5327}</destination>
+		</relationship>
+	</object>
+</objects>

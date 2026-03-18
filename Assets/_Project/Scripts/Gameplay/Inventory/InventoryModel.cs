@@ -30,8 +30,7 @@ namespace Project.Gameplay.Inventory
         
         public void RemoveItem(InventoryItemEntry inventoryItem)
         {
-            var index = _items.IndexOf(inventoryItem);
-            RemoveAt(index);;
+            _items.Remove(inventoryItem);
             OnRemoveItem?.Invoke(inventoryItem);
         }
 
