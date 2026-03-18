@@ -3,7 +3,17 @@ guid: 306a2800ce74e014c9557b5fd12e74e5
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: T_Door_Handle
+    second: {fileID: 2100000, guid: 4a4afdff2648b02418f883762d8a06d4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: T_Wood_Planks_0
+    second: {fileID: 2100000, guid: 2f8f99e84ddd71d47b4a997ce269fab4, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -46,7 +56,7 @@ ModelImporter:
     nodeNameCollisionStrategy: 1
     fileIdsGeneration: 2
     swapUVChannels: 0
-    generateSecondaryUV: 0
+    generateSecondaryUV: 1
     useFileUnits: 1
     keepQuads: 0
     weldVertices: 1

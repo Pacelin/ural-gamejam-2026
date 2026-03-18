@@ -3,7 +3,22 @@ guid: 2508fc1ca2f5d084a96d5b91e5cb664d
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: T_Concrete
+    second: {fileID: 2100000, guid: ee53a85d772790740bf326e41da20825, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: T_Floor_Wood_Old
+    second: {fileID: 2100000, guid: b33f52c4f7051464ca94662f38d2ebd4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: T_Wood_Planks_0
+    second: {fileID: 2100000, guid: 2f8f99e84ddd71d47b4a997ce269fab4, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -46,7 +61,7 @@ ModelImporter:
     nodeNameCollisionStrategy: 1
     fileIdsGeneration: 2
     swapUVChannels: 0
-    generateSecondaryUV: 0
+    generateSecondaryUV: 1
     useFileUnits: 1
     keepQuads: 0
     weldVertices: 1
