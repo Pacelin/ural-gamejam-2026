@@ -1,5 +1,6 @@
 ﻿using Cysharp.Threading.Tasks;
 using JetBrains.Annotations;
+using Plugins.Audio;
 using Project.Gameplay.Misc;
 using UnityEngine;
 using VContainer.Unity;
@@ -48,6 +49,7 @@ namespace Project.Gameplay.Movement
         {
             UniTask.Void(async cancellationToken =>
             {
+                AudioSystem.Game_FadeWalk.PlayOneShot();
                 await _fadeView.FadeIn();
                 cancellationToken.ThrowIfCancellationRequested();
                 await UniTask.Delay(System.TimeSpan.FromSeconds(_movementDuration),
