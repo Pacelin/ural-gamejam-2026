@@ -1,4 +1,5 @@
-﻿using Cysharp.Threading.Tasks;
+﻿using System.Threading;
+using Cysharp.Threading.Tasks;
 using JetBrains.Annotations;
 using Plugins.Audio;
 using Project.Gameplay.Misc;
@@ -12,22 +13,22 @@ namespace Project.Gameplay.Movement
     {
         private MovementPoint _activePoint;
 
-        private readonly Camera _camera;
         private readonly CursorService _cursorService;
-        private readonly MovementFadeView _fadeView;
+        private readonly MovementBlockView _blockView;
         private readonly MovementControlView _controlView;
-        private readonly float _movementDuration;
+        private readonly MovementCameraController _cameraController;
+        private readonly MovementConfig _movementConfig;
         
-        public MovementService(Camera camera, CursorService cursorService,
-            MovementFadeView fadeView, MovementControlView controlView,
-            MovementPoint initialMovementPoint,
-            float movementDuration)
+        public MovementService(CursorService cursorService,
+            MovementBlockView blockView, MovementControlView controlView,
+            MovementCameraController cameraController,
+            MovementPoint initialMovementPoint)
         {
-            _camera = camera;
             _cursorService = cursorService;
-            _fadeView = fadeView;
+            _blockView = blockView;
             _controlView = controlView;
-            _movementDuration = movementDuration;
+            _movementConfig = Resources.Load<MovementConfig>("SO_MovementConfig");
+            _cameraController = cameraController;
             _activePoint = initialMovementPoint;
         }
 
@@ -38,7 +39,13 @@ namespace Project.Gameplay.Movement
 
         public void Start()
         {
-            UpdateControlsAndCamera();
+            foreach (var obj in _activePoint.ActiveWhenOnPoint)
+                obj.SetActive(true);
+            
+            _controlView.UpdateControlsFor(_activePoint);
+
+            var activePointTransform = _activePoint.transform;
+            _cameraController.Set(activePointTransform.position, activePointTransform.rotation);
         }
 
         public void RotateRight() => Move(_activePoint.RightPoint);
@@ -49,35 +56,40 @@ namespace Project.Gameplay.Movement
         {
             UniTask.Void(async cancellationToken =>
             {
-                AudioSystem.Game_FadeWalk.PlayOneShot();
-                await _fadeView.FadeIn();
                 cancellationToken.ThrowIfCancellationRequested();
-                await UniTask.Delay(System.TimeSpan.FromSeconds(_movementDuration),
-                    cancellationToken: cancellationToken);
-                cancellationToken.ThrowIfCancellationRequested();
+                _cursorService.EnableCursorState(ECursorState.Transition);
+                _blockView.Block();
                 
-                if (_activePoint)
-                    foreach (var obj in _activePoint.ActiveWhenOnPoint)
-                        obj.SetActive(false);
+                foreach (var obj in _activePoint.ActiveWhenOnPoint)
+                    obj.SetActive(false);
+                foreach (var obj in point.ActiveWhenOnPoint)
+                    obj.SetActive(true);
+                
+                _controlView.UpdateControlsFor(point);
+
+                await MoveTo(point, cancellationToken);
+
+                cancellationToken.ThrowIfCancellationRequested();
                 _activePoint = point;
-                
-                UpdateControlsAndCamera();
-                await _fadeView.FadeOut();
-            }, _fadeView.gameObject.GetCancellationTokenOnDestroy());
+                _blockView.Unblock();
+                _cursorService.DisableCursorState(ECursorState.Transition);
+            }, _blockView.gameObject.GetCancellationTokenOnDestroy());
         }
 
-        private void UpdateControlsAndCamera()
+        private async UniTask MoveTo(MovementPoint point, CancellationToken cancellationToken)
         {
-            foreach (var obj in _activePoint.ActiveWhenOnPoint)
-                obj.SetActive(true);
-            
-            _controlView.UpdateControlsFor(_activePoint);
+            var cameraPosition = _cameraController.GetPosition();
+            var newPointTransform = point.transform;
 
-            var cameraTransform = _camera.transform;
-            var activePointTransform = _activePoint.transform;
-            cameraTransform.position = activePointTransform.position;
-            cameraTransform.rotation = activePointTransform.rotation;
-            _camera.fieldOfView = _activePoint.Fov;
+            var distance = Vector3.Distance(cameraPosition, newPointTransform.position);
+            if (distance > 0.2f)
+                AudioSystem.Game_Walk.PlayOneShot();
+
+            var duration = Mathf.Clamp(distance * _movementConfig.MoveDurationPerMeter,
+                _movementConfig.MinMoveDuration, _movementConfig.MaxMoveDuration);
+            
+            await _cameraController.MoveTo(newPointTransform.position, newPointTransform.rotation, duration,
+                cancellationToken);
         }
     }
 }

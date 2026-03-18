@@ -132,6 +132,7 @@ GameObject:
   - component: {fileID: 84892813}
   - component: {fileID: 84892814}
   - component: {fileID: 84892815}
+  - component: {fileID: 84892816}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -279,6 +280,19 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   m_MaxRayIntersections: 0
+--- !u!114 &84892816
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 84892809}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8af347d4ddb46aeac0fd54f3d4d5edd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Project.Gameplay.Movement.MovementCameraController
+  _cameraTransform: {fileID: 84892812}
 --- !u!1 &242424752
 GameObject:
   m_ObjectHideFlags: 0
@@ -313,9 +327,9 @@ MonoBehaviour:
   autoRun: 1
   autoInjectGameObjects:
   - {fileID: 1684804565}
-  _camera: {fileID: 84892811}
-  _fadeView: {fileID: 714870219}
+  _blockView: {fileID: 714870219}
   _controlView: {fileID: 2026503732}
+  _cameraController: {fileID: 84892816}
   _initialMovementPoint: {fileID: 1417024708}
   _movementDuration: 0.4
 --- !u!4 &242424755
@@ -729,7 +743,6 @@ GameObject:
   - component: {fileID: 714870217}
   - component: {fileID: 714870216}
   - component: {fileID: 714870219}
-  - component: {fileID: 714870218}
   m_Layer: 5
   m_Name: MoveFadeView
   m_TagString: Untagged
@@ -797,18 +810,6 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 500
   m_TargetDisplay: 0
---- !u!225 &714870218
-CanvasGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 714870213}
-  m_Enabled: 1
-  m_Alpha: 1
-  m_Interactable: 1
-  m_BlocksRaycasts: 1
-  m_IgnoreParentGroups: 0
 --- !u!114 &714870219
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -821,7 +822,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 127bccbf34b8488b9d8ab7ef4fb96451, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Project.Gameplay.Movement.MovementFadeView
-  _canvasGroup: {fileID: 714870218}
 --- !u!1001 &795249645
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1239,7 +1239,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1757,7 +1757,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91bd580f66ae4d33880c8ff56d4f36c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Project.Gameplay.Movement.MovementPoint
-  _fov: 60
   _rightPoint: {fileID: 0}
   _leftPoint: {fileID: 0}
   _backPoint: {fileID: 0}
@@ -2550,7 +2549,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91bd580f66ae4d33880c8ff56d4f36c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Project.Gameplay.Movement.MovementPoint
-  _fov: 60
   _rightPoint: {fileID: 0}
   _leftPoint: {fileID: 0}
   _backPoint: {fileID: 1417024708}

@@ -17,5 +17,6 @@
         MoveBack = 256,
         
         DownPointer = 512,
+        Transition = 1024
     }
 }

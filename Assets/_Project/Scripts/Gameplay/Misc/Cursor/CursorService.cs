@@ -59,7 +59,9 @@ namespace Project.Gameplay.Misc
                 return;
             }
             
-            if (_currentState.HasFlag(ECursorState.HoldInventoryItem))
+            if (_currentState.HasFlag(ECursorState.Transition))
+                SetDefault();
+            else if (_currentState.HasFlag(ECursorState.HoldInventoryItem))
                 SetCustom(_settings.HoldItem);
             else if (_currentState.HasFlag(ECursorState.HoverInventoryItem) ||
                      _currentState.HasFlag(ECursorState.HoverPickup))
