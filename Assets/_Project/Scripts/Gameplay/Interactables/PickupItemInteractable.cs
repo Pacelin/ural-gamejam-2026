@@ -13,7 +13,7 @@ namespace Project.Gameplay.Interactables
         private InventoryModel _inventory;
 
         protected override ECursorState HoverCursorState => ECursorState.HoverPickup;
-        protected override ECursorState DownCursorState => ECursorState.None;
+        protected override ECursorState DownCursorState => ECursorState.HoverPickup;
 
         protected override void Initialize(IObjectResolver resolver)
         {

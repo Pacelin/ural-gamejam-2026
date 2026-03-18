@@ -8,7 +8,7 @@ namespace Project.Gameplay.Interactables
     public class MoveInteractableObject : InteractableObjectWithCursor
     {
         protected override ECursorState HoverCursorState => ECursorState.HoverWalkObject;
-        protected override ECursorState DownCursorState => ECursorState.None;
+        protected override ECursorState DownCursorState => ECursorState.HoverWalkObject;
 
         [SerializeField] private MovementPoint _point;
 

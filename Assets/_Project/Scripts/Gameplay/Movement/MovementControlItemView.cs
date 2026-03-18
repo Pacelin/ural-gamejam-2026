@@ -17,7 +17,8 @@ namespace Project.Gameplay.Movement
         private CursorService _cursorService;
         private EType _type;
         private ECursorState _cursor;
-
+        private bool _hover;
+        
         public void Setup(MovementService service, CursorService cursorService, EType type)
         {
             _service = service;
@@ -32,11 +33,26 @@ namespace Project.Gameplay.Movement
                 _cursor = ECursorState.MoveBack;
         }
 
-        public void OnPointerEnter(PointerEventData eventData) =>
-            _cursorService.EnableCursorState(_cursor);
+        private void OnDisable()
+        {
+            if (_hover)
+            {
+                _cursorService.DisableCursorState(_cursor);
+                _hover = false;
+            }
+        }
 
-        public void OnPointerExit(PointerEventData eventData) =>
+        public void OnPointerEnter(PointerEventData eventData)
+        {
+            _cursorService.EnableCursorState(_cursor);
+            _hover = true;
+        }
+
+        public void OnPointerExit(PointerEventData eventData)
+        {
             _cursorService.DisableCursorState(_cursor);
+            _hover = false;
+        }
 
         public void OnPointerClick(PointerEventData eventData)
         {
