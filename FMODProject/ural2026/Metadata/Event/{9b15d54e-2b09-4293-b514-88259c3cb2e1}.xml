@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.03.00">
 	<object class="Event" id="{9b15d54e-2b09-4293-b514-88259c3cb2e1}">
 		<property name="name">
-			<value>SwipeIteam</value>
+			<value>SwipeItem</value>
 		</property>
 		<property name="outputFormat">
 			<value>1</value>
