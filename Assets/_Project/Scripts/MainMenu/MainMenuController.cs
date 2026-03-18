@@ -30,7 +30,7 @@ namespace Project.MainMenu
             _mainMenuWindow.QuitButton.onClick.AddListener(OnQuitClicked);
             _achievementsButtonController.Initialize();
             
-            MusicController.SetMusic(AudioSystem.Music_BGM);
+            MusicController.SetMusic(AudioSystem.Music_MenuMusic);
         }
 
         public void Dispose()
