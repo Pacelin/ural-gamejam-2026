@@ -50,7 +50,7 @@ namespace Project.Gameplay.Movement
                 .Append(_cameraTransform.DOMove(position, halfDuration)
                     .SetEase(Ease.OutQuad))
                 .Join(_cameraTransform.DORotateQuaternion(rotation, halfDuration)
-                    .SetEase(Ease.OutQuad))
+                    .SetEase(Ease.InBounce))
                 .ToUniTask(cancellationToken: cancellationToken);
         }
     }

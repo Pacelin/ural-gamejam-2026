@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.03.00">
-	<object class="AudioFile" id="{b97f3642-a56f-4d67-8a98-c8ad6980cb02}">
+	<object class="AudioFile" id="{1b5d0251-ce8a-4eb0-a73f-10d03eb37119}">
 		<property name="assetPath">
-			<value>kozyBGM.mp3</value>
+			<value>carpet-foot-steps.aiff</value>
 		</property>
 		<property name="isStreaming">
 			<value>true</value>
 		</property>
 		<property name="frequencyInKHz">
-			<value>48</value>
+			<value>44.0999985</value>
 		</property>
 		<property name="channelCount">
 			<value>2</value>
 		</property>
 		<property name="length">
-			<value>186.024</value>
+			<value>40.838798185941044</value>
 		</property>
 		<relationship name="masterAssetFolder">
 			<destination>{45c282e8-9be0-47d3-ab7a-b976823d5327}</destination>
