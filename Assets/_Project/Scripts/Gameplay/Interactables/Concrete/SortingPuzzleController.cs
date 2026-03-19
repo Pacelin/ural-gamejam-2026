@@ -53,7 +53,7 @@ namespace Project.Gameplay.Interactables
 
             if (complete)
             {
-                AudioSystem.Game_PuzzleComplete.PlayOneShot();
+                AudioSystem.Game_Misc_PuzzleComplete.PlayOneShot();
                 if (_trigger)
                     _trigger.OnComplete();
                 if (_behaviour == EBehaviour.DisableAllWhenComplete)

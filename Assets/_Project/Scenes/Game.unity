@@ -2453,6 +2453,23 @@ MonoBehaviour:
   _doorOrigin: {fileID: 1386799741}
   _closedPoint: {fileID: 659576741}
   _openedPoint: {fileID: 116505745}
+  _openSound:
+    _eventRef:
+      Guid:
+        Data1: 44454908
+        Data2: 1216834629
+        Data3: -2018856783
+        Data4: -229859209
+      Path: event:/Game/Doors/ChiffanerOpen
+  _closeSound:
+    _eventRef:
+      Guid:
+        Data1: -1576939681
+        Data2: 1089097459
+        Data3: 1590049184
+        Data4: 287387383
+      Path: event:/Game/Doors/ChiffanerClose
+  _openCloseDuration: 0.4
 --- !u!1001 &367577385
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3031,6 +3048,14 @@ MonoBehaviour:
   _manager: {fileID: 1684804566}
   _point: {fileID: 1161104558}
   _door: {fileID: 446946674}
+  _moveSound:
+    _eventRef:
+      Guid:
+        Data1: -869096729
+        Data2: 1284696489
+        Data3: 1881439620
+        Data4: -853788377
+      Path: event:/Game/Doors/ClassicOpenClose
 --- !u!65 &446946676
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3934,6 +3959,14 @@ MonoBehaviour:
   _manager: {fileID: 1684804566}
   _point: {fileID: 476404488}
   _door: {fileID: 557178886}
+  _moveSound:
+    _eventRef:
+      Guid:
+        Data1: -869096729
+        Data2: 1284696489
+        Data3: 1881439620
+        Data4: -853788377
+      Path: event:/Game/Doors/ClassicOpenClose
 --- !u!65 &557178885
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9509,6 +9542,14 @@ MonoBehaviour:
   _manager: {fileID: 1684804566}
   _itemConfig: {fileID: 11400000, guid: cc3a588e0c4669143830204f8936796b, type: 2}
   _destroyObject: {fileID: 626427526}
+  _pickupSound:
+    _eventRef:
+      Guid:
+        Data1: -1511492524
+        Data2: 1210862987
+        Data3: 1106791324
+        Data4: -624966896
+      Path: event:/Game/Doors/ChiffanerPickup
 --- !u!1001 &649987307
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15617,6 +15658,30 @@ MonoBehaviour:
   _point: {fileID: 1837868990}
   _door: {fileID: 871905477}
   _key: {fileID: 11400000, guid: 6919f830b544a5448b403ab3075d05c2, type: 2}
+  _moveSound:
+    _eventRef:
+      Guid:
+        Data1: -869096729
+        Data2: 1284696489
+        Data3: 1881439620
+        Data4: -853788377
+      Path: event:/Game/Doors/ClassicOpenClose
+  _closedSound:
+    _eventRef:
+      Guid:
+        Data1: 1730481780
+        Data2: 1212147640
+        Data3: 1701157822
+        Data4: 871384296
+      Path: event:/Game/Doors/ClassicLocked
+  _unlockSound:
+    _eventRef:
+      Guid:
+        Data1: 1898611439
+        Data2: 1097014406
+        Data3: 537778085
+        Data4: 21287164
+      Path: event:/Game/Doors/ClassicUnlock
 --- !u!1 &877612719
 GameObject:
   m_ObjectHideFlags: 0
@@ -18495,6 +18560,23 @@ MonoBehaviour:
   _doorOrigin: {fileID: 1386799740}
   _closedPoint: {fileID: 433579253}
   _openedPoint: {fileID: 92242970}
+  _openSound:
+    _eventRef:
+      Guid:
+        Data1: 44454908
+        Data2: 1216834629
+        Data3: -2018856783
+        Data4: -229859209
+      Path: event:/Game/Doors/ChiffanerOpen
+  _closeSound:
+    _eventRef:
+      Guid:
+        Data1: -1576939681
+        Data2: 1089097459
+        Data3: 1590049184
+        Data4: 287387383
+      Path: event:/Game/Doors/ChiffanerClose
+  _openCloseDuration: 0.4
 --- !u!1001 &1328633742
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26335,6 +26417,14 @@ MonoBehaviour:
   _manager: {fileID: 1684804566}
   _point: {fileID: 1471305599}
   _door: {fileID: 1657766597}
+  _moveSound:
+    _eventRef:
+      Guid:
+        Data1: -869096729
+        Data2: 1284696489
+        Data3: 1881439620
+        Data4: -853788377
+      Path: event:/Game/Doors/ClassicOpenClose
 --- !u!65 &1657766596
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -27276,7 +27366,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1795282543}
   m_Layer: 0
-  m_Name: --------------------------------- (2)
+  m_Name: ---------------------------------
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -43456,6 +43546,8 @@ SceneRoots:
   - {fileID: 1469882717}
   - {fileID: 476404486}
   - {fileID: 1445084745}
+  - {fileID: 1237966187}
+  - {fileID: 1531174731}
   - {fileID: 1657766597}
   - {fileID: 871905477}
   - {fileID: 1995251641}
@@ -43465,7 +43557,6 @@ SceneRoots:
   - {fileID: 1491826385}
   - {fileID: 1933287773}
   - {fileID: 1471305597}
-  - {fileID: 1237966187}
   - {fileID: 557178886}
   - {fileID: 1187225780}
   - {fileID: 1837868988}
@@ -43505,4 +43596,3 @@ SceneRoots:
   - {fileID: 752722011}
   - {fileID: 1666077285}
   - {fileID: 4419526}
-  - {fileID: 1531174731}

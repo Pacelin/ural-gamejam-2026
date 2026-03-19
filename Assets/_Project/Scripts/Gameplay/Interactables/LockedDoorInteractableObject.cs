@@ -19,6 +19,9 @@ namespace Project.Gameplay.Interactables
         [SerializeField] private MovementPoint _point;
         [SerializeField] private Transform _door;
         [SerializeField] private InventoryItemConfig _key;
+        [SerializeField] private SoundEvent _moveSound;
+        [SerializeField] private SoundEvent _closedSound;
+        [SerializeField] private SoundEvent _unlockSound;
 
         private MovementService _movementService;
         private SubtitlesService _subtitlesService;
@@ -47,11 +50,11 @@ namespace Project.Gameplay.Interactables
         {
             if (_unlocked)
             {
-                _movementService.MoveInDoor(_point, _door.position);
+                _movementService.MoveInDoor(_point, _door.position, _moveSound);
             }
             else
             {
-                AudioSystem.Game_Door_Closed.PlayOneShotInPoint(_door.position);
+                _closedSound.PlayOneShotInPoint(_door.position);
                 _subtitlesService.Show("Закрыто");
             }
         }
@@ -63,7 +66,7 @@ namespace Project.Gameplay.Interactables
 
         public void OnDrop(InventoryItemEntry item)
         {
-            AudioSystem.Game_Door_Unlock.PlayOneShotInPoint(_door.position);
+            _unlockSound.PlayOneShotInPoint(_door.position);
             _inventory.RemoveItem(item);
             UniTask.Void(async cancellationToken =>
             {

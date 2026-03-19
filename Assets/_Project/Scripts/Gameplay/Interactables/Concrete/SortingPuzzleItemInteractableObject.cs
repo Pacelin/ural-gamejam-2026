@@ -24,6 +24,8 @@ namespace Project.Gameplay.Interactables
         [SerializeField] private InventoryItemConfig[] _availableItems;
         [SerializeField] private GameObject[] _itemObjectMap;
         [SerializeField] private GameObject _emptyObject;
+        [SerializeField] private SoundEvent _pickupSound;
+        [SerializeField] private SoundEvent _dropSound;
         
         private InventoryModel _inventory;
         private SubtitlesService _subtitles;
@@ -41,7 +43,7 @@ namespace Project.Gameplay.Interactables
             if (_currentItem)
             {
                 _inventory.AddItem(_currentItem);
-                AudioSystem.Game_PickupItem.PlayOneShot();
+                _pickupSound.PlayOneShotInPoint(transform.position);
                 _currentItem = null;
                 OnChanged?.Invoke(this);
                 UpdateState();
@@ -64,6 +66,7 @@ namespace Project.Gameplay.Interactables
         public void OnDrop(InventoryItemEntry item)
         {
             _currentItem = item.Config;
+            _dropSound.PlayOneShotInPoint(transform.position);
             _inventory.RemoveItem(item);
             OnChanged?.Invoke(this);
             UpdateCursor();

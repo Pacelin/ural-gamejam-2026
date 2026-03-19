@@ -96,7 +96,7 @@ namespace Project.Gameplay.Movement
             }, _blockView.gameObject.GetCancellationTokenOnDestroy());
         }
 
-        public void MoveInDoor(MovementPoint point, Vector3 doorPoint)
+        public void MoveInDoor(MovementPoint point, Vector3 doorPoint, ISoundEvent moveSound)
         {
             UniTask.Void(async cancellationToken =>
             {
@@ -119,7 +119,7 @@ namespace Project.Gameplay.Movement
                 var moveTask = MoveTo(pointTransform.position, pointTransform.rotation, doorPoint, cancellationToken);
                 
                 await UniTask.Delay(TimeSpan.FromSeconds(0.2f), cancellationToken: cancellationToken);
-                AudioSystem.Game_Door_OpenClose.PlayOneShotInPoint(doorPoint);
+                moveSound.PlayOneShotInPoint(doorPoint);
                 cancellationToken.ThrowIfCancellationRequested();
                 await _blockView.FadeIn();
                 cancellationToken.ThrowIfCancellationRequested();
@@ -148,7 +148,7 @@ namespace Project.Gameplay.Movement
             if (useMoveSound && distance > 0.2f)
             {
                 _cameraController.MakeMoveImpulse(duration);
-                AudioSystem.Game_Walk.PlayOneShot();
+                AudioSystem.Game_Characters_PlayerWalk.PlayOneShot();
             }
             await _cameraController.MoveTo(position, rotation, duration,
                 cancellationToken);
