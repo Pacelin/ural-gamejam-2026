@@ -8,13 +8,6 @@ namespace Project.Core
 {
     public class RuntimeEntryPoint : IInitializable
     {
-        private readonly RuntimeSetup setup;
-        
-        public RuntimeEntryPoint(RuntimeSetup setup)
-        {
-            this.setup = setup;
-        }
-        
         public void Initialize()
         {
             UniTask.Void(async () =>
@@ -22,8 +15,6 @@ namespace Project.Core
                 await AudioSystem.Initialize(Application.exitCancellationToken);
                 
                 await SceneManager.LoadSceneAsync(sceneBuildIndex: 1, LoadSceneMode.Single);
-                
-                setup.Setup();
             });
         }
     }

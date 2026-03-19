@@ -17,8 +17,6 @@ namespace Project.Core
 
         protected override void Configure(IContainerBuilder builder)
         {
-            builder.Register<GameModel>(Lifetime.Singleton);
-            builder.Register<RuntimeSetup>(Lifetime.Singleton);
             builder.RegisterEntryPoint<RuntimeEntryPoint>();
             builder.RegisterEntryPoint<EscapeController>().AsSelf();
             builder.RegisterEntryPoint<PauseController>().AsSelf();
