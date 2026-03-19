@@ -1,4 +1,5 @@
 ﻿using System;
+using Cysharp.Threading.Tasks;
 using Plugins.Audio;
 using Project.Gameplay.Inventory;
 using Project.Gameplay.Misc;
@@ -63,8 +64,16 @@ namespace Project.Gameplay.Interactables
         public void OnDrop(InventoryItemEntry item)
         {
             AudioSystem.Game_Door_Unlock.PlayOneShotInPoint(_door.position);
-            _unlocked = true;
             _inventory.RemoveItem(item);
+            UniTask.Void(async cancellationToken =>
+            {
+                cancellationToken.ThrowIfCancellationRequested();
+                _movementService.BlockControls();
+                await UniTask.Delay(TimeSpan.FromSeconds(1f), cancellationToken: cancellationToken);
+                cancellationToken.ThrowIfCancellationRequested();
+                _movementService.UnblockControls();
+                _unlocked = true;
+            }, this.GetCancellationTokenOnDestroy());
         }
     }
 }

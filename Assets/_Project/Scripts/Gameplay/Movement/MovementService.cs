@@ -51,6 +51,18 @@ namespace Project.Gameplay.Movement
         public void RotateRight() => Move(_activePoint.RightPoint);
         public void RotateLeft() => Move(_activePoint.LeftPoint);
         public void MoveBack() => Move(_activePoint.BackPoint);
+
+        public void BlockControls()
+        {
+            _cursorService.EnableCursorState(ECursorState.Transition);
+            _blockView.Block();
+        }
+
+        public void UnblockControls()
+        {
+            _cursorService.DisableCursorState(ECursorState.Transition);
+            _blockView.Unblock();
+        }
         
         public void Move(MovementPoint point)
         {
