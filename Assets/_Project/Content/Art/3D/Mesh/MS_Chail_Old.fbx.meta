@@ -3,7 +3,12 @@ guid: 553d18d5b0310cf47822e47184735f8a
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: T_Chair_Wood_Old
+    second: {fileID: 2100000, guid: b3a718af5c454d54d8fc2f111bbdda23, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

@@ -9,6 +9,7 @@ namespace Project.Gameplay.Interactables
     public class PickupItemInteractable : InteractableObjectWithCursor
     {
         [SerializeField] private InventoryItemConfig _itemConfig;
+        [SerializeField] private GameObject _destroyObject;
 
         private InventoryModel _inventory;
 
@@ -25,7 +26,12 @@ namespace Project.Gameplay.Interactables
         {
             _inventory.AddItem(_itemConfig);
             AudioSystem.Game_PickupItem.PlayOneShot();
-            Destroy(gameObject);
+            AfterInteract();
+        }
+
+        protected virtual void AfterInteract()
+        {
+            Destroy(_destroyObject);
         }
     }
 }

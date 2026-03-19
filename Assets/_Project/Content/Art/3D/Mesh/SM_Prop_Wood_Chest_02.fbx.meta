@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 62ddcdfaae9673e46aa6dc3533e4fd24
+guid: e0c2ed98ed2e04e418da4675b22f899c
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
@@ -7,18 +7,8 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: T_Concrete
-    second: {fileID: 2100000, guid: ee53a85d772790740bf326e41da20825, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: T_Floor_Wood_Old
-    second: {fileID: 2100000, guid: b33f52c4f7051464ca94662f38d2ebd4, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: T_Wood_Planks_0
-    second: {fileID: 2100000, guid: 2f8f99e84ddd71d47b4a997ce269fab4, type: 2}
+      name: WOOD_TS_PANEL_GLOSS_OLD
+    second: {fileID: 2100000, guid: 2591861b6b1681f418aedd816ce69896, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -61,7 +51,7 @@ ModelImporter:
     nodeNameCollisionStrategy: 1
     fileIdsGeneration: 2
     swapUVChannels: 0
-    generateSecondaryUV: 1
+    generateSecondaryUV: 0
     useFileUnits: 1
     keepQuads: 0
     weldVertices: 1

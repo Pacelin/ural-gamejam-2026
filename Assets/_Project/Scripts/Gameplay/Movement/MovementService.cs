@@ -73,7 +73,14 @@ namespace Project.Gameplay.Movement
                 _blockView.Block();
                 
                 _activePoint.gameObject.SetActive(false);
+                foreach (var p in _activePoint.ActiveWhenOnPoint)
+                    if (p)
+                        p.gameObject.SetActive(false);
+    
                 point.gameObject.SetActive(true);
+                foreach (var p in point.ActiveWhenOnPoint)
+                    if (p)
+                        p.SetActive(true);
                 
                 _controlView.UpdateControlsFor(point);
 
@@ -96,7 +103,13 @@ namespace Project.Gameplay.Movement
                 _blockView.Block();
                 
                 _activePoint.gameObject.SetActive(false);
+                foreach (var p in _activePoint.ActiveWhenOnPoint)
+                    if (p)
+                        p.gameObject.SetActive(false);
                 point.gameObject.SetActive(true);
+                foreach (var p in point.ActiveWhenOnPoint)
+                    if (p)
+                        p.SetActive(true);
                 
                 _controlView.UpdateControlsFor(point);
 

@@ -44,8 +44,9 @@ namespace Project.Gameplay.Inventory
         public void DestroyItem()
         {
             _textController.OnDestroyItem(_item);
-            Object.Destroy(_view.gameObject);
+            Object.Destroy(_itemView.gameObject);
         } 
+        
         private void OnExitItem(PointerEventData eventData) => _textController.SetHover(null);
         private void OnEnterItem(PointerEventData eventData) => _textController.SetHover(_item);
     }
