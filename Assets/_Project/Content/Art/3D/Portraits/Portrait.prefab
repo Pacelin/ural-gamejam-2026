@@ -613,7 +613,7 @@ GameObject:
   - component: {fileID: 5457515660309545627}
   - component: {fileID: 5558491475650025807}
   m_Layer: 0
-  m_Name: Interact
+  m_Name: Look_On_Frame
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -713,7 +713,7 @@ GameObject:
   - component: {fileID: 7405932336574559310}
   - component: {fileID: 9112132126264812455}
   m_Layer: 0
-  m_Name: Interact
+  m_Name: Puzzle_Interact
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -768,6 +768,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Project.Gameplay.Interactables.SortingPuzzleItemInteractableObject
   _manager: {fileID: 0}
+  _puzzleCounter: {fileID: 0}
   _correctItem: {fileID: 11400000, guid: 4b94ca00cf825d3438acc96e2b5090f3, type: 2}
   _questionText: "\u041C\u0435\u0441\u0442\u043E \u0434\u043B\u044F \u0440\u0430\u043C\u043A\u0438"
   _availableItems:
@@ -780,23 +781,24 @@ MonoBehaviour:
   - {fileID: 2133622454953799713}
   - {fileID: 1344097495400746109}
   - {fileID: 405468672521475940}
-  _emptyObject: {fileID: 1082103647913633070}
-  _pickupSound:
-    _eventRef:
-      Guid:
-        Data1: -947825183
-        Data2: 1195424432
-        Data3: 438572930
-        Data4: -721581957
-      Path: event:/Game/Pickups/Wood
-  _dropSound:
-    _eventRef:
-      Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
+  _initialItem: {fileID: 0}
+  _onPut:
+    _activate: []
+    _deactivate:
+    - {fileID: 1082103647913633070}
+    _destroy: []
+    _locks: []
+  _onTake:
+    _activate:
+    - {fileID: 1082103647913633070}
+    _deactivate: []
+    _destroy: []
+    _locks: []
+  _onComplete:
+    _activate: []
+    _deactivate: []
+    _destroy: []
+    _locks: []
 --- !u!1 &7883332006911494592
 GameObject:
   m_ObjectHideFlags: 0

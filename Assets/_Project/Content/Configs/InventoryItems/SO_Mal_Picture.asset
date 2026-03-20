@@ -14,3 +14,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Project.Gameplay.Inventory.InventoryItemConfig
   _icon: {fileID: 21300000, guid: 33413b93e40d6a14195530bf9d2bc612, type: 3}
   _text: "\u041F\u043E\u0440\u0442\u0440\u0435\u0442 \u0431\u0435\u0437 \u0440\u0430\u043C\u043A\u0438"
+  _pickupSound:
+    _eventRef:
+      Guid:
+        Data1: 1641164780
+        Data2: 1267320035
+        Data3: -219452775
+        Data4: 35285274
+      Path: event:/Game/Pickups/Paper
+  _putSound:
+    _eventRef:
+      Guid:
+        Data1: 1641164780
+        Data2: 1267320035
+        Data3: -219452775
+        Data4: 35285274
+      Path: event:/Game/Pickups/Paper

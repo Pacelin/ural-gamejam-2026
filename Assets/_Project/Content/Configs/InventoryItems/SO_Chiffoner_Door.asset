@@ -14,3 +14,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Project.Gameplay.Inventory.InventoryItemConfig
   _icon: {fileID: 21300000, guid: 431e2cf0f3fc4434db29a13efc233cba, type: 3}
   _text: "\u0414\u0432\u0435\u0440\u044C \u0448\u043A\u0430\u0444\u0430"
+  _pickupSound:
+    _eventRef:
+      Guid:
+        Data1: -1511492524
+        Data2: 1210862987
+        Data3: 1106791324
+        Data4: -624966896
+      Path: event:/Game/Doors/ChiffanerPickup
+  _putSound:
+    _eventRef:
+      Guid:
+        Data1: -829063108
+        Data2: 1198634699
+        Data3: 43341245
+        Data4: 1217387080
+      Path: event:/Game/Doors/ChiffanerInstall

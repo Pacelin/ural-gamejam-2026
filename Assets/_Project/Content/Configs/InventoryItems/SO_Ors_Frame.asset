@@ -15,3 +15,19 @@ MonoBehaviour:
   _icon: {fileID: 21300000, guid: 1ed359d9989cb384083259d8ec345a4e, type: 3}
   _text: "\u041F\u043E\u0440\u0442\u0440\u0435\u0442 \"\u041E\u0441\u043D\u043E\u0432\u0430\u0442\u0435\u043B\u044C
     \u0440\u043E\u0434\u0430\""
+  _pickupSound:
+    _eventRef:
+      Guid:
+        Data1: -947825183
+        Data2: 1195424432
+        Data3: 438572930
+        Data4: -721581957
+      Path: event:/Game/Pickups/Wood
+  _putSound:
+    _eventRef:
+      Guid:
+        Data1: -947825183
+        Data2: 1195424432
+        Data3: 438572930
+        Data4: -721581957
+      Path: event:/Game/Pickups/Wood

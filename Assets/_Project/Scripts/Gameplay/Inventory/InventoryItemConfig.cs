@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Plugins.Audio;
+using UnityEngine;
 
 namespace Project.Gameplay.Inventory
 {
@@ -7,8 +8,12 @@ namespace Project.Gameplay.Inventory
     {
         public Sprite Icon => _icon;
         public string Text => _text;
+        public SoundEvent PickupSound => _pickupSound;
+        public SoundEvent PutSound => _putSound;
         
         [SerializeField] private Sprite _icon;
         [SerializeField] private string _text;
+        [SerializeField] private SoundEvent _pickupSound;
+        [SerializeField] private SoundEvent _putSound;
     }
 }
