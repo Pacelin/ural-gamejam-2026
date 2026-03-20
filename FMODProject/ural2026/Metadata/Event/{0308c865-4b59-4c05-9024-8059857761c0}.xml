@@ -65,7 +65,7 @@
 	</object>
 	<object class="EventMixerMaster" id="{71c3a439-534a-4c21-a404-71021383557f}">
 		<property name="volume">
-			<value>-13.5</value>
+			<value>-17.5</value>
 		</property>
 		<relationship name="effectChain">
 			<destination>{1f6e05b3-e93c-4c02-98a8-ea923b169ad6}</destination>
@@ -84,6 +84,9 @@
 		<property name="playlistMode">
 			<value>1</value>
 		</property>
+		<relationship name="fadeInCurve">
+			<destination>{b8f2d2a1-5abd-4877-8220-8016f08f07e7}</destination>
+		</relationship>
 		<relationship name="sounds">
 			<destination>{56867505-bd79-448d-95f5-4a765ce210c3}</destination>
 			<destination>{190bb7a9-97e8-445f-9338-c036cebcf83f}</destination>
@@ -103,6 +106,14 @@
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{bd937c3c-c4e3-4530-aa80-917bca7690cd}" />
+	<object class="FadeCurve" id="{b8f2d2a1-5abd-4877-8220-8016f08f07e7}">
+		<relationship name="startPoint">
+			<destination>{ef128d94-078c-45d4-91d0-ba055dfdef06}</destination>
+		</relationship>
+		<relationship name="endPoint">
+			<destination>{a8f02245-68a7-4023-977d-6bacb5e9fc9d}</destination>
+		</relationship>
+	</object>
 	<object class="SingleSound" id="{56867505-bd79-448d-95f5-4a765ce210c3}">
 		<relationship name="audioFile">
 			<destination>{110b07b5-cfa1-4171-8120-73bdc21d63a0}</destination>
@@ -125,4 +136,23 @@
 	</object>
 	<object class="MixerBusFader" id="{70769165-112d-47f5-bfa7-3f14397a52fe}" />
 	<object class="MixerBusFader" id="{740d190a-895a-4373-a9ba-e70bbe30fc2e}" />
+	<object class="AutomationPoint" id="{ef128d94-078c-45d4-91d0-ba055dfdef06}">
+		<property name="position">
+			<value>0</value>
+		</property>
+		<property name="value">
+			<value>0</value>
+		</property>
+		<property name="curveShape">
+			<value>-0.2547189</value>
+		</property>
+	</object>
+	<object class="AutomationPoint" id="{a8f02245-68a7-4023-977d-6bacb5e9fc9d}">
+		<property name="position">
+			<value>0.53000000000000003</value>
+		</property>
+		<property name="value">
+			<value>1</value>
+		</property>
+	</object>
 </objects>

@@ -65,7 +65,7 @@
 	</object>
 	<object class="EventMixerMaster" id="{e4ed1183-92ce-4a69-ba45-2f5fd9cbe25e}">
 		<property name="volume">
-			<value>-12</value>
+			<value>-17.5</value>
 		</property>
 		<relationship name="effectChain">
 			<destination>{c247e035-b1f0-479f-8c27-a8216aa74c4d}</destination>
@@ -84,6 +84,9 @@
 		<property name="playlistMode">
 			<value>1</value>
 		</property>
+		<relationship name="fadeOutCurve">
+			<destination>{9556967c-f787-44d6-8c67-0d47b52cd689}</destination>
+		</relationship>
 		<relationship name="sounds">
 			<destination>{21bb4104-51a4-403c-a77a-57db07ace558}</destination>
 			<destination>{611eb3ee-474f-4460-beb8-2dfc45db5fcc}</destination>
@@ -103,6 +106,14 @@
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{641347de-1990-49f1-a2e1-4c2ea77a0160}" />
+	<object class="FadeCurve" id="{9556967c-f787-44d6-8c67-0d47b52cd689}">
+		<relationship name="startPoint">
+			<destination>{8572f730-0834-4c2f-af5c-41f08a151145}</destination>
+		</relationship>
+		<relationship name="endPoint">
+			<destination>{fed3c03b-80ff-4dcf-89e5-459db3063add}</destination>
+		</relationship>
+	</object>
 	<object class="SingleSound" id="{21bb4104-51a4-403c-a77a-57db07ace558}">
 		<relationship name="audioFile">
 			<destination>{04a1eaaa-b64b-476d-9daa-97bea0a7f1fc}</destination>
@@ -125,4 +136,23 @@
 	</object>
 	<object class="MixerBusFader" id="{674b9898-29cc-4e13-921b-8f5c620722ca}" />
 	<object class="MixerBusFader" id="{2b903eef-55d4-4c52-988c-69578bac0310}" />
+	<object class="AutomationPoint" id="{8572f730-0834-4c2f-af5c-41f08a151145}">
+		<property name="position">
+			<value>0.79000000000000004</value>
+		</property>
+		<property name="value">
+			<value>1</value>
+		</property>
+		<property name="curveShape">
+			<value>0.25471893</value>
+		</property>
+	</object>
+	<object class="AutomationPoint" id="{fed3c03b-80ff-4dcf-89e5-459db3063add}">
+		<property name="position">
+			<value>1.2000000000000002</value>
+		</property>
+		<property name="value">
+			<value>0</value>
+		</property>
+	</object>
 </objects>
