@@ -62,7 +62,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2889994292042144857, guid: cb886ef2401fd5e4b81743ade977c068, type: 2}
+  - {fileID: -1291140432390571434, guid: 082e49856ebe4d74789713cc94797bf4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -109,8 +109,8 @@ MonoBehaviour:
   m_text: "\u041E\u0440\u0441 \u0412\u0435\u0440\u0435\u0439\u0441\u043A\u0438\u0445\n1765
     \u0433"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: cb886ef2401fd5e4b81743ade977c068, type: 2}
-  m_sharedMaterial: {fileID: 2889994292042144857, guid: cb886ef2401fd5e4b81743ade977c068, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 082e49856ebe4d74789713cc94797bf4, type: 2}
+  m_sharedMaterial: {fileID: -1291140432390571434, guid: 082e49856ebe4d74789713cc94797bf4, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -789,6 +789,14 @@ MonoBehaviour:
         Data3: 438572930
         Data4: -721581957
       Path: event:/Game/Pickups/Wood
+  _dropSound:
+    _eventRef:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
 --- !u!1 &7883332006911494592
 GameObject:
   m_ObjectHideFlags: 0

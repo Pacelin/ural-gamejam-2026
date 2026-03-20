@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.03.00">
 	<object class="Event" id="{6db918bb-450a-4eec-8b9c-329df5666dfe}">
 		<property name="name">
-			<value>CabinetOpen</value>
+			<value>PropsDoorOpen</value>
 		</property>
 		<property name="outputFormat">
 			<value>1</value>
@@ -64,6 +64,9 @@
 		</relationship>
 	</object>
 	<object class="EventMixerMaster" id="{ece0e583-34b7-4c99-9d79-9b276601ddd4}">
+		<relationship name="modulators">
+			<destination>{098ef8b5-e8ea-4eb2-abfc-27174f25bd0a}</destination>
+		</relationship>
 		<relationship name="effectChain">
 			<destination>{6f706344-5648-4e1f-abf8-8c872736626d}</destination>
 		</relationship>
@@ -76,7 +79,7 @@
 	</object>
 	<object class="SingleSound" id="{d7c23e09-e142-46ab-9b6b-4b1081b87911}">
 		<property name="length">
-			<value>1.6000000000000001</value>
+			<value>0.60000000000000009</value>
 		</property>
 		<relationship name="fadeOutCurve">
 			<destination>{887fb3d8-ac34-4616-8666-9bca25b6ab10}</destination>
@@ -91,6 +94,17 @@
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{d52be920-7ceb-49a0-9c19-0d939e6c56b4}" />
+	<object class="RandomizerModulator" id="{098ef8b5-e8ea-4eb2-abfc-27174f25bd0a}">
+		<property name="nameOfPropertyBeingModulated">
+			<value>pitch</value>
+		</property>
+		<property name="clockSource">
+			<value>1</value>
+		</property>
+		<property name="amount">
+			<value>10.416666</value>
+		</property>
+	</object>
 	<object class="MixerBusEffectChain" id="{6f706344-5648-4e1f-abf8-8c872736626d}">
 		<relationship name="effects">
 			<destination>{6213f586-5b62-441d-8cba-ec0cd53a6347}</destination>
@@ -109,18 +123,18 @@
 	<object class="MixerBusFader" id="{6213f586-5b62-441d-8cba-ec0cd53a6347}" />
 	<object class="AutomationPoint" id="{989ad733-b4c9-42c4-972e-f2d984d1d4ae}">
 		<property name="position">
-			<value>0.80000000000000004</value>
+			<value>0.25000000000000011</value>
 		</property>
 		<property name="value">
 			<value>1</value>
 		</property>
 		<property name="curveShape">
-			<value>0.25471893</value>
+			<value>-0.0155283064</value>
 		</property>
 	</object>
 	<object class="AutomationPoint" id="{a1fa820d-d560-431d-937a-c58789ba46f5}">
 		<property name="position">
-			<value>1.6000000000000001</value>
+			<value>0.60000000000000009</value>
 		</property>
 		<property name="value">
 			<value>0</value>

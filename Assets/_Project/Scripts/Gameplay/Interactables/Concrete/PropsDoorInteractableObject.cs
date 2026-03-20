@@ -19,6 +19,8 @@ namespace Project.Gameplay.Interactables
         
         private bool _opened;
         
+        private void OnDestroy() => _doorOrigin.DOKill();
+        
         protected override void OnInteract()
         {
             DOTween.Kill(_doorOrigin);
@@ -26,12 +28,14 @@ namespace Project.Gameplay.Interactables
             {
                 _opened = false;
                 _doorOrigin.DORotateQuaternion(_closedPoint.rotation, _openCloseDuration);
+                _doorOrigin.DOMove(_closedPoint.position, _openCloseDuration);
                 _closeSound.PlayOneShotInPoint(_doorOrigin.position);
             }
             else
             {
                 _opened = true;
                 _doorOrigin.DORotateQuaternion(_openedPoint.rotation, _openCloseDuration);
+                _doorOrigin.DOMove(_openedPoint.position, _openCloseDuration);
                 _openSound.PlayOneShotInPoint(_doorOrigin.position);
             }
         }

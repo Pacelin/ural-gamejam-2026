@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.03.00">
 	<object class="Event" id="{44294071-41e9-4b3c-8f78-bde025a61519}">
 		<property name="name">
-			<value>SmallBoxUnlock</value>
+			<value>PropsUnlock</value>
 		</property>
 		<property name="outputFormat">
 			<value>1</value>
@@ -65,7 +65,7 @@
 	</object>
 	<object class="EventMixerMaster" id="{6303b751-a2a3-4fa6-b5e1-b7743fa236e5}">
 		<property name="volume">
-			<value>-6</value>
+			<value>-10</value>
 		</property>
 		<relationship name="effectChain">
 			<destination>{9031e091-afd1-4a37-a112-fe2d9d1b63b5}</destination>
