@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.03.00">
 	<object class="AudioFile" id="{cfba4e2f-ecde-46ed-8818-2f7c595b55a9}">
 		<property name="assetPath">
-			<value>door_thump.wav</value>
+			<value>PutIn.wav</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>48</value>
