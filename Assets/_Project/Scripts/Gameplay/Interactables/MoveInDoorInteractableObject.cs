@@ -1,4 +1,5 @@
-﻿using Project.Gameplay.Misc;
+﻿using Plugins.Audio;
+using Project.Gameplay.Misc;
 using Project.Gameplay.Movement;
 using UnityEngine;
 using VContainer;
@@ -12,6 +13,7 @@ namespace Project.Gameplay.Interactables
 
         [SerializeField] private MovementPoint _point;
         [SerializeField] private Transform _door;
+        [SerializeField] private SoundEvent _moveSound;
 
         private MovementService _movementService;
         
@@ -34,7 +36,7 @@ namespace Project.Gameplay.Interactables
 
         protected override void OnInteract()
         {
-            _movementService.MoveInDoor(_point, _door.position);
+            _movementService.MoveInDoor(_point, _door.position, _moveSound);
         }
     }
 }

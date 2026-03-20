@@ -74,7 +74,7 @@ namespace Project.Gameplay.Inventory
             UpdatePosition();
             _textController.SetHold(_draggingItem);
             _cursorService.EnableCursorState(ECursorState.HoldInventoryItem);
-            AudioSystem.Game_GrabInventory.PlayOneShot();
+            AudioSystem.Game_Misc_GrabInventory.PlayOneShot();
         }
 
         public void OnDrag(PointerEventData eventData)
@@ -105,7 +105,7 @@ namespace Project.Gameplay.Inventory
             _isDragging = false;
             _textController.SetHold(null);
             _cursorService.DisableCursorState(ECursorState.HoldInventoryItem);
-            AudioSystem.Game_DropInventory.PlayOneShot();
+            AudioSystem.Game_Misc_DropInventory.PlayOneShot();
         }
 
         private void OnUpdate()

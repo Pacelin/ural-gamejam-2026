@@ -10,6 +10,7 @@ namespace Project.Gameplay.Interactables
     {
         [SerializeField] private InventoryItemConfig _itemConfig;
         [SerializeField] private GameObject _destroyObject;
+        [SerializeField] private SoundEvent _pickupSound;
 
         private InventoryModel _inventory;
 
@@ -25,7 +26,7 @@ namespace Project.Gameplay.Interactables
         protected override void OnInteract()
         {
             _inventory.AddItem(_itemConfig);
-            AudioSystem.Game_PickupItem.PlayOneShot();
+            _pickupSound.PlayOneShot();
             AfterInteract();
         }
 

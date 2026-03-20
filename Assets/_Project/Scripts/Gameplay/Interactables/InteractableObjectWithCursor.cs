@@ -53,7 +53,7 @@ namespace Project.Gameplay.Interactables
             UpdateCursor();
         }
 
-        private void UpdateCursor()
+        protected void UpdateCursor()
         {
             var newCursor = ECursorState.None;
             if (_hover)

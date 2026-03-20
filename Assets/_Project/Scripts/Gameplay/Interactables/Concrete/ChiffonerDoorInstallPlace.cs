@@ -1,4 +1,5 @@
-﻿using Project.Gameplay.Inventory;
+﻿using Plugins.Audio;
+using Project.Gameplay.Inventory;
 using UnityEngine;
 using VContainer;
 
@@ -22,6 +23,7 @@ namespace Project.Gameplay.Interactables
         {
             _door.gameObject.SetActive(true);
             _inventory.RemoveItem(item);
+            AudioSystem.Game_Doors_ChiffanerInstall.PlayOneShotInPoint(_door.transform.position);
             Destroy(gameObject);
         }
     }
