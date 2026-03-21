@@ -180,7 +180,7 @@ MonoBehaviour:
         Data3: -296707178
         Data4: 445664429
       Path: event:/Game/Doors/PropsSlideClose
-  _openCloseDuration: 0.4
+  _openCloseDuration: 0.8
   _onOpen:
     _activate: []
     _deactivate: []
@@ -278,7 +278,7 @@ MonoBehaviour:
         Data3: -296707178
         Data4: 445664429
       Path: event:/Game/Doors/PropsSlideClose
-  _openCloseDuration: 0.4
+  _openCloseDuration: 0.8
   _onOpen:
     _activate: []
     _deactivate: []
@@ -566,7 +566,7 @@ MonoBehaviour:
         Data3: -296707178
         Data4: 445664429
       Path: event:/Game/Doors/PropsSlideClose
-  _openCloseDuration: 0.4
+  _openCloseDuration: 0.8
   _onOpen:
     _activate: []
     _deactivate: []
@@ -801,7 +801,7 @@ MonoBehaviour:
         Data3: -296707178
         Data4: 445664429
       Path: event:/Game/Doors/PropsSlideClose
-  _openCloseDuration: 0.4
+  _openCloseDuration: 0.8
   _onOpen:
     _activate: []
     _deactivate: []

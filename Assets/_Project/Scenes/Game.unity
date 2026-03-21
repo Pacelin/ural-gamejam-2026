@@ -3700,6 +3700,26 @@ PrefabInstance:
       propertyPath: '_activeWhenOnPoint.Array.data[7]'
       value: 
       objectReference: {fileID: 1576722106}
+    - target: {fileID: 947184946921640398, guid: c10539ae55b4a0f46a9571c9b32116ee, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.8708123
+      objectReference: {fileID: 0}
+    - target: {fileID: 947184946921640398, guid: c10539ae55b4a0f46a9571c9b32116ee, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.0380205
+      objectReference: {fileID: 0}
+    - target: {fileID: 947184946921640398, guid: c10539ae55b4a0f46a9571c9b32116ee, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.48967674
+      objectReference: {fileID: 0}
+    - target: {fileID: 947184946921640398, guid: c10539ae55b4a0f46a9571c9b32116ee, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.021379756
+      objectReference: {fileID: 0}
+    - target: {fileID: 947184946921640398, guid: c10539ae55b4a0f46a9571c9b32116ee, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 58.7
+      objectReference: {fileID: 0}
     - target: {fileID: 986188114327800713, guid: c10539ae55b4a0f46a9571c9b32116ee, type: 3}
       propertyPath: _activeWhenOnPoint.Array.size
       value: 2
@@ -11289,7 +11309,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Project.Gameplay.Interactables.LookInteractableObject
   _manager: {fileID: 1684804566}
-  _point: {fileID: 1842396636}
+  _point: {fileID: 1100519955}
   _useMoveSound: 0
 --- !u!4 &758072135
 Transform:
@@ -19103,6 +19123,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c10539ae55b4a0f46a9571c9b32116ee, type: 3}
+--- !u!114 &1100519955 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 986188114327800713, guid: c10539ae55b4a0f46a9571c9b32116ee, type: 3}
+  m_PrefabInstance: {fileID: 1100519954}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91bd580f66ae4d33880c8ff56d4f36c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Project.Gameplay.Movement.MovementPoint
 --- !u!1001 &1101130318
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -29680,7 +29711,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 220}
+  m_SizeDelta: {x: 0, y: 120}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &1774893555
 MonoBehaviour:
@@ -35789,11 +35820,7 @@ MonoBehaviour:
     TypeName: Project.Gameplay.Misc.CursorServiceLifetimeScope
   autoRun: 1
   autoInjectGameObjects: []
-  _initialItems:
-  - {fileID: 11400000, guid: c3e24126d6473ab48a0f095115702299, type: 2}
-  - {fileID: 11400000, guid: 18c731af0e99e7345b1ebc04342c2470, type: 2}
-  - {fileID: 11400000, guid: c418434b77075be448f59b904858b7a1, type: 2}
-  - {fileID: 11400000, guid: 17c33a47826c76548b99aeb2e7c5936e, type: 2}
+  _initialItems: []
   _inventoryView: {fileID: 4055657758760285983}
 --- !u!1 &1933287772
 GameObject:
@@ -47772,6 +47799,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4484172903051697224, guid: 9851c021c4c87074ea52ad7ba975763b, type: 3}
+      propertyPath: _manager
+      value: 
+      objectReference: {fileID: 1684804566}
+    - target: {fileID: 4484172903051697224, guid: 9851c021c4c87074ea52ad7ba975763b, type: 3}
+      propertyPath: _openCloseDuration
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4568058949642708873, guid: 9851c021c4c87074ea52ad7ba975763b, type: 3}
+      propertyPath: _manager
+      value: 
+      objectReference: {fileID: 1684804566}
+    - target: {fileID: 4568058949642708873, guid: 9851c021c4c87074ea52ad7ba975763b, type: 3}
+      propertyPath: _openCloseDuration
+      value: 0.8
+      objectReference: {fileID: 0}
     - target: {fileID: 5121356372236671817, guid: 9851c021c4c87074ea52ad7ba975763b, type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
@@ -47783,6 +47826,14 @@ PrefabInstance:
     - target: {fileID: 5121356372236671817, guid: 9851c021c4c87074ea52ad7ba975763b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5912042120661224589, guid: 9851c021c4c87074ea52ad7ba975763b, type: 3}
+      propertyPath: _manager
+      value: 
+      objectReference: {fileID: 1684804566}
+    - target: {fileID: 5912042120661224589, guid: 9851c021c4c87074ea52ad7ba975763b, type: 3}
+      propertyPath: _openCloseDuration
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 7171833120638954752, guid: 9851c021c4c87074ea52ad7ba975763b, type: 3}
       propertyPath: m_Name
@@ -48853,6 +48904,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2994854459682156281}
     m_Modifications:
+    - target: {fileID: 3598707833444514672, guid: 340c2d8ce62d47340b898a84d75e242c, type: 3}
+      propertyPath: _manager
+      value: 
+      objectReference: {fileID: 1684804566}
     - target: {fileID: 4822147771160483318, guid: 340c2d8ce62d47340b898a84d75e242c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -48992,7 +49047,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6228349457413794672, guid: 340c2d8ce62d47340b898a84d75e242c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7960191584273663027}
   m_SourcePrefab: {fileID: 100100000, guid: 340c2d8ce62d47340b898a84d75e242c, type: 3}
 --- !u!4 &7960191584273663024 stripped
 Transform:
@@ -49009,6 +49067,29 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6228349457413794672, guid: 340c2d8ce62d47340b898a84d75e242c, type: 3}
   m_PrefabInstance: {fileID: 7960191584273663023}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7960191584273663027
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7960191584273663026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b37301801bc14163984c1703ceb188d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Project.Gameplay.Interactables.PropsQuestion
+  _manager: {fileID: 1684804566}
+  _text: "\u041D\u0435 \u0445\u0432\u0430\u0442\u0430\u0435\u0442 \u043F\u043E\u0440\u0442\u0440\u0435\u0442\u0430"
+  _playSoundOnQuestion: 0
+  _sound:
+    _eventRef:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
 --- !u!222 &7977408450274281199
 CanvasRenderer:
   m_ObjectHideFlags: 0
