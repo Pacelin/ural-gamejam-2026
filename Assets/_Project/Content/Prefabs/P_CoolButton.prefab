@@ -462,9 +462,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Project.Core.Misc.CoolButtonAnimation
   _renderer: {fileID: 8288053350124757206}
   _backgroundRenderer: {fileID: 5139490513037232601}
-  _defaultColor: {r: 0.7411765, g: 0.7882353, b: 1, a: 1}
+  _defaultColor: {r: 0.63529414, g: 0.5803922, b: 0.45882353, a: 1}
   _hoverColor: {r: 0.7019608, g: 0.5058824, b: 0.07843138, a: 1}
-  _downColor: {r: 0.7411765, g: 0.7882353, b: 1, a: 1}
+  _downColor: {r: 0.63529414, g: 0.5803922, b: 0.45882353, a: 1}
 --- !u!114 &832954837552620818
 MonoBehaviour:
   m_ObjectHideFlags: 0
