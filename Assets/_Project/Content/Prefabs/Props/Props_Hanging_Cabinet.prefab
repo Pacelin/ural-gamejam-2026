@@ -157,8 +157,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.7000002, y: 0.9999998, z: 0.08777733}
-  m_Center: {x: 0.35, y: 0.49999997, z: 0.04388901}
+  m_Size: {x: 0.7000002, y: 0.9999998, z: 0.027504306}
+  m_Center: {x: 0.34999996, y: 0.49999997, z: 0.013752492}
 --- !u!1 &4549601247340083846
 GameObject:
   m_ObjectHideFlags: 0
@@ -316,8 +316,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.7000002, y: 0.9999998, z: 0.08777733}
-  m_Center: {x: -0.34999952, y: 0.49999997, z: 0.04388901}
+  m_Size: {x: 0.7000002, y: 0.9999998, z: 0.027504222}
+  m_Center: {x: -0.3499995, y: 0.49999997, z: 0.01375245}
 --- !u!1001 &2400351917618229048
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -389,6 +389,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 0d67f50eb602381419662740f57fc0ce, type: 3}
       propertyPath: m_Name
       value: Props_Hanging_Cabinet
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0d67f50eb602381419662740f57fc0ce, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 1273572497918569987, guid: 0d67f50eb602381419662740f57fc0ce, type: 3}
       propertyPath: m_Name

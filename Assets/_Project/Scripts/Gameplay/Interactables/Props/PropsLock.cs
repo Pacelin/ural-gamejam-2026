@@ -19,7 +19,8 @@ namespace Project.Gameplay.Interactables
         [SerializeField] private SoundEvent _lockedSound;
         [SerializeField] private string _text;
         [Space]
-        [SerializeField] private PropsEvents _onUnlock;
+        [SerializeField] private PropsEvents _beforeUnlock;
+        [SerializeField] private PropsEvents _afterUnlock;
         
         private SubtitlesService _subtitlesService;
         
@@ -28,9 +29,10 @@ namespace Project.Gameplay.Interactables
         public void Unlock()
         {
             DOTween.Sequence(_doorOrigin)
+                .AppendCallback(() => _beforeUnlock.Trigger())
                 .Append(_doorOrigin.DORotateQuaternion(_openedPoint.rotation, _openDuration))
                 .Join(_doorOrigin.DOMove(_openedPoint.position, _openDuration))
-                .AppendCallback(() => _onUnlock.Trigger());
+                .AppendCallback(() => _afterUnlock.Trigger());
             _openSound.PlayOneShotInPoint(_doorOrigin.position);
         }
         
@@ -38,7 +40,8 @@ namespace Project.Gameplay.Interactables
         {
             base.Initialize(resolver);
             _subtitlesService = resolver.Resolve<SubtitlesService>();
-            _onUnlock.Prepare();
+            _beforeUnlock.Prepare();
+            _afterUnlock.Prepare();
         }
 
         protected override void OnInteract()

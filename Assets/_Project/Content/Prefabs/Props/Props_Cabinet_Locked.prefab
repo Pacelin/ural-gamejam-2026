@@ -87,6 +87,11 @@ MonoBehaviour:
         Data4: -1159365732
       Path: event:/Game/Doors/PropsLocked
   _text: "\u0417\u0430\u043A\u0440\u044B\u0442\u043E"
+  _onUnlock:
+    _activate: []
+    _deactivate: []
+    _destroy: []
+    _locks: []
 --- !u!1 &7051167079616390883
 GameObject:
   m_ObjectHideFlags: 0
@@ -188,7 +193,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 4242766e1ec67274bbd7bf411ba11c29, type: 3}
       propertyPath: m_Name
-      value: Props_Cabinet
+      value: Props_Cabinet_Locked
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

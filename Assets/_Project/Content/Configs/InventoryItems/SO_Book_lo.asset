@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 358386a3657a42b2814d31c092a37e9e, type: 3}
-  m_Name: SO_Vsemil_Frame
+  m_Name: SO_Book_lo
   m_EditorClassIdentifier: Assembly-CSharp::Project.Gameplay.Inventory.InventoryItemConfig
-  _icon: {fileID: 21300000, guid: 1ed359d9989cb384083259d8ec345a4e, type: 3}
-  _text: "\u041F\u043E\u0440\u0442\u0440\u0435\u0442 \"\u0417\u0430\u043A\u0430\u0442
-    \u0438 \u0431\u0435\u0437\u0443\u043C\u0438\u0435\""
+  _icon: {fileID: 21300000, guid: 33413b93e40d6a14195530bf9d2bc612, type: 3}
+  _text: "\u041A\u043D\u0438\u0433\u0430 \u0441 \u0431\u0443\u043A\u0432\u043E\u0439
+    \"\u042C\""
   _pickupSound:
     _eventRef:
       Guid:
