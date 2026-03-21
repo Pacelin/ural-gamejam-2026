@@ -11,6 +11,7 @@ namespace Project.Gameplay.Interactables
         protected override ECursorState DownCursorState => ECursorState.Eye;
 
         [SerializeField] private MovementPoint _point;
+        [SerializeField] private bool _useMoveSound;
 
         private MovementService _movementService;
         
@@ -22,7 +23,7 @@ namespace Project.Gameplay.Interactables
 
         protected override void OnInteract()
         {
-            _movementService.Move(_point, false);
+            _movementService.Move(_point, _useMoveSound);
         }
     }
 }

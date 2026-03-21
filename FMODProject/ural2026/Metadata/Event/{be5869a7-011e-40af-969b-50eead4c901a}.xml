@@ -56,7 +56,11 @@
 			<destination>{36df5eac-a34e-4f6e-9cfd-2f00c3df2f1a}</destination>
 		</relationship>
 	</object>
-	<object class="EventAutomatableProperties" id="{52e689f9-14cb-4e71-b27e-03474fed1405}" />
+	<object class="EventAutomatableProperties" id="{52e689f9-14cb-4e71-b27e-03474fed1405}">
+		<property name="maximumDistance">
+			<value>10</value>
+		</property>
+	</object>
 	<object class="MarkerTrack" id="{834e7e7b-dc82-42e1-b174-4f1359ecb7c5}" />
 	<object class="Timeline" id="{3021e4f5-f915-4754-a398-045aec0c1247}">
 		<relationship name="modules">
@@ -103,6 +107,7 @@
 	<object class="MixerBusEffectChain" id="{c247e035-b1f0-479f-8c27-a8216aa74c4d}">
 		<relationship name="effects">
 			<destination>{2b903eef-55d4-4c52-988c-69578bac0310}</destination>
+			<destination>{28c9016e-a0a9-467f-b021-ce07289631ad}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{641347de-1990-49f1-a2e1-4c2ea77a0160}" />
@@ -136,6 +141,7 @@
 	</object>
 	<object class="MixerBusFader" id="{674b9898-29cc-4e13-921b-8f5c620722ca}" />
 	<object class="MixerBusFader" id="{2b903eef-55d4-4c52-988c-69578bac0310}" />
+	<object class="ObjectSpatialiserEffect" id="{28c9016e-a0a9-467f-b021-ce07289631ad}" />
 	<object class="AutomationPoint" id="{8572f730-0834-4c2f-af5c-41f08a151145}">
 		<property name="position">
 			<value>0.79000000000000004</value>

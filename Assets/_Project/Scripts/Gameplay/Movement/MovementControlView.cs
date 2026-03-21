@@ -20,7 +20,7 @@ namespace Project.Gameplay.Movement
         {
             _rotateRightControl.gameObject.SetActive(point.RightPoint);
             _rotateLeftControl.gameObject.SetActive(point.LeftPoint);
-            _moveBackControl.gameObject.SetActive(point.BackPoint);
+            _moveBackControl.gameObject.SetActive(point.BackPoint || point.UsePreviousPointWhenBack);
         }
     }
 }

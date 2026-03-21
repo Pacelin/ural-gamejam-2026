@@ -72,6 +72,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6866224004635835427}
   - component: {fileID: 2346515299910164568}
+  - component: {fileID: 894110463147661450}
   m_Layer: 0
   m_Name: Door_Interact
   m_TagString: Untagged
@@ -137,6 +138,27 @@ MonoBehaviour:
     _deactivate: []
     _destroy: []
     _locks: []
+--- !u!65 &894110463147661450
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4493677746617329199}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.90000033, y: 1.6912723, z: 0.13134734}
+  m_Center: {x: 0.4499998, y: 0.8456361, z: 0.06567366}
 --- !u!1001 &5586774548208749005
 PrefabInstance:
   m_ObjectHideFlags: 0

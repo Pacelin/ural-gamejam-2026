@@ -56,7 +56,11 @@
 			<destination>{36df5eac-a34e-4f6e-9cfd-2f00c3df2f1a}</destination>
 		</relationship>
 	</object>
-	<object class="EventAutomatableProperties" id="{465f1bbb-64fe-46cb-8929-8bbc87280552}" />
+	<object class="EventAutomatableProperties" id="{465f1bbb-64fe-46cb-8929-8bbc87280552}">
+		<property name="maximumDistance">
+			<value>10</value>
+		</property>
+	</object>
 	<object class="MarkerTrack" id="{6dd8e73a-0e9b-4a56-9b17-50fcf50ab762}" />
 	<object class="Timeline" id="{00864167-f175-47de-9e9c-4cf6dbb2b653}">
 		<relationship name="modules">
@@ -81,6 +85,9 @@
 		</relationship>
 	</object>
 	<object class="MultiSound" id="{684f644f-31e7-4337-8923-00189343a0c1}">
+		<property name="length">
+			<value>0.57999999999999996</value>
+		</property>
 		<property name="playlistMode">
 			<value>1</value>
 		</property>
@@ -109,6 +116,7 @@
 	<object class="MixerBusEffectChain" id="{6f706344-5648-4e1f-abf8-8c872736626d}">
 		<relationship name="effects">
 			<destination>{6213f586-5b62-441d-8cba-ec0cd53a6347}</destination>
+			<destination>{4f345367-4a25-4812-856e-2b05034e2f4f}</destination>
 			<destination>{bb501c5c-4c5b-4f37-89d8-9be25bfc6b39}</destination>
 		</relationship>
 	</object>
@@ -125,5 +133,6 @@
 	</object>
 	<object class="MixerBusFader" id="{0f81708f-ea38-498d-b232-b9c4af34a8f5}" />
 	<object class="MixerBusFader" id="{6213f586-5b62-441d-8cba-ec0cd53a6347}" />
+	<object class="ObjectSpatialiserEffect" id="{4f345367-4a25-4812-856e-2b05034e2f4f}" />
 	<object class="LowpassSimpleEffect" id="{bb501c5c-4c5b-4f37-89d8-9be25bfc6b39}" />
 </objects>

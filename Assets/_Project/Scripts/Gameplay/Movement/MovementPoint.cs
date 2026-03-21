@@ -8,6 +8,7 @@ namespace Project.Gameplay.Movement
         public MovementPoint RightPoint => _rightPoint;
         public MovementPoint LeftPoint => _leftPoint;
         public MovementPoint BackPoint => _backPoint;
+        public bool UsePreviousPointWhenBack => _usePreviousPointWhenBack;
         public IReadOnlyList<GameObject> ActiveWhenOnPoint => _activeWhenOnPoint;
         public bool UseSoundWhenBack => _useSoundWhenBack;
 
@@ -15,6 +16,7 @@ namespace Project.Gameplay.Movement
         [SerializeField] private MovementPoint _leftPoint;
         [SerializeField] private MovementPoint _backPoint;
         [SerializeField] private bool _useSoundWhenBack = false;
+        [SerializeField] private bool _usePreviousPointWhenBack = false;
         [SerializeField] private GameObject[] _activeWhenOnPoint;
 
         private void Awake()

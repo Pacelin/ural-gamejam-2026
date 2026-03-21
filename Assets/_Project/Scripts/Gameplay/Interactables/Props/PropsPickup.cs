@@ -27,7 +27,7 @@ namespace Project.Gameplay.Interactables
         protected override void OnInteract()
         {
             _inventory.AddItem(_itemConfig);
-            _itemConfig.PickupSound.PlayOneShotInPoint(transform.position);
+            _itemConfig.PickupSound.PlayOneShot();
             _afterPickup.Trigger();
         }
     }

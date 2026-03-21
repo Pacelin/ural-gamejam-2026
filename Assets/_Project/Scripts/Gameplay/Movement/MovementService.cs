@@ -13,6 +13,7 @@ namespace Project.Gameplay.Movement
     public class MovementService : IInitializable, IStartable
     {
         private MovementPoint _activePoint;
+        private MovementPoint _previousPoint;
 
         private readonly CursorService _cursorService;
         private readonly MovementBlockView _blockView;
@@ -52,7 +53,13 @@ namespace Project.Gameplay.Movement
 
         public void RotateRight() => Move(_activePoint.RightPoint);
         public void RotateLeft() => Move(_activePoint.LeftPoint);
-        public void MoveBack() => Move(_activePoint.BackPoint, _activePoint.UseSoundWhenBack);
+        public void MoveBack()
+        {
+            if (_activePoint.UsePreviousPointWhenBack)
+                Move(_previousPoint, _activePoint.UseSoundWhenBack);
+            else
+                Move(_activePoint.BackPoint, _activePoint.UseSoundWhenBack);
+        }
 
         public void BlockControls()
         {
@@ -90,6 +97,7 @@ namespace Project.Gameplay.Movement
                 await MoveTo(pointTransform.position, pointTransform.rotation, useMoveSound, cancellationToken);
 
                 cancellationToken.ThrowIfCancellationRequested();
+                _previousPoint = _activePoint;
                 _activePoint = point;
                 _blockView.Unblock();
                 _cursorService.DisableCursorState(ECursorState.Transition);
@@ -131,6 +139,7 @@ namespace Project.Gameplay.Movement
                 await moveTask;
                 
                 cancellationToken.ThrowIfCancellationRequested();
+                _previousPoint = _activePoint;
                 _activePoint = point;
                 _blockView.Unblock();
                 _cursorService.DisableCursorState(ECursorState.Transition);

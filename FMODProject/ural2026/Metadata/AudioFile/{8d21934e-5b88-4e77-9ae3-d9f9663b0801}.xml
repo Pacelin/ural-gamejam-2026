@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="AudioFile" id="{8d21934e-5b88-4e77-9ae3-d9f9663b0801}">
+		<property name="assetPath">
+			<value>teijaorgjiar.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>96</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>157.54666666666665</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{45c282e8-9be0-47d3-ab7a-b976823d5327}</destination>
+		</relationship>
+	</object>
+</objects>
