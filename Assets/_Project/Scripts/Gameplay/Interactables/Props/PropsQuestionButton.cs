@@ -12,7 +12,8 @@ namespace Project.Gameplay.Interactables
         protected override ECursorState DownCursorState => ECursorState.DownPointer;
 
         [SerializeField] private string _text;
-        [SerializeField] private SoundEvent _sound;
+        [SerializeField] private SoundEvent _downSound;
+        [SerializeField] private SoundEvent _upSound;
 
         private SubtitlesService _service;
         
@@ -30,7 +31,13 @@ namespace Project.Gameplay.Interactables
         public override void OnPointerDown(PointerEventData eventData)
         {
             base.OnPointerDown(eventData);
-            _sound.PlayOneShotInPoint(transform.position);
+            _downSound.PlayOneShotInPoint(transform.position);
+        }
+
+        public override void OnPointerUp(PointerEventData eventData)
+        {
+            base.OnPointerUp(eventData);
+            _upSound.PlayOneShotInPoint(transform.position);
         }
     }
 }
