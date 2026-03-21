@@ -41,13 +41,13 @@ namespace Project.Gameplay.Interactables
             UpdateCursor();
         }
 
-        public void OnPointerDown(PointerEventData eventData)
+        public virtual void OnPointerDown(PointerEventData eventData)
         {
             _down = true;
             UpdateCursor();
         }
 
-        public void OnPointerUp(PointerEventData eventData)
+        public virtual void OnPointerUp(PointerEventData eventData)
         {
             _down = false;
             UpdateCursor();

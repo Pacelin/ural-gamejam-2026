@@ -123,7 +123,8 @@ Transform:
   m_LocalPosition: {x: 0.0000002682209, y: 0, z: 9.313226e-10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 714130941092445642}
   m_Father: {fileID: 6029508483580480817}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &7603703824899283112
@@ -220,7 +221,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1186971569271638279}
   m_Father: {fileID: 8363525436148741418}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &4166378142773747174
@@ -507,7 +509,8 @@ Transform:
   m_LocalPosition: {x: 0.0000002682209, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 5492296372714344800}
   m_Father: {fileID: 4870442206641506723}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &7717550033453783454
@@ -604,7 +607,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 8363525436148741418}
+  m_Father: {fileID: 6024564810224802708}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &3269818045167741715
 BoxCollider:
@@ -657,7 +660,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 6029508483580480817}
+  m_Father: {fileID: 5653351602406735064}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &5448019475813340616
 BoxCollider:
@@ -741,7 +744,8 @@ Transform:
   m_LocalPosition: {x: 0.0000002682209, y: 0, z: -0.000000029802322}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 2613948067836830502}
   m_Father: {fileID: 5634153400407776880}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &4451661114276458429
@@ -869,7 +873,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 4870442206641506723}
+  m_Father: {fileID: 1619730275047640597}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &5151168192217376009
 BoxCollider:
@@ -922,7 +926,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 5634153400407776880}
+  m_Father: {fileID: 8889590851150965390}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &2686723829020395522
 BoxCollider:
@@ -1122,27 +1126,15 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -8094683087125266776, guid: 8d9454e7dfbc17f45b0b1dc7499e571c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 6024564810224802708}
-    - targetCorrespondingSourceObject: {fileID: -8094683087125266776, guid: 8d9454e7dfbc17f45b0b1dc7499e571c, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1186971569271638279}
     - targetCorrespondingSourceObject: {fileID: 4048621638435996193, guid: 8d9454e7dfbc17f45b0b1dc7499e571c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1619730275047640597}
-    - targetCorrespondingSourceObject: {fileID: 4048621638435996193, guid: 8d9454e7dfbc17f45b0b1dc7499e571c, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 5492296372714344800}
     - targetCorrespondingSourceObject: {fileID: -6334945606131579213, guid: 8d9454e7dfbc17f45b0b1dc7499e571c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 5653351602406735064}
-    - targetCorrespondingSourceObject: {fileID: -6334945606131579213, guid: 8d9454e7dfbc17f45b0b1dc7499e571c, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 714130941092445642}
     - targetCorrespondingSourceObject: {fileID: -5365944232450025998, guid: 8d9454e7dfbc17f45b0b1dc7499e571c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 8889590851150965390}
-    - targetCorrespondingSourceObject: {fileID: -5365944232450025998, guid: 8d9454e7dfbc17f45b0b1dc7499e571c, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2613948067836830502}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8d9454e7dfbc17f45b0b1dc7499e571c, type: 3}
 --- !u!4 &3605370231051457448 stripped
