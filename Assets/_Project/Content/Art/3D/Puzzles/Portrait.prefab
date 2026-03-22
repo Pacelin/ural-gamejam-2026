@@ -34,8 +34,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -0.392}
-  m_SizeDelta: {x: 0.35, y: 0.14}
+  m_AnchoredPosition: {x: 0, y: -0.38}
+  m_SizeDelta: {x: 0.35, y: 0.17}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!23 &5268560096711189389
 MeshRenderer:
@@ -116,8 +116,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4286753462
+  m_fontColor: {r: 0.7132075, g: 0.66643345, b: 0.51001066, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -134,12 +134,12 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 0.5
+  m_fontSize: 0.7
   m_fontSizeBase: 0.5
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 0.5
+  m_fontSizeMax: 0.7
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -560,6 +560,7 @@ MonoBehaviour:
   _leftPoint: {fileID: 0}
   _backPoint: {fileID: 0}
   _useSoundWhenBack: 0
+  _usePreviousPointWhenBack: 0
   _activeWhenOnPoint: []
 --- !u!1 &3797423784985480190
 GameObject:
@@ -648,6 +649,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Project.Gameplay.Interactables.LookInteractableObject
   _manager: {fileID: 0}
   _point: {fileID: 5360130459221135173}
+  _useMoveSound: 0
 --- !u!65 &5558491475650025807
 BoxCollider:
   m_ObjectHideFlags: 0
