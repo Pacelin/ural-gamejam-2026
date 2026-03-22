@@ -1,6 +1,4 @@
-﻿using System;
-using System.Linq;
-using Project.Gameplay.Inventory;
+﻿using Project.Gameplay.Inventory;
 using Project.Gameplay.Misc;
 using UnityEngine;
 using VContainer;

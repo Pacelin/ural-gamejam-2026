@@ -21,6 +21,11 @@ namespace Project.Gameplay.Interactables
         [Space]
         [SerializeField] private PropsEvents _onOpen;
         [SerializeField] private PropsEvents _onClose;
+        [Space]
+        [SerializeField] private bool _useOtherCloseDuration = false;
+        [SerializeField] private float _otherCloseDuration;
+        [SerializeField] private bool _useCustomEaseOnClose = false;
+        [SerializeField] private Ease _customEase = Ease.OutBounce;
         
         private bool _opened;
 
@@ -38,9 +43,13 @@ namespace Project.Gameplay.Interactables
             if (_opened)
             {
                 _opened = false;
+                var duration = _useOtherCloseDuration ? _otherCloseDuration : _openCloseDuration;
+                var ease = _useCustomEaseOnClose ? _customEase : Ease.InQuad;
                 DOTween.Sequence(_doorOrigin)
-                    .Append(_doorOrigin.DORotateQuaternion(_closedPoint.rotation, _openCloseDuration))
-                    .Join(_doorOrigin.DOMove(_closedPoint.position, _openCloseDuration))
+                    .Append(_doorOrigin.DORotateQuaternion(_closedPoint.rotation, duration)
+                        .SetEase(ease))
+                    .Join(_doorOrigin.DOMove(_closedPoint.position, duration)
+                        .SetEase(ease))
                     .AppendCallback(() => _onClose.Trigger());
                 _closeSound.PlayOneShotInPoint(_doorOrigin.position);
             }
