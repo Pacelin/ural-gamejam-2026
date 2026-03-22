@@ -1,7 +1,6 @@
 ﻿#if UNITY_EDITOR
 using UnityEditor;
 using UnityEngine;
-#endif
 
 namespace Project.Editor
 {
@@ -15,7 +14,6 @@ namespace Project.Editor
         [SerializeField] private Vector3[] _originalPositions;
         [SerializeField] private Quaternion[] _originalRotations;
         
-#if UNITY_EDITOR
         [ContextMenu("Start Simulation")]
         private void StartSimulation()
         {
@@ -58,6 +56,6 @@ namespace Project.Editor
             Physics.Simulate(_timeStep);
             SceneView.RepaintAll();
         }
-#endif
     }
 }
+#endif

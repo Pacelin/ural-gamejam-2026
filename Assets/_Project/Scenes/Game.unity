@@ -1257,7 +1257,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 7.214913e+22, y: -1.968926e-16, z: 5.9e-43, w: 8e-44}
+  m_BoundingSphereOverride: {x: 3.8518603e-34, y: 6.3108872e-30, z: 0, w: 4.5918e-41}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ForceVisible: 0
@@ -2789,7 +2789,7 @@ Light:
   m_BounceIntensity: 3
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 1.7409433e+25, y: 4.0706433e+31, z: 9.315733e-39, w: 7.1853964e+22}
+  m_BoundingSphereOverride: {x: 0, y: 2.3509887e-38, z: 2.910827e-11, w: 7.036877e+13}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ForceVisible: 0
@@ -11404,11 +11404,11 @@ PrefabInstance:
       objectReference: {fileID: 476404488}
     - target: {fileID: 4834322320520257252, guid: c10539ae55b4a0f46a9571c9b32116ee, type: 3}
       propertyPath: _useSoundWhenBack
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4834322320520257252, guid: c10539ae55b4a0f46a9571c9b32116ee, type: 3}
       propertyPath: _usePreviousPointWhenBack
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4834322320520257252, guid: c10539ae55b4a0f46a9571c9b32116ee, type: 3}
       propertyPath: _activeWhenOnPoint.Array.size
@@ -36465,8 +36465,7 @@ MonoBehaviour:
     TypeName: Project.Gameplay.Misc.CursorServiceLifetimeScope
   autoRun: 1
   autoInjectGameObjects: []
-  _initialItems:
-  - {fileID: 11400000, guid: 6919f830b544a5448b403ab3075d05c2, type: 2}
+  _initialItems: []
   _inventoryView: {fileID: 4055657758760285983}
 --- !u!1 &1933287772
 GameObject:
@@ -47025,6 +47024,15 @@ MonoBehaviour:
         Data4: 104140723
       Path: event:/Game/Misc/LukeUp
   _lukeSoundPoint: {fileID: 680694380}
+  _onFinish:
+    _activate: []
+    _deactivate: []
+    _destroy:
+    - {fileID: 978028769}
+    - {fileID: 1471698377}
+    - {fileID: 1391952660}
+    _locks: []
+    _activators: []
 --- !u!224 &4227489516081937672
 RectTransform:
   m_ObjectHideFlags: 0
@@ -50722,6 +50730,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 945438500}
     m_Modifications:
+    - target: {fileID: 4273485991273459334, guid: d5a7bb4922e37cf4180eae7b7f0cbb46, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5081057239113484260, guid: d5a7bb4922e37cf4180eae7b7f0cbb46, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.1000005
@@ -50774,6 +50786,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5383784791537127027, guid: d5a7bb4922e37cf4180eae7b7f0cbb46, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5604828760868724062, guid: d5a7bb4922e37cf4180eae7b7f0cbb46, type: 3}
       propertyPath: m_Name
       value: Pickup_Book_lo
@@ -50781,6 +50797,10 @@ PrefabInstance:
     - target: {fileID: 5604828760868724062, guid: d5a7bb4922e37cf4180eae7b7f0cbb46, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5604828760868724062, guid: d5a7bb4922e37cf4180eae7b7f0cbb46, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8248383516484007820, guid: d5a7bb4922e37cf4180eae7b7f0cbb46, type: 3}
       propertyPath: _manager

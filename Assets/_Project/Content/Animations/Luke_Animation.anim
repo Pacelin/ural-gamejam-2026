@@ -136439,13 +136439,6 @@ AnimationClip:
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 2
-    functionName: StopMusic
-    data: 
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 0
   - time: 3.6666667
     functionName: PlaySecondValveSqueak
     data: 
@@ -136469,6 +136462,13 @@ AnimationClip:
     messageOptions: 0
   - time: 10.25
     functionName: PlayLukeSmallUp
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 10.816667
+    functionName: StopMusic
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0

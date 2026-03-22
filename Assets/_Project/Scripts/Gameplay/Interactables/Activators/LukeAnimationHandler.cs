@@ -28,6 +28,8 @@ namespace Project.Gameplay.Interactables
         [SerializeField] private SoundEvent _smallLukeSoundUp;
         [SerializeField] private SoundEvent _lukeSoundUp;
         [SerializeField] private GameObject _lukeSoundPoint;
+        [Space]
+        [SerializeField] private PropsEvents _onFinish;
         
         private IDisposable _pauseDisposable;
         private bool _animate;
@@ -83,6 +85,9 @@ namespace Project.Gameplay.Interactables
             _cursorService.DisableCursorState(ECursorState.Transition);
             _movementService.UnblockControls();
             _animate = false;
+            _onFinish.Trigger();
+            Destroy(this);
+            Destroy(_animation);
         }
 
         [UsedImplicitly]
