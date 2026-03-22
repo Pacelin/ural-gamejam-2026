@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 358386a3657a42b2814d31c092a37e9e, type: 3}
   m_Name: SO_PortraitPicture_Mal
   m_EditorClassIdentifier: Assembly-CSharp::Project.Gameplay.Inventory.InventoryItemConfig
-  _icon: {fileID: 21300000, guid: 2db218ede417417409dfd9040fac8068, type: 3}
+  _icon: {fileID: 21300000, guid: 6b8aef377ef0f8244a53d8ef7bcb5c96, type: 3}
   _text: "\u041F\u043E\u0440\u0442\u0440\u0435\u0442 \u0431\u0435\u0437 \u0440\u0430\u043C\u043A\u0438"
   _pickupSound:
     _eventRef:
