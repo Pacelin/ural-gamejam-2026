@@ -69,7 +69,7 @@
 	</object>
 	<object class="EventMixerMaster" id="{ece0e583-34b7-4c99-9d79-9b276601ddd4}">
 		<property name="volume">
-			<value>-9</value>
+			<value>-12</value>
 		</property>
 		<relationship name="modulators">
 			<destination>{098ef8b5-e8ea-4eb2-abfc-27174f25bd0a}</destination>
@@ -133,6 +133,14 @@
 	</object>
 	<object class="MixerBusFader" id="{0f81708f-ea38-498d-b232-b9c4af34a8f5}" />
 	<object class="MixerBusFader" id="{6213f586-5b62-441d-8cba-ec0cd53a6347}" />
-	<object class="ObjectSpatialiserEffect" id="{4f345367-4a25-4812-856e-2b05034e2f4f}" />
-	<object class="LowpassSimpleEffect" id="{bb501c5c-4c5b-4f37-89d8-9be25bfc6b39}" />
+	<object class="ObjectSpatialiserEffect" id="{4f345367-4a25-4812-856e-2b05034e2f4f}">
+		<property name="distanceRolloffType">
+			<value>3</value>
+		</property>
+	</object>
+	<object class="LowpassSimpleEffect" id="{bb501c5c-4c5b-4f37-89d8-9be25bfc6b39}">
+		<property name="cutoff">
+			<value>2100</value>
+		</property>
+	</object>
 </objects>
