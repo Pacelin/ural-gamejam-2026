@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 358386a3657a42b2814d31c092a37e9e, type: 3}
   m_Name: SO_Key_BasementDoor
   m_EditorClassIdentifier: Assembly-CSharp::Project.Gameplay.Inventory.InventoryItemConfig
-  _icon: {fileID: 21300000, guid: 7d39fa6b88d57444cb20f61608e234ca, type: 3}
+  _icon: {fileID: 21300000, guid: a3de408df97eeef4eb5fb07db8cfc3d7, type: 3}
   _text: "\u0414\u0432\u0435\u0440\u043D\u043E\u0439 \u043A\u043B\u044E\u0447"
   _pickupSound:
     _eventRef:
