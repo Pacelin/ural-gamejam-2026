@@ -9,6 +9,7 @@ namespace Project.Gameplay.Interactables
         [SerializeField] private GameObject[] _deactivate;
         [SerializeField] private GameObject[] _destroy;
         [SerializeField] private PropsLock[] _locks;
+        [SerializeField] private PuzzleActivator[] _activators;
 
         public void Prepare()
         {
@@ -34,6 +35,9 @@ namespace Project.Gameplay.Interactables
             foreach (var obj in _locks)
                 if (obj)
                     obj.Unlock();
+            foreach (var activator in _activators)
+                if (activator)
+                    activator.Activate();
         }
     }
 }

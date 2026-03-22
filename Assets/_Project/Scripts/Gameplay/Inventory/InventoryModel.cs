@@ -9,14 +9,18 @@ namespace Project.Gameplay.Inventory
     {
         public event System.Action<InventoryItemEntry> OnAddItem;
         public event System.Action<InventoryItemEntry> OnRemoveItem;
-
+        public event System.Action<bool> OnViewStateChanged;
+        
         public IReadOnlyList<InventoryItemEntry> Items => _items;
 
         private readonly List<InventoryItemEntry> _items;
 
+        private bool _viewEnabled;
+        
         public InventoryModel(InventoryItemConfig[] initialItems)
         {
             _items = new List<InventoryItemEntry>(initialItems.Select(c => new InventoryItemEntry(c)));
+            _viewEnabled = true;
         }
         
         public void AddItem(InventoryItemConfig item)
@@ -26,17 +30,22 @@ namespace Project.Gameplay.Inventory
             OnAddItem?.Invoke(itemEntry);
         }
 
-        public void RemoveAt(int index) => RemoveItem(_items[index]);
+        public void DisableView()
+        {
+            _viewEnabled = false;
+            OnViewStateChanged?.Invoke(false);
+        }
+
+        public void EnableView()
+        {
+            _viewEnabled = true;
+            OnViewStateChanged?.Invoke(true);
+        }
         
         public void RemoveItem(InventoryItemEntry inventoryItem)
         {
             _items.Remove(inventoryItem);
             OnRemoveItem?.Invoke(inventoryItem);
-        }
-
-        public bool HasItem(InventoryItemConfig item)
-        {
-            return _items.Any(i => i.Config == item);
         }
     }
 }

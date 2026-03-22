@@ -5,12 +5,30 @@ namespace Project.Core.Audio
     public static class MusicController
     {
         private static ISoundEventInstance _soundEventInstance;
+        private static ISoundEventInstance _roomTone;
         
         public static void SetMusic(ISoundEvent soundEvent)
         {
             Stop();
             _soundEventInstance = soundEvent.CreateInstance();
             _soundEventInstance.Start();
+        }
+
+        public static void SetRoomTone(ISoundEvent soundEvent)
+        {
+            StopRoomTone();
+            _roomTone = soundEvent.CreateInstance();
+            _roomTone.Start();
+        }
+
+        public static void StopRoomTone()
+        {
+            if (_roomTone != null)
+            {
+                _roomTone.Stop(true);
+                _roomTone.Release();
+                _roomTone = null;
+            }
         }
 
         public static void Stop()

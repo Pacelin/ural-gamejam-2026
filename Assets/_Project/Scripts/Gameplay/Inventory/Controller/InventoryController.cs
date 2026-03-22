@@ -28,6 +28,7 @@ namespace Project.Gameplay.Inventory
         {
             _model.OnAddItem += OnAddItem;
             _model.OnRemoveItem += OnRemoveItem;
+            _model.OnViewStateChanged += OnViewStateChanged;
             
             foreach (var item in _model.Items)
                 OnAddItem(item);
@@ -39,6 +40,7 @@ namespace Project.Gameplay.Inventory
         {
             _model.OnAddItem -= OnAddItem;
             _model.OnRemoveItem -= OnRemoveItem;
+            _model.OnViewStateChanged -= OnViewStateChanged;
             
             foreach (var item in _itemsControllers)
                 item.Dispose();
@@ -63,6 +65,11 @@ namespace Project.Gameplay.Inventory
             controller.DestroyItem();
             controller.Dispose();
             _itemsControllers.RemoveAt(index);
+        }
+
+        private void OnViewStateChanged(bool active)
+        {
+            _view.gameObject.SetActive(active);
         }
     }
 }
