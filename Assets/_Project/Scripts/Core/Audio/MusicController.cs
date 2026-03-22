@@ -6,10 +6,15 @@ namespace Project.Core.Audio
     {
         private static ISoundEventInstance _soundEventInstance;
         private static ISoundEventInstance _roomTone;
+
+        private static ISoundEvent _currentMusic;
         
         public static void SetMusic(ISoundEvent soundEvent)
         {
+            if (_currentMusic == soundEvent)
+                return;
             Stop();
+            _currentMusic = soundEvent;
             _soundEventInstance = soundEvent.CreateInstance();
             _soundEventInstance.Start();
         }
@@ -38,6 +43,7 @@ namespace Project.Core.Audio
                 _soundEventInstance.Stop(true);
                 _soundEventInstance.Release();
                 _soundEventInstance = null;
+                _currentMusic = null;
             }
         }
     }
