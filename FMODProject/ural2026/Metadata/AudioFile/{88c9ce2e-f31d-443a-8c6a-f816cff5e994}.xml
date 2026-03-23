@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="AudioFile" id="{88c9ce2e-f31d-443a-8c6a-f816cff5e994}">
+		<property name="assetPath">
+			<value>mice-squeaks - Trimmed.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>5.5384580498866214</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{45c282e8-9be0-47d3-ab7a-b976823d5327}</destination>
+		</relationship>
+	</object>
+</objects>

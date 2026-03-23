@@ -68,6 +68,9 @@
 		</relationship>
 	</object>
 	<object class="EventMixerMaster" id="{ca0b14a5-4979-4c8a-94f5-e60d19aa2489}">
+		<property name="volume">
+			<value>-6</value>
+		</property>
 		<relationship name="modulators">
 			<destination>{f26980f6-f6f6-4ad4-9e55-713b920515f5}</destination>
 		</relationship>
@@ -112,6 +115,7 @@
 	<object class="MixerBusEffectChain" id="{0d015fa9-de87-41dc-b44e-64949bb8e31d}">
 		<relationship name="effects">
 			<destination>{13319ed9-ea3d-44d1-9150-8984be1005b9}</destination>
+			<destination>{bc160ca3-a00c-4d89-a880-2d1c8327cdf1}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{3011c8d1-054e-4491-a43a-047d5751c874}" />
@@ -125,6 +129,13 @@
 	</object>
 	<object class="MixerBusFader" id="{70637daa-fdf3-4ee0-b024-150f4b767d40}" />
 	<object class="MixerBusFader" id="{13319ed9-ea3d-44d1-9150-8984be1005b9}" />
+	<object class="ThreeEQEffect" id="{bc160ca3-a00c-4d89-a880-2d1c8327cdf1}">
+		<relationship name="modulators">
+			<destination>{19dd9d3f-17bd-478c-a5b8-04bc3028f4f5}</destination>
+			<destination>{7cc91ba6-6682-4b92-8df1-04a1a2cda922}</destination>
+			<destination>{7fd62b5b-b326-4922-a32a-adcf3997cb2f}</destination>
+		</relationship>
+	</object>
 	<object class="AutomationPoint" id="{30ac68bd-4aa3-40a4-9018-301d2143058e}">
 		<property name="position">
 			<value>0.059999999999999998</value>
@@ -142,6 +153,30 @@
 		</property>
 		<property name="value">
 			<value>0</value>
+		</property>
+	</object>
+	<object class="RandomizerModulator" id="{19dd9d3f-17bd-478c-a5b8-04bc3028f4f5}">
+		<property name="nameOfPropertyBeingModulated">
+			<value>highGain</value>
+		</property>
+		<property name="amount">
+			<value>18.5</value>
+		</property>
+	</object>
+	<object class="RandomizerModulator" id="{7cc91ba6-6682-4b92-8df1-04a1a2cda922}">
+		<property name="nameOfPropertyBeingModulated">
+			<value>midGain</value>
+		</property>
+		<property name="amount">
+			<value>13</value>
+		</property>
+	</object>
+	<object class="RandomizerModulator" id="{7fd62b5b-b326-4922-a32a-adcf3997cb2f}">
+		<property name="nameOfPropertyBeingModulated">
+			<value>lowGain</value>
+		</property>
+		<property name="amount">
+			<value>13</value>
 		</property>
 	</object>
 </objects>
