@@ -21310,7 +21310,7 @@ MonoBehaviour:
   m_text: 0/8
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 257f9e9368627094d9f79886f2dc64b7, type: 2}
-  m_sharedMaterial: {fileID: 2889994292042144857, guid: 257f9e9368627094d9f79886f2dc64b7, type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: 6d1b683773972fa4f90de6217258b3fa, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -48298,7 +48298,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5906598630791247547, guid: 4c3e0b33280400d479c1112003bf4318, type: 3}
       propertyPath: m_fontColor32.rgba
-      value: 2541872
+      value: 4278190258
       objectReference: {fileID: 0}
     - target: {fileID: 6000767001882305537, guid: 4c3e0b33280400d479c1112003bf4318, type: 3}
       propertyPath: m_Pivot.x
@@ -48787,7 +48787,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5906598630791247547, guid: 4c3e0b33280400d479c1112003bf4318, type: 3}
       propertyPath: m_fontColor32.rgba
-      value: 2541872
+      value: 4278190258
       objectReference: {fileID: 0}
     - target: {fileID: 6000767001882305537, guid: 4c3e0b33280400d479c1112003bf4318, type: 3}
       propertyPath: m_Pivot.x
@@ -49161,7 +49161,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5906598630791247547, guid: 4c3e0b33280400d479c1112003bf4318, type: 3}
       propertyPath: m_fontColor32.rgba
-      value: 2541872
+      value: 4278190258
       objectReference: {fileID: 0}
     - target: {fileID: 6000767001882305537, guid: 4c3e0b33280400d479c1112003bf4318, type: 3}
       propertyPath: m_Pivot.x
@@ -53906,7 +53906,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5906598630791247547, guid: 4c3e0b33280400d479c1112003bf4318, type: 3}
       propertyPath: m_fontColor32.rgba
-      value: 2541872
+      value: 4278190258
       objectReference: {fileID: 0}
     - target: {fileID: 6000767001882305537, guid: 4c3e0b33280400d479c1112003bf4318, type: 3}
       propertyPath: m_Pivot.x
