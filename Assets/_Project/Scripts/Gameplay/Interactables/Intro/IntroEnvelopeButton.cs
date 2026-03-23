@@ -28,7 +28,7 @@ namespace Project.Gameplay.Interactables.Intro
 
         private void OnClick()
         {
-            _sceneLoader.Load(3);
+            _sceneLoader.Load(3, 2);
         }
     }
 }

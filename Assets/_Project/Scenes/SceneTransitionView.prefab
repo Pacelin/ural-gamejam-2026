@@ -205,4 +205,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Project.Core.Misc.SceneTransitionView
   _canvasGroup: {fileID: 8588044179613169091}
   _fadeIn: 0.5
-  _fadeOut: 0.4
+  _fadeOut: 1.5
