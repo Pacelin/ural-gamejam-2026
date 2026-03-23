@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8aa5059f1d8488783e983b5053cc9e3, type: 3}
   m_Name: SO_MovementConfig
   m_EditorClassIdentifier: Assembly-CSharp::Project.Gameplay.Movement.MovementConfig
-  MoveDurationPerMeter: 0.5
-  MinMoveDuration: 0.3
-  MaxMoveDuration: 1.5
+  MoveDurationPerMeter: 0.6
+  MinMoveDuration: 0.5
+  MaxMoveDuration: 3

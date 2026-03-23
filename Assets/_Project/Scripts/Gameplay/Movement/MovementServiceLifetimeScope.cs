@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using UnityEngine.Serialization;
 using VContainer;
 using VContainer.Unity;
 
@@ -11,7 +10,6 @@ namespace Project.Gameplay.Movement
         [SerializeField] private MovementControlView _controlView;
         [SerializeField] private MovementCameraController _cameraController;
         [SerializeField] private MovementPoint _initialMovementPoint;
-        [SerializeField] private float _movementDuration;
         
         protected override void Configure(IContainerBuilder builder)
         {
@@ -20,7 +18,6 @@ namespace Project.Gameplay.Movement
                 .WithParameter(_controlView)
                 .WithParameter(_cameraController)
                 .WithParameter(_initialMovementPoint)
-                .WithParameter(_movementDuration)
                 .AsSelf();
         }
     }

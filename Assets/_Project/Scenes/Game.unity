@@ -2031,7 +2031,7 @@ MonoBehaviour:
   _controlView: {fileID: 2026503732}
   _cameraController: {fileID: 381268062}
   _initialMovementPoint: {fileID: 1417024708}
-  _movementDuration: 0.4
+  _movementDuration: 0.6
 --- !u!4 &242424755
 Transform:
   m_ObjectHideFlags: 0
