@@ -154,7 +154,7 @@ namespace Project.Gameplay.Movement
             var duration = Mathf.Clamp(distance * _movementConfig.MoveDurationPerMeter,
                 _movementConfig.MinMoveDuration, _movementConfig.MaxMoveDuration);
             
-            if (useMoveSound && distance > 0.2f)
+            if (useMoveSound && distance > 1f)
             {
                 _cameraController.MakeMoveImpulse(duration);
                 AudioSystem.Game_Characters_PlayerWalk.PlayOneShot();

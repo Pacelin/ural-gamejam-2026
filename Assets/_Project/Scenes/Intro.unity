@@ -1066,7 +1066,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Project.Gameplay.Interactables.Intro.IntroEnvelopeAnimatorHandler
   _animator: {fileID: 869770215}
-  _buttonActivationDelay: 1
+  _buttonActivationDelay: 5
   _interactable: {fileID: 1864683439}
   _button: {fileID: 257028647}
   _soundPoint: {fileID: 869770213}
