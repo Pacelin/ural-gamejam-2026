@@ -49,12 +49,7 @@ MonoBehaviour:
     TypeName: 
   autoRun: 1
   autoInjectGameObjects: []
-  _allAchievements:
-  - {fileID: 11400000, guid: be7bb97b2df0a7946b2c740406c3ec68, type: 2}
-  _allPurposes:
-  - {fileID: 11400000, guid: 980c141eb664b9c4da850a0cb18439fa, type: 2}
-  _achievementsWindowPrefab: {fileID: 1114267567379323107, guid: e3fc4cf4373128247bdef68a95b9b739, type: 3}
-  _achievementsNotificationWindowPrefab: {fileID: 6260135418882060709, guid: db52bdb11d139de438786888da97dba3, type: 3}
+  _transitionPrefab: {fileID: 8886789946137941994, guid: 01e4fb438393adb4097c438ab1eaf654, type: 3}
 --- !u!1 &7197456042193460031
 GameObject:
   m_ObjectHideFlags: 0

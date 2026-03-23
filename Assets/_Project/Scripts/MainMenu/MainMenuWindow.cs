@@ -1,5 +1,4 @@
-﻿using Project.Achievements;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 namespace Project.MainMenu
@@ -8,10 +7,8 @@ namespace Project.MainMenu
     {
         public Button PlayButton => _playButton;
         public Button QuitButton => _quitButton;
-        public AchievementsButtonView AchievementsButton => _achievementsButton;
         
         [SerializeField] private Button _playButton;
         [SerializeField] private Button _quitButton;
-        [SerializeField] private AchievementsButtonView _achievementsButton;
     }
 }

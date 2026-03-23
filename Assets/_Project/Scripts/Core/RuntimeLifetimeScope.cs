@@ -1,5 +1,4 @@
-﻿using Project.Achievements;
-using Project.Core.Misc;
+﻿using Project.Core.Misc;
 using Project.Core.Pause;
 using UnityEngine;
 using VContainer;
@@ -9,43 +8,22 @@ namespace Project.Core
 {
     public class RuntimeLifetimeScope : LifetimeScope
     {
-        [Header("Achievements")]
-        [SerializeField] private AchievementConfig[] _allAchievements;
-        [SerializeField] private PurposeConfig[] _allPurposes;
-        [SerializeField] private AchievementsWindowView _achievementsWindowPrefab;
-        [SerializeField] private AchievementsNotificationWindowView _achievementsNotificationWindowPrefab;
-
+        [Header("Scene Loading")] 
+        [SerializeField] private SceneTransitionView _transitionPrefab;
+        
         protected override void Configure(IContainerBuilder builder)
         {
             builder.RegisterEntryPoint<RuntimeEntryPoint>();
             builder.RegisterEntryPoint<EscapeController>().AsSelf();
             builder.RegisterEntryPoint<PauseController>().AsSelf();
-            
-            ConfigureAchievements(builder);
+
+            builder.RegisterComponentInNewPrefab(_transitionPrefab, Lifetime.Singleton)
+                .UnderTransform(transform);
+            builder.RegisterBuildCallback(o => 
+                o.Resolve<SceneTransitionView>().gameObject.SetActive(false));
+            builder.Register<SceneLoader>(Lifetime.Singleton);
             
             DontDestroyOnLoad(gameObject);
-        }
-
-        private void ConfigureAchievements(IContainerBuilder builder)
-        {
-            builder.RegisterInstance(_allAchievements);
-            builder.RegisterInstance(_allPurposes);
-            builder.Register<PurposesModel>(Lifetime.Singleton);
-            builder.RegisterEntryPoint<AchievementsModel>().AsSelf();
-
-            builder.RegisterComponentInNewPrefab(_achievementsWindowPrefab, Lifetime.Singleton)
-                .UnderTransform(transform);
-            builder.RegisterComponentInNewPrefab(_achievementsNotificationWindowPrefab, Lifetime.Singleton)
-                .UnderTransform(transform);
-            
-            builder.RegisterEntryPoint<AchievementsWindowController>().AsSelf();
-            builder.RegisterEntryPoint<AchievementsNotificationsWindowController>().AsSelf();
-            
-            builder.RegisterBuildCallback(o =>
-            {
-                o.Resolve<AchievementsWindowView>().gameObject.SetActive(false);
-                o.Resolve<AchievementsNotificationWindowView>().gameObject.SetActive(false);
-            });
         }
     }
 }

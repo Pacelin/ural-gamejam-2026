@@ -15,12 +15,9 @@ namespace Project.Gameplay.Inventory
 
         private readonly List<InventoryItemEntry> _items;
 
-        private bool _viewEnabled;
-        
         public InventoryModel(InventoryItemConfig[] initialItems)
         {
             _items = new List<InventoryItemEntry>(initialItems.Select(c => new InventoryItemEntry(c)));
-            _viewEnabled = true;
         }
         
         public void AddItem(InventoryItemConfig item)
@@ -32,13 +29,12 @@ namespace Project.Gameplay.Inventory
 
         public void DisableView()
         {
-            _viewEnabled = false;
             OnViewStateChanged?.Invoke(false);
         }
 
+        [PublicAPI]
         public void EnableView()
         {
-            _viewEnabled = true;
             OnViewStateChanged?.Invoke(true);
         }
         
