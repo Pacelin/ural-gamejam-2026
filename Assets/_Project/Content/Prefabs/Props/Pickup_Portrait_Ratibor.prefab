@@ -52,6 +52,8 @@ MonoBehaviour:
     _deactivate: []
     _destroy:
     - {fileID: 6398694642574871625}
+    _locks: []
+    _activators: []
 --- !u!65 &2699618748971656239
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -89,7 +91,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &8799735856940934035
 Transform:
@@ -229,11 +231,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: f892538337f0f0f42bfe746554448b79, type: 3}
       propertyPath: m_StaticShadowCaster
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: f892538337f0f0f42bfe746554448b79, type: 3}
       propertyPath: m_Name
-      value: Ratibor_Frame
+      value: Pickup_Portrait_Ratibor
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: f892538337f0f0f42bfe746554448b79, type: 3}
       propertyPath: m_IsActive
