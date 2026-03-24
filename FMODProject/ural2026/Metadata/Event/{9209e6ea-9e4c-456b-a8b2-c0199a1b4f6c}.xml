@@ -5,7 +5,7 @@
 			<value>BGM</value>
 		</property>
 		<property name="outputFormat">
-			<value>3</value>
+			<value>1</value>
 		</property>
 		<relationship name="folder">
 			<destination>{25d245c5-97be-4367-b05b-a46d06017b11}</destination>
@@ -136,47 +136,29 @@
 			<value>1.15555573</value>
 		</property>
 		<property name="decayTime">
-			<value>26666.6504</value>
+			<value>18000</value>
 		</property>
 		<property name="sustainValue">
 			<value>-7.51111221</value>
 		</property>
 		<property name="releaseTime">
-			<value>60000</value>
+			<value>820</value>
 		</property>
 		<property name="releaseShape">
 			<value>0.259036183</value>
 		</property>
 		<property name="finalValue">
-			<value>-17.1555557</value>
+			<value>-80</value>
 		</property>
 	</object>
 	<object class="MixerBusEffectChain" id="{772c5590-428d-4aa5-905a-3b7ead6fa1be}">
 		<relationship name="effects">
-			<destination>{bf75f217-c762-48d2-898f-c98894cfec84}</destination>
 			<destination>{d306c4a7-6864-4f62-b2b0-736cd0e6e93f}</destination>
 			<destination>{adaab33f-a32c-4767-8d1f-d193a32a8477}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{f50bab13-11b2-4e6f-83f7-54aed9c610c2}" />
 	<object class="MixerBusFader" id="{fe337398-9d8e-4697-8a61-4658b7c0888a}" />
-	<object class="PannerEffect" id="{bf75f217-c762-48d2-898f-c98894cfec84}">
-		<property name="bypass">
-			<value>true</value>
-		</property>
-		<property name="stereoPan">
-			<value>56</value>
-		</property>
-		<property name="surroundStereoSeparation">
-			<value>-152.1884</value>
-		</property>
-		<property name="surroundHeightBlend">
-			<value>-1</value>
-		</property>
-		<property name="overridingOutputFormat">
-			<value>3</value>
-		</property>
-	</object>
 	<object class="MixerBusFader" id="{d306c4a7-6864-4f62-b2b0-736cd0e6e93f}" />
 	<object class="SFXReverbEffect" id="{adaab33f-a32c-4767-8d1f-d193a32a8477}">
 		<property name="decayTime">

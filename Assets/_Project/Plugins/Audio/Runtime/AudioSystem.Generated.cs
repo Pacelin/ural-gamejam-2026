@@ -30,62 +30,64 @@ namespace Plugins.Audio
 		}
     
 		public static SoundEvent_UI_Click UI_Click { get; } = new();
-		public static SoundEvent_UI_Hover UI_Hover { get; } = new();
-		public static SoundEvent_UI_Scroll UI_Scroll { get; } = new();
-		public static SoundEvent_Game_Pickups_Key Game_Pickups_Key { get; } = new();
-		public static SoundEvent_Game_Misc_PuzzleComplete Game_Misc_PuzzleComplete { get; } = new();
 		public static SoundEvent_Music_BGMBunker Music_BGMBunker { get; } = new();
-		public static SoundEvent_Game_Doors_ChiffanerInstall Game_Doors_ChiffanerInstall { get; } = new();
+		public static SoundEvent_UI_Hover UI_Hover { get; } = new();
 		public static SoundEvent_UI_Achievement UI_Achievement { get; } = new();
-		public static SoundEvent_Game_Misc_Put Game_Misc_Put { get; } = new();
-		public static SoundEvent_Game_Doors_ChiffanerPickup Game_Doors_ChiffanerPickup { get; } = new();
-		public static SoundEvent_Game_Doors_ChiffanerClose Game_Doors_ChiffanerClose { get; } = new();
+		public static SoundEvent_Music_Menu Music_Menu { get; } = new();
+		public static SoundEvent_UI_Select UI_Select { get; } = new();
+		public static SoundEvent_Music_BGM Music_BGM { get; } = new();
+		public static SoundEvent_UI_Scroll UI_Scroll { get; } = new();
+		public static SoundEvent_Game_Misc_PuzzleComplete Game_Misc_PuzzleComplete { get; } = new();
 		public static SoundEvent_Game_Misc_GrabInventory Game_Misc_GrabInventory { get; } = new();
 		public static SoundEvent_Game_Doors_ClassicLocked Game_Doors_ClassicLocked { get; } = new();
 		public static SoundEvent_Game_Misc_DropInventory Game_Misc_DropInventory { get; } = new();
 		public static SoundEvent_Game_Characters_PlayerWalk Game_Characters_PlayerWalk { get; } = new();
-		public static SoundEvent_Music_Menu Music_Menu { get; } = new();
 		public static SoundEvent_Game_Doors_BunkerOpen Game_Doors_BunkerOpen { get; } = new();
-		public static SoundEvent_UI_Select UI_Select { get; } = new();
-		public static SoundEvent_Game_Pickups_Wood Game_Pickups_Wood { get; } = new();
 		public static SoundEvent_Game_Doors_ClassicOpenClose Game_Doors_ClassicOpenClose { get; } = new();
-		public static SoundEvent_Music_BGM Music_BGM { get; } = new();
-		public static SoundEvent_Game_Pickups_Paper Game_Pickups_Paper { get; } = new();
 		public static SoundEvent_Game_Doors_ClassicUnlock Game_Doors_ClassicUnlock { get; } = new();
+		public static SoundEvent_Game_Pickups_Key Game_Pickups_Key { get; } = new();
+		public static SoundEvent_Game_Doors_ChiffanerClose Game_Doors_ChiffanerClose { get; } = new();
+		public static SoundEvent_Game_Pickups_Wood Game_Pickups_Wood { get; } = new();
+		public static SoundEvent_Game_Pickups_Paper Game_Pickups_Paper { get; } = new();
 		public static SoundEvent_Game_Doors_ChiffanerOpen Game_Doors_ChiffanerOpen { get; } = new();
+		public static SoundEvent_Game_Doors_ChiffanerInstall Game_Doors_ChiffanerInstall { get; } = new();
+		public static SoundEvent_Game_Doors_ChiffanerPickup Game_Doors_ChiffanerPickup { get; } = new();
+		public static SoundEvent_Game_Misc_Put Game_Misc_Put { get; } = new();
 		public static SoundEvent_Game_Doors_PropsDoorClose Game_Doors_PropsDoorClose { get; } = new();
 		public static SoundEvent_Game_Doors_PropsBoxOpen Game_Doors_PropsBoxOpen { get; } = new();
 		public static SoundEvent_Game_Doors_PropsSlideOpen Game_Doors_PropsSlideOpen { get; } = new();
 		public static SoundEvent_Game_Doors_PropsUnlock Game_Doors_PropsUnlock { get; } = new();
-		public static SoundEvent_Game_Doors_PropsLocked Game_Doors_PropsLocked { get; } = new();
 		public static SoundEvent_Game_Doors_PropsSlideClose Game_Doors_PropsSlideClose { get; } = new();
-		public static SoundEvent_Game_Doors_FridgeOpen Game_Doors_FridgeOpen { get; } = new();
 		public static SoundEvent_Game_Doors_PropsDoorOpen Game_Doors_PropsDoorOpen { get; } = new();
 		public static SoundEvent_Game_Doors_PropsBoxClose Game_Doors_PropsBoxClose { get; } = new();
+		public static SoundEvent_Game_Doors_PropsLocked Game_Doors_PropsLocked { get; } = new();
+		public static SoundEvent_Game_Doors_FridgeOpen Game_Doors_FridgeOpen { get; } = new();
 		public static SoundEvent_Game_Doors_FridgeClose Game_Doors_FridgeClose { get; } = new();
 		public static SoundEvent_Game_Pickups_Plate Game_Pickups_Plate { get; } = new();
 		public static SoundEvent_Game_Doors_PropsValveOpen Game_Doors_PropsValveOpen { get; } = new();
 		public static SoundEvent_Game_Doors_PropsValveClose Game_Doors_PropsValveClose { get; } = new();
-		public static SoundEvent_Game_Misc_CodeChanged Game_Misc_CodeChanged { get; } = new();
-		public static SoundEvent_Game_Misc_ElectroButtonUp Game_Misc_ElectroButtonUp { get; } = new();
-		public static SoundEvent_Game_Misc_ElectroButtonDown Game_Misc_ElectroButtonDown { get; } = new();
 		public static SoundEvent_Game_Misc_TelevisionButtonDown Game_Misc_TelevisionButtonDown { get; } = new();
 		public static SoundEvent_Game_Misc_TelevisionScreenTap Game_Misc_TelevisionScreenTap { get; } = new();
 		public static SoundEvent_Game_Misc_TelevisionButtonUp Game_Misc_TelevisionButtonUp { get; } = new();
+		public static SoundEvent_Game_Misc_ElectroButtonUp Game_Misc_ElectroButtonUp { get; } = new();
+		public static SoundEvent_Game_Misc_ElectroButtonDown Game_Misc_ElectroButtonDown { get; } = new();
+		public static SoundEvent_Game_Misc_CodeChanged Game_Misc_CodeChanged { get; } = new();
 		public static SoundEvent_Game_Misc_LukeFirstValveSqueak Game_Misc_LukeFirstValveSqueak { get; } = new();
+		public static SoundEvent_Game_Misc_LukeFirstValveImpact Game_Misc_LukeFirstValveImpact { get; } = new();
+		public static SoundEvent_Game_Misc_LukeSecondValveSqueak Game_Misc_LukeSecondValveSqueak { get; } = new();
 		public static SoundEvent_Game_Misc_LukeSmallUp Game_Misc_LukeSmallUp { get; } = new();
 		public static SoundEvent_Game_Misc_LukeUp Game_Misc_LukeUp { get; } = new();
 		public static SoundEvent_Game_Misc_RoomTone Game_Misc_RoomTone { get; } = new();
-		public static SoundEvent_Game_Misc_LukeSecondValveSqueak Game_Misc_LukeSecondValveSqueak { get; } = new();
-		public static SoundEvent_Game_Misc_LukeFirstValveImpact Game_Misc_LukeFirstValveImpact { get; } = new();
 		public static SoundEvent_Game_Doors_PropsToiletOpen Game_Doors_PropsToiletOpen { get; } = new();
 		public static SoundEvent_Game_Doors_PropsToiletClose Game_Doors_PropsToiletClose { get; } = new();
 		public static SoundEvent_Game_Pickups_Collectable Game_Pickups_Collectable { get; } = new();
-		public static SoundEvent_BunkerEnv_MiceSqueaks BunkerEnv_MiceSqueaks { get; } = new();
-		public static SoundEvent_Game_Characters_PlayerWalkGround Game_Characters_PlayerWalkGround { get; } = new();
-		public static SoundEvent_Game_Characters_PlayerWalkWood Game_Characters_PlayerWalkWood { get; } = new();
-		public static SoundEvent_BunkerEnv_Dripping BunkerEnv_Dripping { get; } = new();
 		public static SoundEvent_Game_Misc_EnvelopeOpen Game_Misc_EnvelopeOpen { get; } = new();
+		public static SoundEvent_FadeSwitch_LadderBunker FadeSwitch_LadderBunker { get; } = new();
+		public static SoundEvent_BunkerEnv_MiceSqueaks BunkerEnv_MiceSqueaks { get; } = new();
+		public static SoundEvent_FadeSwitch_Onway FadeSwitch_Onway { get; } = new();
+		public static SoundEvent_Game_Characters_PlayerWalkGround Game_Characters_PlayerWalkGround { get; } = new();
+		public static SoundEvent_BunkerEnv_Dripping BunkerEnv_Dripping { get; } = new();
+		public static SoundEvent_BunkerEnv_RandomBoom BunkerEnv_RandomBoom { get; } = new();
     }
 
 	public class SoundEvent_UI_Click : ISoundEvent
@@ -94,6 +96,27 @@ namespace Plugins.Audio
 		public float Length => 133;
 
 		private static readonly FMOD.GUID _guid = new FMOD.GUID() { Data1 = -653917656, Data2 = 1136402062, Data3 = 1857164724, Data4 = -611272453 };
+
+		public void PlayOneShot() => RuntimeManager.PlayOneShot(_guid);
+		public void PlayOneShotAttached(GameObject attachTo) => RuntimeManager.PlayOneShotAttached(_guid, attachTo);
+		public void PlayOneShotInPoint(Vector3 point) => RuntimeManager.PlayOneShot(_guid, point);
+
+		public Instance CreateInstance() => new Instance(RuntimeManager.CreateInstance(_guid));
+		ISoundEventInstance ISoundEvent.CreateInstance() => CreateInstance();
+
+		public class Instance : SoundEventInstance
+		{
+			public Instance(FMOD.Studio.EventInstance eventInstance) : base(eventInstance) { }
+
+		}
+	}
+
+	public class SoundEvent_Music_BGMBunker : ISoundEvent
+	{
+		public bool IsOneShot => false;
+		public float Length => 11500;
+
+		private static readonly FMOD.GUID _guid = new FMOD.GUID() { Data1 = 440895534, Data2 = 1106836941, Data3 = -968104016, Data4 = 856815534 };
 
 		public void PlayOneShot() => RuntimeManager.PlayOneShot(_guid);
 		public void PlayOneShotAttached(GameObject attachTo) => RuntimeManager.PlayOneShotAttached(_guid, attachTo);
@@ -130,111 +153,6 @@ namespace Plugins.Audio
 		}
 	}
 
-	public class SoundEvent_UI_Scroll : ISoundEvent
-	{
-		public bool IsOneShot => true;
-		public float Length => 52;
-
-		private static readonly FMOD.GUID _guid = new FMOD.GUID() { Data1 = 2016224761, Data2 = 1335053742, Data3 = 1643764617, Data4 = -365945755 };
-
-		public void PlayOneShot() => RuntimeManager.PlayOneShot(_guid);
-		public void PlayOneShotAttached(GameObject attachTo) => RuntimeManager.PlayOneShotAttached(_guid, attachTo);
-		public void PlayOneShotInPoint(Vector3 point) => RuntimeManager.PlayOneShot(_guid, point);
-
-		public Instance CreateInstance() => new Instance(RuntimeManager.CreateInstance(_guid));
-		ISoundEventInstance ISoundEvent.CreateInstance() => CreateInstance();
-
-		public class Instance : SoundEventInstance
-		{
-			public Instance(FMOD.Studio.EventInstance eventInstance) : base(eventInstance) { }
-
-		}
-	}
-
-	public class SoundEvent_Game_Pickups_Key : ISoundEvent
-	{
-		public bool IsOneShot => true;
-		public float Length => 265;
-
-		private static readonly FMOD.GUID _guid = new FMOD.GUID() { Data1 = -143634430, Data2 = 1185644692, Data3 = -1224909409, Data4 = 1828588164 };
-
-		public void PlayOneShot() => RuntimeManager.PlayOneShot(_guid);
-		public void PlayOneShotAttached(GameObject attachTo) => RuntimeManager.PlayOneShotAttached(_guid, attachTo);
-		public void PlayOneShotInPoint(Vector3 point) => RuntimeManager.PlayOneShot(_guid, point);
-
-		public Instance CreateInstance() => new Instance(RuntimeManager.CreateInstance(_guid));
-		ISoundEventInstance ISoundEvent.CreateInstance() => CreateInstance();
-
-		public class Instance : SoundEventInstance
-		{
-			public Instance(FMOD.Studio.EventInstance eventInstance) : base(eventInstance) { }
-
-		}
-	}
-
-	public class SoundEvent_Game_Misc_PuzzleComplete : ISoundEvent
-	{
-		public bool IsOneShot => true;
-		public float Length => 836;
-
-		private static readonly FMOD.GUID _guid = new FMOD.GUID() { Data1 = -1821818349, Data2 = 1311416463, Data3 = -2139594596, Data4 = 1734662935 };
-
-		public void PlayOneShot() => RuntimeManager.PlayOneShot(_guid);
-		public void PlayOneShotAttached(GameObject attachTo) => RuntimeManager.PlayOneShotAttached(_guid, attachTo);
-		public void PlayOneShotInPoint(Vector3 point) => RuntimeManager.PlayOneShot(_guid, point);
-
-		public Instance CreateInstance() => new Instance(RuntimeManager.CreateInstance(_guid));
-		ISoundEventInstance ISoundEvent.CreateInstance() => CreateInstance();
-
-		public class Instance : SoundEventInstance
-		{
-			public Instance(FMOD.Studio.EventInstance eventInstance) : base(eventInstance) { }
-
-		}
-	}
-
-	public class SoundEvent_Music_BGMBunker : ISoundEvent
-	{
-		public bool IsOneShot => false;
-		public float Length => 64062;
-
-		private static readonly FMOD.GUID _guid = new FMOD.GUID() { Data1 = 440895534, Data2 = 1106836941, Data3 = -968104016, Data4 = 856815534 };
-
-		public void PlayOneShot() => RuntimeManager.PlayOneShot(_guid);
-		public void PlayOneShotAttached(GameObject attachTo) => RuntimeManager.PlayOneShotAttached(_guid, attachTo);
-		public void PlayOneShotInPoint(Vector3 point) => RuntimeManager.PlayOneShot(_guid, point);
-
-		public Instance CreateInstance() => new Instance(RuntimeManager.CreateInstance(_guid));
-		ISoundEventInstance ISoundEvent.CreateInstance() => CreateInstance();
-
-		public class Instance : SoundEventInstance
-		{
-			public Instance(FMOD.Studio.EventInstance eventInstance) : base(eventInstance) { }
-
-		}
-	}
-
-	public class SoundEvent_Game_Doors_ChiffanerInstall : ISoundEvent
-	{
-		public bool IsOneShot => true;
-		public float Length => 687;
-
-		private static readonly FMOD.GUID _guid = new FMOD.GUID() { Data1 = -829063108, Data2 = 1198634699, Data3 = 43341245, Data4 = 1217387080 };
-
-		public void PlayOneShot() => RuntimeManager.PlayOneShot(_guid);
-		public void PlayOneShotAttached(GameObject attachTo) => RuntimeManager.PlayOneShotAttached(_guid, attachTo);
-		public void PlayOneShotInPoint(Vector3 point) => RuntimeManager.PlayOneShot(_guid, point);
-
-		public Instance CreateInstance() => new Instance(RuntimeManager.CreateInstance(_guid));
-		ISoundEventInstance ISoundEvent.CreateInstance() => CreateInstance();
-
-		public class Instance : SoundEventInstance
-		{
-			public Instance(FMOD.Studio.EventInstance eventInstance) : base(eventInstance) { }
-
-		}
-	}
-
 	public class SoundEvent_UI_Achievement : ISoundEvent
 	{
 		public bool IsOneShot => true;
@@ -256,12 +174,12 @@ namespace Plugins.Audio
 		}
 	}
 
-	public class SoundEvent_Game_Misc_Put : ISoundEvent
+	public class SoundEvent_Music_Menu : ISoundEvent
 	{
-		public bool IsOneShot => true;
-		public float Length => 687;
+		public bool IsOneShot => false;
+		public float Length => 351384;
 
-		private static readonly FMOD.GUID _guid = new FMOD.GUID() { Data1 = 1655223378, Data2 = 1134739298, Data3 = 1227707525, Data4 = -1814829709 };
+		private static readonly FMOD.GUID _guid = new FMOD.GUID() { Data1 = -1247552362, Data2 = 1227610015, Data3 = -1166220665, Data4 = 1664410332 };
 
 		public void PlayOneShot() => RuntimeManager.PlayOneShot(_guid);
 		public void PlayOneShotAttached(GameObject attachTo) => RuntimeManager.PlayOneShotAttached(_guid, attachTo);
@@ -277,12 +195,12 @@ namespace Plugins.Audio
 		}
 	}
 
-	public class SoundEvent_Game_Doors_ChiffanerPickup : ISoundEvent
+	public class SoundEvent_UI_Select : ISoundEvent
 	{
 		public bool IsOneShot => true;
-		public float Length => 250;
+		public float Length => 85;
 
-		private static readonly FMOD.GUID _guid = new FMOD.GUID() { Data1 = -1511492524, Data2 = 1210862987, Data3 = 1106791324, Data4 = -624966896 };
+		private static readonly FMOD.GUID _guid = new FMOD.GUID() { Data1 = -1762932299, Data2 = 1150821187, Data3 = 710381722, Data4 = 49048003 };
 
 		public void PlayOneShot() => RuntimeManager.PlayOneShot(_guid);
 		public void PlayOneShotAttached(GameObject attachTo) => RuntimeManager.PlayOneShotAttached(_guid, attachTo);
@@ -298,12 +216,54 @@ namespace Plugins.Audio
 		}
 	}
 
-	public class SoundEvent_Game_Doors_ChiffanerClose : ISoundEvent
+	public class SoundEvent_Music_BGM : ISoundEvent
+	{
+		public bool IsOneShot => false;
+		public float Length => 154853;
+
+		private static readonly FMOD.GUID _guid = new FMOD.GUID() { Data1 = -1844844822, Data2 = 1164680780, Data3 = 432059048, Data4 = 1817123738 };
+
+		public void PlayOneShot() => RuntimeManager.PlayOneShot(_guid);
+		public void PlayOneShotAttached(GameObject attachTo) => RuntimeManager.PlayOneShotAttached(_guid, attachTo);
+		public void PlayOneShotInPoint(Vector3 point) => RuntimeManager.PlayOneShot(_guid, point);
+
+		public Instance CreateInstance() => new Instance(RuntimeManager.CreateInstance(_guid));
+		ISoundEventInstance ISoundEvent.CreateInstance() => CreateInstance();
+
+		public class Instance : SoundEventInstance
+		{
+			public Instance(FMOD.Studio.EventInstance eventInstance) : base(eventInstance) { }
+
+		}
+	}
+
+	public class SoundEvent_UI_Scroll : ISoundEvent
 	{
 		public bool IsOneShot => true;
-		public float Length => 600;
+		public float Length => 52;
 
-		private static readonly FMOD.GUID _guid = new FMOD.GUID() { Data1 = -1576939681, Data2 = 1089097459, Data3 = 1590049184, Data4 = 287387383 };
+		private static readonly FMOD.GUID _guid = new FMOD.GUID() { Data1 = 2016224761, Data2 = 1335053742, Data3 = 1643764617, Data4 = -365945755 };
+
+		public void PlayOneShot() => RuntimeManager.PlayOneShot(_guid);
+		public void PlayOneShotAttached(GameObject attachTo) => RuntimeManager.PlayOneShotAttached(_guid, attachTo);
+		public void PlayOneShotInPoint(Vector3 point) => RuntimeManager.PlayOneShot(_guid, point);
+
+		public Instance CreateInstance() => new Instance(RuntimeManager.CreateInstance(_guid));
+		ISoundEventInstance ISoundEvent.CreateInstance() => CreateInstance();
+
+		public class Instance : SoundEventInstance
+		{
+			public Instance(FMOD.Studio.EventInstance eventInstance) : base(eventInstance) { }
+
+		}
+	}
+
+	public class SoundEvent_Game_Misc_PuzzleComplete : ISoundEvent
+	{
+		public bool IsOneShot => true;
+		public float Length => 836;
+
+		private static readonly FMOD.GUID _guid = new FMOD.GUID() { Data1 = -1821818349, Data2 = 1311416463, Data3 = -2139594596, Data4 = 1734662935 };
 
 		public void PlayOneShot() => RuntimeManager.PlayOneShot(_guid);
 		public void PlayOneShotAttached(GameObject attachTo) => RuntimeManager.PlayOneShotAttached(_guid, attachTo);
@@ -403,75 +363,12 @@ namespace Plugins.Audio
 		}
 	}
 
-	public class SoundEvent_Music_Menu : ISoundEvent
-	{
-		public bool IsOneShot => false;
-		public float Length => 351384;
-
-		private static readonly FMOD.GUID _guid = new FMOD.GUID() { Data1 = -1247552362, Data2 = 1227610015, Data3 = -1166220665, Data4 = 1664410332 };
-
-		public void PlayOneShot() => RuntimeManager.PlayOneShot(_guid);
-		public void PlayOneShotAttached(GameObject attachTo) => RuntimeManager.PlayOneShotAttached(_guid, attachTo);
-		public void PlayOneShotInPoint(Vector3 point) => RuntimeManager.PlayOneShot(_guid, point);
-
-		public Instance CreateInstance() => new Instance(RuntimeManager.CreateInstance(_guid));
-		ISoundEventInstance ISoundEvent.CreateInstance() => CreateInstance();
-
-		public class Instance : SoundEventInstance
-		{
-			public Instance(FMOD.Studio.EventInstance eventInstance) : base(eventInstance) { }
-
-		}
-	}
-
 	public class SoundEvent_Game_Doors_BunkerOpen : ISoundEvent
 	{
 		public bool IsOneShot => true;
 		public float Length => 1500;
 
 		private static readonly FMOD.GUID _guid = new FMOD.GUID() { Data1 = -517713995, Data2 = 1083553432, Data3 = -666863430, Data4 = 1310010374 };
-
-		public void PlayOneShot() => RuntimeManager.PlayOneShot(_guid);
-		public void PlayOneShotAttached(GameObject attachTo) => RuntimeManager.PlayOneShotAttached(_guid, attachTo);
-		public void PlayOneShotInPoint(Vector3 point) => RuntimeManager.PlayOneShot(_guid, point);
-
-		public Instance CreateInstance() => new Instance(RuntimeManager.CreateInstance(_guid));
-		ISoundEventInstance ISoundEvent.CreateInstance() => CreateInstance();
-
-		public class Instance : SoundEventInstance
-		{
-			public Instance(FMOD.Studio.EventInstance eventInstance) : base(eventInstance) { }
-
-		}
-	}
-
-	public class SoundEvent_UI_Select : ISoundEvent
-	{
-		public bool IsOneShot => true;
-		public float Length => 85;
-
-		private static readonly FMOD.GUID _guid = new FMOD.GUID() { Data1 = -1762932299, Data2 = 1150821187, Data3 = 710381722, Data4 = 49048003 };
-
-		public void PlayOneShot() => RuntimeManager.PlayOneShot(_guid);
-		public void PlayOneShotAttached(GameObject attachTo) => RuntimeManager.PlayOneShotAttached(_guid, attachTo);
-		public void PlayOneShotInPoint(Vector3 point) => RuntimeManager.PlayOneShot(_guid, point);
-
-		public Instance CreateInstance() => new Instance(RuntimeManager.CreateInstance(_guid));
-		ISoundEventInstance ISoundEvent.CreateInstance() => CreateInstance();
-
-		public class Instance : SoundEventInstance
-		{
-			public Instance(FMOD.Studio.EventInstance eventInstance) : base(eventInstance) { }
-
-		}
-	}
-
-	public class SoundEvent_Game_Pickups_Wood : ISoundEvent
-	{
-		public bool IsOneShot => true;
-		public float Length => 200;
-
-		private static readonly FMOD.GUID _guid = new FMOD.GUID() { Data1 = -947825183, Data2 = 1195424432, Data3 = 438572930, Data4 = -721581957 };
 
 		public void PlayOneShot() => RuntimeManager.PlayOneShot(_guid);
 		public void PlayOneShotAttached(GameObject attachTo) => RuntimeManager.PlayOneShotAttached(_guid, attachTo);
@@ -508,12 +405,75 @@ namespace Plugins.Audio
 		}
 	}
 
-	public class SoundEvent_Music_BGM : ISoundEvent
+	public class SoundEvent_Game_Doors_ClassicUnlock : ISoundEvent
 	{
-		public bool IsOneShot => false;
-		public float Length => 154853;
+		public bool IsOneShot => true;
+		public float Length => 1547;
 
-		private static readonly FMOD.GUID _guid = new FMOD.GUID() { Data1 = -1844844822, Data2 = 1164680780, Data3 = 432059048, Data4 = 1817123738 };
+		private static readonly FMOD.GUID _guid = new FMOD.GUID() { Data1 = 1898611439, Data2 = 1097014406, Data3 = 537778085, Data4 = 21287164 };
+
+		public void PlayOneShot() => RuntimeManager.PlayOneShot(_guid);
+		public void PlayOneShotAttached(GameObject attachTo) => RuntimeManager.PlayOneShotAttached(_guid, attachTo);
+		public void PlayOneShotInPoint(Vector3 point) => RuntimeManager.PlayOneShot(_guid, point);
+
+		public Instance CreateInstance() => new Instance(RuntimeManager.CreateInstance(_guid));
+		ISoundEventInstance ISoundEvent.CreateInstance() => CreateInstance();
+
+		public class Instance : SoundEventInstance
+		{
+			public Instance(FMOD.Studio.EventInstance eventInstance) : base(eventInstance) { }
+
+		}
+	}
+
+	public class SoundEvent_Game_Pickups_Key : ISoundEvent
+	{
+		public bool IsOneShot => true;
+		public float Length => 265;
+
+		private static readonly FMOD.GUID _guid = new FMOD.GUID() { Data1 = -143634430, Data2 = 1185644692, Data3 = -1224909409, Data4 = 1828588164 };
+
+		public void PlayOneShot() => RuntimeManager.PlayOneShot(_guid);
+		public void PlayOneShotAttached(GameObject attachTo) => RuntimeManager.PlayOneShotAttached(_guid, attachTo);
+		public void PlayOneShotInPoint(Vector3 point) => RuntimeManager.PlayOneShot(_guid, point);
+
+		public Instance CreateInstance() => new Instance(RuntimeManager.CreateInstance(_guid));
+		ISoundEventInstance ISoundEvent.CreateInstance() => CreateInstance();
+
+		public class Instance : SoundEventInstance
+		{
+			public Instance(FMOD.Studio.EventInstance eventInstance) : base(eventInstance) { }
+
+		}
+	}
+
+	public class SoundEvent_Game_Doors_ChiffanerClose : ISoundEvent
+	{
+		public bool IsOneShot => true;
+		public float Length => 600;
+
+		private static readonly FMOD.GUID _guid = new FMOD.GUID() { Data1 = -1576939681, Data2 = 1089097459, Data3 = 1590049184, Data4 = 287387383 };
+
+		public void PlayOneShot() => RuntimeManager.PlayOneShot(_guid);
+		public void PlayOneShotAttached(GameObject attachTo) => RuntimeManager.PlayOneShotAttached(_guid, attachTo);
+		public void PlayOneShotInPoint(Vector3 point) => RuntimeManager.PlayOneShot(_guid, point);
+
+		public Instance CreateInstance() => new Instance(RuntimeManager.CreateInstance(_guid));
+		ISoundEventInstance ISoundEvent.CreateInstance() => CreateInstance();
+
+		public class Instance : SoundEventInstance
+		{
+			public Instance(FMOD.Studio.EventInstance eventInstance) : base(eventInstance) { }
+
+		}
+	}
+
+	public class SoundEvent_Game_Pickups_Wood : ISoundEvent
+	{
+		public bool IsOneShot => true;
+		public float Length => 200;
+
+		private static readonly FMOD.GUID _guid = new FMOD.GUID() { Data1 = -947825183, Data2 = 1195424432, Data3 = 438572930, Data4 = -721581957 };
 
 		public void PlayOneShot() => RuntimeManager.PlayOneShot(_guid);
 		public void PlayOneShotAttached(GameObject attachTo) => RuntimeManager.PlayOneShotAttached(_guid, attachTo);
@@ -550,12 +510,12 @@ namespace Plugins.Audio
 		}
 	}
 
-	public class SoundEvent_Game_Doors_ClassicUnlock : ISoundEvent
+	public class SoundEvent_Game_Doors_ChiffanerOpen : ISoundEvent
 	{
 		public bool IsOneShot => true;
-		public float Length => 1547;
+		public float Length => 600;
 
-		private static readonly FMOD.GUID _guid = new FMOD.GUID() { Data1 = 1898611439, Data2 = 1097014406, Data3 = 537778085, Data4 = 21287164 };
+		private static readonly FMOD.GUID _guid = new FMOD.GUID() { Data1 = 44454908, Data2 = 1216834629, Data3 = -2018856783, Data4 = -229859209 };
 
 		public void PlayOneShot() => RuntimeManager.PlayOneShot(_guid);
 		public void PlayOneShotAttached(GameObject attachTo) => RuntimeManager.PlayOneShotAttached(_guid, attachTo);
@@ -571,12 +531,54 @@ namespace Plugins.Audio
 		}
 	}
 
-	public class SoundEvent_Game_Doors_ChiffanerOpen : ISoundEvent
+	public class SoundEvent_Game_Doors_ChiffanerInstall : ISoundEvent
 	{
 		public bool IsOneShot => true;
-		public float Length => 600;
+		public float Length => 687;
 
-		private static readonly FMOD.GUID _guid = new FMOD.GUID() { Data1 = 44454908, Data2 = 1216834629, Data3 = -2018856783, Data4 = -229859209 };
+		private static readonly FMOD.GUID _guid = new FMOD.GUID() { Data1 = -829063108, Data2 = 1198634699, Data3 = 43341245, Data4 = 1217387080 };
+
+		public void PlayOneShot() => RuntimeManager.PlayOneShot(_guid);
+		public void PlayOneShotAttached(GameObject attachTo) => RuntimeManager.PlayOneShotAttached(_guid, attachTo);
+		public void PlayOneShotInPoint(Vector3 point) => RuntimeManager.PlayOneShot(_guid, point);
+
+		public Instance CreateInstance() => new Instance(RuntimeManager.CreateInstance(_guid));
+		ISoundEventInstance ISoundEvent.CreateInstance() => CreateInstance();
+
+		public class Instance : SoundEventInstance
+		{
+			public Instance(FMOD.Studio.EventInstance eventInstance) : base(eventInstance) { }
+
+		}
+	}
+
+	public class SoundEvent_Game_Doors_ChiffanerPickup : ISoundEvent
+	{
+		public bool IsOneShot => true;
+		public float Length => 250;
+
+		private static readonly FMOD.GUID _guid = new FMOD.GUID() { Data1 = -1511492524, Data2 = 1210862987, Data3 = 1106791324, Data4 = -624966896 };
+
+		public void PlayOneShot() => RuntimeManager.PlayOneShot(_guid);
+		public void PlayOneShotAttached(GameObject attachTo) => RuntimeManager.PlayOneShotAttached(_guid, attachTo);
+		public void PlayOneShotInPoint(Vector3 point) => RuntimeManager.PlayOneShot(_guid, point);
+
+		public Instance CreateInstance() => new Instance(RuntimeManager.CreateInstance(_guid));
+		ISoundEventInstance ISoundEvent.CreateInstance() => CreateInstance();
+
+		public class Instance : SoundEventInstance
+		{
+			public Instance(FMOD.Studio.EventInstance eventInstance) : base(eventInstance) { }
+
+		}
+	}
+
+	public class SoundEvent_Game_Misc_Put : ISoundEvent
+	{
+		public bool IsOneShot => true;
+		public float Length => 687;
+
+		private static readonly FMOD.GUID _guid = new FMOD.GUID() { Data1 = 1655223378, Data2 = 1134739298, Data3 = 1227707525, Data4 = -1814829709 };
 
 		public void PlayOneShot() => RuntimeManager.PlayOneShot(_guid);
 		public void PlayOneShotAttached(GameObject attachTo) => RuntimeManager.PlayOneShotAttached(_guid, attachTo);
@@ -676,54 +678,12 @@ namespace Plugins.Audio
 		}
 	}
 
-	public class SoundEvent_Game_Doors_PropsLocked : ISoundEvent
-	{
-		public bool IsOneShot => true;
-		public float Length => 616;
-
-		private static readonly FMOD.GUID _guid = new FMOD.GUID() { Data1 = 889358201, Data2 = 1168042271, Data3 = -545674611, Data4 = -1159365732 };
-
-		public void PlayOneShot() => RuntimeManager.PlayOneShot(_guid);
-		public void PlayOneShotAttached(GameObject attachTo) => RuntimeManager.PlayOneShotAttached(_guid, attachTo);
-		public void PlayOneShotInPoint(Vector3 point) => RuntimeManager.PlayOneShot(_guid, point);
-
-		public Instance CreateInstance() => new Instance(RuntimeManager.CreateInstance(_guid));
-		ISoundEventInstance ISoundEvent.CreateInstance() => CreateInstance();
-
-		public class Instance : SoundEventInstance
-		{
-			public Instance(FMOD.Studio.EventInstance eventInstance) : base(eventInstance) { }
-
-		}
-	}
-
 	public class SoundEvent_Game_Doors_PropsSlideClose : ISoundEvent
 	{
 		public bool IsOneShot => true;
 		public float Length => 1200;
 
 		private static readonly FMOD.GUID _guid = new FMOD.GUID() { Data1 = -1101502041, Data2 = 1085210910, Data3 = -296707178, Data4 = 445664429 };
-
-		public void PlayOneShot() => RuntimeManager.PlayOneShot(_guid);
-		public void PlayOneShotAttached(GameObject attachTo) => RuntimeManager.PlayOneShotAttached(_guid, attachTo);
-		public void PlayOneShotInPoint(Vector3 point) => RuntimeManager.PlayOneShot(_guid, point);
-
-		public Instance CreateInstance() => new Instance(RuntimeManager.CreateInstance(_guid));
-		ISoundEventInstance ISoundEvent.CreateInstance() => CreateInstance();
-
-		public class Instance : SoundEventInstance
-		{
-			public Instance(FMOD.Studio.EventInstance eventInstance) : base(eventInstance) { }
-
-		}
-	}
-
-	public class SoundEvent_Game_Doors_FridgeOpen : ISoundEvent
-	{
-		public bool IsOneShot => true;
-		public float Length => 1000;
-
-		private static readonly FMOD.GUID _guid = new FMOD.GUID() { Data1 = -237460048, Data2 = 1304599288, Data3 = 1257570210, Data4 = 522449072 };
 
 		public void PlayOneShot() => RuntimeManager.PlayOneShot(_guid);
 		public void PlayOneShotAttached(GameObject attachTo) => RuntimeManager.PlayOneShotAttached(_guid, attachTo);
@@ -766,6 +726,48 @@ namespace Plugins.Audio
 		public float Length => 500;
 
 		private static readonly FMOD.GUID _guid = new FMOD.GUID() { Data1 = 1040061648, Data2 = 1196539138, Data3 = -1525016693, Data4 = 838440114 };
+
+		public void PlayOneShot() => RuntimeManager.PlayOneShot(_guid);
+		public void PlayOneShotAttached(GameObject attachTo) => RuntimeManager.PlayOneShotAttached(_guid, attachTo);
+		public void PlayOneShotInPoint(Vector3 point) => RuntimeManager.PlayOneShot(_guid, point);
+
+		public Instance CreateInstance() => new Instance(RuntimeManager.CreateInstance(_guid));
+		ISoundEventInstance ISoundEvent.CreateInstance() => CreateInstance();
+
+		public class Instance : SoundEventInstance
+		{
+			public Instance(FMOD.Studio.EventInstance eventInstance) : base(eventInstance) { }
+
+		}
+	}
+
+	public class SoundEvent_Game_Doors_PropsLocked : ISoundEvent
+	{
+		public bool IsOneShot => true;
+		public float Length => 616;
+
+		private static readonly FMOD.GUID _guid = new FMOD.GUID() { Data1 = 889358201, Data2 = 1168042271, Data3 = -545674611, Data4 = -1159365732 };
+
+		public void PlayOneShot() => RuntimeManager.PlayOneShot(_guid);
+		public void PlayOneShotAttached(GameObject attachTo) => RuntimeManager.PlayOneShotAttached(_guid, attachTo);
+		public void PlayOneShotInPoint(Vector3 point) => RuntimeManager.PlayOneShot(_guid, point);
+
+		public Instance CreateInstance() => new Instance(RuntimeManager.CreateInstance(_guid));
+		ISoundEventInstance ISoundEvent.CreateInstance() => CreateInstance();
+
+		public class Instance : SoundEventInstance
+		{
+			public Instance(FMOD.Studio.EventInstance eventInstance) : base(eventInstance) { }
+
+		}
+	}
+
+	public class SoundEvent_Game_Doors_FridgeOpen : ISoundEvent
+	{
+		public bool IsOneShot => true;
+		public float Length => 1000;
+
+		private static readonly FMOD.GUID _guid = new FMOD.GUID() { Data1 = -237460048, Data2 = 1304599288, Data3 = 1257570210, Data4 = 522449072 };
 
 		public void PlayOneShot() => RuntimeManager.PlayOneShot(_guid);
 		public void PlayOneShotAttached(GameObject attachTo) => RuntimeManager.PlayOneShotAttached(_guid, attachTo);
@@ -865,69 +867,6 @@ namespace Plugins.Audio
 		}
 	}
 
-	public class SoundEvent_Game_Misc_CodeChanged : ISoundEvent
-	{
-		public bool IsOneShot => true;
-		public float Length => 234;
-
-		private static readonly FMOD.GUID _guid = new FMOD.GUID() { Data1 = 242043557, Data2 = 1193425016, Data3 = 1636394371, Data4 = 1915944667 };
-
-		public void PlayOneShot() => RuntimeManager.PlayOneShot(_guid);
-		public void PlayOneShotAttached(GameObject attachTo) => RuntimeManager.PlayOneShotAttached(_guid, attachTo);
-		public void PlayOneShotInPoint(Vector3 point) => RuntimeManager.PlayOneShot(_guid, point);
-
-		public Instance CreateInstance() => new Instance(RuntimeManager.CreateInstance(_guid));
-		ISoundEventInstance ISoundEvent.CreateInstance() => CreateInstance();
-
-		public class Instance : SoundEventInstance
-		{
-			public Instance(FMOD.Studio.EventInstance eventInstance) : base(eventInstance) { }
-
-		}
-	}
-
-	public class SoundEvent_Game_Misc_ElectroButtonUp : ISoundEvent
-	{
-		public bool IsOneShot => true;
-		public float Length => 358;
-
-		private static readonly FMOD.GUID _guid = new FMOD.GUID() { Data1 = -1753637688, Data2 = 1292968725, Data3 = 811670168, Data4 = -1817928684 };
-
-		public void PlayOneShot() => RuntimeManager.PlayOneShot(_guid);
-		public void PlayOneShotAttached(GameObject attachTo) => RuntimeManager.PlayOneShotAttached(_guid, attachTo);
-		public void PlayOneShotInPoint(Vector3 point) => RuntimeManager.PlayOneShot(_guid, point);
-
-		public Instance CreateInstance() => new Instance(RuntimeManager.CreateInstance(_guid));
-		ISoundEventInstance ISoundEvent.CreateInstance() => CreateInstance();
-
-		public class Instance : SoundEventInstance
-		{
-			public Instance(FMOD.Studio.EventInstance eventInstance) : base(eventInstance) { }
-
-		}
-	}
-
-	public class SoundEvent_Game_Misc_ElectroButtonDown : ISoundEvent
-	{
-		public bool IsOneShot => true;
-		public float Length => 408;
-
-		private static readonly FMOD.GUID _guid = new FMOD.GUID() { Data1 = -2089235751, Data2 = 1268413989, Data3 = 288921494, Data4 = -1670464828 };
-
-		public void PlayOneShot() => RuntimeManager.PlayOneShot(_guid);
-		public void PlayOneShotAttached(GameObject attachTo) => RuntimeManager.PlayOneShotAttached(_guid, attachTo);
-		public void PlayOneShotInPoint(Vector3 point) => RuntimeManager.PlayOneShot(_guid, point);
-
-		public Instance CreateInstance() => new Instance(RuntimeManager.CreateInstance(_guid));
-		ISoundEventInstance ISoundEvent.CreateInstance() => CreateInstance();
-
-		public class Instance : SoundEventInstance
-		{
-			public Instance(FMOD.Studio.EventInstance eventInstance) : base(eventInstance) { }
-
-		}
-	}
-
 	public class SoundEvent_Game_Misc_TelevisionButtonDown : ISoundEvent
 	{
 		public bool IsOneShot => true;
@@ -991,12 +930,117 @@ namespace Plugins.Audio
 		}
 	}
 
+	public class SoundEvent_Game_Misc_ElectroButtonUp : ISoundEvent
+	{
+		public bool IsOneShot => true;
+		public float Length => 358;
+
+		private static readonly FMOD.GUID _guid = new FMOD.GUID() { Data1 = -1753637688, Data2 = 1292968725, Data3 = 811670168, Data4 = -1817928684 };
+
+		public void PlayOneShot() => RuntimeManager.PlayOneShot(_guid);
+		public void PlayOneShotAttached(GameObject attachTo) => RuntimeManager.PlayOneShotAttached(_guid, attachTo);
+		public void PlayOneShotInPoint(Vector3 point) => RuntimeManager.PlayOneShot(_guid, point);
+
+		public Instance CreateInstance() => new Instance(RuntimeManager.CreateInstance(_guid));
+		ISoundEventInstance ISoundEvent.CreateInstance() => CreateInstance();
+
+		public class Instance : SoundEventInstance
+		{
+			public Instance(FMOD.Studio.EventInstance eventInstance) : base(eventInstance) { }
+
+		}
+	}
+
+	public class SoundEvent_Game_Misc_ElectroButtonDown : ISoundEvent
+	{
+		public bool IsOneShot => true;
+		public float Length => 408;
+
+		private static readonly FMOD.GUID _guid = new FMOD.GUID() { Data1 = -2089235751, Data2 = 1268413989, Data3 = 288921494, Data4 = -1670464828 };
+
+		public void PlayOneShot() => RuntimeManager.PlayOneShot(_guid);
+		public void PlayOneShotAttached(GameObject attachTo) => RuntimeManager.PlayOneShotAttached(_guid, attachTo);
+		public void PlayOneShotInPoint(Vector3 point) => RuntimeManager.PlayOneShot(_guid, point);
+
+		public Instance CreateInstance() => new Instance(RuntimeManager.CreateInstance(_guid));
+		ISoundEventInstance ISoundEvent.CreateInstance() => CreateInstance();
+
+		public class Instance : SoundEventInstance
+		{
+			public Instance(FMOD.Studio.EventInstance eventInstance) : base(eventInstance) { }
+
+		}
+	}
+
+	public class SoundEvent_Game_Misc_CodeChanged : ISoundEvent
+	{
+		public bool IsOneShot => true;
+		public float Length => 234;
+
+		private static readonly FMOD.GUID _guid = new FMOD.GUID() { Data1 = 242043557, Data2 = 1193425016, Data3 = 1636394371, Data4 = 1915944667 };
+
+		public void PlayOneShot() => RuntimeManager.PlayOneShot(_guid);
+		public void PlayOneShotAttached(GameObject attachTo) => RuntimeManager.PlayOneShotAttached(_guid, attachTo);
+		public void PlayOneShotInPoint(Vector3 point) => RuntimeManager.PlayOneShot(_guid, point);
+
+		public Instance CreateInstance() => new Instance(RuntimeManager.CreateInstance(_guid));
+		ISoundEventInstance ISoundEvent.CreateInstance() => CreateInstance();
+
+		public class Instance : SoundEventInstance
+		{
+			public Instance(FMOD.Studio.EventInstance eventInstance) : base(eventInstance) { }
+
+		}
+	}
+
 	public class SoundEvent_Game_Misc_LukeFirstValveSqueak : ISoundEvent
 	{
 		public bool IsOneShot => true;
 		public float Length => 1500;
 
 		private static readonly FMOD.GUID _guid = new FMOD.GUID() { Data1 = 606607113, Data2 = 1213875972, Data3 = 612115857, Data4 = -1253089790 };
+
+		public void PlayOneShot() => RuntimeManager.PlayOneShot(_guid);
+		public void PlayOneShotAttached(GameObject attachTo) => RuntimeManager.PlayOneShotAttached(_guid, attachTo);
+		public void PlayOneShotInPoint(Vector3 point) => RuntimeManager.PlayOneShot(_guid, point);
+
+		public Instance CreateInstance() => new Instance(RuntimeManager.CreateInstance(_guid));
+		ISoundEventInstance ISoundEvent.CreateInstance() => CreateInstance();
+
+		public class Instance : SoundEventInstance
+		{
+			public Instance(FMOD.Studio.EventInstance eventInstance) : base(eventInstance) { }
+
+		}
+	}
+
+	public class SoundEvent_Game_Misc_LukeFirstValveImpact : ISoundEvent
+	{
+		public bool IsOneShot => true;
+		public float Length => 1600;
+
+		private static readonly FMOD.GUID _guid = new FMOD.GUID() { Data1 = 1865030040, Data2 = 1123165569, Data3 = 1933804684, Data4 = 688141254 };
+
+		public void PlayOneShot() => RuntimeManager.PlayOneShot(_guid);
+		public void PlayOneShotAttached(GameObject attachTo) => RuntimeManager.PlayOneShotAttached(_guid, attachTo);
+		public void PlayOneShotInPoint(Vector3 point) => RuntimeManager.PlayOneShot(_guid, point);
+
+		public Instance CreateInstance() => new Instance(RuntimeManager.CreateInstance(_guid));
+		ISoundEventInstance ISoundEvent.CreateInstance() => CreateInstance();
+
+		public class Instance : SoundEventInstance
+		{
+			public Instance(FMOD.Studio.EventInstance eventInstance) : base(eventInstance) { }
+
+		}
+	}
+
+	public class SoundEvent_Game_Misc_LukeSecondValveSqueak : ISoundEvent
+	{
+		public bool IsOneShot => true;
+		public float Length => 940;
+
+		private static readonly FMOD.GUID _guid = new FMOD.GUID() { Data1 = -1835721836, Data2 = 1326425696, Data3 = 379066500, Data4 = 1330215492 };
 
 		public void PlayOneShot() => RuntimeManager.PlayOneShot(_guid);
 		public void PlayOneShotAttached(GameObject attachTo) => RuntimeManager.PlayOneShotAttached(_guid, attachTo);
@@ -1075,48 +1119,6 @@ namespace Plugins.Audio
 		}
 	}
 
-	public class SoundEvent_Game_Misc_LukeSecondValveSqueak : ISoundEvent
-	{
-		public bool IsOneShot => true;
-		public float Length => 960;
-
-		private static readonly FMOD.GUID _guid = new FMOD.GUID() { Data1 = -1835721836, Data2 = 1326425696, Data3 = 379066500, Data4 = 1330215492 };
-
-		public void PlayOneShot() => RuntimeManager.PlayOneShot(_guid);
-		public void PlayOneShotAttached(GameObject attachTo) => RuntimeManager.PlayOneShotAttached(_guid, attachTo);
-		public void PlayOneShotInPoint(Vector3 point) => RuntimeManager.PlayOneShot(_guid, point);
-
-		public Instance CreateInstance() => new Instance(RuntimeManager.CreateInstance(_guid));
-		ISoundEventInstance ISoundEvent.CreateInstance() => CreateInstance();
-
-		public class Instance : SoundEventInstance
-		{
-			public Instance(FMOD.Studio.EventInstance eventInstance) : base(eventInstance) { }
-
-		}
-	}
-
-	public class SoundEvent_Game_Misc_LukeFirstValveImpact : ISoundEvent
-	{
-		public bool IsOneShot => true;
-		public float Length => 1600;
-
-		private static readonly FMOD.GUID _guid = new FMOD.GUID() { Data1 = 1865030040, Data2 = 1123165569, Data3 = 1933804684, Data4 = 688141254 };
-
-		public void PlayOneShot() => RuntimeManager.PlayOneShot(_guid);
-		public void PlayOneShotAttached(GameObject attachTo) => RuntimeManager.PlayOneShotAttached(_guid, attachTo);
-		public void PlayOneShotInPoint(Vector3 point) => RuntimeManager.PlayOneShot(_guid, point);
-
-		public Instance CreateInstance() => new Instance(RuntimeManager.CreateInstance(_guid));
-		ISoundEventInstance ISoundEvent.CreateInstance() => CreateInstance();
-
-		public class Instance : SoundEventInstance
-		{
-			public Instance(FMOD.Studio.EventInstance eventInstance) : base(eventInstance) { }
-
-		}
-	}
-
 	public class SoundEvent_Game_Doors_PropsToiletOpen : ISoundEvent
 	{
 		public bool IsOneShot => true;
@@ -1180,12 +1182,75 @@ namespace Plugins.Audio
 		}
 	}
 
+	public class SoundEvent_Game_Misc_EnvelopeOpen : ISoundEvent
+	{
+		public bool IsOneShot => true;
+		public float Length => 3300;
+
+		private static readonly FMOD.GUID _guid = new FMOD.GUID() { Data1 = 716425557, Data2 = 1251773731, Data3 = 296599214, Data4 = -951543946 };
+
+		public void PlayOneShot() => RuntimeManager.PlayOneShot(_guid);
+		public void PlayOneShotAttached(GameObject attachTo) => RuntimeManager.PlayOneShotAttached(_guid, attachTo);
+		public void PlayOneShotInPoint(Vector3 point) => RuntimeManager.PlayOneShot(_guid, point);
+
+		public Instance CreateInstance() => new Instance(RuntimeManager.CreateInstance(_guid));
+		ISoundEventInstance ISoundEvent.CreateInstance() => CreateInstance();
+
+		public class Instance : SoundEventInstance
+		{
+			public Instance(FMOD.Studio.EventInstance eventInstance) : base(eventInstance) { }
+
+		}
+	}
+
+	public class SoundEvent_FadeSwitch_LadderBunker : ISoundEvent
+	{
+		public bool IsOneShot => true;
+		public float Length => 4150;
+
+		private static readonly FMOD.GUID _guid = new FMOD.GUID() { Data1 = 477555219, Data2 = 1306748296, Data3 = 1907043988, Data4 = -1272564261 };
+
+		public void PlayOneShot() => RuntimeManager.PlayOneShot(_guid);
+		public void PlayOneShotAttached(GameObject attachTo) => RuntimeManager.PlayOneShotAttached(_guid, attachTo);
+		public void PlayOneShotInPoint(Vector3 point) => RuntimeManager.PlayOneShot(_guid, point);
+
+		public Instance CreateInstance() => new Instance(RuntimeManager.CreateInstance(_guid));
+		ISoundEventInstance ISoundEvent.CreateInstance() => CreateInstance();
+
+		public class Instance : SoundEventInstance
+		{
+			public Instance(FMOD.Studio.EventInstance eventInstance) : base(eventInstance) { }
+
+		}
+	}
+
 	public class SoundEvent_BunkerEnv_MiceSqueaks : ISoundEvent
 	{
 		public bool IsOneShot => false;
 		public float Length => 5538;
 
 		private static readonly FMOD.GUID _guid = new FMOD.GUID() { Data1 = -21221060, Data2 = 1323619490, Data3 = -1404055632, Data4 = -1513255838 };
+
+		public void PlayOneShot() => RuntimeManager.PlayOneShot(_guid);
+		public void PlayOneShotAttached(GameObject attachTo) => RuntimeManager.PlayOneShotAttached(_guid, attachTo);
+		public void PlayOneShotInPoint(Vector3 point) => RuntimeManager.PlayOneShot(_guid, point);
+
+		public Instance CreateInstance() => new Instance(RuntimeManager.CreateInstance(_guid));
+		ISoundEventInstance ISoundEvent.CreateInstance() => CreateInstance();
+
+		public class Instance : SoundEventInstance
+		{
+			public Instance(FMOD.Studio.EventInstance eventInstance) : base(eventInstance) { }
+
+		}
+	}
+
+	public class SoundEvent_FadeSwitch_Onway : ISoundEvent
+	{
+		public bool IsOneShot => true;
+		public float Length => 4400;
+
+		private static readonly FMOD.GUID _guid = new FMOD.GUID() { Data1 = -1555112097, Data2 = 1338700720, Data3 = 1790548866, Data4 = -1564342172 };
 
 		public void PlayOneShot() => RuntimeManager.PlayOneShot(_guid);
 		public void PlayOneShotAttached(GameObject attachTo) => RuntimeManager.PlayOneShotAttached(_guid, attachTo);
@@ -1222,27 +1287,6 @@ namespace Plugins.Audio
 		}
 	}
 
-	public class SoundEvent_Game_Characters_PlayerWalkWood : ISoundEvent
-	{
-		public bool IsOneShot => true;
-		public float Length => 1384;
-
-		private static readonly FMOD.GUID _guid = new FMOD.GUID() { Data1 = -1962310233, Data2 = 1292377018, Data3 = -1023040112, Data4 = -2046129414 };
-
-		public void PlayOneShot() => RuntimeManager.PlayOneShot(_guid);
-		public void PlayOneShotAttached(GameObject attachTo) => RuntimeManager.PlayOneShotAttached(_guid, attachTo);
-		public void PlayOneShotInPoint(Vector3 point) => RuntimeManager.PlayOneShot(_guid, point);
-
-		public Instance CreateInstance() => new Instance(RuntimeManager.CreateInstance(_guid));
-		ISoundEventInstance ISoundEvent.CreateInstance() => CreateInstance();
-
-		public class Instance : SoundEventInstance
-		{
-			public Instance(FMOD.Studio.EventInstance eventInstance) : base(eventInstance) { }
-
-		}
-	}
-
 	public class SoundEvent_BunkerEnv_Dripping : ISoundEvent
 	{
 		public bool IsOneShot => false;
@@ -1264,12 +1308,12 @@ namespace Plugins.Audio
 		}
 	}
 
-	public class SoundEvent_Game_Misc_EnvelopeOpen : ISoundEvent
+	public class SoundEvent_BunkerEnv_RandomBoom : ISoundEvent
 	{
 		public bool IsOneShot => true;
-		public float Length => 3300;
+		public float Length => 6800;
 
-		private static readonly FMOD.GUID _guid = new FMOD.GUID() { Data1 = 716425557, Data2 = 1251773731, Data3 = 296599214, Data4 = -951543946 };
+		private static readonly FMOD.GUID _guid = new FMOD.GUID() { Data1 = 269895356, Data2 = 1265007420, Data3 = 830902157, Data4 = -1448921396 };
 
 		public void PlayOneShot() => RuntimeManager.PlayOneShot(_guid);
 		public void PlayOneShotAttached(GameObject attachTo) => RuntimeManager.PlayOneShotAttached(_guid, attachTo);

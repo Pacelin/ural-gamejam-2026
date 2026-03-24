@@ -1,4 +1,5 @@
-﻿using Project.Core.Misc;
+﻿using Plugins.Audio;
+using Project.Core.Misc;
 using Project.Editor.Gameplay;
 using Project.Gameplay.Misc;
 using VContainer;
@@ -22,6 +23,7 @@ namespace Project.Gameplay.Interactables
 
         protected override void OnInteract()
         {
+            AudioSystem.FadeSwitch_LadderBunker.PlayOneShot();
             _sceneLoader.Load(4, builder => builder.RegisterInstance(_collectables), 3);
         }
     }

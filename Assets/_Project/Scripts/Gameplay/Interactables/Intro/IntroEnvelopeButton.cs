@@ -1,4 +1,5 @@
-﻿using Project.Core.Misc;
+﻿using Plugins.Audio;
+using Project.Core.Misc;
 using UnityEngine;
 using UnityEngine.UI;
 using VContainer;
@@ -28,6 +29,7 @@ namespace Project.Gameplay.Interactables.Intro
 
         private void OnClick()
         {
+            AudioSystem.FadeSwitch_Onway.PlayOneShot();
             _sceneLoader.Load(3, 2);
         }
     }
