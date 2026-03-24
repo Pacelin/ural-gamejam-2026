@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="EventFolder" id="{f03e0cd3-7771-437d-bc9d-0903835fa6bd}">
+		<property name="name">
+			<value>FadeSwitch</value>
+		</property>
+		<relationship name="folder">
+			<destination>{680cb858-5088-4613-891c-4531801eee08}</destination>
+		</relationship>
+	</object>
+</objects>

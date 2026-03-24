@@ -85,6 +85,7 @@ namespace Plugins.Audio
 		public static SoundEvent_Game_Characters_PlayerWalkGround Game_Characters_PlayerWalkGround { get; } = new();
 		public static SoundEvent_Game_Characters_PlayerWalkWood Game_Characters_PlayerWalkWood { get; } = new();
 		public static SoundEvent_BunkerEnv_Dripping BunkerEnv_Dripping { get; } = new();
+		public static SoundEvent_Game_Misc_EnvelopeOpen Game_Misc_EnvelopeOpen { get; } = new();
     }
 
 	public class SoundEvent_UI_Click : ISoundEvent
@@ -804,7 +805,7 @@ namespace Plugins.Audio
 	public class SoundEvent_Game_Pickups_Plate : ISoundEvent
 	{
 		public bool IsOneShot => true;
-		public float Length => 403;
+		public float Length => 465;
 
 		private static readonly FMOD.GUID _guid = new FMOD.GUID() { Data1 = -1680753191, Data2 = 1268123024, Data3 = -687526497, Data4 = -1073329918 };
 
@@ -1161,7 +1162,7 @@ namespace Plugins.Audio
 	public class SoundEvent_Game_Pickups_Collectable : ISoundEvent
 	{
 		public bool IsOneShot => true;
-		public float Length => 330;
+		public float Length => 750;
 
 		private static readonly FMOD.GUID _guid = new FMOD.GUID() { Data1 = 553993693, Data2 = 1267126535, Data3 = 665609372, Data4 = -1906483769 };
 
@@ -1248,6 +1249,27 @@ namespace Plugins.Audio
 		public float Length => 7080;
 
 		private static readonly FMOD.GUID _guid = new FMOD.GUID() { Data1 = 1075435997, Data2 = 1290949446, Data3 = -1961783893, Data4 = 1082511880 };
+
+		public void PlayOneShot() => RuntimeManager.PlayOneShot(_guid);
+		public void PlayOneShotAttached(GameObject attachTo) => RuntimeManager.PlayOneShotAttached(_guid, attachTo);
+		public void PlayOneShotInPoint(Vector3 point) => RuntimeManager.PlayOneShot(_guid, point);
+
+		public Instance CreateInstance() => new Instance(RuntimeManager.CreateInstance(_guid));
+		ISoundEventInstance ISoundEvent.CreateInstance() => CreateInstance();
+
+		public class Instance : SoundEventInstance
+		{
+			public Instance(FMOD.Studio.EventInstance eventInstance) : base(eventInstance) { }
+
+		}
+	}
+
+	public class SoundEvent_Game_Misc_EnvelopeOpen : ISoundEvent
+	{
+		public bool IsOneShot => true;
+		public float Length => 3300;
+
+		private static readonly FMOD.GUID _guid = new FMOD.GUID() { Data1 = 716425557, Data2 = 1251773731, Data3 = 296599214, Data4 = -951543946 };
 
 		public void PlayOneShot() => RuntimeManager.PlayOneShot(_guid);
 		public void PlayOneShotAttached(GameObject attachTo) => RuntimeManager.PlayOneShotAttached(_guid, attachTo);
