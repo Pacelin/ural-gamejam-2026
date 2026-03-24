@@ -1,16 +1,17 @@
 ﻿using Plugins.Audio;
 using UnityEngine;
+using VContainer;
 
 namespace Project.Gameplay.Interactables
 {
-    public class PuzzleCounter : MonoBehaviour
+    public class PuzzleCounter : NotInteractableObject
     {
         [SerializeField] private PropsEvents _onComplete;
         [SerializeField] private int _correctCount;
 
         private int _currentCorrect;
 
-        private void Awake()
+        protected override void Initialize(IObjectResolver resolver)
         {
             _onComplete.Prepare();
         }
@@ -20,7 +21,7 @@ namespace Project.Gameplay.Interactables
             _currentCorrect++;
             if (_currentCorrect == _correctCount)
             {
-                _onComplete.Trigger();
+                _onComplete.Trigger(SubtitlesService);
                 AudioSystem.Game_Misc_PuzzleComplete.PlayOneShot();
             }
         }
@@ -30,7 +31,7 @@ namespace Project.Gameplay.Interactables
             _currentCorrect--;
             if (_currentCorrect == _correctCount)
             {
-                _onComplete.Trigger();
+                _onComplete.Trigger(SubtitlesService);
                 AudioSystem.Game_Misc_PuzzleComplete.PlayOneShot();
             }
         }

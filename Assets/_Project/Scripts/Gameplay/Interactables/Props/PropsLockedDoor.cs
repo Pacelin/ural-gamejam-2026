@@ -54,7 +54,6 @@ namespace Project.Gameplay.Interactables
         private bool _opened;
         private bool _unlocked;
         private bool _unlocking;
-        private SubtitlesService _subtitlesService;
         private InventoryModel _inventory;
         
         private void OnDestroy() => _doorOrigin.DOKill();
@@ -62,7 +61,6 @@ namespace Project.Gameplay.Interactables
         protected override void Initialize(IObjectResolver resolver)
         {
             base.Initialize(resolver);
-            _subtitlesService = resolver.Resolve<SubtitlesService>();
             _inventory = resolver.Resolve<InventoryModel>();
         
             _onUnlock.Prepare();
@@ -82,14 +80,14 @@ namespace Project.Gameplay.Interactables
                     DOTween.Sequence(_doorOrigin)
                         .Append(_doorOrigin.DORotateQuaternion(_closedPoint.rotation, _openCloseDuration))
                         .Join(_doorOrigin.DOMove(_closedPoint.position, _openCloseDuration))
-                        .AppendCallback(() => _onClose.Trigger());
+                        .AppendCallback(() => _onClose.Trigger(SubtitlesService));
                     _closeSound.PlayOneShotInPoint(_doorOrigin.position);
                 }
                 else
                 {
                     _opened = true;
                     DOTween.Sequence(_doorOrigin)
-                        .AppendCallback(() => _onOpen.Trigger())
+                        .AppendCallback(() => _onOpen.Trigger(SubtitlesService))
                         .Append(_doorOrigin.DORotateQuaternion(_openedPoint.rotation, _openCloseDuration))
                         .Join(_doorOrigin.DOMove(_openedPoint.position, _openCloseDuration));
                     _openSound.PlayOneShotInPoint(_doorOrigin.position);
@@ -98,7 +96,7 @@ namespace Project.Gameplay.Interactables
             else
             {
                 _lockedSound.PlayOneShotInPoint(_doorOrigin.position);
-                _subtitlesService.Show(_text);
+                SubtitlesService.Show(_text);
             }
         }
         
@@ -122,7 +120,7 @@ namespace Project.Gameplay.Interactables
                 
                 _unlocking = false;
                 _unlocked = true;
-                _onUnlock.Trigger();
+                _onUnlock.Trigger(SubtitlesService);
                 UpdateCursor();
             }, this.GetCancellationTokenOnDestroy());
         }

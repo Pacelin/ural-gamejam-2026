@@ -22,7 +22,7 @@ namespace Project.Gameplay.Interactables
         {
             item.Config.PutSound.PlayOneShotInPoint(transform.position);
             _inventory.RemoveItem(item);
-            _afterDrop.Trigger();
+            _afterDrop.Trigger(SubtitlesService);
         }
     }
 }

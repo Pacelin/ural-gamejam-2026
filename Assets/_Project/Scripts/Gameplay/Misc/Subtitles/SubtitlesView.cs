@@ -10,7 +10,7 @@ namespace Project.Gameplay.Misc
         [SerializeField] private float _minDuration = 1.5f;
         [SerializeField] private float _maxDuration = 5f;
         [SerializeField] private float _durationPerSymbol = 0.075f;
-        [SerializeField] private float _delay = 0.2f;
+        [SerializeField] private float _delay = 0.4f;
 
         private void OnDestroy()
         {
@@ -46,9 +46,9 @@ namespace Project.Gameplay.Misc
                     _text.gameObject.SetActive(true);
                     _text.alpha = 0;
                 })
-                .Append(_text.DOFade(1, 0.15f))
+                .Append(_text.DOFade(1, 0.4f))
                 .AppendInterval(data.Duration)
-                .Append(_text.DOFade(0, 0.15f))
+                .Append(_text.DOFade(0, 0.4f))
                 .AppendCallback(() =>
                 {
                     _text.gameObject.SetActive(false);

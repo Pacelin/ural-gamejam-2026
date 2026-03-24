@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using Project.Gameplay.Misc;
 using UnityEngine;
 
 namespace Project.Gameplay.Movement
@@ -18,12 +19,19 @@ namespace Project.Gameplay.Movement
         [SerializeField] private bool _useSoundWhenBack = false;
         [SerializeField] private bool _usePreviousPointWhenBack = false;
         [SerializeField] private GameObject[] _activeWhenOnPoint;
+        [SerializeField] private SubtitleTrigger _subtitleTrigger;
 
         private void Awake()
         {
             foreach (var go in _activeWhenOnPoint)
                 go.SetActive(false);
             gameObject.SetActive(false);
+        }
+
+        public void TriggerSubtitles(SubtitlesService service)
+        {
+            if (_subtitleTrigger)
+                _subtitleTrigger.Trigger(service);
         }
 
 #if UNITY_EDITOR

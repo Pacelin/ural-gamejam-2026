@@ -2121,6 +2121,14 @@ MonoBehaviour:
   _controlView: {fileID: 2026503732}
   _cameraController: {fileID: 381268062}
   _initialMovementPoint: {fileID: 1417024708}
+  _moveSound:
+    _eventRef:
+      Guid:
+        Data1: 1472852616
+        Data2: 1221819984
+        Data3: -1346469502
+        Data4: 681418791
+      Path: event:/Game/Characters/PlayerWalk
 --- !u!4 &242424755
 Transform:
   m_ObjectHideFlags: 0
@@ -4778,6 +4786,7 @@ MonoBehaviour:
     - {fileID: 564754535}
     _locks: []
     _activators: []
+    _subtitleTrigger: {fileID: 0}
 --- !u!1001 &566117327
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11570,7 +11579,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4834322320520257252, guid: c10539ae55b4a0f46a9571c9b32116ee, type: 3}
       propertyPath: _activeWhenOnPoint.Array.size
-      value: 10
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 4834322320520257252, guid: c10539ae55b4a0f46a9571c9b32116ee, type: 3}
       propertyPath: '_activeWhenOnPoint.Array.data[0]'
@@ -11612,6 +11621,10 @@ PrefabInstance:
       propertyPath: '_activeWhenOnPoint.Array.data[9]'
       value: 
       objectReference: {fileID: 1489143142070501905}
+    - target: {fileID: 4834322320520257252, guid: c10539ae55b4a0f46a9571c9b32116ee, type: 3}
+      propertyPath: '_activeWhenOnPoint.Array.data[10]'
+      value: 
+      objectReference: {fileID: 1951523626}
     - target: {fileID: 5119508956517934658, guid: c10539ae55b4a0f46a9571c9b32116ee, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.22
@@ -17612,9 +17625,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: c4d719000decb4a47a55867840dfdc6b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 985287052}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c4d719000decb4a47a55867840dfdc6b, type: 3}
+--- !u!4 &953385424 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: c4d719000decb4a47a55867840dfdc6b, type: 3}
+  m_PrefabInstance: {fileID: 953385423}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &969459716
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17892,6 +17913,84 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 984464814}
   m_Mesh: {fileID: -3252479090893578492, guid: ceb2e33a4ecd0d4449080285e8ae2724, type: 3}
+--- !u!1 &985287051
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 985287052}
+  - component: {fileID: 985287054}
+  - component: {fileID: 985287053}
+  m_Layer: 0
+  m_Name: Question_Interact
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &985287052
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 985287051}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 953385424}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &985287053
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 985287051}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b37301801bc14163984c1703ceb188d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Project.Gameplay.Interactables.PropsQuestion
+  _manager: {fileID: 1684804566}
+  _text: "\u0415\u0433\u043E \u043D\u0435 \u043C\u0435\u043D\u044F\u043B\u0438 5
+    \u043B\u0435\u0442..."
+  _playSoundOnQuestion: 0
+  _sound:
+    _eventRef:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
+--- !u!65 &985287054
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 985287051}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.46093756, y: 0.02261235, z: 0.7056894}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &986160729
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19928,6 +20027,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1142609516}
   - component: {fileID: 1142609517}
+  - component: {fileID: 1142609518}
   m_Layer: 0
   m_Name: Books_Puzzle
   m_TagString: Untagged
@@ -19967,6 +20067,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b594a500a2e94b2ba91daa358d05f1d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Project.Gameplay.Interactables.PuzzleCounter
+  _manager: {fileID: 1684804566}
   _onComplete:
     _activate: []
     _deactivate: []
@@ -19979,7 +20080,24 @@ MonoBehaviour:
     _locks:
     - {fileID: 4836225694180040822}
     _activators: []
+    _subtitleTrigger: {fileID: 1142609518}
   _correctCount: 5
+--- !u!114 &1142609518
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1142609515}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a8e0604dc47410f8b18040b2cf804e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Project.Gameplay.Movement.SubtitleTrigger
+  _delay: 0
+  _queue:
+  - "\u042F \u0432\u0441\u0435\u0433\u0434\u0430 \u043D\u0435\u043F\u043B\u043E\u0445\u043E
+    \u0440\u0435\u0448\u0430\u043B \u0430\u043D\u0430\u0433\u0440\u0430\u043C\u043C\u044B"
 --- !u!1001 &1143062403
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21476,9 +21594,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 7a29b44b43d0e654bbe09e9b42fea271, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1951523627}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7a29b44b43d0e654bbe09e9b42fea271, type: 3}
+--- !u!4 &1298733228 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 7a29b44b43d0e654bbe09e9b42fea271, type: 3}
+  m_PrefabInstance: {fileID: 1298733227}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1305360855
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22293,7 +22419,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4834322320520257252, guid: c10539ae55b4a0f46a9571c9b32116ee, type: 3}
   m_PrefabInstance: {fileID: 344914564414497938}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 344914564414497940}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 91bd580f66ae4d33880c8ff56d4f36c3, type: 3}
@@ -23180,6 +23306,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6c203403503493e9db522e96039f9d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Project.Gameplay.Interactables.CodePuzzle
+  _manager: {fileID: 1684804566}
   _codeTexts:
   - {fileID: 1354732263}
   - {fileID: 1354732262}
@@ -23202,6 +23329,7 @@ MonoBehaviour:
     _locks: []
     _activators:
     - {fileID: 978028771}
+    _subtitleTrigger: {fileID: 0}
 --- !u!1001 &1480639433
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -30920,6 +31048,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 605137780767501175}
     - target: {fileID: 4834322320520257252, guid: c10539ae55b4a0f46a9571c9b32116ee, type: 3}
+      propertyPath: _subtitleTrigger
+      value: 
+      objectReference: {fileID: 1837868992}
+    - target: {fileID: 4834322320520257252, guid: c10539ae55b4a0f46a9571c9b32116ee, type: 3}
       propertyPath: _activeWhenOnPoint.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -30969,11 +31101,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5212889656089160350, guid: c10539ae55b4a0f46a9571c9b32116ee, type: 3}
       propertyPath: _activeWhenOnPoint.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5212889656089160350, guid: c10539ae55b4a0f46a9571c9b32116ee, type: 3}
       propertyPath: '_activeWhenOnPoint.Array.data[0]'
       value: 
+      objectReference: {fileID: 985287051}
+    - target: {fileID: 7154095092388087048, guid: c10539ae55b4a0f46a9571c9b32116ee, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9848078
+      objectReference: {fileID: 0}
+    - target: {fileID: 7154095092388087048, guid: c10539ae55b4a0f46a9571c9b32116ee, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.17364816
+      objectReference: {fileID: 0}
+    - target: {fileID: 7154095092388087048, guid: c10539ae55b4a0f46a9571c9b32116ee, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 9034918645247332364, guid: c10539ae55b4a0f46a9571c9b32116ee, type: 3}
       propertyPath: m_Name
@@ -30986,7 +31130,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7455536243129994084, guid: c10539ae55b4a0f46a9571c9b32116ee, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1837868992}
   m_SourcePrefab: {fileID: 100100000, guid: c10539ae55b4a0f46a9571c9b32116ee, type: 3}
 --- !u!114 &1837868989 stripped
 MonoBehaviour:
@@ -31004,12 +31151,36 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4834322320520257252, guid: c10539ae55b4a0f46a9571c9b32116ee, type: 3}
   m_PrefabInstance: {fileID: 1837868988}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1837868991}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 91bd580f66ae4d33880c8ff56d4f36c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Project.Gameplay.Movement.MovementPoint
+--- !u!1 &1837868991 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7455536243129994084, guid: c10539ae55b4a0f46a9571c9b32116ee, type: 3}
+  m_PrefabInstance: {fileID: 1837868988}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1837868992
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1837868991}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a8e0604dc47410f8b18040b2cf804e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Project.Gameplay.Movement.SubtitleTrigger
+  _delay: 0.3
+  _queue:
+  - "\u041D\u0435 \u0431\u0443\u0434\u0435\u043C \u0433\u0430\u0434\u0430\u0442\u044C.
+    \u041D\u0430\u0431\u0435\u0440\u0443 \u043A\u043E\u0434, \u043E\u0442\u043A\u0440\u043E\u044E
+    \u2014 \u0438 \u0432\u0441\u0451 \u0432\u0441\u0442\u0430\u043D\u0435\u0442 \u043D\u0430
+    \u0441\u0432\u043E\u0438 \u043C\u0435\u0441\u0442\u0430. \u0423\u0442\u0440\u043E
+    \u0432\u0435\u0447\u0435\u0440\u0430 \u043C\u0443\u0434\u0440\u0435\u043D\u0435\u0435."
 --- !u!1001 &1842396635
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -36861,6 +37032,83 @@ MonoBehaviour:
   _manager: {fileID: 1684804566}
   _point: {fileID: 362366416}
   _useMoveSound: 0
+--- !u!1 &1951523626
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1951523627}
+  - component: {fileID: 1951523629}
+  - component: {fileID: 1951523628}
+  m_Layer: 0
+  m_Name: Question_Interact
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1951523627
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1951523626}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1298733228}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1951523628
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1951523626}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b37301801bc14163984c1703ceb188d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Project.Gameplay.Interactables.PropsQuestion
+  _manager: {fileID: 1684804566}
+  _text: "\u041A\u0430\u0440\u0442\u0438\u043D\u0430 \"Orange\""
+  _playSoundOnQuestion: 0
+  _sound:
+    _eventRef:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
+--- !u!65 &1951523629
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1951523626}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.35422254, y: 0.022630692, z: 0.48561454}
+  m_Center: {x: -0.0013977289, y: -0.006795287, z: -0.002795577}
 --- !u!1001 &1962345760
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -43529,6 +43777,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1147799500}
     - target: {fileID: 4834322320520257252, guid: c10539ae55b4a0f46a9571c9b32116ee, type: 3}
+      propertyPath: _subtitleTrigger
+      value: 
+      objectReference: {fileID: 344914564414497941}
+    - target: {fileID: 4834322320520257252, guid: c10539ae55b4a0f46a9571c9b32116ee, type: 3}
       propertyPath: _activeWhenOnPoint.Array.size
       value: 3
       objectReference: {fileID: 0}
@@ -43623,7 +43875,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7455536243129994084, guid: c10539ae55b4a0f46a9571c9b32116ee, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 344914564414497941}
   m_SourcePrefab: {fileID: 100100000, guid: c10539ae55b4a0f46a9571c9b32116ee, type: 3}
 --- !u!114 &344914564414497939 stripped
 MonoBehaviour:
@@ -43636,6 +43891,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91bd580f66ae4d33880c8ff56d4f36c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Project.Gameplay.Movement.MovementPoint
+--- !u!1 &344914564414497940 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7455536243129994084, guid: c10539ae55b4a0f46a9571c9b32116ee, type: 3}
+  m_PrefabInstance: {fileID: 344914564414497938}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &344914564414497941
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 344914564414497940}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a8e0604dc47410f8b18040b2cf804e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Project.Gameplay.Movement.SubtitleTrigger
+  _delay: 3.5
+  _queue:
+  - "\u041D\u0435\u0437\u043D\u0430\u043A\u043E\u043C\u043E\u0435 \u043C\u0435\u0441\u0442\u043E\u2026\n\u041D\u0430\u0434\u043E
+    \u0431\u044B \u043E\u0441\u043C\u043E\u0442\u0440\u0435\u0442\u044C\u0441\u044F."
 --- !u!4 &351365997581565530
 Transform:
   m_ObjectHideFlags: 0
@@ -43656,6 +43932,22 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6659584873050369684, guid: 767f02bdadf23e347b961435f91e18d7, type: 3}
   m_PrefabInstance: {fileID: 1896519323214079374}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &472273818636374582
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 472273818636374581}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a8e0604dc47410f8b18040b2cf804e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Project.Gameplay.Movement.SubtitleTrigger
+  _delay: 0
+  _queue:
+  - "\u041A\u0442\u043E-\u0442\u043E \u043B\u044E\u0431\u0438\u043B \u0447\u0438\u0442\u0430\u0442\u044C
+    \u043F\u0440\u0438\u043D\u0438\u043C\u0430\u044F \u0432\u0430\u043D\u043D\u0443."
 --- !u!33 &500589999875498920
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -45196,6 +45488,10 @@ PrefabInstance:
       propertyPath: _backPoint
       value: 
       objectReference: {fileID: 476404489}
+    - target: {fileID: 1132019951787375185, guid: fe56b50589b65d8499b2fc1a4c7efd23, type: 3}
+      propertyPath: _onComplete._subtitleTrigger
+      value: 
+      objectReference: {fileID: 1851241112346930162}
     - target: {fileID: 2047240257334953484, guid: fe56b50589b65d8499b2fc1a4c7efd23, type: 3}
       propertyPath: _backPoint
       value: 
@@ -45216,6 +45512,9 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4568917941461085982, guid: fe56b50589b65d8499b2fc1a4c7efd23, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1851241112346930162}
     - targetCorrespondingSourceObject: {fileID: 1490366924155718387, guid: fe56b50589b65d8499b2fc1a4c7efd23, type: 3}
       insertIndex: -1
       addedObject: {fileID: 0}
@@ -45229,6 +45528,26 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: fe56b50589b65d8499b2fc1a4c7efd23, type: 3}
+--- !u!1 &1851241112346930161 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4568917941461085982, guid: fe56b50589b65d8499b2fc1a4c7efd23, type: 3}
+  m_PrefabInstance: {fileID: 1851241112346930160}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1851241112346930162
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1851241112346930161}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a8e0604dc47410f8b18040b2cf804e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Project.Gameplay.Movement.SubtitleTrigger
+  _delay: 0
+  _queue:
+  - "\u0412\u0441\u0435 \u0432 \u0441\u0431\u043E\u0440\u0435"
 --- !u!1001 &1872575756973227115
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -45328,6 +45647,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Props_Bath
       objectReference: {fileID: 0}
+    - target: {fileID: 3178182504384981537, guid: 767f02bdadf23e347b961435f91e18d7, type: 3}
+      propertyPath: _manager
+      value: 
+      objectReference: {fileID: 1684804566}
+    - target: {fileID: 3178182504384981537, guid: 767f02bdadf23e347b961435f91e18d7, type: 3}
+      propertyPath: _subtitleTrigger
+      value: 
+      objectReference: {fileID: 472273818636374582}
+    - target: {fileID: 3178182504384981537, guid: 767f02bdadf23e347b961435f91e18d7, type: 3}
+      propertyPath: _afterPickup._subtitleTrigger
+      value: 
+      objectReference: {fileID: 472273818636374582}
     - target: {fileID: 7349661943391276348, guid: 767f02bdadf23e347b961435f91e18d7, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.569
@@ -45372,6 +45703,9 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6659584873050369684, guid: 767f02bdadf23e347b961435f91e18d7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 472273818636374582}
     - targetCorrespondingSourceObject: {fileID: 5496585110240790812, guid: 767f02bdadf23e347b961435f91e18d7, type: 3}
       insertIndex: -1
       addedObject: {fileID: 0}
@@ -46821,6 +47155,7 @@ MonoBehaviour:
     - {fileID: 1391952660}
     _locks: []
     _activators: []
+    _subtitleTrigger: {fileID: 0}
 --- !u!4 &4153057506666858987
 Transform:
   m_ObjectHideFlags: 0
@@ -50471,6 +50806,7 @@ SceneRoots:
   - {fileID: 729739541053926633}
   - {fileID: 635834627}
   - {fileID: 1480639433}
+  - {fileID: 1298733227}
   - {fileID: 496829419}
   - {fileID: 1386108892}
   - {fileID: 443790623}
@@ -50519,7 +50855,8 @@ SceneRoots:
   - {fileID: 986160729}
   - {fileID: 7731999821548173602}
   - {fileID: 6712298152938107718}
-  - {fileID: 1298733227}
+  - {fileID: 1285615581}
+  - {fileID: 2108767353}
   - {fileID: 953385423}
   - {fileID: 446946674}
   - {fileID: 1338631323}
@@ -50559,5 +50896,3 @@ SceneRoots:
   - {fileID: 752722011}
   - {fileID: 1666077285}
   - {fileID: 4419526}
-  - {fileID: 1285615581}
-  - {fileID: 2108767353}

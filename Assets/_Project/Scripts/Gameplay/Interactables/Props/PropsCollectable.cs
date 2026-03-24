@@ -27,7 +27,7 @@ namespace Project.Gameplay.Interactables
         {
             _collectables.Add();
             _pickupSound.PlayOneShot();
-            _afterPickup.Trigger();
+            _afterPickup.Trigger(SubtitlesService);
         }
     }
 }

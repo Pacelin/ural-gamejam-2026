@@ -7,6 +7,16 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: T_METAL_TS_PLANKS_02
+    second: {fileID: 2100000, guid: 08e4d3e0f158e714297d1d88973e94da, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: T_Wood_Old_Beams
+    second: {fileID: 2100000, guid: 3b4074bb32edd8e48b2441c3ee2db82b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: T_rocky_trail_02
     second: {fileID: 2100000, guid: 8984e19871b47b448855825faa674eaa, type: 2}
   materials:

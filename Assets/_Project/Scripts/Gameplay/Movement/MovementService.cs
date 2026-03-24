@@ -16,21 +16,25 @@ namespace Project.Gameplay.Movement
         private MovementPoint _previousPoint;
 
         private readonly CursorService _cursorService;
+        private readonly SubtitlesService _subtitlesService;
         private readonly MovementBlockView _blockView;
         private readonly MovementControlView _controlView;
         private readonly MovementCameraController _cameraController;
+        private readonly SoundEvent _moveSound;
         private readonly MovementConfig _movementConfig;
         
-        public MovementService(CursorService cursorService,
+        public MovementService(CursorService cursorService, SubtitlesService subtitlesService,
             MovementBlockView blockView, MovementControlView controlView,
-            MovementCameraController cameraController,
+            MovementCameraController cameraController, SoundEvent moveSound,
             MovementPoint initialMovementPoint)
         {
             _cursorService = cursorService;
+            _subtitlesService = subtitlesService;
             _blockView = blockView;
             _controlView = controlView;
-            _movementConfig = Resources.Load<MovementConfig>("SO_MovementConfig");
             _cameraController = cameraController;
+            _moveSound = moveSound;
+            _movementConfig = Resources.Load<MovementConfig>("SO_MovementConfig");
             _activePoint = initialMovementPoint;
         }
 
@@ -44,6 +48,7 @@ namespace Project.Gameplay.Movement
             _activePoint.gameObject.SetActive(true);
             foreach (var p in _activePoint.ActiveWhenOnPoint)
                 p.gameObject.SetActive(true);
+            _activePoint.TriggerSubtitles(_subtitlesService);
             
             _controlView.UpdateControlsFor(_activePoint);
 
@@ -99,6 +104,7 @@ namespace Project.Gameplay.Movement
                 cancellationToken.ThrowIfCancellationRequested();
                 _previousPoint = _activePoint;
                 _activePoint = point;
+                _activePoint.TriggerSubtitles(_subtitlesService);
                 _blockView.Unblock();
                 _cursorService.DisableCursorState(ECursorState.Transition);
             }, _blockView.gameObject.GetCancellationTokenOnDestroy());
@@ -141,6 +147,7 @@ namespace Project.Gameplay.Movement
                 cancellationToken.ThrowIfCancellationRequested();
                 _previousPoint = _activePoint;
                 _activePoint = point;
+                _activePoint.TriggerSubtitles(_subtitlesService);
                 _blockView.Unblock();
                 _cursorService.DisableCursorState(ECursorState.Transition);
             }, _blockView.gameObject.GetCancellationTokenOnDestroy());
@@ -157,7 +164,7 @@ namespace Project.Gameplay.Movement
             if (useMoveSound && distance > 1.5f)
             {
                 _cameraController.MakeMoveImpulse(duration);
-                AudioSystem.Game_Characters_PlayerWalk.PlayOneShot();
+                _moveSound.PlayOneShot();
             }
             await _cameraController.MoveTo(position, rotation, duration,
                 cancellationToken);

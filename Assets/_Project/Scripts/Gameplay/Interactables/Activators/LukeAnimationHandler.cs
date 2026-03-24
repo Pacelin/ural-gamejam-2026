@@ -85,7 +85,7 @@ namespace Project.Gameplay.Interactables
             _cursorService.DisableCursorState(ECursorState.Transition);
             _movementService.UnblockControls();
             _animate = false;
-            _onFinish.Trigger();
+            _onFinish.Trigger(SubtitlesService);
             Destroy(this);
             Destroy(_animation);
         }

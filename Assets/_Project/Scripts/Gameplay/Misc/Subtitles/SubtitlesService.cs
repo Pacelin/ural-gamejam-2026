@@ -1,7 +1,15 @@
-﻿namespace Project.Gameplay.Misc
+﻿using System.Linq;
+using System.Threading;
+using Cysharp.Threading.Tasks;
+using JetBrains.Annotations;
+
+namespace Project.Gameplay.Misc
 {
+    [UsedImplicitly]
     public class SubtitlesService
     {
+        public CancellationToken CancellationToken => _view.GetCancellationTokenOnDestroy();
+        
         private readonly SubtitlesView _view;
 
         public SubtitlesService(SubtitlesView view)
@@ -10,6 +18,12 @@
         } 
 
         public SubtitleSequence Sequence() => new SubtitleSequence(this);
+
+        public void Show(string[] texts) => Show(texts.Select(t => new SubtitleData()
+        {
+            Text = t,
+            Duration = -1
+        }).ToArray());
         
         public void Show(SubtitleData[] datas) => _view.Show(datas);
         public void Show(SubtitleData data) => _view.Show(new[] { data });

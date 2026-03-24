@@ -23,7 +23,7 @@ namespace Project.Gameplay.Interactables
         protected override void OnInteract()
         {
             takeSound.PlayOneShotInPoint(transform.position);
-            _onTake.Trigger();
+            _onTake.Trigger(SubtitlesService);
             _stack.Stack();
         }
     }

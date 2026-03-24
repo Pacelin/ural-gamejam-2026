@@ -502,8 +502,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -500, y: 140}
-  m_SizeDelta: {x: -1000, y: 100}
+  m_AnchoredPosition: {x: -600, y: 140}
+  m_SizeDelta: {x: -1200, y: 100}
   m_Pivot: {x: 1, y: 0}
 --- !u!222 &4775892473400113491
 CanvasRenderer:
@@ -527,34 +527,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: " \u0444\u044B\u0432\u0430\u0444\u044B\u0432\u0430  \u0444\u044B\u0432\u0430\u0444\u044B\u0432\u0430 
-    \u0444\u044B\u0432\u0430\u0444\u044B\u0432\u0430  \u0444\u044B\u0432\u0430\u0444\u044B\u0432\u0430 
-    \u0444\u044B\u0432\u0430\u0444\u044B\u0432\u0430  \u0444\u044B\u0432\u0430\u0444\u044B\u0432\u0430 
-    \u0444\u044B\u0432\u0430\u0444\u044B\u0432\u0430  \u0444\u044B\u0432\u0430\u0444\u044B\u0432\u0430 
-    \u0444\u044B\u0432\u0430\u0444\u044B\u0432\u0430  \u0444\u044B\u0432\u0430\u0444\u044B\u0432\u0430 
-    \u0444\u044B\u0432\u0430\u0444\u044B\u0432\u0430  \u0444\u044B\u0432\u0430\u0444\u044B\u0432\u0430 
-    \u0444\u044B\u0432\u0430\u0444\u044B\u0432\u0430  \u0444\u044B\u0432\u0430\u0444\u044B\u0432\u0430 
-    \u0444\u044B\u0432\u0430\u0444\u044B\u0432\u0430  \u0444\u044B\u0432\u0430\u0444\u044B\u0432\u0430 
-    \u0444\u044B\u0432\u0430\u0444\u044B\u0432\u0430  \u0444\u044B\u0432\u0430\u0444\u044B\u0432\u0430 
-    \u0444\u044B\u0432\u0430\u0444\u044B\u0432\u0430  \u0444\u044B\u0432\u0430\u0444\u044B\u0432\u0430 
-    \u0444\u044B\u0432\u0430\u0444\u044B\u0432\u0430  \u0444\u044B\u0432\u0430\u0444\u044B\u0432\u0430 
-    \u0444\u044B\u0432\u0430\u0444\u044B\u0432\u0430  \u0444\u044B\u0432\u0430\u0444\u044B\u0432\u0430 "
+  m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: cb886ef2401fd5e4b81743ade977c068, type: 2}
-  m_sharedMaterial: {fileID: 2889994292042144857, guid: cb886ef2401fd5e4b81743ade977c068, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 257f9e9368627094d9f79886f2dc64b7, type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: 6d1b683773972fa4f90de6217258b3fa, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColor: {r: 0.93333334, g: 0.91764706, b: 0.8784314, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -571,8 +560,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 32
+  m_fontSizeBase: 32
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -584,7 +573,7 @@ MonoBehaviour:
   m_characterSpacing: 0
   m_characterHorizontalScale: 1
   m_wordSpacing: 0
-  m_lineSpacing: 0
+  m_lineSpacing: 20
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
@@ -613,7 +602,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &1856065080351147876
@@ -2097,7 +2086,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 120}
+  m_SizeDelta: {x: 0, y: 140}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!222 &5290507051817494289
 CanvasRenderer:
@@ -2599,7 +2588,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7540347655421164099}
   - component: {fileID: 6948176323914781861}
-  - component: {fileID: 8845119376381333964}
   - component: {fileID: 2217367423457020397}
   m_Layer: 5
   m_Name: Subtitles
@@ -2651,23 +2639,6 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 500
   m_TargetDisplay: 0
---- !u!114 &8845119376381333964
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6762224538371707407}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.GraphicRaycaster
-  m_IgnoreReversedGraphics: 1
-  m_BlockingObjects: 0
-  m_BlockingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
 --- !u!114 &2217367423457020397
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2682,8 +2653,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Project.Gameplay.Misc.SubtitlesView
   _text: {fileID: 4253071572137619048}
   _minDuration: 1.5
-  _maxDuration: 5
-  _durationPerSymbol: 0.075
+  _maxDuration: 7
+  _durationPerSymbol: 0.15
   _delay: 0.2
 --- !u!1 &6908073367222814450
 GameObject:
@@ -3693,7 +3664,7 @@ RectTransform:
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
   m_AnchoredPosition: {x: -20, y: 140}
-  m_SizeDelta: {x: 450, y: 50}
+  m_SizeDelta: {x: 550, y: 50}
   m_Pivot: {x: 1, y: 0}
 --- !u!222 &1388401476132299683
 CanvasRenderer:
@@ -3723,17 +3694,17 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u041D\u043E\u0436"
+  m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: cb886ef2401fd5e4b81743ade977c068, type: 2}
-  m_sharedMaterial: {fileID: 2889994292042144857, guid: cb886ef2401fd5e4b81743ade977c068, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 257f9e9368627094d9f79886f2dc64b7, type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: 6d1b683773972fa4f90de6217258b3fa, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColor: {r: 0.93333334, g: 0.91764706, b: 0.8784314, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -3750,8 +3721,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 28
+  m_fontSizeBase: 28
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -4028,8 +3999,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4292930286
+  m_fontColor: {r: 0.93333334, g: 0.91764706, b: 0.8784314, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:

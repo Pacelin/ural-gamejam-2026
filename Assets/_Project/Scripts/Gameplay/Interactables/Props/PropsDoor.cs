@@ -50,14 +50,14 @@ namespace Project.Gameplay.Interactables
                         .SetEase(ease))
                     .Join(_doorOrigin.DOMove(_closedPoint.position, duration)
                         .SetEase(ease))
-                    .AppendCallback(() => _onClose.Trigger());
+                    .AppendCallback(() => _onClose.Trigger(SubtitlesService));
                 _closeSound.PlayOneShotInPoint(_doorOrigin.position);
             }
             else
             {
                 _opened = true;
                 DOTween.Sequence(_doorOrigin)
-                    .AppendCallback(() => _onOpen.Trigger())
+                    .AppendCallback(() => _onOpen.Trigger(SubtitlesService))
                     .Append(_doorOrigin.DORotateQuaternion(_openedPoint.rotation, _openCloseDuration))
                     .Join(_doorOrigin.DOMove(_openedPoint.position, _openCloseDuration));
                 _openSound.PlayOneShotInPoint(_doorOrigin.position);

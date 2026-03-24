@@ -1,5 +1,6 @@
 ﻿using Project.Gameplay.Inventory;
 using Project.Gameplay.Misc;
+using Project.Gameplay.Movement;
 using UnityEngine;
 using VContainer;
 
@@ -26,7 +27,7 @@ namespace Project.Gameplay.Interactables
         {
             _inventory.AddItem(_itemConfig);
             _itemConfig.PickupSound.PlayOneShot();
-            _afterPickup.Trigger();
+            _afterPickup.Trigger(SubtitlesService);
         }
     }
 }

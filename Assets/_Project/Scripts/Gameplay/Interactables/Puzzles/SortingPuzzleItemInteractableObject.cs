@@ -30,14 +30,12 @@ namespace Project.Gameplay.Interactables
         [SerializeField] private PropsEvents _onComplete;
         
         private InventoryModel _inventory;
-        private SubtitlesService _subtitles;
         private InventoryItemConfig _currentItem;
         
         protected override void Initialize(IObjectResolver resolver)
         {
             base.Initialize(resolver);
             _inventory = resolver.Resolve<InventoryModel>();
-            _subtitles = resolver.Resolve<SubtitlesService>();
             if (_initialItem)
             {
                 _currentItem = _initialItem;
@@ -60,13 +58,13 @@ namespace Project.Gameplay.Interactables
                 _inventory.AddItem(_currentItem);
                 _currentItem.PickupSound.PlayOneShotInPoint(transform.position);
                 _currentItem = null;
-                _onTake.Trigger();
+                _onTake.Trigger(SubtitlesService);
                 OnChanged?.Invoke(this);
                 UpdateItemsActivation();
             }
             else
             {
-                _subtitles.Show(_questionText);
+                SubtitlesService.Show(_questionText);
             }
         }
         
@@ -84,7 +82,7 @@ namespace Project.Gameplay.Interactables
             _currentItem = item.Config;
             _currentItem.PutSound.PlayOneShotInPoint(transform.position);
             _inventory.RemoveItem(item);
-            _onPut.Trigger();
+            _onPut.Trigger(SubtitlesService);
             OnChanged?.Invoke(this);
             UpdateCursor();
             UpdateItemsActivation();
@@ -92,7 +90,7 @@ namespace Project.Gameplay.Interactables
             if (_currentItem == _correctItem)
             {
                 _puzzleCounter.SetCorrect();
-                _onComplete.Trigger();
+                _onComplete.Trigger(SubtitlesService);
             }
         }
 

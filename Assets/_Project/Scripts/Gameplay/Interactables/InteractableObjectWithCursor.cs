@@ -11,7 +11,10 @@ namespace Project.Gameplay.Interactables
         protected abstract ECursorState HoverCursorState { get; }
         protected abstract ECursorState DownCursorState { get; }
 
+        public SubtitlesService SubtitlesService => _subtitlesService;
+        
         private CursorService _cursorService;
+        private SubtitlesService _subtitlesService;
         private ECursorState _activeCursor;
         private bool _hover;
         private bool _down;
@@ -19,6 +22,7 @@ namespace Project.Gameplay.Interactables
         protected override void Initialize(IObjectResolver resolver)
         {
             _cursorService = resolver.Resolve<CursorService>();
+            _subtitlesService = resolver.Resolve<SubtitlesService>();
             _activeCursor = ECursorState.None;
         }
 

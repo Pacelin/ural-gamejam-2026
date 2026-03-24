@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using Project.Gameplay.Misc;
+using Project.Gameplay.Movement;
+using UnityEngine;
 
 namespace Project.Gameplay.Interactables
 {
@@ -10,6 +12,7 @@ namespace Project.Gameplay.Interactables
         [SerializeField] private GameObject[] _destroy;
         [SerializeField] private PropsLock[] _locks;
         [SerializeField] private PuzzleActivator[] _activators;
+        [SerializeField] private SubtitleTrigger _subtitleTrigger;
 
         public void Prepare()
         {
@@ -21,8 +24,11 @@ namespace Project.Gameplay.Interactables
                     obj.SetActive(true);
         }
 
-        public void Trigger()
+        public void Trigger(SubtitlesService subtitlesService)
         {
+            if (_subtitleTrigger)
+                _subtitleTrigger.Trigger(subtitlesService);
+            
             foreach (var obj in _activate)
                 if (obj)
                     obj.SetActive(true);

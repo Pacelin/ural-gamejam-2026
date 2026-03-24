@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Plugins.Audio;
+using UnityEngine;
 using VContainer;
 using VContainer.Unity;
 
@@ -10,6 +11,7 @@ namespace Project.Gameplay.Movement
         [SerializeField] private MovementControlView _controlView;
         [SerializeField] private MovementCameraController _cameraController;
         [SerializeField] private MovementPoint _initialMovementPoint;
+        [SerializeField] private SoundEvent _moveSound;
         
         protected override void Configure(IContainerBuilder builder)
         {
@@ -18,6 +20,7 @@ namespace Project.Gameplay.Movement
                 .WithParameter(_controlView)
                 .WithParameter(_cameraController)
                 .WithParameter(_initialMovementPoint)
+                .WithParameter(_moveSound)
                 .AsSelf();
         }
     }
