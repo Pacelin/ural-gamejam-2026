@@ -88,7 +88,7 @@
 			<value>123.84528125</value>
 		</property>
 		<relationship name="audioFile">
-			<destination>{660753ee-a8e4-4ab2-a5ff-c3821259783e}</destination>
+			<destination>{bae3aca2-b189-4813-b8c0-ef81327709f6}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusEffectChain" id="{b9521834-4305-4e7b-aa12-f55cb51e6b2e}">
@@ -118,16 +118,28 @@
 		<property name="initialValue">
 			<value>-80</value>
 		</property>
+		<property name="releaseTime">
+			<value>60000</value>
+		</property>
+		<property name="releaseShape">
+			<value>0.252501041</value>
+		</property>
 		<property name="finalValue">
-			<value>-80</value>
+			<value>-20.8888893</value>
 		</property>
 	</object>
 	<object class="MixerBusEffectChain" id="{7e6df43b-1693-4cc7-b89c-0cf8630662fe}">
 		<relationship name="effects">
+			<destination>{dbf632ac-eb28-4234-8e6d-d5953838bae5}</destination>
 			<destination>{9e35041e-908b-4501-8bcf-50b0e16dda5f}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{d23789d5-51ec-4c66-9f4f-6467a8a9fe35}" />
 	<object class="MixerBusFader" id="{963a5020-f03b-43de-b7c3-64487c541e81}" />
+	<object class="ThreeEQEffect" id="{dbf632ac-eb28-4234-8e6d-d5953838bae5}">
+		<property name="highGain">
+			<value>-6</value>
+		</property>
+	</object>
 	<object class="MixerBusFader" id="{9e35041e-908b-4501-8bcf-50b0e16dda5f}" />
 </objects>

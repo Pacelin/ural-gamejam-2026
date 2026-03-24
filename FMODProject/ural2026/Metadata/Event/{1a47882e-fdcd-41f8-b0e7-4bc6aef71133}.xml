@@ -93,7 +93,7 @@
 	</object>
 	<object class="SingleSound" id="{525227fb-eaeb-49f7-8dcb-37376cad5ac7}">
 		<property name="length">
-			<value>11.5</value>
+			<value>11.500000000000002</value>
 		</property>
 		<relationship name="fadeOutCurve">
 			<destination>{4855a97f-66b4-4cae-96cf-0ecdab4d418a}</destination>
@@ -169,7 +169,7 @@
 	</object>
 	<object class="AutomationPoint" id="{16e72c4c-07c3-4e9e-8779-f816d3e2db39}">
 		<property name="position">
-			<value>11.5</value>
+			<value>11.500000000000002</value>
 		</property>
 		<property name="value">
 			<value>1</value>
