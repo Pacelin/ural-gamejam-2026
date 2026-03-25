@@ -7,8 +7,18 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: T_CobWeb
+    second: {fileID: 2100000, guid: 6a68c50f7d2e37540bc5c72535e86e02, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: T_METAL_TS_PLANKS_02
     second: {fileID: 2100000, guid: 08e4d3e0f158e714297d1d88973e94da, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: T_Tube
+    second: {fileID: 2100000, guid: bfbbedc3c27f0d84e93afd0289448178, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule

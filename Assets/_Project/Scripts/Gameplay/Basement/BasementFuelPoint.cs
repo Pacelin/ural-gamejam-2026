@@ -5,6 +5,7 @@ using Project.Gameplay.Interactables;
 using Project.Gameplay.Inventory;
 using Project.Gameplay.Misc;
 using UnityEngine;
+using VContainer;
 
 namespace Project.Gameplay.Basement
 {
@@ -22,7 +23,15 @@ namespace Project.Gameplay.Basement
         [SerializeField] private PropsEvents _onBeginFuel;
         [SerializeField] private PropsEvents _onEndFuel;
         [SerializeField] private BasementGenerator _generator;
-        
+
+        private InventoryModel _inventory;
+
+        protected override void Initialize(IObjectResolver resolver)
+        {
+            base.Initialize(resolver);
+            _inventory = resolver.Resolve<InventoryModel>();
+        }
+
         protected override void OnInteract()
         {
             SubtitlesService.Show(_text);
@@ -37,6 +46,7 @@ namespace Project.Gameplay.Basement
         {
             _fuelSound.PlayOneShotInPoint(_soundPoint.position);
             _onBeginFuel.Trigger(SubtitlesService);
+            _inventory.RemoveItem(item);
             UniTask.Void(async cancellationToken =>
             {
                 cancellationToken.ThrowIfCancellationRequested();

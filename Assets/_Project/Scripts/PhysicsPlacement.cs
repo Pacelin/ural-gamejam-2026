@@ -8,8 +8,6 @@ namespace Project.Editor
     {
         [SerializeField] private Rigidbody[] _rigidbodies;
         [SerializeField] private float _timeStep = 0.1f;
-
-        [SerializeField] private Vector3 _velocity;
         
         [SerializeField] private Vector3[] _originalPositions;
         [SerializeField] private Quaternion[] _originalRotations;
@@ -26,7 +24,8 @@ namespace Project.Editor
             {
                 _originalPositions[i] = _rigidbodies[i].transform.position;
                 _originalRotations[i] = _rigidbodies[i].transform.rotation;
-                _rigidbodies[i].linearVelocity = _velocity;
+                _rigidbodies[i].transform.rotation = Random.rotation;
+                _rigidbodies[i].linearVelocity = Random.insideUnitSphere;
                 _rigidbodies[i].angularVelocity = Random.insideUnitSphere;
             }
         }
