@@ -15,17 +15,9 @@ namespace Project.Gameplay.Interactables
         [SerializeField] private SoundEvent _downSound;
         [SerializeField] private SoundEvent _upSound;
 
-        private SubtitlesService _service;
-        
-        protected override void Initialize(IObjectResolver resolver)
-        {
-            base.Initialize(resolver);
-            _service = resolver.Resolve<SubtitlesService>();
-        }
-
         protected override void OnInteract()
         {
-            _service.Show(_text);
+            SubtitlesService.Show(_text);
         }
 
         public override void OnPointerDown(PointerEventData eventData)

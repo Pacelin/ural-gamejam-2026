@@ -19,13 +19,11 @@ namespace Project.Gameplay.Interactables
         [SerializeField] private Transform _closeValve;
         [SerializeField] private float _duration = 0.7f;
 
-        private SubtitlesService _service;
         private bool _opened;
         
         protected override void Initialize(IObjectResolver resolver)
         {
             base.Initialize(resolver);
-            _service = resolver.Resolve<SubtitlesService>();
             _valve.rotation = _closeValve.rotation;
         }
 
@@ -36,7 +34,7 @@ namespace Project.Gameplay.Interactables
 
         protected override void OnInteract()
         {
-            _service.Show(_text);
+            SubtitlesService.Show(_text);
             if (_opened)
             {
                 _opened = false;

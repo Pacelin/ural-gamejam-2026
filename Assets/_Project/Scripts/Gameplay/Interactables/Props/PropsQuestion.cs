@@ -14,19 +14,11 @@ namespace Project.Gameplay.Interactables
         [SerializeField] private bool _playSoundOnQuestion;
         [SerializeField] private SoundEvent _sound;
 
-        private SubtitlesService _service;
-        
-        protected override void Initialize(IObjectResolver resolver)
-        {
-            base.Initialize(resolver);
-            _service = resolver.Resolve<SubtitlesService>();
-        }
-
         protected override void OnInteract()
         {
             if (_playSoundOnQuestion)
                 _sound.PlayOneShotInPoint(transform.position);
-            _service.Show(_text);
+            SubtitlesService.Show(_text);
         }
     }
 }
