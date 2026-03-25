@@ -17,16 +17,16 @@ MonoBehaviour:
   _pickupSound:
     _eventRef:
       Guid:
-        Data1: 1655223378
-        Data2: 1134739298
-        Data3: 1227707525
-        Data4: -1814829709
-      Path: event:/Game/Misc/Put
+        Data1: -449827902
+        Data2: 1158834923
+        Data3: 1023794825
+        Data4: 776699372
+      Path: event:/Game/Pickups/Fuel
   _putSound:
     _eventRef:
       Guid:
-        Data1: 1655223378
-        Data2: 1134739298
-        Data3: 1227707525
-        Data4: -1814829709
-      Path: event:/Game/Misc/Put
+        Data1: -449827902
+        Data2: 1158834923
+        Data3: 1023794825
+        Data4: 776699372
+      Path: event:/Game/Pickups/Fuel
