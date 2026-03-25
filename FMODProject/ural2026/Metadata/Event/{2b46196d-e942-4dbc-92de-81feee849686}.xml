@@ -5,7 +5,7 @@
 			<value>PlayerWalkGround</value>
 		</property>
 		<property name="outputFormat">
-			<value>1</value>
+			<value>0</value>
 		</property>
 		<relationship name="folder">
 			<destination>{e52e2f7b-7ec6-4799-ba7d-f1092466835e}</destination>
@@ -92,7 +92,6 @@
 		</relationship>
 		<relationship name="sounds">
 			<destination>{ce828580-f45d-4eaa-98f3-67efa95abf14}</destination>
-			<destination>{78e5ed49-8610-4924-90f1-e045ed9a4dec}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusEffectChain" id="{ba0009bf-5cfc-48a2-87d9-5f1f8d414073}">
@@ -138,11 +137,6 @@
 	<object class="SingleSound" id="{ce828580-f45d-4eaa-98f3-67efa95abf14}">
 		<relationship name="audioFile">
 			<destination>{f6181901-3d52-4635-bc6b-793913e7ce7f}</destination>
-		</relationship>
-	</object>
-	<object class="SingleSound" id="{78e5ed49-8610-4924-90f1-e045ed9a4dec}">
-		<relationship name="audioFile">
-			<destination>{a88ca2dd-ec03-483b-955c-6fc8e868920d}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusFader" id="{1c3a4ab3-8d27-4416-bf06-2784180830d9}" />
