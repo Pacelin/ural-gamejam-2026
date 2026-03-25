@@ -2956,6 +2956,55 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91bd580f66ae4d33880c8ff56d4f36c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Project.Gameplay.Movement.MovementPoint
+--- !u!1 &362052801
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 362052803}
+  - component: {fileID: 362052802}
+  m_Layer: 0
+  m_Name: Subtitle_For_Collectables
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &362052802
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 362052801}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a8e0604dc47410f8b18040b2cf804e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Project.Gameplay.Movement.SubtitleTrigger
+  _delay: 0
+  _queue:
+  - "\u0421\u0442\u0440\u0430\u043D\u0438\u0446\u0430 \u044F\u0432\u043D\u043E \u0432\u044B\u0440\u0432\u0430\u043D\u0430
+    \u0438\u0437 \u0442\u0435\u0442\u0440\u0430\u0434\u0438. \u0417\u043D\u0430\u0447\u0438\u0442,
+    \u0435\u0441\u0442\u044C \u0438 \u0434\u0440\u0443\u0433\u0438\u0435."
+--- !u!4 &362052803
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 362052801}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &362366416 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4834322320520257252, guid: c10539ae55b4a0f46a9571c9b32116ee, type: 3}
@@ -20097,7 +20146,7 @@ MonoBehaviour:
   _delay: 0
   _queue:
   - "\u042F \u0432\u0441\u0435\u0433\u0434\u0430 \u043D\u0435\u043F\u043B\u043E\u0445\u043E
-    \u0440\u0435\u0448\u0430\u043B \u0430\u043D\u0430\u0433\u0440\u0430\u043C\u043C\u044B"
+    \u0440\u0435\u0448\u0430\u043B \u0430\u043D\u0430\u0433\u0440\u0430\u043C\u043C\u044B."
 --- !u!1001 &1143062403
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -31176,11 +31225,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Project.Gameplay.Movement.SubtitleTrigger
   _delay: 0.3
   _queue:
-  - "\u041D\u0435 \u0431\u0443\u0434\u0435\u043C \u0433\u0430\u0434\u0430\u0442\u044C.
-    \u041D\u0430\u0431\u0435\u0440\u0443 \u043A\u043E\u0434, \u043E\u0442\u043A\u0440\u043E\u044E
-    \u2014 \u0438 \u0432\u0441\u0451 \u0432\u0441\u0442\u0430\u043D\u0435\u0442 \u043D\u0430
-    \u0441\u0432\u043E\u0438 \u043C\u0435\u0441\u0442\u0430. \u0423\u0442\u0440\u043E
-    \u0432\u0435\u0447\u0435\u0440\u0430 \u043C\u0443\u0434\u0440\u0435\u043D\u0435\u0435."
+  - "\u041B\u044E\u043A \u0432 \u043F\u043E\u043B\u0443. \u0418 \u043D\u0435 \u043F\u0440\u043E\u0441\u0442\u043E
+    \u043A\u0440\u044B\u0448\u043A\u0430, \u0430 \u0441 \u043A\u043E\u0434\u043E\u0432\u044B\u043C
+    \u0437\u0430\u043C\u043A\u043E\u043C. \u0414\u0435\u0434 \u044F\u0432\u043D\u043E
+    \u043D\u0435 \u043A\u0430\u0440\u0442\u043E\u0448\u043A\u0443 \u0437\u0434\u0435\u0441\u044C
+    \u0445\u0440\u0430\u043D\u0438\u043B."
 --- !u!1001 &1842396635
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -37078,7 +37127,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Project.Gameplay.Interactables.PropsQuestion
   _manager: {fileID: 1684804566}
-  _text: "\u041A\u0430\u0440\u0442\u0438\u043D\u0430 \"Orange\""
+  _text: "\u0421\u0442\u0430\u0440\u044B\u0439 \u0440\u0435\u043A\u043B\u0430\u043C\u043D\u044B\u0439
+    \u043F\u043B\u0430\u043A\u0430\u0442."
   _playSoundOnQuestion: 0
   _sound:
     _eventRef:
@@ -43946,8 +43996,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Project.Gameplay.Movement.SubtitleTrigger
   _delay: 0
   _queue:
-  - "\u041A\u0442\u043E-\u0442\u043E \u043B\u044E\u0431\u0438\u043B \u0447\u0438\u0442\u0430\u0442\u044C
-    \u043F\u0440\u0438\u043D\u0438\u043C\u0430\u044F \u0432\u0430\u043D\u043D\u0443."
+  - "\u0427\u0442\u043E \u043E\u043D\u0430 \u0437\u0434\u0435\u0441\u044C \u0437\u0430\u0431\u044B\u043B\u0430."
 --- !u!33 &500589999875498920
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -45131,6 +45180,14 @@ PrefabInstance:
       propertyPath: m_StaticShadowCaster
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8662399183598095112, guid: ce00ec5f401866e46ba170d1bdcb5f01, type: 3}
+      propertyPath: _manager
+      value: 
+      objectReference: {fileID: 1684804566}
+    - target: {fileID: 8662399183598095112, guid: ce00ec5f401866e46ba170d1bdcb5f01, type: 3}
+      propertyPath: _afterPickup._subtitleTrigger
+      value: 
+      objectReference: {fileID: 362052802}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -47334,6 +47391,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2994854459682156281}
     m_Modifications:
+    - target: {fileID: 1537662858305652948, guid: 3a87b6cff37ba5743b22439f38ed44a8, type: 3}
+      propertyPath: _manager
+      value: 
+      objectReference: {fileID: 1684804566}
+    - target: {fileID: 1537662858305652948, guid: 3a87b6cff37ba5743b22439f38ed44a8, type: 3}
+      propertyPath: _afterPickup._subtitleTrigger
+      value: 
+      objectReference: {fileID: 362052802}
     - target: {fileID: 3634583330107113890, guid: 3a87b6cff37ba5743b22439f38ed44a8, type: 3}
       propertyPath: m_Name
       value: Collectable_6
@@ -48006,6 +48071,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1480639434}
     m_Modifications:
+    - target: {fileID: 1019705325132597286, guid: ba5de0c63380e0245afbbc0de32cd826, type: 3}
+      propertyPath: _manager
+      value: 
+      objectReference: {fileID: 1684804566}
+    - target: {fileID: 1019705325132597286, guid: ba5de0c63380e0245afbbc0de32cd826, type: 3}
+      propertyPath: _afterPickup._subtitleTrigger
+      value: 
+      objectReference: {fileID: 362052802}
     - target: {fileID: 6339171576399543887, guid: ba5de0c63380e0245afbbc0de32cd826, type: 3}
       propertyPath: m_Name
       value: Collectable_1
@@ -48454,6 +48527,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 4.09
       objectReference: {fileID: 0}
+    - target: {fileID: 1685362542274865371, guid: 17ef7e85a4b72124b9df4ef4951280a2, type: 3}
+      propertyPath: _manager
+      value: 
+      objectReference: {fileID: 1684804566}
+    - target: {fileID: 1685362542274865371, guid: 17ef7e85a4b72124b9df4ef4951280a2, type: 3}
+      propertyPath: _afterPickup._subtitleTrigger
+      value: 
+      objectReference: {fileID: 362052802}
     - target: {fileID: 6304269465700018503, guid: 17ef7e85a4b72124b9df4ef4951280a2, type: 3}
       propertyPath: m_Size.x
       value: 0.20576912
@@ -50793,6 +50874,7 @@ SceneRoots:
   - {fileID: 3232165383401129791}
   - {fileID: 375243905}
   - {fileID: 1684804567}
+  - {fileID: 362052803}
   - {fileID: 1938773004}
   - {fileID: 344914564414497938}
   - {fileID: 476404486}
