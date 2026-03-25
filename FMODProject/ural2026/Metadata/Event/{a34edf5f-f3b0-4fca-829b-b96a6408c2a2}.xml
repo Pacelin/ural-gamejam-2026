@@ -71,7 +71,7 @@
 	</object>
 	<object class="EventMixerMaster" id="{36f26d5b-7e9d-4668-8032-c0c3dd2dbe82}">
 		<property name="volume">
-			<value>-12</value>
+			<value>-10</value>
 		</property>
 		<relationship name="effectChain">
 			<destination>{c2e487cf-0d75-4969-b2f6-93527e853ded}</destination>
@@ -85,7 +85,7 @@
 	</object>
 	<object class="SingleSound" id="{e64bf8da-ecf2-43bc-8335-d0282927b2d2}">
 		<property name="start">
-			<value>0.29999999999999999</value>
+			<value>0.35000000000000003</value>
 		</property>
 		<property name="length">
 			<value>2.950000000000002</value>
@@ -116,7 +116,7 @@
 	</object>
 	<object class="SingleSound" id="{ae6767fe-eaff-4433-9531-852d6bf17305}">
 		<property name="start">
-			<value>3.505187976607453</value>
+			<value>4.3500000000000005</value>
 		</property>
 		<property name="length">
 			<value>0.68568684282060421</value>
@@ -130,7 +130,7 @@
 	</object>
 	<object class="SingleSound" id="{c3ef4023-e870-46e0-89a5-7a4e1039a3ee}">
 		<property name="start">
-			<value>3.2500000000000018</value>
+			<value>3.5500000000000003</value>
 		</property>
 		<property name="length">
 			<value>0.25518797660745118</value>
@@ -183,7 +183,7 @@
 	</object>
 	<object class="AutomationPoint" id="{cedce7b0-46f5-41c2-aa8a-883934158bff}">
 		<property name="position">
-			<value>0.29999999999999999</value>
+			<value>0.35000000000000003</value>
 		</property>
 		<property name="value">
 			<value>0</value>
@@ -194,7 +194,7 @@
 	</object>
 	<object class="AutomationPoint" id="{cf3f7ebf-fce6-42f8-a77d-ecbf9cdbe1ff}">
 		<property name="position">
-			<value>1.75</value>
+			<value>1.8</value>
 		</property>
 		<property name="value">
 			<value>1</value>
@@ -202,7 +202,7 @@
 	</object>
 	<object class="AutomationPoint" id="{2c416770-de91-49e9-a439-501f8b027d39}">
 		<property name="position">
-			<value>1.8000000000000043</value>
+			<value>1.8500000000000043</value>
 		</property>
 		<property name="value">
 			<value>1</value>
@@ -213,7 +213,7 @@
 	</object>
 	<object class="AutomationPoint" id="{a263822f-c5b5-454a-b209-1ad53a85fff6}">
 		<property name="position">
-			<value>3.2500000000000018</value>
+			<value>3.3000000000000016</value>
 		</property>
 		<property name="value">
 			<value>0</value>
