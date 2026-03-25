@@ -1,6 +1,8 @@
-﻿using DG.Tweening;
+﻿using System;
+using DG.Tweening;
 using Plugins.Audio;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 namespace Project.Gameplay.Basement
 {
