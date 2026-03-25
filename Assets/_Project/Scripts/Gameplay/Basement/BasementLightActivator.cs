@@ -1,4 +1,5 @@
-﻿using Project.Gameplay.Interactables;
+﻿using System;
+using Project.Gameplay.Interactables;
 using UnityEngine;
 
 namespace Project.Gameplay.Basement
