@@ -57,22 +57,22 @@ Material:
     - _CausticsTiling: 0
     - _DebugUV: 0
     - _DistortionSpeed: 0.02
-    - _DistortionStrength: 0.0211
+    - _DistortionStrength: 0.007
     - _EnableReflections: 1
     - _EnableSpecular: 1
-    - _FresnelBias: 0.439
-    - _FresnelPower: 0.54
+    - _FresnelBias: 0.68
+    - _FresnelPower: 0.3
     - _NormalScale: 0.67
-    - _ReflectionFresnelPower: 10
+    - _ReflectionFresnelPower: 0.7
     - _ReflectionIntensity: 0
     - _ReflectionStrength: 1
-    - _RefractionScale: 0
+    - _RefractionScale: 0.017
     - _RefractionStrength: 0.003
     - _Smoothness: 1
     - _SpecularIntensity: 0
     - _WaterDepthMax: 1
     m_Colors:
-    - _Color: {r: 0.27547157, g: 0.12006392, b: 0.17324299, a: 0.8509804}
+    - _Color: {r: 0.2679245, g: 0.15114985, b: 0.1753861, a: 0.8745098}
     - _DepthColor: {r: 0.5999999, g: 0.20470579, b: 0.1799999, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
