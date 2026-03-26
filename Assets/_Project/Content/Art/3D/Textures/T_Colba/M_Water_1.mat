@@ -57,16 +57,16 @@ Material:
     - _CausticsTiling: 0
     - _DebugUV: 0
     - _DistortionSpeed: 0.02
-    - _DistortionStrength: 0.007
+    - _DistortionStrength: 0.01
     - _EnableReflections: 1
     - _EnableSpecular: 1
-    - _FresnelBias: 0.68
-    - _FresnelPower: 0.3
+    - _FresnelBias: 1
+    - _FresnelPower: 0.68
     - _NormalScale: 0.67
-    - _ReflectionFresnelPower: 0.7
-    - _ReflectionIntensity: 0
+    - _ReflectionFresnelPower: 1.34
+    - _ReflectionIntensity: 0.048
     - _ReflectionStrength: 1
-    - _RefractionScale: 0.017
+    - _RefractionScale: 0.0074
     - _RefractionStrength: 0.003
     - _Smoothness: 1
     - _SpecularIntensity: 0

@@ -11,6 +11,7 @@ Shader "Custom/RealisticWater"
         _SpecularIntensity ("Specular Intensity", Range(0, 1)) = 0.3
         _NoiseTexture ("Noise Texture", 2D) = "white" {}
         
+        // Отражения
         _ReflectionCube ("Reflection Cube", Cube) = "white" {}
         _ReflectionIntensity ("Reflection Intensity", Range(0, 1)) = 0.5
         _ReflectionFresnelPower ("Reflection Fresnel Power", Range(0, 10)) = 2.0
@@ -30,9 +31,9 @@ Shader "Custom/RealisticWater"
             Name "WaterPass"
             Tags { "LightMode" = "UniversalForward" }
 
-            Cull Back
             Blend SrcAlpha OneMinusSrcAlpha
             ZWrite Off
+            Cull Off
 
             HLSLPROGRAM
             #pragma vertex vert
@@ -92,48 +93,56 @@ Shader "Custom/RealisticWater"
 
             half4 frag(Varyings input) : SV_Target
             {
+                // Нормализация
                 float3 normalWS = normalize(input.normalWS);
                 float3 viewDirWS = normalize(input.viewDirWS);
 
-                float NdotV = abs(dot(normalWS, viewDirWS));
-
-                float fresnel = pow(1.0 - NdotV, _FresnelPower);
+                // Эффект Френеля для прозрачности/цвета воды
+                float fresnel = pow(1.0 - saturate(dot(normalWS, viewDirWS)), _FresnelPower);
                 fresnel = lerp(_FresnelBias, 1.0, fresnel);
 
+                // Искажение экранных координат для преломления
                 float2 screenUV = input.screenPos.xy / input.screenPos.w;
+
+                // Шумовое искажение (движение)
                 float2 noiseUV = input.uv + _Time.y * _DistortionSpeed;
                 float2 noise = SAMPLE_TEXTURE2D(_NoiseTexture, sampler_NoiseTexture, noiseUV).rg * 2.0 - 1.0;
                 noise *= _DistortionStrength;
 
+                // Искажение на основе нормалей в экранном пространстве
                 float3 normalVS = TransformWorldToViewDir(normalWS);
                 float2 normalDistortion = normalVS.xy * _RefractionScale;
+                
+                // Суммарное смещение для преломления
                 float2 distortion = noise + normalDistortion;
                 float2 distortedUV = screenUV + distortion;
-                distortedUV = clamp(distortedUV, 0.001, 0.999);
 
+                // Цвет фона (текстура камеры) — преломлённый
                 half3 bgColor = SAMPLE_TEXTURE2D(_CameraOpaqueTexture, sampler_CameraOpaqueTexture, distortedUV).rgb;
+
+                // Цвет воды (основной)
                 half3 waterColor = _Color.rgb;
 
+                // Отражения
+                float3 reflectionDir = reflect(-viewDirWS, normalWS);
+                half3 reflectionColor = SAMPLE_TEXTURECUBE(_ReflectionCube, sampler_ReflectionCube, reflectionDir).rgb;
+
+                // Френель для отражений (отражения сильнее на краях)
+                float reflectionFresnel = pow(1.0 - saturate(dot(normalWS, viewDirWS)), _ReflectionFresnelPower);
+                reflectionFresnel = saturate(reflectionFresnel);
+
+                // Смешивание: сначала вода с фоном (преломление), затем отражения поверх
                 half alphaWater = _Color.a * fresnel;
                 half3 combinedColor = lerp(bgColor, waterColor, alphaWater);
-
-                half3 reflectionColor = 0;
-                #ifdef TEXTURECUBE_ON
-                float3 reflectionDir = reflect(-viewDirWS, normalWS);
-                reflectionColor = SAMPLE_TEXTURECUBE(_ReflectionCube, sampler_ReflectionCube, reflectionDir).rgb;
-                #endif
-                float reflectionFresnel = pow(1.0 - NdotV, _ReflectionFresnelPower);
-                reflectionFresnel = saturate(reflectionFresnel);
+                
+                // Добавляем отражения с учётом интенсивности и Френеля
                 half3 finalColor = lerp(combinedColor, reflectionColor, _ReflectionIntensity * reflectionFresnel);
 
-                Light mainLight = GetMainLight();
-                float3 lightDir = mainLight.direction;
-                float3 halfVec = normalize(lightDir + viewDirWS);
-                half specular = pow(saturate(dot(normalWS, halfVec)), 64);
-                specular = min(specular, 1.0) * _SpecularIntensity;
+                // Простой блик (спекуляр)
+                half3 lightDir = normalize(_MainLightPosition.xyz);
+                half3 halfVec = normalize(lightDir + viewDirWS);
+                half specular = pow(saturate(dot(normalWS, halfVec)), 64) * _SpecularIntensity;
                 finalColor += specular;
-
-                finalColor = saturate(finalColor);
 
                 return half4(finalColor, 1.0);
             }

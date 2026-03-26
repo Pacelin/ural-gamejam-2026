@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using Plugins.Audio;
 using Project.Gameplay.Misc;
 using UnityEngine;
 
@@ -13,6 +14,9 @@ namespace Project.Gameplay.Movement
         public IReadOnlyList<GameObject> ActiveWhenOnPoint => _activeWhenOnPoint;
         public bool UseSoundWhenBack => _useSoundWhenBack;
 
+        public bool HaveCustomMoveSound => _haveCustomMoveSound;
+        public SoundEvent CustomMoveSound => _customMoveSound;
+        
         [SerializeField] private MovementPoint _rightPoint;
         [SerializeField] private MovementPoint _leftPoint;
         [SerializeField] private MovementPoint _backPoint;
@@ -20,6 +24,9 @@ namespace Project.Gameplay.Movement
         [SerializeField] private bool _usePreviousPointWhenBack = false;
         [SerializeField] private GameObject[] _activeWhenOnPoint;
         [SerializeField] private SubtitleTrigger _subtitleTrigger;
+        [Space]
+        [SerializeField] private bool _haveCustomMoveSound = false;
+        [SerializeField] private SoundEvent _customMoveSound;
 
         private void Awake()
         {

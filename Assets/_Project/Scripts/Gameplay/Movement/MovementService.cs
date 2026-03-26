@@ -164,7 +164,10 @@ namespace Project.Gameplay.Movement
             if (useMoveSound && distance > 1.5f)
             {
                 _cameraController.MakeMoveImpulse(duration);
-                _moveSound.PlayOneShot();
+                var moveSound = _moveSound;
+                if (_activePoint.HaveCustomMoveSound)
+                    moveSound = _activePoint.CustomMoveSound;
+                moveSound.PlayOneShot();
             }
             await _cameraController.MoveTo(position, rotation, duration,
                 cancellationToken);
