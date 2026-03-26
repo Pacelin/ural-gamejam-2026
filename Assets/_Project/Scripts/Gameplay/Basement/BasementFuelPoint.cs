@@ -23,6 +23,7 @@ namespace Project.Gameplay.Basement
         [SerializeField] private PropsEvents _onBeginFuel;
         [SerializeField] private PropsEvents _onEndFuel;
         [SerializeField] private BasementGenerator _generator;
+        [SerializeField] private Animation _fuelAnimation;
 
         private InventoryModel _inventory;
 
@@ -47,6 +48,7 @@ namespace Project.Gameplay.Basement
             _fuelSound.PlayOneShotInPoint(_soundPoint.position);
             _onBeginFuel.Trigger(SubtitlesService);
             _inventory.RemoveItem(item);
+            _fuelAnimation.Play();
             UniTask.Void(async cancellationToken =>
             {
                 cancellationToken.ThrowIfCancellationRequested();
