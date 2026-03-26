@@ -1,4 +1,5 @@
-﻿using UnityEditor;
+﻿#if UNITY_EDITOR
+using UnityEditor;
 using UnityEngine;
 
 namespace Project.Gameplay.Basement
@@ -32,3 +33,4 @@ namespace Project.Gameplay.Basement
         }
     }
 }
+#endif

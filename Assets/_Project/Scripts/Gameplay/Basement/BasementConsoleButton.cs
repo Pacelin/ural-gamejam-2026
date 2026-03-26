@@ -24,6 +24,12 @@ namespace Project.Gameplay.Basement
         private bool _down;
         private bool _selected;
 
+        protected override void OnValidate()
+        {
+            base.OnValidate();
+            _meshRenderer = GetComponentInParent<MeshRenderer>();
+        }
+
         public void SetSelected(bool selected)
         {
             _selected = selected;

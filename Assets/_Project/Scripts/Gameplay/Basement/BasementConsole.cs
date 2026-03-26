@@ -5,16 +5,20 @@ using VContainer;
 
 namespace Project.Gameplay.Basement
 {
-    public class PureBloodReceiver : MonoBehaviour
-    {
-        
-    }
-    
     public class BasementConsole : NotInteractableObject
     {
         [SerializeField] private BasementConsoleButton[] _buttons;
         [SerializeField] private BasementConsoleCommand[] _commands;
         [SerializeField] private PropsEvents _onFailEnter;
+
+        protected override void OnValidate()
+        {
+            base.OnValidate();
+            if (_buttons == null || _buttons.Length == 0)
+            {
+                _buttons = FindObjectsByType<BasementConsoleButton>(FindObjectsSortMode.None);
+            }
+        }
 
         protected override void Initialize(IObjectResolver resolver) { }
 
