@@ -65,7 +65,7 @@
 	</object>
 	<object class="EventMixerMaster" id="{63ee9884-579d-43d3-a3c7-c57083f50893}">
 		<property name="volume">
-			<value>-9</value>
+			<value>-3.5</value>
 		</property>
 		<relationship name="modulators">
 			<destination>{6a3a9b31-8289-4430-8298-d7f39eda30db}</destination>
@@ -107,13 +107,14 @@
 			<value>1</value>
 		</property>
 		<property name="amount">
-			<value>6.5</value>
+			<value>3</value>
 		</property>
 	</object>
 	<object class="MixerBusEffectChain" id="{31f8efab-9a32-4942-9b45-730acde46222}">
 		<relationship name="effects">
 			<destination>{ba3e0d49-0e0f-45cb-a2d0-09a05fb37de7}</destination>
 			<destination>{7b200b40-15b8-413d-9da7-7e6aa2ce1504}</destination>
+			<destination>{54279df1-6ffa-4ad0-876a-1251c45f004f}</destination>
 			<destination>{ed9285f2-d440-462f-84c9-91711d45dbfe}</destination>
 		</relationship>
 	</object>
@@ -158,9 +159,37 @@
 		</property>
 	</object>
 	<object class="MixerBusFader" id="{7b200b40-15b8-413d-9da7-7e6aa2ce1504}" />
+	<object class="ThreeEQEffect" id="{54279df1-6ffa-4ad0-876a-1251c45f004f}">
+		<property name="midGain">
+			<value>6.5</value>
+		</property>
+		<property name="highGain">
+			<value>5.5</value>
+		</property>
+		<relationship name="modulators">
+			<destination>{cdb8b734-e8fc-4548-b077-e786e3146274}</destination>
+			<destination>{1116ccae-30ec-41e9-8dc9-f6607f4c3fc8}</destination>
+		</relationship>
+	</object>
 	<object class="ObjectSpatialiserEffect" id="{ed9285f2-d440-462f-84c9-91711d45dbfe}">
 		<property name="distanceRolloffType">
 			<value>3</value>
+		</property>
+	</object>
+	<object class="RandomizerModulator" id="{cdb8b734-e8fc-4548-b077-e786e3146274}">
+		<property name="nameOfPropertyBeingModulated">
+			<value>highGain</value>
+		</property>
+		<property name="amount">
+			<value>14.5</value>
+		</property>
+	</object>
+	<object class="RandomizerModulator" id="{1116ccae-30ec-41e9-8dc9-f6607f4c3fc8}">
+		<property name="nameOfPropertyBeingModulated">
+			<value>midGain</value>
+		</property>
+		<property name="amount">
+			<value>23.5</value>
 		</property>
 	</object>
 </objects>
