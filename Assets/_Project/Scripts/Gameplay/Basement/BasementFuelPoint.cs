@@ -4,6 +4,7 @@ using Plugins.Audio;
 using Project.Gameplay.Interactables;
 using Project.Gameplay.Inventory;
 using Project.Gameplay.Misc;
+using Project.Gameplay.Movement;
 using UnityEngine;
 using VContainer;
 
@@ -26,11 +27,13 @@ namespace Project.Gameplay.Basement
         [SerializeField] private Animation _fuelAnimation;
 
         private InventoryModel _inventory;
+        private MovementService _movementService;
 
         protected override void Initialize(IObjectResolver resolver)
         {
             base.Initialize(resolver);
             _inventory = resolver.Resolve<InventoryModel>();
+            _movementService = resolver.Resolve<MovementService>();
         }
 
         protected override void OnInteract()
@@ -51,6 +54,7 @@ namespace Project.Gameplay.Basement
             _fuelAnimation.Play();
             UniTask.Void(async cancellationToken =>
             {
+                _movementService.BlockControls();
                 cancellationToken.ThrowIfCancellationRequested();
                 await UniTask.Delay(TimeSpan.FromSeconds(_fuelDuration), 
                     cancellationToken: cancellationToken);
@@ -58,6 +62,7 @@ namespace Project.Gameplay.Basement
                 cancellationToken.ThrowIfCancellationRequested();
                 _onEndFuel.Trigger(SubtitlesService);
                 _generator.SetFuel();
+                _movementService.UnblockControls();
             }, this.GetCancellationTokenOnDestroy());
         }
     }

@@ -1,12 +1,15 @@
-﻿using System;
-using System.Linq;
+﻿using System.Linq;
 using Project.Gameplay.Interactables;
-using TMPro;
 using UnityEngine;
 using VContainer;
 
 namespace Project.Gameplay.Basement
 {
+    public class PureBloodReceiver : MonoBehaviour
+    {
+        
+    }
+    
     public class BasementConsole : NotInteractableObject
     {
         [SerializeField] private BasementConsoleButton[] _buttons;
