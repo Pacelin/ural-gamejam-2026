@@ -19,7 +19,7 @@ Shader "Custom/RealisticGlass"
         Tags
         {
             "RenderPipeline" = "UniversalPipeline"
-            "Queue" = "Transparent"
+            "Queue" = "Transparent+1"
             "RenderType" = "Transparent"
         }
 
@@ -29,7 +29,7 @@ Shader "Custom/RealisticGlass"
             Tags { "LightMode" = "UniversalForward" }
 
             Blend SrcAlpha OneMinusSrcAlpha
-            ZWrite Off
+            ZWrite On
             Cull Back
 
             HLSLPROGRAM
@@ -94,11 +94,9 @@ Shader "Custom/RealisticGlass"
 
             half4 frag(Varyings input) : SV_Target
             {
-                // Нормализация
                 float3 normalWS = normalize(input.normalWS);
                 float3 viewDirWS = normalize(input.viewDirWS);
 
-                // Получение нормалей из карты нормалей (если есть)
                 float3 normalTS = UnpackNormal(SAMPLE_TEXTURE2D(_NormalMap, sampler_NormalMap, input.uv));
                 normalTS.xy *= _NormalStrength;
                 normalTS.z = sqrt(1.0 - saturate(dot(normalTS.xy, normalTS.xy)));
@@ -106,36 +104,33 @@ Shader "Custom/RealisticGlass"
                 float3x3 TBN = float3x3(input.tangentWS, input.bitangentWS, normalWS);
                 float3 perturbedNormalWS = normalize(mul(normalTS, TBN));
 
-                // Френель для прозрачности и цвета (края стекла более плотные)
                 float fresnel = pow(1.0 - saturate(dot(perturbedNormalWS, viewDirWS)), _FresnelPower);
                 fresnel = lerp(_FresnelBias, 1.0, fresnel);
 
-                // Искажение экранных координат (преломление)
                 float2 screenUV = input.screenPos.xy / input.screenPos.w;
                 float2 normalDistortion = perturbedNormalWS.xy * _RefractionStrength;
                 float2 distortedUV = screenUV + normalDistortion;
+                distortedUV = clamp(distortedUV, 0.001, 0.999);
 
-                // Цвет фона (текстура камеры) — преломлённый
                 half3 bgColor = SAMPLE_TEXTURE2D(_CameraOpaqueTexture, sampler_CameraOpaqueTexture, distortedUV).rgb;
 
-                // Отражения
                 float3 reflectionDir = reflect(-viewDirWS, perturbedNormalWS);
                 half3 reflectionColor = SAMPLE_TEXTURECUBE(_ReflectionCube, sampler_ReflectionCube, reflectionDir).rgb;
 
-                // Френель для отражений (отражения сильнее на скользящих углах)
                 float reflectionFresnel = pow(1.0 - saturate(dot(perturbedNormalWS, viewDirWS)), _ReflectionFresnelPower);
                 reflectionFresnel = saturate(reflectionFresnel);
 
-                // Смешивание: сначала фон с цветом стекла, затем отражения
                 half alphaGlass = _Color.a * fresnel;
                 half3 tintedBg = lerp(bgColor, bgColor * _Color.rgb, _Color.a);
                 half3 combinedColor = lerp(tintedBg, reflectionColor, _ReflectionIntensity * reflectionFresnel);
 
-                // Блик (простой спекуляр) на основе шероховатости
-                half3 lightDir = normalize(_MainLightPosition.xyz);
-                half3 halfVec = normalize(lightDir + viewDirWS);
+                Light mainLight = GetMainLight();
+                float3 lightDir = mainLight.direction;
+                float3 halfVec = normalize(lightDir + viewDirWS);
                 half specular = pow(saturate(dot(perturbedNormalWS, halfVec)), lerp(64, 256, 1.0 - _Roughness)) * (1.0 - _Roughness);
                 combinedColor += specular * 0.5;
+
+                combinedColor = saturate(combinedColor);
 
                 return half4(combinedColor, alphaGlass);
             }

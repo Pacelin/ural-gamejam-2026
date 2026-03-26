@@ -30,7 +30,7 @@ Shader "Custom/RealisticWater"
             Name "WaterPass"
             Tags { "LightMode" = "UniversalForward" }
 
-            Cull Off
+            Cull Back
             Blend SrcAlpha OneMinusSrcAlpha
             ZWrite Off
 
@@ -95,14 +95,11 @@ Shader "Custom/RealisticWater"
                 float3 normalWS = normalize(input.normalWS);
                 float3 viewDirWS = normalize(input.viewDirWS);
 
-                // Симметричный френель (абсолютное значение)
                 float NdotV = abs(dot(normalWS, viewDirWS));
 
-                // Френель для прозрачности воды
                 float fresnel = pow(1.0 - NdotV, _FresnelPower);
                 fresnel = lerp(_FresnelBias, 1.0, fresnel);
 
-                // Преломление – защита UV от выхода за границы (с небольшим отступом)
                 float2 screenUV = input.screenPos.xy / input.screenPos.w;
                 float2 noiseUV = input.uv + _Time.y * _DistortionSpeed;
                 float2 noise = SAMPLE_TEXTURE2D(_NoiseTexture, sampler_NoiseTexture, noiseUV).rg * 2.0 - 1.0;
@@ -112,18 +109,14 @@ Shader "Custom/RealisticWater"
                 float2 normalDistortion = normalVS.xy * _RefractionScale;
                 float2 distortion = noise + normalDistortion;
                 float2 distortedUV = screenUV + distortion;
-
-                // Жёсткое ограничение UV с отступом от краёв
                 distortedUV = clamp(distortedUV, 0.001, 0.999);
 
                 half3 bgColor = SAMPLE_TEXTURE2D(_CameraOpaqueTexture, sampler_CameraOpaqueTexture, distortedUV).rgb;
                 half3 waterColor = _Color.rgb;
 
-                // Смешивание воды с фоном
                 half alphaWater = _Color.a * fresnel;
                 half3 combinedColor = lerp(bgColor, waterColor, alphaWater);
 
-                // Отражения – используем только если куб назначен (иначе не добавляем)
                 half3 reflectionColor = 0;
                 #ifdef TEXTURECUBE_ON
                 float3 reflectionDir = reflect(-viewDirWS, normalWS);
@@ -133,7 +126,6 @@ Shader "Custom/RealisticWater"
                 reflectionFresnel = saturate(reflectionFresnel);
                 half3 finalColor = lerp(combinedColor, reflectionColor, _ReflectionIntensity * reflectionFresnel);
 
-                // Спекуляр – ограничиваем яркость
                 Light mainLight = GetMainLight();
                 float3 lightDir = mainLight.direction;
                 float3 halfVec = normalize(lightDir + viewDirWS);
@@ -141,7 +133,6 @@ Shader "Custom/RealisticWater"
                 specular = min(specular, 1.0) * _SpecularIntensity;
                 finalColor += specular;
 
-                // Финальная защита от пересвета
                 finalColor = saturate(finalColor);
 
                 return half4(finalColor, 1.0);
