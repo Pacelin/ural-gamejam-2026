@@ -87,6 +87,7 @@
 		<relationship name="sounds">
 			<destination>{b56772ee-d3fb-48c0-84ba-cc297f4dbfaa}</destination>
 			<destination>{a84d94b2-2070-4902-b077-dc531be23256}</destination>
+			<destination>{fe767eb6-de77-4c4d-be3d-6ecb9745f81a}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusEffectChain" id="{a81287b6-2cda-46de-a03e-2b95c4c6438d}">
@@ -121,6 +122,11 @@
 			<destination>{b6f441ae-4a7a-4ea8-9f9a-cb8194ac2b2a}</destination>
 		</relationship>
 	</object>
+	<object class="SingleSound" id="{fe767eb6-de77-4c4d-be3d-6ecb9745f81a}">
+		<relationship name="audioFile">
+			<destination>{7355cd7d-6986-4315-a601-0f56818fbf00}</destination>
+		</relationship>
+	</object>
 	<object class="MixerBusFader" id="{73cae6a2-90bf-4566-a576-0b5151c40d53}" />
 	<object class="DelayEffect" id="{10271791-51be-4999-88ac-50012aa97b0e}">
 		<property name="feedback">
@@ -144,7 +150,7 @@
 			<value>1</value>
 		</property>
 		<property name="curveShape">
-			<value>0.25471893</value>
+			<value>-0.180115893</value>
 		</property>
 	</object>
 	<object class="AutomationPoint" id="{3a406e11-3ff5-4e7d-b487-db57fe3ca046}">
