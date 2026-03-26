@@ -82,11 +82,14 @@
 	</object>
 	<object class="MultiSound" id="{6667d74f-163d-4b7e-823a-a8ec23a205d9}">
 		<property name="length">
-			<value>0.20000000000000001</value>
+			<value>0.188</value>
 		</property>
 		<property name="playlistMode">
 			<value>1</value>
 		</property>
+		<relationship name="fadeOutCurve">
+			<destination>{56c22372-9137-45ff-b498-9824087b426d}</destination>
+		</relationship>
 		<relationship name="sounds">
 			<destination>{b2c71af5-4b10-4cef-a5ee-01cb7907a033}</destination>
 			<destination>{09c0777e-b3e6-4ab2-99c9-2bcf4b083fcd}</destination>
@@ -119,6 +122,14 @@
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{0d76e936-3156-4878-8983-e3f728bb5c6e}" />
+	<object class="FadeCurve" id="{56c22372-9137-45ff-b498-9824087b426d}">
+		<relationship name="startPoint">
+			<destination>{8074856d-051a-405d-bc3a-aa6c81638082}</destination>
+		</relationship>
+		<relationship name="endPoint">
+			<destination>{a06a5f43-0f66-4f72-b4f7-24e709cae50f}</destination>
+		</relationship>
+	</object>
 	<object class="SingleSound" id="{b2c71af5-4b10-4cef-a5ee-01cb7907a033}">
 		<relationship name="audioFile">
 			<destination>{6aec2eae-4ef1-478d-b342-4381aef8d856}</destination>
@@ -174,6 +185,25 @@
 	<object class="ObjectSpatialiserEffect" id="{ed9285f2-d440-462f-84c9-91711d45dbfe}">
 		<property name="distanceRolloffType">
 			<value>3</value>
+		</property>
+	</object>
+	<object class="AutomationPoint" id="{8074856d-051a-405d-bc3a-aa6c81638082}">
+		<property name="position">
+			<value>0.126</value>
+		</property>
+		<property name="value">
+			<value>1</value>
+		</property>
+		<property name="curveShape">
+			<value>-0.550549269</value>
+		</property>
+	</object>
+	<object class="AutomationPoint" id="{a06a5f43-0f66-4f72-b4f7-24e709cae50f}">
+		<property name="position">
+			<value>0.188</value>
+		</property>
+		<property name="value">
+			<value>0</value>
 		</property>
 	</object>
 	<object class="RandomizerModulator" id="{cdb8b734-e8fc-4548-b077-e786e3146274}">
