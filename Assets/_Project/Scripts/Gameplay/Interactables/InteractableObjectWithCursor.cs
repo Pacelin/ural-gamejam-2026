@@ -28,8 +28,8 @@ namespace Project.Gameplay.Interactables
 
         protected virtual void OnDisable()
         {
-            _down = false;
             _hover = false;
+            _down = false;
             UpdateCursor();
         }
         

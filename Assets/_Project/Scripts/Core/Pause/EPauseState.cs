@@ -7,8 +7,6 @@ namespace Project.Core.Pause
     {
         None = 0,
         PausedByApplication = 1,
-        PausedByUser = 2,
-        PausedByCutscene = 4,
-        PausedByAchievements = 8,
+        PausedByUser = 2
     }
 }
