@@ -118,7 +118,6 @@
 	<object class="MixerBusPanner" id="{e0af26fa-66c0-4cc8-a8a8-a37c3ceadd71}" />
 	<object class="MixerBusEffectChain" id="{1a8e4612-adba-4f15-8d26-16fbcbfd2000}">
 		<relationship name="effects">
-			<destination>{67998e28-6855-4e7f-b2cd-ee3fe237e57f}</destination>
 			<destination>{10095311-b371-41f1-ad80-32a29fac8aa8}</destination>
 			<destination>{80ec69c3-89b4-4378-92bb-ad4c9db90f8a}</destination>
 			<destination>{cf8900e5-351d-46e2-aad6-d0d24374243d}</destination>
@@ -143,17 +142,6 @@
 		</relationship>
 	</object>
 	<object class="MixerBusFader" id="{fe0cc32e-d80b-4901-a84d-4663aa94f483}" />
-	<object class="ChorusEffect" id="{67998e28-6855-4e7f-b2cd-ee3fe237e57f}">
-		<property name="bypass">
-			<value>true</value>
-		</property>
-		<property name="rate">
-			<value>0.0350000001</value>
-		</property>
-		<property name="depth">
-			<value>38</value>
-		</property>
-	</object>
 	<object class="SFXReverbEffect" id="{10095311-b371-41f1-ad80-32a29fac8aa8}">
 		<property name="decayTime">
 			<value>9000</value>

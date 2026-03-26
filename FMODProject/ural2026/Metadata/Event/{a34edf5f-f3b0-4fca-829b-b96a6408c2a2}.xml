@@ -105,7 +105,7 @@
 	</object>
 	<object class="SingleSound" id="{22ff59c6-c32e-4189-9bea-b739f92d0483}">
 		<property name="length">
-			<value>0.29999999999999999</value>
+			<value>0.35000000000000003</value>
 		</property>
 		<property name="timelockedOffset">
 			<value>8.7000000000000028</value>
@@ -130,13 +130,13 @@
 	</object>
 	<object class="SingleSound" id="{c3ef4023-e870-46e0-89a5-7a4e1039a3ee}">
 		<property name="start">
-			<value>3.5500000000000003</value>
+			<value>3.5</value>
 		</property>
 		<property name="length">
-			<value>0.25518797660745118</value>
+			<value>0.30518797660745145</value>
 		</property>
 		<property name="timelockedOffset">
-			<value>9.2448120233925586</value>
+			<value>9.1948120233925579</value>
 		</property>
 		<relationship name="audioFile">
 			<destination>{d4179cb9-f8ff-461c-9341-eadbacfefa8f}</destination>
@@ -189,7 +189,7 @@
 			<value>0</value>
 		</property>
 		<property name="curveShape">
-			<value>0.615015328</value>
+			<value>0.150471598</value>
 		</property>
 	</object>
 	<object class="AutomationPoint" id="{cf3f7ebf-fce6-42f8-a77d-ecbf9cdbe1ff}">
