@@ -3,7 +3,22 @@ guid: 4fbb458473235c642b436cbbab5c0a80
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: T_Grammafon
+    second: {fileID: 2100000, guid: 49c7bbef29f68db4bbe1e38aecf50c3d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: T_Grammafon_Truba
+    second: {fileID: 2100000, guid: 4872fc6fbd08c7a4db9547d877d79a55, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: T_Vinyl
+    second: {fileID: 2100000, guid: 40a605c6146083a4692b89b615347662, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
