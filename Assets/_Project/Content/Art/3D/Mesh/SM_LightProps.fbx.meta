@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 2ca42f215e2a8484ea91d6753cedf5c1
+guid: bf1d450503131c649838456a2ad860fc
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
@@ -7,8 +7,8 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: T_CobWeb
-    second: {fileID: 2100000, guid: 4393a3670ca35284a9e55ddc991fb659, type: 2}
+      name: TD_Checker.001
+    second: {fileID: 2100000, guid: 964c0571abeaf244c9781a2e771413f4, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

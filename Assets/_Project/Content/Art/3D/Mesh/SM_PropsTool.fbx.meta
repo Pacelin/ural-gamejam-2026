@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: bf1d450503131c649838456a2ad860fc
+guid: b582cb4c23781ad4faeeb252c88ab801
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
@@ -7,8 +7,8 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: TD_Checker.001
-    second: {fileID: 2100000, guid: 964c0571abeaf244c9781a2e771413f4, type: 2}
+      name: Material
+    second: {fileID: 2100000, guid: 8d0bebc8fde14b546ad9502c2218b538, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -51,7 +51,7 @@ ModelImporter:
     nodeNameCollisionStrategy: 1
     fileIdsGeneration: 2
     swapUVChannels: 0
-    generateSecondaryUV: 0
+    generateSecondaryUV: 1
     useFileUnits: 1
     keepQuads: 0
     weldVertices: 1

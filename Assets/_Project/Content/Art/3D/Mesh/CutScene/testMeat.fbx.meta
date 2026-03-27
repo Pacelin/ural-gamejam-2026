@@ -1,14 +1,9 @@
 fileFormatVersion: 2
-guid: 2ca42f215e2a8484ea91d6753cedf5c1
+guid: ddcb56763d6070f40bc80c37c628fe8e
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: T_CobWeb
-    second: {fileID: 2100000, guid: 4393a3670ca35284a9e55ddc991fb659, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -51,7 +46,7 @@ ModelImporter:
     nodeNameCollisionStrategy: 1
     fileIdsGeneration: 2
     swapUVChannels: 0
-    generateSecondaryUV: 1
+    generateSecondaryUV: 0
     useFileUnits: 1
     keepQuads: 0
     weldVertices: 1
