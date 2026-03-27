@@ -5,7 +5,7 @@
 			<value>OpenConsoleSlot</value>
 		</property>
 		<property name="outputFormat">
-			<value>0</value>
+			<value>1</value>
 		</property>
 		<relationship name="folder">
 			<destination>{4b154995-e6ef-4bc0-9938-12d51e994e23}</destination>
@@ -39,7 +39,7 @@
 	</object>
 	<object class="MasterTrack" id="{a74122ce-2819-4ce0-a969-eba02cb6b658}">
 		<relationship name="modules">
-			<destination>{ba3fd381-19df-4cd4-9835-97cbefe2bde9}</destination>
+			<destination>{224e8907-a2d2-41ab-a558-dd53468e1b18}</destination>
 		</relationship>
 		<relationship name="mixerGroup">
 			<destination>{97242b13-62bb-4c75-9a46-22ee22a6d0d7}</destination>
@@ -60,10 +60,13 @@
 	<object class="MarkerTrack" id="{2281a17b-ce3a-47c9-a12d-7c4c2bf781da}" />
 	<object class="Timeline" id="{1e844e5b-66fb-45e2-b5b8-7f135fec2d5d}">
 		<relationship name="modules">
-			<destination>{ba3fd381-19df-4cd4-9835-97cbefe2bde9}</destination>
+			<destination>{224e8907-a2d2-41ab-a558-dd53468e1b18}</destination>
 		</relationship>
 	</object>
 	<object class="EventMixerMaster" id="{97242b13-62bb-4c75-9a46-22ee22a6d0d7}">
+		<property name="volume">
+			<value>-3</value>
+		</property>
 		<relationship name="effectChain">
 			<destination>{0b8f5f4d-029f-4f8f-8d1f-f0ce2a4d31a2}</destination>
 		</relationship>
@@ -74,15 +77,15 @@
 			<destination>{8ef42cd8-1238-49d8-940d-82e69a75d925}</destination>
 		</relationship>
 	</object>
-	<object class="SingleSound" id="{ba3fd381-19df-4cd4-9835-97cbefe2bde9}">
+	<object class="SingleSound" id="{224e8907-a2d2-41ab-a558-dd53468e1b18}">
 		<property name="length">
-			<value>0.012</value>
+			<value>0.38</value>
 		</property>
-		<property name="timelockedOffset">
-			<value>0.048413125336202283</value>
-		</property>
+		<relationship name="fadeOutCurve">
+			<destination>{efb3d0db-e91d-462e-bede-a1a04f8b0724}</destination>
+		</relationship>
 		<relationship name="audioFile">
-			<destination>{f3e0d54e-6dae-4d8e-af83-9e83a9eda180}</destination>
+			<destination>{691f0136-f15e-4523-8709-70dab24de2ff}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusEffectChain" id="{56904da2-a4d2-4fb1-9d69-cb471578e08e}">
@@ -95,10 +98,19 @@
 		<relationship name="effects">
 			<destination>{8371c070-03ab-45e3-9ccc-496fe0d51208}</destination>
 			<destination>{3e2b2838-d06f-4709-bd5c-6345d6473bcb}</destination>
+			<destination>{a68709de-5fcd-40a2-bce5-597ac584bf47}</destination>
 			<destination>{5fee8512-9e93-43a1-9f2e-367f6563bdde}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{608a146a-7635-458a-9ee6-0c12aebb05f5}" />
+	<object class="FadeCurve" id="{efb3d0db-e91d-462e-bede-a1a04f8b0724}">
+		<relationship name="startPoint">
+			<destination>{396a1250-4fd4-4bd7-819a-26526797a82c}</destination>
+		</relationship>
+		<relationship name="endPoint">
+			<destination>{7a5639ed-3e75-48aa-a4a6-568729dc118f}</destination>
+		</relationship>
+	</object>
 	<object class="MixerBusFader" id="{d8fed0c2-78a0-4e0c-ac18-6db16109586b}" />
 	<object class="SFXReverbEffect" id="{8371c070-03ab-45e3-9ccc-496fe0d51208}">
 		<property name="decayTime">
@@ -121,9 +133,33 @@
 		</property>
 	</object>
 	<object class="MixerBusFader" id="{3e2b2838-d06f-4709-bd5c-6345d6473bcb}" />
+	<object class="LowpassEffect" id="{a68709de-5fcd-40a2-bce5-597ac584bf47}">
+		<property name="cutoff">
+			<value>3100</value>
+		</property>
+	</object>
 	<object class="ObjectSpatialiserEffect" id="{5fee8512-9e93-43a1-9f2e-367f6563bdde}">
 		<property name="distanceRolloffType">
 			<value>1</value>
+		</property>
+	</object>
+	<object class="AutomationPoint" id="{396a1250-4fd4-4bd7-819a-26526797a82c}">
+		<property name="position">
+			<value>0.13999999999999999</value>
+		</property>
+		<property name="value">
+			<value>1</value>
+		</property>
+		<property name="curveShape">
+			<value>0.0307165105</value>
+		</property>
+	</object>
+	<object class="AutomationPoint" id="{7a5639ed-3e75-48aa-a4a6-568729dc118f}">
+		<property name="position">
+			<value>0.38</value>
+		</property>
+		<property name="value">
+			<value>0</value>
 		</property>
 	</object>
 </objects>
