@@ -58,7 +58,7 @@
 	</object>
 	<object class="EventAutomatableProperties" id="{accbc539-9c90-4d9d-b22a-da5855a0b08b}">
 		<property name="maximumDistance">
-			<value>2</value>
+			<value>5.4000001</value>
 		</property>
 	</object>
 	<object class="MarkerTrack" id="{723180d4-a749-4352-9fd3-cc82665d8a3e}" />
@@ -87,8 +87,11 @@
 	</object>
 	<object class="MultiSound" id="{14fc057f-f18f-4392-b0ee-1f473f02c743}">
 		<property name="length">
-			<value>0.40000000000000002</value>
+			<value>0.14999999999999999</value>
 		</property>
+		<relationship name="fadeOutCurve">
+			<destination>{4190bc33-3651-4093-ba36-e172137b13ab}</destination>
+		</relationship>
 		<relationship name="sounds">
 			<destination>{1c39414f-68be-4bfc-a8d8-e1fa1dc23b9c}</destination>
 			<destination>{20ef2c37-e7b1-4fa2-bbcb-a22d60f83797}</destination>
@@ -126,6 +129,14 @@
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{674d3b14-7c0a-41c2-ac34-a1e6a3f59ff4}" />
+	<object class="FadeCurve" id="{4190bc33-3651-4093-ba36-e172137b13ab}">
+		<relationship name="startPoint">
+			<destination>{36a1098c-9344-430a-9a3b-764f0ffa3a94}</destination>
+		</relationship>
+		<relationship name="endPoint">
+			<destination>{00a4f625-cb82-45fa-96b5-fe6764e3ca1b}</destination>
+		</relationship>
+	</object>
 	<object class="SingleSound" id="{1c39414f-68be-4bfc-a8d8-e1fa1dc23b9c}">
 		<relationship name="audioFile">
 			<destination>{e186bf79-ce9d-4d55-b414-1defe4478784}</destination>
@@ -139,4 +150,23 @@
 	<object class="MixerBusFader" id="{69f5ca94-0354-436c-869a-f144c60470fc}" />
 	<object class="MixerBusFader" id="{1e194545-3026-46b6-9a8b-daa8d09c2273}" />
 	<object class="ObjectSpatialiserEffect" id="{cd4240d0-6723-4ac3-bacd-a1c2f616bab4}" />
+	<object class="AutomationPoint" id="{36a1098c-9344-430a-9a3b-764f0ffa3a94}">
+		<property name="position">
+			<value>0.10999999999999999</value>
+		</property>
+		<property name="value">
+			<value>1</value>
+		</property>
+		<property name="curveShape">
+			<value>-0.337889761</value>
+		</property>
+	</object>
+	<object class="AutomationPoint" id="{00a4f625-cb82-45fa-96b5-fe6764e3ca1b}">
+		<property name="position">
+			<value>0.14999999999999999</value>
+		</property>
+		<property name="value">
+			<value>0</value>
+		</property>
+	</object>
 </objects>
