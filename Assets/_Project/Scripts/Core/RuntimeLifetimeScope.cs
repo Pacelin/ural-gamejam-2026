@@ -13,7 +13,6 @@ namespace Project.Core
         
         protected override void Configure(IContainerBuilder builder)
         {
-            builder.RegisterEntryPoint<RuntimeEntryPoint>();
             builder.RegisterEntryPoint<EscapeController>().AsSelf();
             builder.RegisterEntryPoint<PauseController>().AsSelf();
 

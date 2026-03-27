@@ -28,11 +28,18 @@ namespace Project.Gameplay.Basement
         [Space]
         [SerializeField] private float _doubleTickChance;
         [SerializeField] private Vector2 _doubleTickDelays;
+        [SerializeField] private bool _activateOnAwake = false;
 
         private float _currentRandomTickDelays;
         private float _tickCooldown;
         private ISoundEventInstance _soundEventInstance;
-        
+
+        private void Start()
+        {
+            if (_activateOnAwake)
+                Activate();
+        }
+
         private void OnDestroy()
         {
             if (_soundEventInstance != null && _soundEventInstance.IsValid())
