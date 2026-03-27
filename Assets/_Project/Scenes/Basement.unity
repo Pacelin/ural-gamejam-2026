@@ -17630,6 +17630,86 @@ MonoBehaviour:
     FrequencyGain: 1
     Duration: 1
     m_NoiseOffsets: {x: -440.12106, y: -916.41113, z: -32.544037}
+--- !u!1 &1210526018
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1210526019}
+  - component: {fileID: 1210526021}
+  - component: {fileID: 1210526020}
+  m_Layer: 0
+  m_Name: BeepCommand
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1210526019
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1210526018}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.29, y: 1.436, z: 0.608}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1625153377}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1210526020
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1210526018}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53a6b14663814a3f9ad995349dc3788e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Project.Gameplay.Basement.SoundActivator
+  _soundPoint: {fileID: 1210526019}
+  _sound:
+    _eventRef:
+      Guid:
+        Data1: -1214063169
+        Data2: 1107667006
+        Data3: -1791571285
+        Data4: -486508992
+      Path: event:/Game/BunkerMachins/ConsoleBeep
+--- !u!114 &1210526021
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1210526018}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 097619655e8a4decb3992fdfb46b0f2f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Project.Gameplay.Basement.BasementConsoleCommand
+  _manager: {fileID: 1684804566}
+  _codeDebug: D5 F2 C4
+  _activeButtons:
+  - {fileID: 1516289734}
+  - {fileID: 209297748}
+  - {fileID: 1312535873}
+  _onApplyCommand:
+    _activate: []
+    _deactivate: []
+    _destroy: []
+    _locks: []
+    _activators:
+    - {fileID: 1210526020}
+    _subtitleTrigger: {fileID: 0}
 --- !u!1001 &1211271937
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19805,7 +19885,7 @@ MonoBehaviour:
   _meshRenderer: {fileID: 1484197}
   _defaultMaterial: {fileID: 2100000, guid: 5523225f8b2adba4c96f7d793e35cbf9, type: 2}
   _downMaterial: {fileID: 2100000, guid: 7e2d05920da51154592dc7a9c6a7ec78, type: 2}
-  _blockedMaterial: {fileID: 0}
+  _blockedMaterial: {fileID: 2100000, guid: b14284b152dc71141b4847b7efd24090, type: 2}
   _downSound:
     _eventRef:
       Guid:
@@ -22021,8 +22101,8 @@ MonoBehaviour:
   - ANALYZE COMMAND...
   _screenMeshRenderer: {fileID: 1280586398}
   _loadingDuration: 0.1
-  _loadingScreenMaterial: {fileID: 2100000, guid: dff88819e8554c94392db47a72c8f9e3, type: 2}
-  _defaultScreenMaterial: {fileID: 2100000, guid: 5217c8978db5555409f0f9255cdf3496, type: 2}
+  _loadingScreenMaterial: {fileID: 2100000, guid: 5217c8978db5555409f0f9255cdf3496, type: 2}
+  _defaultScreenMaterial: {fileID: 2100000, guid: dff88819e8554c94392db47a72c8f9e3, type: 2}
   _disksItems: []
   _disksMaterials: []
 --- !u!1001 &1368865836
@@ -27831,6 +27911,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 9224c4d53fe40b14a85577c9fe8f7628, type: 3}
       insertIndex: -1
       addedObject: {fileID: 158278795}
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 9224c4d53fe40b14a85577c9fe8f7628, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1210526019}
     - targetCorrespondingSourceObject: {fileID: -6525538854866916507, guid: 9224c4d53fe40b14a85577c9fe8f7628, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1229936826}
@@ -28462,7 +28545,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Project.Gameplay.Basement.BasementGramophoneVelocity
   _angularAcceleration: 360
-  _angularDeceleration: 270
+  _angularDeceleration: 30
   _angularVelocityClamp: 180
 --- !u!114 &1627840859
 MonoBehaviour:
@@ -29258,34 +29341,35 @@ MonoBehaviour:
   - {fileID: 1516289734}
   - {fileID: 609128407}
   _commands:
-  - {fileID: 46771000}
-  - {fileID: 365809466}
   - {fileID: 518366213}
-  - {fileID: 1600405438}
-  - {fileID: 1351632473}
-  - {fileID: 1321034511}
+  - {fileID: 1321148080}
+  - {fileID: 1886752066}
+  - {fileID: 1651144094}
+  - {fileID: 2005004855}
   - {fileID: 2096168583}
-  - {fileID: 2033350483}
-  - {fileID: 881875737}
-  - {fileID: 1094239027}
+  - {fileID: 241769471}
+  - {fileID: 46771000}
+  - {fileID: 1321034511}
+  - {fileID: 1351632473}
   - {fileID: 1849481728}
   - {fileID: 499402579}
-  - {fileID: 144556378}
-  - {fileID: 542703164}
-  - {fileID: 2067459646}
-  - {fileID: 1321148080}
-  - {fileID: 2133098927}
-  - {fileID: 1442220739}
   - {fileID: 933734389}
-  - {fileID: 1068175210}
-  - {fileID: 1300728837}
-  - {fileID: 1651144094}
-  - {fileID: 2003666398}
-  - {fileID: 130588369}
-  - {fileID: 241769471}
+  - {fileID: 1442220739}
+  - {fileID: 365809466}
+  - {fileID: 881875737}
+  - {fileID: 542703164}
+  - {fileID: 144556378}
   - {fileID: 1090790973}
-  - {fileID: 1886752066}
-  - {fileID: 2005004855}
+  - {fileID: 1094239027}
+  - {fileID: 130588369}
+  - {fileID: 2003666398}
+  - {fileID: 2067459646}
+  - {fileID: 1210526021}
+  - {fileID: 1068175210}
+  - {fileID: 1600405438}
+  - {fileID: 2033350483}
+  - {fileID: 1300728837}
+  - {fileID: 2133098927}
   _commandEnterDuration: 1.6
   _consoleLockDuration: 2.1
 --- !u!1001 &1656765717
@@ -36562,7 +36646,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Project.Gameplay.Basement.BasementGramophoneHandleInteractable
   _manager: {fileID: 1684804566}
   _velocity: {fileID: 1627840858}
-  _rotateOnAngles: 2700
+  _rotateOnAngles: 3600
 --- !u!1001 &2126675099
 PrefabInstance:
   m_ObjectHideFlags: 0

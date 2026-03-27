@@ -65,7 +65,10 @@
 	</object>
 	<object class="EventMixerMaster" id="{558a1faf-f8c3-4ced-b805-bd7b3dbb45e5}">
 		<property name="volume">
-			<value>-6.5</value>
+			<value>-17</value>
+		</property>
+		<property name="pitch">
+			<value>-2.20000005</value>
 		</property>
 		<relationship name="modulators">
 			<destination>{3995b15c-2a79-4542-bb83-6fafc8ab994f}</destination>
@@ -82,7 +85,7 @@
 	</object>
 	<object class="MultiSound" id="{76cc0979-ed84-4402-a140-393990aecb3e}">
 		<property name="length">
-			<value>0.186</value>
+			<value>0.044999999999999998</value>
 		</property>
 		<relationship name="sounds">
 			<destination>{3ede3cd6-53da-46d4-a51d-b55cba1522b6}</destination>

@@ -65,10 +65,10 @@
 	</object>
 	<object class="EventMixerMaster" id="{bec6d742-d9c6-484e-898e-27764c9a7e77}">
 		<property name="volume">
-			<value>-6</value>
+			<value>-10.5</value>
 		</property>
 		<property name="pitch">
-			<value>-3.60000014</value>
+			<value>-10</value>
 		</property>
 		<relationship name="effectChain">
 			<destination>{defbcde3-cec9-4c1b-89ee-fa5a96b93ea5}</destination>
@@ -82,8 +82,11 @@
 	</object>
 	<object class="SingleSound" id="{f1a50caf-b345-432e-a401-240313261fa3}">
 		<property name="length">
-			<value>0.68271999493718949</value>
+			<value>0.29999999999999999</value>
 		</property>
+		<relationship name="fadeOutCurve">
+			<destination>{65c35f76-36d4-4994-be77-6cea50822b9c}</destination>
+		</relationship>
 		<relationship name="audioFile">
 			<destination>{be56aed4-7f00-453f-a664-5ca761f3d71b}</destination>
 		</relationship>
@@ -102,6 +105,14 @@
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{8fac322e-d89d-4e9e-a6d3-efac5f46de6c}" />
+	<object class="FadeCurve" id="{65c35f76-36d4-4994-be77-6cea50822b9c}">
+		<relationship name="startPoint">
+			<destination>{f6808271-ebad-4fd8-b436-bb86580be0de}</destination>
+		</relationship>
+		<relationship name="endPoint">
+			<destination>{165650cd-1d3c-4e82-a9ee-785a8d199a0c}</destination>
+		</relationship>
+	</object>
 	<object class="MixerBusFader" id="{af9fc7b5-9edf-49cc-9ee0-2c8a13ee31fc}" />
 	<object class="SFXReverbEffect" id="{acd50844-a7f0-4f62-ab50-762e528f9391}">
 		<property name="decayTime">
@@ -125,4 +136,23 @@
 	</object>
 	<object class="MixerBusFader" id="{a55f54b3-26c4-425f-bfc3-f403907f9884}" />
 	<object class="ObjectSpatialiserEffect" id="{c9daf9a3-b266-471b-ae1a-2576cfaa4524}" />
+	<object class="AutomationPoint" id="{f6808271-ebad-4fd8-b436-bb86580be0de}">
+		<property name="position">
+			<value>0</value>
+		</property>
+		<property name="value">
+			<value>1</value>
+		</property>
+		<property name="curveShape">
+			<value>-0.285273969</value>
+		</property>
+	</object>
+	<object class="AutomationPoint" id="{165650cd-1d3c-4e82-a9ee-785a8d199a0c}">
+		<property name="position">
+			<value>0.29999999999999999</value>
+		</property>
+		<property name="value">
+			<value>0</value>
+		</property>
+	</object>
 </objects>
