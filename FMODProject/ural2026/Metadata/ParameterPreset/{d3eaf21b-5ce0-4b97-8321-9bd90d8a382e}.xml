@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="ParameterPreset" id="{d3eaf21b-5ce0-4b97-8321-9bd90d8a382e}">
+		<property name="name">
+			<value>GramophoneVelocity</value>
+		</property>
+		<relationship name="folder">
+			<destination>{703955cc-b40f-4fc9-b7ee-05b5f7f39a73}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{a0cf0793-9aa3-420b-815b-b0607e8d8686}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{a0cf0793-9aa3-420b-815b-b0607e8d8686}">
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>
