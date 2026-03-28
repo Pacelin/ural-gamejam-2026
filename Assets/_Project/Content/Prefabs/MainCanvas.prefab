@@ -2575,6 +2575,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8dc6d3e893ae4ea485db6a660e50b35a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Project.Gameplay.Movement.MovementControlView
+  _rootObject: {fileID: 6677196043212202891}
   _rotateLeftControl: {fileID: 9195424652754804957}
   _rotateRightControl: {fileID: 5039531266332915525}
   _moveBackControl: {fileID: 9173064756421278567}

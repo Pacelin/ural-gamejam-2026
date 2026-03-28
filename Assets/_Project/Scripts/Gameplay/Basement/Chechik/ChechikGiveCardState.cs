@@ -12,14 +12,14 @@ namespace Project.Gameplay.Basement
 
         public override void OnEnterState()
         {
-            Agent.MovementService.BlockControls();
+            Agent.MovementService.DisableMovement();
             Agent.Animator.SetBool(IsGive, true);
             Agent.FloppyPickup.SetActive(true);
         }
 
         public override void OnExitState()
         {
-            Agent.MovementService.UnblockControls();
+            Agent.MovementService.EnableMovement();
             Agent.Animator.SetBool(IsGive, false);
         }
 

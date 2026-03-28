@@ -45,12 +45,6 @@ namespace Project.Gameplay.Basement
             return Quaternion.LookRotation(vector, Vector3.up);
         }
         
-        public void ApplyAnimatorRootMotion()
-        {
-            _transform.position += _animator.deltaPosition;
-            _transform.rotation *= _animator.deltaRotation;
-        }
-        
         private void OnAnimatorMove()
         {
             _stateMachine.OnAnimatorMove();

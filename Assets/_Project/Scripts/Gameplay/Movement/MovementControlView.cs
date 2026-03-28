@@ -5,6 +5,7 @@ namespace Project.Gameplay.Movement
 {
     public class MovementControlView : MonoBehaviour
     {
+        [SerializeField] private GameObject _rootObject;
         [SerializeField] private MovementControlItemView _rotateLeftControl;
         [SerializeField] private MovementControlItemView _rotateRightControl;
         [SerializeField] private MovementControlItemView _moveBackControl;
@@ -16,6 +17,9 @@ namespace Project.Gameplay.Movement
             _moveBackControl.Setup(service, cursorService, MovementControlItemView.EType.MoveBack);
         }
 
+        public void EnableControls() => _rootObject.SetActive(true);
+        public void DisableControls() => _rootObject.SetActive(false);
+        
         public void UpdateControlsFor(MovementPoint point)
         {
             _rotateRightControl.gameObject.SetActive(point.RightPoint);

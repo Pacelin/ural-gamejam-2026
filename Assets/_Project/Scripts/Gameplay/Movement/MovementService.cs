@@ -12,6 +12,9 @@ namespace Project.Gameplay.Movement
     [UsedImplicitly]
     public class MovementService : IInitializable, IStartable
     {
+        public event Action OnMovementAvailabilityChanged;
+        public bool MovementEnabled { get; private set; }
+        
         private MovementPoint _activePoint;
         private MovementPoint _previousPoint;
 
@@ -42,6 +45,7 @@ namespace Project.Gameplay.Movement
 
         public void Initialize()
         {
+            MovementEnabled = true;
             _controlView.Setup(this, _cursorService);
         }
 
@@ -68,6 +72,20 @@ namespace Project.Gameplay.Movement
                 Move(_activePoint.BackPoint, _activePoint.UseSoundWhenBack);
         }
 
+        public void DisableMovement()
+        {
+            MovementEnabled = false;
+            _controlView.DisableControls();
+            OnMovementAvailabilityChanged?.Invoke();
+        }
+
+        public void EnableMovement()
+        {
+            MovementEnabled = true;
+            _controlView.EnableControls();
+            OnMovementAvailabilityChanged?.Invoke();
+        }
+        
         public void BlockControls()
         {
             if (_blockersCount == 0)

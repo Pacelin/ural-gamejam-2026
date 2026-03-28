@@ -12,6 +12,9 @@ namespace Project.Gameplay.Basement
 
         protected override void Configure(IContainerBuilder builder)
         {
+            if (Container.TryResolve<CollectablesModel>(out _))
+                return;
+            
             builder.RegisterInstance(new CollectablesModel(_collectablesCount, _maxCount));
         }
     }

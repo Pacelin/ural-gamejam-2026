@@ -7,8 +7,10 @@ namespace Project.Gameplay.Interactables
 {
     public class MoveInteractableObject : InteractableObjectWithCursor
     {
-        protected override ECursorState HoverCursorState => ECursorState.HoverWalkObject;
-        protected override ECursorState DownCursorState => ECursorState.HoverWalkObject;
+        protected override ECursorState HoverCursorState => _movementService.MovementEnabled ? 
+            ECursorState.HoverWalkObject : ECursorState.None;
+        protected override ECursorState DownCursorState => _movementService.MovementEnabled ?
+            ECursorState.HoverWalkObject : ECursorState.None;
 
         [SerializeField] private MovementPoint _point;
 
@@ -20,9 +22,21 @@ namespace Project.Gameplay.Interactables
             _movementService = resolver.Resolve<MovementService>();
         }
 
+        private void OnEnable()
+        {
+            _movementService.OnMovementAvailabilityChanged += UpdateCursor;
+        }
+
+        protected override void OnDisable()
+        {
+            _movementService.OnMovementAvailabilityChanged -= UpdateCursor;
+            base.OnDisable();
+        }
+
         protected override void OnInteract()
         {
-            _movementService.Move(_point);
+            if (_movementService.MovementEnabled)
+                _movementService.Move(_point);
         }
     }
 }
