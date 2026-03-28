@@ -37,6 +37,14 @@ namespace Project.Gameplay.Basement
             return Quaternion.LookRotation(vector, Vector3.up);
         }
         
+        public Quaternion GetLookAt(Vector3 point)
+        {
+            var currentPosition = _transform.position;
+            var targetPosition = point;
+            var vector = (targetPosition - currentPosition).normalized;
+            return Quaternion.LookRotation(vector, Vector3.up);
+        }
+        
         public void ApplyAnimatorRootMotion()
         {
             _transform.position += _animator.deltaPosition;

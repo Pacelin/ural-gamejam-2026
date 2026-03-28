@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.03.00">
-	<object class="AudioFile" id="{8ef8c8e5-2575-4d4c-a68f-01a5dba30fd4}">
+	<object class="AudioFile" id="{1b60b133-f331-4efb-aad3-8649c1fa93e4}">
 		<property name="assetPath">
 			<value>beep.wav</value>
 		</property>
 		<property name="frequencyInKHz">
-			<value>44.0999985</value>
+			<value>48</value>
 		</property>
 		<property name="channelCount">
 			<value>2</value>
 		</property>
 		<property name="length">
-			<value>0.23410430839002266</value>
+			<value>0.23999999999999999</value>
 		</property>
 		<relationship name="masterAssetFolder">
 			<destination>{45c282e8-9be0-47d3-ab7a-b976823d5327}</destination>

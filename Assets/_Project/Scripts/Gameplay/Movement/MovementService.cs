@@ -15,6 +15,8 @@ namespace Project.Gameplay.Movement
         private MovementPoint _activePoint;
         private MovementPoint _previousPoint;
 
+        private int _blockersCount;
+        
         private readonly CursorService _cursorService;
         private readonly SubtitlesService _subtitlesService;
         private readonly MovementBlockView _blockView;
@@ -68,14 +70,22 @@ namespace Project.Gameplay.Movement
 
         public void BlockControls()
         {
-            _cursorService.EnableCursorState(ECursorState.Transition);
-            _blockView.Block();
+            if (_blockersCount == 0)
+            {
+                _cursorService.EnableCursorState(ECursorState.Transition);
+                _blockView.Block();
+            }
+            _blockersCount++;
         }
 
         public void UnblockControls()
         {
-            _cursorService.DisableCursorState(ECursorState.Transition);
-            _blockView.Unblock();
+            _blockersCount--;
+            if (_blockersCount == 0)
+            {
+                _cursorService.DisableCursorState(ECursorState.Transition);
+                _blockView.Unblock();
+            }
         }
         
         public void Move(MovementPoint point, bool useMoveSound = true)
@@ -84,7 +94,7 @@ namespace Project.Gameplay.Movement
             {
                 cancellationToken.ThrowIfCancellationRequested();
                 _cursorService.EnableCursorState(ECursorState.Transition);
-                _blockView.Block();
+                BlockControls();
                 
                 _activePoint.gameObject.SetActive(false);
                 foreach (var p in _activePoint.ActiveWhenOnPoint)
@@ -105,7 +115,7 @@ namespace Project.Gameplay.Movement
                 _previousPoint = _activePoint;
                 _activePoint = point;
                 _activePoint.TriggerSubtitles(_subtitlesService);
-                _blockView.Unblock();
+                UnblockControls();
                 _cursorService.DisableCursorState(ECursorState.Transition);
             }, _blockView.gameObject.GetCancellationTokenOnDestroy());
         }
@@ -116,7 +126,7 @@ namespace Project.Gameplay.Movement
             {
                 cancellationToken.ThrowIfCancellationRequested();
                 _cursorService.EnableCursorState(ECursorState.Transition);
-                _blockView.Block();
+                BlockControls();
                 
                 _activePoint.gameObject.SetActive(false);
                 foreach (var p in _activePoint.ActiveWhenOnPoint)
@@ -148,7 +158,7 @@ namespace Project.Gameplay.Movement
                 _previousPoint = _activePoint;
                 _activePoint = point;
                 _activePoint.TriggerSubtitles(_subtitlesService);
-                _blockView.Unblock();
+                UnblockControls();
                 _cursorService.DisableCursorState(ECursorState.Transition);
             }, _blockView.gameObject.GetCancellationTokenOnDestroy());
         }

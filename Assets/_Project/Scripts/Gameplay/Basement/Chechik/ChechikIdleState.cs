@@ -11,7 +11,6 @@
 
         public override void OnAnimatorMove()
         {
-            Agent.ApplyAnimatorRootMotion();
         }
         public override void OnExitState() { }
     }

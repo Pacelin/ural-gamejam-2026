@@ -25,7 +25,6 @@ namespace Project.Gameplay.Basement
 
         public override void OnAnimatorMove()
         {
-            Agent.ApplyAnimatorRootMotion();
         }
 
         public override void OnUpdate()

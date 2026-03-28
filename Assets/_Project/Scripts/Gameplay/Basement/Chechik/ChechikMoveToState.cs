@@ -23,16 +23,17 @@ namespace Project.Gameplay.Basement
 
         public override void OnAnimatorMove()
         {
+            var targetRotation = Agent.GetLookAt(_targetPosition);
             var delta = Agent.Animator.deltaPosition;
             var currentPosition = Agent.Transform.position;
             var distanceToTarget = Vector3.Distance(currentPosition, _targetPosition);
             bool isOnPoint = distanceToTarget <= Agent.StoppingDistance;
 
-            if (isOnPoint)
+            if (delta.magnitude > distanceToTarget && isOnPoint)
                 delta = delta.normalized * distanceToTarget;
 
             Agent.Transform.position += delta;
-            Agent.transform.rotation *= Agent.Animator.deltaRotation;
+            Agent.transform.rotation = targetRotation;
 
             if (isOnPoint)
                 StateMachine.SwitchState(_nextState);

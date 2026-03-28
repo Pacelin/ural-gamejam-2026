@@ -26,7 +26,6 @@ namespace Project.Gameplay.Basement
                 Quaternion.RotateTowards(transform.rotation, _targetRotation, Agent.RotateSpeed * Time.deltaTime);
             bool isFinish = newRotation == _targetRotation;
             transform.rotation = newRotation;
-            Agent.ApplyAnimatorRootMotion();
 
             if (isFinish)
                 StateMachine.SwitchState(_nextState);

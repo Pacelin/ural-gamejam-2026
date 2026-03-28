@@ -1,4 +1,6 @@
-﻿namespace Project.Gameplay.Basement
+﻿using TMPro;
+
+namespace Project.Gameplay.Basement
 {
     public class ChechikStateMachine
     {
