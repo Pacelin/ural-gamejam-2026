@@ -14,6 +14,7 @@ namespace Project.Gameplay.Basement
         {
             Agent.MovementService.BlockControls();
             Agent.Animator.SetBool(IsGive, true);
+            Agent.FloppyPickup.SetActive(true);
         }
 
         public override void OnExitState()
@@ -38,7 +39,7 @@ namespace Project.Gameplay.Basement
                     Agent.SlotPoint.position,
                     new ChechikRotateToState(Agent, StateMachine,
                         Agent.SlotPoint.rotation,
-                        new ChechikPointingSlotState(Agent, StateMachine)))
+                        new ChechikPointToSlotState(Agent, StateMachine)))
             ));
         }
     }

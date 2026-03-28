@@ -1,5 +1,4 @@
-﻿using System;
-using Project.Gameplay.Interactables;
+﻿using Project.Gameplay.Interactables;
 
 namespace Project.Gameplay.Basement
 {
