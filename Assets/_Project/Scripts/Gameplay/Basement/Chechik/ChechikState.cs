@@ -13,6 +13,7 @@
 
         public abstract void OnEnterState();
         public abstract void OnUpdate();
+        public abstract void OnAnimatorMove();
         public abstract void OnExitState();
     }
 }

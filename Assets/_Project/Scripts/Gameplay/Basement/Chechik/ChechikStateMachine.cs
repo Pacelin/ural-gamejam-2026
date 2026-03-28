@@ -21,6 +21,11 @@
             _currentState?.OnUpdate();
         }
 
+        public void OnAnimatorMove()
+        {
+            _currentState?.OnAnimatorMove();
+        }
+        
         public void SwitchState(ChechikState state)
         {
             _currentState?.OnExitState();
