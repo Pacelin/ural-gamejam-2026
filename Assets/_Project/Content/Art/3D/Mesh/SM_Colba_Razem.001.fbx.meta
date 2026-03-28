@@ -1,9 +1,14 @@
 fileFormatVersion: 2
-guid: fdd39a0984a5e23409e180dd13b071f3
+guid: 083dd8884cfc60b4898cdffaedbb9e4b
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: T_Colba
+    second: {fileID: 2100000, guid: 87786be5f0e3e694da654f3d671c0a04, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -46,7 +51,7 @@ ModelImporter:
     nodeNameCollisionStrategy: 1
     fileIdsGeneration: 2
     swapUVChannels: 0
-    generateSecondaryUV: 0
+    generateSecondaryUV: 1
     useFileUnits: 1
     keepQuads: 0
     weldVertices: 1

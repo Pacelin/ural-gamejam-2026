@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 9886019c3e30d0f439415191b57e01ce
+guid: fc507678854163446b1355ddc5648e2c
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
@@ -7,8 +7,8 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Material
-    second: {fileID: 2100000, guid: 2b7c6e6ab25a10a4595818aaac63c8d9, type: 2}
+      name: T_Colba
+    second: {fileID: 2100000, guid: 87786be5f0e3e694da654f3d671c0a04, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

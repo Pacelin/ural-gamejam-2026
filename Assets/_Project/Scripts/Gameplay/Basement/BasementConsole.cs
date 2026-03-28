@@ -1,6 +1,7 @@
 ﻿using System.Linq;
 using Cysharp.Threading.Tasks;
 using Project.Gameplay.Interactables;
+using Project.Gameplay.Movement;
 using UnityEngine;
 using VContainer;
 
@@ -15,6 +16,8 @@ namespace Project.Gameplay.Basement
         [SerializeField] private float _commandEnterDuration = 1.6f;
         [SerializeField] private float _consoleLockDuration = 2.1f;
 
+        private MovementService _movementService;
+        
         protected override void OnValidate()
         {
             base.OnValidate();
@@ -28,7 +31,10 @@ namespace Project.Gameplay.Basement
                 _buttons = FindObjectsByType<BasementConsoleButton>(FindObjectsSortMode.None);
         }
 
-        protected override void Initialize(IObjectResolver resolver) { }
+        protected override void Initialize(IObjectResolver resolver)
+        {
+            _movementService = resolver.Resolve<MovementService>();
+        }
 
         public void EnterCommand()
         {
@@ -76,11 +82,14 @@ namespace Project.Gameplay.Basement
             {
                 cancellationToken.ThrowIfCancellationRequested();
                 _enterButton.SetBlock(true);
+                _movementService.BlockControls();
+                
                 await UniTask.Delay(System.TimeSpan.FromSeconds(_consoleLockDuration),
                     cancellationToken: cancellationToken);
                 
                 cancellationToken.ThrowIfCancellationRequested();
                 _enterButton.SetBlock(false);
+                _movementService.UnblockControls();
             }, this.GetCancellationTokenOnDestroy());
         }
     }
