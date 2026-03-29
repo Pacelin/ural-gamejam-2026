@@ -8,7 +8,7 @@ namespace Project.Gameplay.Interactables
     {
         [SerializeField] private InteractablesManager _manager;
 
-        protected SubtitlesService SubtitlesService => _subtitlesService;
+        public SubtitlesService SubtitlesService => _subtitlesService;
         
         private SubtitlesService _subtitlesService;
         

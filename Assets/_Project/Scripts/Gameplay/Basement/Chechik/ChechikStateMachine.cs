@@ -1,4 +1,6 @@
-﻿using TMPro;
+﻿using Plugins.Audio;
+using Project.Core.Audio;
+using TMPro;
 
 namespace Project.Gameplay.Basement
 {
@@ -16,6 +18,7 @@ namespace Project.Gameplay.Basement
         {
             _currentState.OnExitState();
             _currentState = null;
+            MusicController.StopRoomTone();
         }
 
         public void Update()

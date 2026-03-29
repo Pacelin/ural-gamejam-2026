@@ -14,6 +14,7 @@ namespace Project.Core
         {
             UniTask.Void(async () =>
             {
+                Application.targetFrameRate = (int) Screen.mainWindowDisplayInfo.refreshRate.value;
                 await AudioSystem.Initialize(Application.exitCancellationToken);
                 await SceneManager.LoadSceneAsync(sceneBuildIndex: 1, LoadSceneMode.Single);
             });

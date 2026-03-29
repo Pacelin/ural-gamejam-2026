@@ -1,6 +1,7 @@
 ﻿using System;
 using Cysharp.Threading.Tasks;
 using Plugins.Audio;
+using Project.Core.Audio;
 using Project.Gameplay.Interactables;
 using Project.Gameplay.Misc;
 using UnityEngine;
@@ -30,6 +31,7 @@ namespace Project.Gameplay.Basement
             {
                 cancellationToken.ThrowIfCancellationRequested();
                 _unlockSound.PlayOneShotInPoint(transform.position);
+                MusicController.StopRoomTone();
                 await UniTask.Delay(System.TimeSpan.FromSeconds(_unlockDuration),
                     cancellationToken: cancellationToken);
 

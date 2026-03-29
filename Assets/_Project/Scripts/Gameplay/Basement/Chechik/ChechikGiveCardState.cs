@@ -1,4 +1,7 @@
-﻿using UnityEngine;
+﻿using Cysharp.Threading.Tasks;
+using Plugins.Audio;
+using Project.Core.Audio;
+using UnityEngine;
 
 namespace Project.Gameplay.Basement
 {
@@ -12,9 +15,22 @@ namespace Project.Gameplay.Basement
 
         public override void OnEnterState()
         {
+            UniTask.Void(async cancellationToken =>
+            {
+                cancellationToken.ThrowIfCancellationRequested();
+
+                await UniTask.Delay(System.TimeSpan.FromSeconds(Agent.AppearCallDelay),
+                    cancellationToken: cancellationToken);
+                
+                cancellationToken.ThrowIfCancellationRequested();
+                Agent.SubtitlesService.Show(Agent.AppearText);
+                Agent.AppearSound.PlayOneShot();
+            }, Agent.GetCancellationTokenOnDestroy());
+            
             Agent.MovementService.DisableMovement();
             Agent.Animator.SetBool(IsGive, true);
             Agent.FloppyPickup.SetActive(true);
+            MusicController.SetRoomTone(AudioSystem.Game_Misc_RoomToneBunker);
         }
 
         public override void OnExitState()

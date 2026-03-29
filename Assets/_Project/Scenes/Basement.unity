@@ -897,7 +897,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &26363964
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9610,7 +9610,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &320923293
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12034,6 +12034,7 @@ GameObject:
   - component: {fileID: 381268061}
   - component: {fileID: 381268062}
   - component: {fileID: 381268063}
+  - component: {fileID: 381268064}
   m_Layer: 0
   m_Name: CameraTransform
   m_TagString: Untagged
@@ -12206,6 +12207,58 @@ MonoBehaviour:
     DissipationDistance: 100
     PropagationSpeed: 343
   DefaultVelocity: {x: 0, y: 1, z: 0}
+--- !u!114 &381268064
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 381268060}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b2649f7e8e6482db51022324004003a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Project.Gameplay.Basement.BasementRandomSound
+  _root: {fileID: 381268061}
+  _sounds:
+  - _eventRef:
+      Guid:
+        Data1: -1992971121
+        Data2: 1339690599
+        Data3: -1272153207
+        Data4: -1469481257
+      Path: event:/BunkerEnv/RandomSound_1
+  - _eventRef:
+      Guid:
+        Data1: 1662697331
+        Data2: 1290104191
+        Data3: -1072655709
+        Data4: -628898846
+      Path: event:/BunkerEnv/RandomSound_2
+  - _eventRef:
+      Guid:
+        Data1: 269895356
+        Data2: 1265007420
+        Data3: 830902157
+        Data4: -1448921396
+      Path: event:/BunkerEnv/RandomBoom
+  - _eventRef:
+      Guid:
+        Data1: -353384327
+        Data2: 1335730680
+        Data3: 971906226
+        Data4: 757287561
+      Path: event:/BunkerEnv/RandomSound_4
+  - _eventRef:
+      Guid:
+        Data1: 1052151309
+        Data2: 1228362956
+        Data3: -600988484
+        Data4: -1588615351
+      Path: event:/BunkerEnv/RandomSound_5
+  _delaysRange: {x: 30, y: 60}
+  _startDelay: 10
+  _distanceRange: {x: 20, y: 50}
 --- !u!1001 &382424381
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13512,7 +13565,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &426091184
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19474,7 +19527,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &638956453
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24379,7 +24432,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &785999017
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32136,7 +32189,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1134601142
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39263,6 +39316,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Project.Gameplay.Basement.ChechikAgent
   _manager: {fileID: 1684804566}
+  _appearCallDelay: 0.2
+  _appearText: "\u041A\u0430\u043A\u043E\u0433\u043E \u0445..."
+  _appearSound:
+    _eventRef:
+      Guid:
+        Data1: 461749567
+        Data2: 1202672117
+        Data3: 106265510
+        Data4: 1757090659
+      Path: event:/Game/Characters/Chehik/ChehikScare
   _transform: {fileID: 1301309684}
   _animator: {fileID: 1301309681}
   _floppyPickup: {fileID: 494565549}
@@ -42462,7 +42525,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1432048199
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42771,7 +42834,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1442089678
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -48400,7 +48463,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1591235547
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -52681,7 +52744,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1638935695
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -52990,7 +53053,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1643322316
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -60562,7 +60625,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1898264178
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -66761,7 +66824,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &2115763396
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -67467,7 +67530,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &2138607524
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -69364,10 +69427,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 5708056361021192749, guid: f0cb84db9e464dc48a4b3de4cf245689, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f0cb84db9e464dc48a4b3de4cf245689, type: 3}
 --- !u!4 &8844784836453972999 stripped
 Transform:

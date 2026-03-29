@@ -1,4 +1,5 @@
-﻿using Project.Gameplay.Interactables;
+﻿using Plugins.Audio;
+using Project.Gameplay.Interactables;
 using Project.Gameplay.Movement;
 using UnityEngine;
 using VContainer;
@@ -9,6 +10,9 @@ namespace Project.Gameplay.Basement
     {
         public GameObject FloppyPickup => _floppyPickup;
         public GameObject KeyPickup => _keyPickup;
+        public float AppearCallDelay => _appearCallDelay;
+        public string AppearText => _appearText;
+        public SoundEvent AppearSound => _appearSound;
         public MovementService MovementService { get; private set; }
         public Transform Transform => _transform;
         public Animator Animator => _animator;
@@ -17,7 +21,11 @@ namespace Project.Gameplay.Basement
 
         public float RotateSpeed => _rotateSpeed;
         public float StoppingDistance => _stoppingDistance;
-        
+
+        [SerializeField] private float _appearCallDelay;
+        [SerializeField] private string _appearText;
+        [SerializeField] private SoundEvent _appearSound;
+        [Space]
         [SerializeField] private Transform _transform;
         [SerializeField] private Animator _animator;
         [SerializeField] private GameObject _floppyPickup;

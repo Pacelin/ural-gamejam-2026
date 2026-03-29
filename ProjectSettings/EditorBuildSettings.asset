@@ -24,9 +24,6 @@ EditorBuildSettings:
     path: Assets/_Project/Scenes/FinalCutSceneStart.unity
     guid: f9df9e5a177751d44b04678886d5c0ca
   - enabled: 1
-    path: Assets/_Project/Scenes/FinalCutSceneGood.unity
-    guid: b3b91726e5d46d843b9c0e65d82968d2
-  - enabled: 1
     path: Assets/_Project/Scenes/FinalCutSceneBad.unity
     guid: 2389efe568328754daa556712b24e881
   m_configObjects:

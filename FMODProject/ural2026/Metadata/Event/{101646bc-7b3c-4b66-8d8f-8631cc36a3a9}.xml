@@ -56,7 +56,11 @@
 			<destination>{36df5eac-a34e-4f6e-9cfd-2f00c3df2f1a}</destination>
 		</relationship>
 	</object>
-	<object class="EventAutomatableProperties" id="{3819ef97-2ffc-42dc-9500-5d232aeb6c1c}" />
+	<object class="EventAutomatableProperties" id="{3819ef97-2ffc-42dc-9500-5d232aeb6c1c}">
+		<property name="maximumDistance">
+			<value>70</value>
+		</property>
+	</object>
 	<object class="MarkerTrack" id="{162dff79-0772-4915-8aa6-a01ff2e37892}" />
 	<object class="Timeline" id="{8ab2e4be-057e-4912-924d-46e35ad7f886}">
 		<relationship name="modules">
@@ -139,7 +143,7 @@
 	<object class="MixerBusFader" id="{8ecaecf8-17e6-4219-8ba6-b956c3072382}" />
 	<object class="ObjectSpatialiserEffect" id="{584bbefb-bc12-49fd-a76f-793f53917d9d}">
 		<property name="distanceRolloffType">
-			<value>3</value>
+			<value>1</value>
 		</property>
 	</object>
 	<object class="AutomationPoint" id="{4ecfefaf-3c23-47cd-ab4f-2298145bfb55}">

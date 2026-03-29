@@ -1388,6 +1388,85 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8842695764353454009, guid: 24153bde6d2acd64a874ea9c41cf4d9a, type: 3}
   m_PrefabInstance: {fileID: 96102837}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &97551026
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 97551029}
+  - component: {fileID: 97551028}
+  - component: {fileID: 97551027}
+  m_Layer: 0
+  m_Name: Question_Interact
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &97551027
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 97551026}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0021561617, y: 0.0017928393, z: 0.000076873315}
+  m_Center: {x: -0.0000013365774, y: 0.000054394546, z: -0.00014330649}
+--- !u!114 &97551028
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 97551026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b37301801bc14163984c1703ceb188d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Project.Gameplay.Interactables.PropsQuestion
+  _manager: {fileID: 1684804566}
+  _text: "\u0417\u043D\u0430\u0442\u043D\u044B\u0439 \u0440\u043E\u0434 \u0412\u0435\u0440\u0435\u0439\u0441\u043A\u0438\u0445
+    \u043E\u043F\u0440\u043E\u0432\u0435\u0440\u0433\u0430\u044E\u0442 \u0441\u043B\u0443\u0445\u0438
+    \u043E \u0444\u0438\u043D\u0430\u043D\u0441\u043E\u0432\u044B\u0445 \u0442\u0440\u0443\u0434\u043D\u043E\u0441\u0442\u044F\u0445."
+  _playSoundOnQuestion: 0
+  _sound:
+    _eventRef:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
+--- !u!4 &97551029
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 97551026}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5154795978156194672}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &110113590
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15587,7 +15666,7 @@ PrefabInstance:
     - target: {fileID: 4834322320520257252, guid: c10539ae55b4a0f46a9571c9b32116ee, type: 3}
       propertyPath: '_activeWhenOnPoint.Array.data[11]'
       value: 
-      objectReference: {fileID: 1389603982}
+      objectReference: {fileID: 1309697042}
     - target: {fileID: 5119508956517934658, guid: c10539ae55b4a0f46a9571c9b32116ee, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.22
@@ -22216,6 +22295,22 @@ PrefabInstance:
       propertyPath: _manager
       value: 
       objectReference: {fileID: 1684804566}
+    - target: {fileID: 2342224072936679389, guid: 1664db12afc53cc4d991f89ba9ceaf9a, type: 3}
+      propertyPath: _onOpen._activate.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2342224072936679389, guid: 1664db12afc53cc4d991f89ba9ceaf9a, type: 3}
+      propertyPath: _onClose._deactivate.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2342224072936679389, guid: 1664db12afc53cc4d991f89ba9ceaf9a, type: 3}
+      propertyPath: '_onOpen._activate.Array.data[0]'
+      value: 
+      objectReference: {fileID: 5494106113066316271}
+    - target: {fileID: 2342224072936679389, guid: 1664db12afc53cc4d991f89ba9ceaf9a, type: 3}
+      propertyPath: '_onClose._deactivate.Array.data[0]'
+      value: 
+      objectReference: {fileID: 5494106113066316271}
     - target: {fileID: 6886863017140902459, guid: 1664db12afc53cc4d991f89ba9ceaf9a, type: 3}
       propertyPath: _manager
       value: 
@@ -28803,6 +28898,84 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3000103641470808843, guid: 02ebcf17c38d6864997838f5b9cf288f, type: 3}
   m_PrefabInstance: {fileID: 1305360855}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1309697042
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1309697043}
+  - component: {fileID: 1309697045}
+  - component: {fileID: 1309697044}
+  m_Layer: 0
+  m_Name: Dice_Interact
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1309697043
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1309697042}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1389603982}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1309697044
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1309697042}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.020000007, y: 0.02, z: 0.019999994}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1309697045
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1309697042}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b37301801bc14163984c1703ceb188d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Project.Gameplay.Interactables.PropsQuestion
+  _manager: {fileID: 1684804566}
+  _text: "\u041A\u0443\u0431\u0438\u043A \u0432 \u0432\u0438\u0434\u0435 \u043B\u0438\u0441\u044B
+    \u2014 \u0437\u0430\u0447\u0435\u043C \u043E\u043D \u043C\u043D\u0435?"
+  _playSoundOnQuestion: 0
+  _sound:
+    _eventRef:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
 --- !u!1001 &1328633742
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -29587,70 +29760,22 @@ PrefabInstance:
     - {fileID: 8539509962452402137, guid: b582cb4c23781ad4faeeb252c88ab801, type: 3}
     - {fileID: -4133226621640405180, guid: b582cb4c23781ad4faeeb252c88ab801, type: 3}
     - {fileID: 9103962308120395736, guid: b582cb4c23781ad4faeeb252c88ab801, type: 3}
-    m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: -6803844034487920469, guid: b582cb4c23781ad4faeeb252c88ab801, type: 3}
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: -1406694632666744564, guid: b582cb4c23781ad4faeeb252c88ab801, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1389603984}
-    - targetCorrespondingSourceObject: {fileID: -6803844034487920469, guid: b582cb4c23781ad4faeeb252c88ab801, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1389603983}
+      addedObject: {fileID: 1309697043}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b582cb4c23781ad4faeeb252c88ab801, type: 3}
 --- !u!4 &1389603981 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: b582cb4c23781ad4faeeb252c88ab801, type: 3}
   m_PrefabInstance: {fileID: 1389603980}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1389603982 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: -6803844034487920469, guid: b582cb4c23781ad4faeeb252c88ab801, type: 3}
+--- !u!4 &1389603982 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -1406694632666744564, guid: b582cb4c23781ad4faeeb252c88ab801, type: 3}
   m_PrefabInstance: {fileID: 1389603980}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &1389603983
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1389603982}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.020000007, y: 0.02, z: 0.019999994}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1389603984
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1389603982}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b37301801bc14163984c1703ceb188d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Project.Gameplay.Interactables.PropsQuestion
-  _manager: {fileID: 1684804566}
-  _text: "\u041A\u0443\u0431\u0438\u043A \u0432 \u0432\u0438\u0434\u0435 \u043B\u0438\u0441\u044B
-    \u2014 \u0437\u0430\u0447\u0435\u043C \u043E\u043D \u043C\u043D\u0435?"
-  _playSoundOnQuestion: 0
-  _sound:
-    _eventRef:
-      Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
 --- !u!1 &1389603985 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b582cb4c23781ad4faeeb252c88ab801, type: 3}
@@ -40719,7 +40844,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 986188114327800713, guid: c10539ae55b4a0f46a9571c9b32116ee, type: 3}
       propertyPath: _activeWhenOnPoint.Array.size
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 986188114327800713, guid: c10539ae55b4a0f46a9571c9b32116ee, type: 3}
       propertyPath: '_activeWhenOnPoint.Array.data[0]'
@@ -40752,7 +40877,7 @@ PrefabInstance:
     - target: {fileID: 986188114327800713, guid: c10539ae55b4a0f46a9571c9b32116ee, type: 3}
       propertyPath: '_activeWhenOnPoint.Array.data[7]'
       value: 
-      objectReference: {fileID: 1744211183}
+      objectReference: {fileID: 97551026}
     - target: {fileID: 4834322320520257252, guid: c10539ae55b4a0f46a9571c9b32116ee, type: 3}
       propertyPath: _leftPoint
       value: 
@@ -46349,8 +46474,7 @@ MonoBehaviour:
     TypeName: Project.Gameplay.Misc.CursorServiceLifetimeScope
   autoRun: 1
   autoInjectGameObjects: []
-  _initialItems:
-  - {fileID: 11400000, guid: 6919f830b544a5448b403ab3075d05c2, type: 2}
+  _initialItems: []
   _inventoryView: {fileID: 4055657758760285983}
 --- !u!1001 &1920153718
 PrefabInstance:
@@ -58789,7 +58913,8 @@ Transform:
   m_LocalPosition: {x: 0.42499983, y: 0.065999866, z: -0.022999734}
   m_LocalScale: {x: 199.99994, y: 199.99994, z: 199.99997}
   m_ConstrainProportionsScale: 1
-  m_Children: []
+  m_Children:
+  - {fileID: 97551029}
   m_Father: {fileID: 294614436}
   m_LocalEulerAnglesHint: {x: -89.972, y: 0, z: 81.944}
 --- !u!1 &5166065569220357846
