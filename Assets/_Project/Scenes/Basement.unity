@@ -47496,6 +47496,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pickup_Key_PureBlood
       objectReference: {fileID: 0}
+    - target: {fileID: 6411573156534957202, guid: bdbe2cc9eccad984189e26bfb5532e23, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
