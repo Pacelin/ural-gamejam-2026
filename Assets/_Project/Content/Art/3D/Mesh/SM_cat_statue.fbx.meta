@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: d8e4f59077c72ad4194b20b844bc03f8
+guid: 808b0949cf415004e81742f5259dfc1d
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
@@ -7,8 +7,8 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: T_CobWeb
-    second: {fileID: 2100000, guid: 6a68c50f7d2e37540bc5c72535e86e02, type: 2}
+      name: T_concrete_cat_statue
+    second: {fileID: 2100000, guid: 6b937b6e8776d664cbd579e7f3b0167d, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

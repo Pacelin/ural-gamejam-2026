@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 922022f72baab5a4e8a2df319770d831
+guid: 60e52c13bf7f0fb4e9b2a79a1697fc24
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
@@ -7,8 +7,8 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: T_CobWeb
-    second: {fileID: 2100000, guid: 6a68c50f7d2e37540bc5c72535e86e02, type: 2}
+      name: T_AXE
+    second: {fileID: 2100000, guid: 3bff09be855c8734aa5f4c3269a4cd5d, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
