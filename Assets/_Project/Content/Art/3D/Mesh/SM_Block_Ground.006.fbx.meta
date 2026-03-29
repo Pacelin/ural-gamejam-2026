@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 7a2b9a9000f7ad946a605e58492af692
+guid: 382537c781fd1e54182eaef9e93f9687
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
@@ -7,33 +7,8 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: T_Ciferblat
-    second: {fileID: 2100000, guid: fcf8fbed8b0f0bb49936076b45ba736b, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: T_Colba_Glass
-    second: {fileID: 2100000, guid: acec6e5124866674fb1d772292516242, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: T_Grammafon
-    second: {fileID: 2100000, guid: 49c7bbef29f68db4bbe1e38aecf50c3d, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: T_Grammafon_Truba
-    second: {fileID: 2100000, guid: 4872fc6fbd08c7a4db9547d877d79a55, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: T_Logo
-    second: {fileID: 2100000, guid: c39c11a760a6dd94ab32c1a5eae94f17, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: T_WOOD_TS_PANEL_GLOSS_OLD
-    second: {fileID: 2100000, guid: 2591861b6b1681f418aedd816ce69896, type: 2}
+      name: T_rocky_trail_02
+    second: {fileID: 2100000, guid: 8984e19871b47b448855825faa674eaa, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

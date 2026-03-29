@@ -1,7 +1,6 @@
 ﻿using Plugins.Audio;
 using Project.Gameplay.Misc;
 using UnityEngine;
-using VContainer;
 
 namespace Project.Gameplay.Interactables
 {
