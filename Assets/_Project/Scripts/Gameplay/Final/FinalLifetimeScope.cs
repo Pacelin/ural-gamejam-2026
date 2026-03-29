@@ -7,15 +7,16 @@ namespace Project.Gameplay.Basement
 {
     public class FinalLifetimeScope : LifetimeScope
     {
+        [SerializeField] private bool _test;
         [SerializeField] private int _collectablesCount = 8;
         [SerializeField] private int _maxCount = 8;
 
         protected override void Configure(IContainerBuilder builder)
         {
-            if (Container.TryResolve<CollectablesModel>(out _))
-                return;
-            
-            builder.RegisterInstance(new CollectablesModel(_collectablesCount, _maxCount));
+#if UNITY_EDITOR
+            if (_test)
+                builder.RegisterInstance(new CollectablesModel(_collectablesCount, _maxCount));
+#endif
         }
     }
 }
