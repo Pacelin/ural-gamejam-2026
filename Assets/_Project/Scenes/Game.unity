@@ -59862,7 +59862,7 @@ PrefabInstance:
     - target: {fileID: 4484172903051697224, guid: 9851c021c4c87074ea52ad7ba975763b, type: 3}
       propertyPath: '_onClose._deactivate.Array.data[0]'
       value: 
-      objectReference: {fileID: 6281291917774451712}
+      objectReference: {fileID: 1389603985}
     - target: {fileID: 4568058949642708873, guid: 9851c021c4c87074ea52ad7ba975763b, type: 3}
       propertyPath: _manager
       value: 
