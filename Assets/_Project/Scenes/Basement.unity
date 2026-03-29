@@ -14,10 +14,10 @@ OcclusionCullingSettings:
 RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 10
-  m_Fog: 0
-  m_FogColor: {r: 0, g: 0, b: 0, a: 1}
-  m_FogMode: 3
-  m_FogDensity: 0.4
+  m_Fog: 1
+  m_FogColor: {r: 0.23018861, g: 0.22579114, b: 0.21846202, a: 1}
+  m_FogMode: 2
+  m_FogDensity: 0.299
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
   m_AmbientSkyColor: {r: 0, g: 0, b: 0, a: 1}
@@ -10514,8 +10514,12 @@ PrefabInstance:
     m_TransformParent: {fileID: 598525215}
     m_Modifications:
     - target: {fileID: 722378516137373448, guid: d1f68446ae890044a976c7d1775aa86d, type: 3}
+      propertyPath: _manager
+      value: 
+      objectReference: {fileID: 1684804566}
+    - target: {fileID: 722378516137373448, guid: d1f68446ae890044a976c7d1775aa86d, type: 3}
       propertyPath: _codeDebug
-      value: B1 C6 A6 B5
+      value: B1 C6 A6 B2
       objectReference: {fileID: 0}
     - target: {fileID: 722378516137373448, guid: d1f68446ae890044a976c7d1775aa86d, type: 3}
       propertyPath: _activeButtons.Array.size
@@ -10524,7 +10528,7 @@ PrefabInstance:
     - target: {fileID: 722378516137373448, guid: d1f68446ae890044a976c7d1775aa86d, type: 3}
       propertyPath: '_activeButtons.Array.data[0]'
       value: 
-      objectReference: {fileID: 1774606976}
+      objectReference: {fileID: 2078179053}
     - target: {fileID: 722378516137373448, guid: d1f68446ae890044a976c7d1775aa86d, type: 3}
       propertyPath: '_activeButtons.Array.data[1]'
       value: 
@@ -10532,18 +10536,22 @@ PrefabInstance:
     - target: {fileID: 722378516137373448, guid: d1f68446ae890044a976c7d1775aa86d, type: 3}
       propertyPath: '_activeButtons.Array.data[2]'
       value: 
-      objectReference: {fileID: 609128407}
+      objectReference: {fileID: 367232557}
     - target: {fileID: 722378516137373448, guid: d1f68446ae890044a976c7d1775aa86d, type: 3}
       propertyPath: '_activeButtons.Array.data[3]'
       value: 
-      objectReference: {fileID: 2078179053}
+      objectReference: {fileID: 1774606976}
     - target: {fileID: 1269432439427983397, guid: d1f68446ae890044a976c7d1775aa86d, type: 3}
       propertyPath: _slot
       value: 
       objectReference: {fileID: 480042394}
     - target: {fileID: 2244038508784140527, guid: d1f68446ae890044a976c7d1775aa86d, type: 3}
+      propertyPath: _manager
+      value: 
+      objectReference: {fileID: 1684804566}
+    - target: {fileID: 2244038508784140527, guid: d1f68446ae890044a976c7d1775aa86d, type: 3}
       propertyPath: _codeDebug
-      value: E2 E6 A6 B5
+      value: E2 E6 A6 B2
       objectReference: {fileID: 0}
     - target: {fileID: 2244038508784140527, guid: d1f68446ae890044a976c7d1775aa86d, type: 3}
       propertyPath: _activeButtons.Array.size
@@ -10552,7 +10560,7 @@ PrefabInstance:
     - target: {fileID: 2244038508784140527, guid: d1f68446ae890044a976c7d1775aa86d, type: 3}
       propertyPath: '_activeButtons.Array.data[0]'
       value: 
-      objectReference: {fileID: 842811662}
+      objectReference: {fileID: 1946879081}
     - target: {fileID: 2244038508784140527, guid: d1f68446ae890044a976c7d1775aa86d, type: 3}
       propertyPath: '_activeButtons.Array.data[1]'
       value: 
@@ -10560,11 +10568,11 @@ PrefabInstance:
     - target: {fileID: 2244038508784140527, guid: d1f68446ae890044a976c7d1775aa86d, type: 3}
       propertyPath: '_activeButtons.Array.data[2]'
       value: 
-      objectReference: {fileID: 1946879081}
+      objectReference: {fileID: 367232557}
     - target: {fileID: 2244038508784140527, guid: d1f68446ae890044a976c7d1775aa86d, type: 3}
       propertyPath: '_activeButtons.Array.data[3]'
       value: 
-      objectReference: {fileID: 609128407}
+      objectReference: {fileID: 842811662}
     - target: {fileID: 5252511052086020039, guid: d1f68446ae890044a976c7d1775aa86d, type: 3}
       propertyPath: _slot
       value: 
@@ -12050,8 +12058,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 381268060}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.13067977, y: 0.6949265, z: 0.13067977, w: 0.6949265}
-  m_LocalPosition: {x: -23.5, y: 1.7, z: 0}
+  m_LocalRotation: {x: -0.0042500193, y: 0.8733568, z: -0.0076216883, w: -0.4870028}
+  m_LocalPosition: {x: -28, y: 1.7, z: 6.13}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
