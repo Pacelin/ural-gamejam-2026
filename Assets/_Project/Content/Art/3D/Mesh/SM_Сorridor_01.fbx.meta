@@ -28,7 +28,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: T_rocky_trail_02
-    second: {fileID: 2100000, guid: 8984e19871b47b448855825faa674eaa, type: 2}
+    second: {fileID: 2100000, guid: 03fbf7799faaf8343912862f7fa83ab3, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
