@@ -1937,7 +1937,7 @@ Light:
   m_BounceIntensity: 3
   m_ColorTemperature: 6500
   m_UseColorTemperature: 1
-  m_BoundingSphereOverride: {x: 4.5452035e+30, y: 6.799271e-33, z: 0, w: -2.7512752e-29}
+  m_BoundingSphereOverride: {x: 1.0010219e-38, y: 1.0102071e-38, z: 1.0010236e-38, w: 1.102041e-38}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ForceVisible: 0
@@ -23687,7 +23687,7 @@ PrefabInstance:
       objectReference: {fileID: 991982039}
     - target: {fileID: 4834322320520257252, guid: c10539ae55b4a0f46a9571c9b32116ee, type: 3}
       propertyPath: _activeWhenOnPoint.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4834322320520257252, guid: c10539ae55b4a0f46a9571c9b32116ee, type: 3}
       propertyPath: '_activeWhenOnPoint.Array.data[0]'
@@ -23696,7 +23696,7 @@ PrefabInstance:
     - target: {fileID: 4834322320520257252, guid: c10539ae55b4a0f46a9571c9b32116ee, type: 3}
       propertyPath: '_activeWhenOnPoint.Array.data[1]'
       value: 
-      objectReference: {fileID: 537244801}
+      objectReference: {fileID: 1632689046}
     - target: {fileID: 4834322320520257252, guid: c10539ae55b4a0f46a9571c9b32116ee, type: 3}
       propertyPath: '_activeWhenOnPoint.Array.data[2]'
       value: 
@@ -25707,7 +25707,7 @@ Light:
   m_BounceIntensity: 2
   m_ColorTemperature: 6500
   m_UseColorTemperature: 1
-  m_BoundingSphereOverride: {x: 4.5452035e+30, y: 6.799271e-33, z: 0, w: -2.7512752e-29}
+  m_BoundingSphereOverride: {x: 0, y: 0, z: -1.14461715e+27, w: 0}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ForceVisible: 0
@@ -26439,6 +26439,75 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3000103641470808843, guid: 02ebcf17c38d6864997838f5b9cf288f, type: 3}
   m_PrefabInstance: {fileID: 1625148776}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1632689046
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1632689049}
+  - component: {fileID: 1632689048}
+  - component: {fileID: 1632689047}
+  m_Layer: 0
+  m_Name: Look_To_Washbasin
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1632689047
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1632689046}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 858992d45d4748ceaf95e29d444d02be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Project.Gameplay.Interactables.LookInteractableObject
+  _manager: {fileID: 1684804566}
+  _point: {fileID: 470705596}
+  _useMoveSound: 0
+--- !u!65 &1632689048
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1632689046}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.74374765, y: 2.3142638, z: 0.57038224}
+  m_Center: {x: -0.0034225285, y: 0.58525765, z: 0.285191}
+--- !u!4 &1632689049
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1632689046}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalPosition: {x: 0.004, y: 0.63, z: 11.013}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1657766594
 GameObject:
   m_ObjectHideFlags: 0
@@ -42205,6 +42274,42 @@ PrefabInstance:
       propertyPath: m_Name
       value: Props_Washbasin
       objectReference: {fileID: 0}
+    - target: {fileID: 1628528737206034569, guid: d841e12c20750fc4d8d91570a51542e1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.185
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150163892069361801, guid: d841e12c20750fc4d8d91570a51542e1, type: 3}
+      propertyPath: _manager
+      value: 
+      objectReference: {fileID: 1684804566}
+    - target: {fileID: 2695371777102914043, guid: d841e12c20750fc4d8d91570a51542e1, type: 3}
+      propertyPath: _manager
+      value: 
+      objectReference: {fileID: 1684804566}
+    - target: {fileID: 2863779695877899600, guid: d841e12c20750fc4d8d91570a51542e1, type: 3}
+      propertyPath: _manager
+      value: 
+      objectReference: {fileID: 1684804566}
+    - target: {fileID: 6408375909576679107, guid: d841e12c20750fc4d8d91570a51542e1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6636943898510790980, guid: d841e12c20750fc4d8d91570a51542e1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7102205876868944586, guid: d841e12c20750fc4d8d91570a51542e1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7499444775945366727, guid: d841e12c20750fc4d8d91570a51542e1, type: 3}
+      propertyPath: _manager
+      value: 
+      objectReference: {fileID: 1684804566}
+    - target: {fileID: 7520916007418741134, guid: d841e12c20750fc4d8d91570a51542e1, type: 3}
+      propertyPath: _manager
+      value: 
+      objectReference: {fileID: 1684804566}
     - target: {fileID: 7925157184364260266, guid: d841e12c20750fc4d8d91570a51542e1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.01
@@ -45209,6 +45314,7 @@ SceneRoots:
   - {fileID: 1881459691}
   - {fileID: 2007713947}
   - {fileID: 1941338350}
+  - {fileID: 1632689049}
   - {fileID: 991982042}
   - {fileID: 557178886}
   - {fileID: 1187225780}

@@ -19,6 +19,7 @@ namespace Project.Gameplay.Movement
         private MovementPoint _previousPoint;
 
         private int _blockersCount;
+        private bool _isMoving;
         
         private readonly CursorService _cursorService;
         private readonly SubtitlesService _subtitlesService;
@@ -108,8 +109,12 @@ namespace Project.Gameplay.Movement
         
         public void Move(MovementPoint point, bool useMoveSound = true)
         {
+            if (_isMoving)
+                return;
+            
             UniTask.Void(async cancellationToken =>
             {
+                _isMoving = true;
                 cancellationToken.ThrowIfCancellationRequested();
                 _cursorService.EnableCursorState(ECursorState.Transition);
                 BlockControls();
@@ -135,13 +140,18 @@ namespace Project.Gameplay.Movement
                 _activePoint.TriggerSubtitles(_subtitlesService);
                 UnblockControls();
                 _cursorService.DisableCursorState(ECursorState.Transition);
+                _isMoving = false;
             }, _blockView.gameObject.GetCancellationTokenOnDestroy());
         }
 
         public void MoveInDoor(MovementPoint point, Vector3 doorPoint, ISoundEvent moveSound)
         {
+            if (_isMoving)
+                return;
+            
             UniTask.Void(async cancellationToken =>
             {
+                _isMoving = true;
                 cancellationToken.ThrowIfCancellationRequested();
                 _cursorService.EnableCursorState(ECursorState.Transition);
                 BlockControls();
@@ -178,6 +188,7 @@ namespace Project.Gameplay.Movement
                 _activePoint.TriggerSubtitles(_subtitlesService);
                 UnblockControls();
                 _cursorService.DisableCursorState(ECursorState.Transition);
+                _isMoving = false;
             }, _blockView.gameObject.GetCancellationTokenOnDestroy());
         }
 
