@@ -11,16 +11,15 @@ namespace Project.Editor.Gameplay
 
         private void OnDestroy() => DOTween.Kill(_text);
 
-        public void Setup() => _text.alpha = 0;
         public void SetText(int current, int required) => _text.text = current + "/" + required;
 
         public void Ping()
         {
             DOTween.Kill(_text);
+            var t = _text.transform;
             DOTween.Sequence(_text)
-                .Append(_text.DOFade(1, 0.2f))
-                .AppendInterval(2f)
-                .Append(_text.DOFade(0, 0.2f));
+                .Append(t.DOScale(1.15f, 0.1f).SetEase(Ease.OutCubic))
+                .Append(t.DOScale(1f, 0.1f).SetEase(Ease.InCubic));
         }
     }
 }

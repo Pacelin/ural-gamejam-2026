@@ -16,7 +16,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!224 &6600406539881204625
 RectTransform:
@@ -562,6 +562,16 @@ MonoBehaviour:
   _useSoundWhenBack: 0
   _usePreviousPointWhenBack: 0
   _activeWhenOnPoint: []
+  _subtitleTrigger: {fileID: 0}
+  _haveCustomMoveSound: 0
+  _customMoveSound:
+    _eventRef:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
 --- !u!1 &3797423784985480190
 GameObject:
   m_ObjectHideFlags: 0
@@ -791,6 +801,7 @@ MonoBehaviour:
     _destroy: []
     _locks: []
     _activators: []
+    _subtitleTrigger: {fileID: 0}
   _onTake:
     _activate:
     - {fileID: 1082103647913633070}
@@ -798,12 +809,14 @@ MonoBehaviour:
     _destroy: []
     _locks: []
     _activators: []
+    _subtitleTrigger: {fileID: 0}
   _onComplete:
     _activate: []
     _deactivate: []
     _destroy: []
     _locks: []
     _activators: []
+    _subtitleTrigger: {fileID: 0}
 --- !u!1 &7883332006911494592
 GameObject:
   m_ObjectHideFlags: 0

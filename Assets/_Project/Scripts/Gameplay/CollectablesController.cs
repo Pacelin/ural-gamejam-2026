@@ -19,7 +19,7 @@ namespace Project.Editor.Gameplay
         public void Initialize()
         {
             _model.OnChanged += OnModelChanged;
-            _view.Setup();
+            _view.SetText(_model.Current, _model.Required);
         }
 
         public void Dispose()

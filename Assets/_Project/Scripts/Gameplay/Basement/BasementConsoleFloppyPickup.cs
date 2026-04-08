@@ -20,7 +20,6 @@ namespace Project.Gameplay.Basement
         {
             base.Initialize(resolver);
             _inventory = resolver.Resolve<InventoryModel>();
-            _afterPickup.Prepare();
         }
 
         protected override void OnInteract()

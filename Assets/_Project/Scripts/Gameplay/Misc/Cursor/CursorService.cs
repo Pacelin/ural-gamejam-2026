@@ -31,12 +31,14 @@ namespace Project.Gameplay.Misc
                     SetDefault();
                 }
             });
+            Cursor.lockState = CursorLockMode.Confined;
         }
 
         public void Dispose()
         {
             _pauseDisposable.Dispose();
             SetDefault();
+            Cursor.lockState = CursorLockMode.None;
         }
 
         public void EnableCursorState(ECursorState state)

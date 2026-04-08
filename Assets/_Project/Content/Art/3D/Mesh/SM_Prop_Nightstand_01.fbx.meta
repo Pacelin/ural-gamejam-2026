@@ -7,6 +7,11 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: T_WOOD_TS_PANEL_GLOSS_OLD
+    second: {fileID: 2100000, guid: 2591861b6b1681f418aedd816ce69896, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: WOOD_TS_PANEL_GLOSS_OLD
     second: {fileID: 2100000, guid: 2591861b6b1681f418aedd816ce69896, type: 2}
   materials:

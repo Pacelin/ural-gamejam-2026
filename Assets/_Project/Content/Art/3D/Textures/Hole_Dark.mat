@@ -26,8 +26,8 @@ Material:
     m_Ints: []
     m_Floats:
     - _DarknessMax: 1
-    - _EndDepth: 5
-    - _StartDepth: 1
+    - _EndDepth: 7
+    - _StartDepth: 2
     m_Colors: []
   m_BuildTextureStacks: []
   m_AllowLocking: 1
