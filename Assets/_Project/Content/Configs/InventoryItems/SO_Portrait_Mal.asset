@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Project.Gameplay.Inventory.InventoryItemConfig
   _icon: {fileID: 21300000, guid: ceb62ead2386bc9438c748aae69cbff8, type: 3}
   _text: "\u041F\u043E\u0440\u0442\u0440\u0435\u0442 \"\u041F\u043E\u0441\u043B\u0435\u0434\u043D\u0438\u0439
-    \u043F\u0435\u0440\u0435\u0434 ...\""
+    \u043F\u0435\u0440\u0435\u0434...\""
   _pickupSound:
     _eventRef:
       Guid:
