@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 92502518692509477}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0.7771459, z: 0, w: 0.62932044}
+  m_LocalRotation: {x: 0, y: 0.7495971, z: 0, w: 0.6618945}
   m_LocalPosition: {x: 0.6200005, y: -0.5000007, z: 0.49999946}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -133,11 +133,19 @@ MonoBehaviour:
     _deactivate: []
     _destroy: []
     _locks: []
+    _activators: []
+    _subtitleTrigger: {fileID: 0}
   _onClose:
     _activate: []
     _deactivate: []
     _destroy: []
     _locks: []
+    _activators: []
+    _subtitleTrigger: {fileID: 0}
+  _useOtherCloseDuration: 0
+  _otherCloseDuration: 0
+  _useCustomEaseOnClose: 0
+  _customEase: 30
 --- !u!65 &6466805714744087788
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -292,11 +300,19 @@ MonoBehaviour:
     _deactivate: []
     _destroy: []
     _locks: []
+    _activators: []
+    _subtitleTrigger: {fileID: 0}
   _onClose:
     _activate: []
     _deactivate: []
     _destroy: []
     _locks: []
+    _activators: []
+    _subtitleTrigger: {fileID: 0}
+  _useOtherCloseDuration: 0
+  _otherCloseDuration: 0
+  _useCustomEaseOnClose: 0
+  _customEase: 30
 --- !u!65 &332379954222902545
 BoxCollider:
   m_ObjectHideFlags: 0

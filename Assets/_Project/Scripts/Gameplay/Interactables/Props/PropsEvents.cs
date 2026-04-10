@@ -1,6 +1,8 @@
-﻿using Project.Gameplay.Misc;
+﻿using System;
+using Project.Gameplay.Misc;
 using Project.Gameplay.Movement;
 using UnityEngine;
+using Object = UnityEngine.Object;
 
 namespace Project.Gameplay.Interactables
 {

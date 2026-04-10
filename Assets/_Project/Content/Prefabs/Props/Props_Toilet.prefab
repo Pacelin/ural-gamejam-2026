@@ -31,6 +31,86 @@ Transform:
   m_Children: []
   m_Father: {fileID: 887796920548036909}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3873791027684525698
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4626795353042379530}
+  - component: {fileID: 4333528372411729736}
+  - component: {fileID: 5772372741994488790}
+  m_Layer: 0
+  m_Name: Handle_Interact
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4626795353042379530
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3873791027684525698}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4190721219023873713}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4333528372411729736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3873791027684525698}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3804be2e616a482c8c28adf9af53e73b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Project.Gameplay.Interactables.PropsToiletHandle
+  _manager: {fileID: 0}
+  _handle: {fileID: 4190721219023873713}
+  _defaultRotation: {x: 0, y: 0, z: 0}
+  _downRotation: {x: 0, y: 0, z: -20}
+  _fadeInDuration: 0.05
+  _fadeOutDuration: 0.05
+  _soundEvent:
+    _eventRef:
+      Guid:
+        Data1: 1550191516
+        Data2: 1313465425
+        Data3: 610161831
+        Data4: -1341392241
+      Path: event:/Game/Misc/ToiletHandle
+--- !u!65 &5772372741994488790
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3873791027684525698}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.09321642, y: 0.04507333, z: 0.026232243}
+  m_Center: {x: 0.03170538, y: 0.00027930737, z: 0.011511533}
 --- !u!1 &8436024753987249957
 GameObject:
   m_ObjectHideFlags: 0
@@ -134,12 +214,18 @@ MonoBehaviour:
     _destroy: []
     _locks: []
     _activators: []
+    _subtitleTrigger: {fileID: 0}
   _onClose:
     _activate: []
     _deactivate: []
     _destroy: []
     _locks: []
     _activators: []
+    _subtitleTrigger: {fileID: 0}
+  _useOtherCloseDuration: 1
+  _otherCloseDuration: 0.5
+  _useCustomEaseOnClose: 1
+  _customEase: 30
 --- !u!65 &3927633702301751025
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -245,11 +331,19 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6164469299287161651, guid: 1fbad3a3e9b2b6a4792e3a6ba0a8b239, type: 3}
       insertIndex: -1
       addedObject: {fileID: 7258601516713234659}
+    - targetCorrespondingSourceObject: {fileID: 3598588702140584055, guid: 1fbad3a3e9b2b6a4792e3a6ba0a8b239, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4626795353042379530}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1fbad3a3e9b2b6a4792e3a6ba0a8b239, type: 3}
 --- !u!4 &887796920548036909 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 1fbad3a3e9b2b6a4792e3a6ba0a8b239, type: 3}
+  m_PrefabInstance: {fileID: 853625527725913798}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &4190721219023873713 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3598588702140584055, guid: 1fbad3a3e9b2b6a4792e3a6ba0a8b239, type: 3}
   m_PrefabInstance: {fileID: 853625527725913798}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &6797119102818258421 stripped
