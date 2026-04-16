@@ -64,6 +64,9 @@
 		</relationship>
 	</object>
 	<object class="EventMixerMaster" id="{a25ccfb5-7b3d-459b-a844-d8771e85350c}">
+		<property name="volume">
+			<value>2</value>
+		</property>
 		<property name="pitch">
 			<value>2</value>
 		</property>
