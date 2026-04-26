@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: SO_Basement_Generator_Fuel_Filled
   m_EditorClassIdentifier: Assembly-CSharp::Project.Gameplay.Inventory.InventoryItemConfig
   _icon: {fileID: 21300000, guid: e0e5079792d6a5e46a680eead3317946, type: 3}
-  _text: "\u041A\u0430\u043D\u0438\u0441\u0442\u0440\u0430 \u0441 \u0431\u0435\u043D\u0437\u0438\u043D\u043E\u043C"
+  _text: Gas canister.
   _pickupSound:
     _eventRef:
       Guid:

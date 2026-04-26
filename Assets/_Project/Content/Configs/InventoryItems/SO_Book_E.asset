@@ -13,8 +13,7 @@ MonoBehaviour:
   m_Name: SO_Book_E
   m_EditorClassIdentifier: Assembly-CSharp::Project.Gameplay.Inventory.InventoryItemConfig
   _icon: {fileID: 21300000, guid: 5550073252107ea40a0d3ebf417d4546, type: 3}
-  _text: "\u041A\u043D\u0438\u0433\u0430 \u0441 \u0431\u0443\u043A\u0432\u043E\u0439
-    \"\u0415\""
+  _text: "Book with letter \u201CU\u201D"
   _pickupSound:
     _eventRef:
       Guid:

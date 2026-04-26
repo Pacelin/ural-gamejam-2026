@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: SO_Floppy_1
   m_EditorClassIdentifier: Assembly-CSharp::Project.Gameplay.Inventory.InventoryItemConfig
   _icon: {fileID: 21300000, guid: 0c89faad358bcd141913d06a416494f2, type: 3}
-  _text: "\u0414\u0438\u0441\u043A\u0435\u0442\u0430 1"
+  _text: "Floppy disk \u201C1\u201D"
   _pickupSound:
     _eventRef:
       Guid:

@@ -55,7 +55,7 @@ namespace Project.Gameplay.Interactables
             else
             {
                 _closedSound.PlayOneShotInPoint(_door.position);
-                _subtitlesService.Show("Закрыто");
+                _subtitlesService.Show("Locked");
             }
         }
 

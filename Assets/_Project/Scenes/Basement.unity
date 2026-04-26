@@ -15218,9 +15218,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Project.Gameplay.Movement.SubtitleTrigger
   _delay: 0.5
   _queue:
-  - "\u0425\u043E\u0442\u044C \u0433\u043B\u0430\u0437 \u0432\u044B\u043A\u043E\u043B\u0438...
-    \u0413\u0434\u0435-\u0442\u043E \u0434\u043E\u043B\u0436\u0435\u043D \u0431\u044B\u0442\u044C
-    \u0438\u0441\u0442\u043E\u0447\u043D\u0438\u043A \u043F\u0438\u0442\u0430\u043D\u0438\u044F."
+  - "Pitch black\u2026 there must be some kind of light source."
   _destroyAfterTrigger: 1
 --- !u!1001 &487010391
 PrefabInstance:
@@ -19864,8 +19862,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Project.Gameplay.Interactables.PropsQuestion
   _manager: {fileID: 1684804566}
-  _text: "\u041F\u0440\u043E\u0442\u043E\u043A\u043E\u043B\u044B \u0438\u0441\u0441\u043B\u0435\u0434\u043E\u0432\u0430\u043D\u0438\u0439.
-    \u041F\u043E\u0434\u0447\u0435\u0440\u043A \u043D\u0435 \u0440\u0430\u0437\u043E\u0431\u0440\u0430\u0442\u044C."
+  _text: Research logs. The handwriting is illegible.
   _playSoundOnQuestion: 0
   _sound:
     _eventRef:
@@ -21267,7 +21264,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Project.Gameplay.Interactables.PropsQuestion
   _manager: {fileID: 1684804566}
-  _text: "\u0424\u0443, \u043A\u0430\u043A\u0430\u044F \u043C\u0435\u0440\u0437\u043E\u0441\u0442\u044C..."
+  _text: "Ugh, disgusting\u2026"
   _playSoundOnQuestion: 0
   _sound:
     _eventRef:
@@ -25013,10 +25010,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Project.Gameplay.Interactables.PropsQuestion
   _manager: {fileID: 1684804566}
-  _text: "\u0416\u0443\u0440\u043D\u0430\u043B 2: \u0412\u0441\u0435 \u0440\u0435\u0437\u0443\u043B\u044C\u0442\u0430\u0442\u044B
-    \u043E\u0442\u0440\u0438\u0446\u0430\u0442\u0435\u043B\u044C\u043D\u044B - \u043F\u0440\u043E\u043A\u043B\u044F\u0442\u0438\u0435
-    \u043D\u0435 \u0432\u044B\u0432\u043E\u0434\u0438\u0442\u0441\u044F, \u043D\u0438\u0447\u0435\u0433\u043E
-    \u043D\u0435 \u043F\u043E\u043C\u043E\u0433\u0430\u0435\u0442."
+  _text: "Journal 2: all results are negative \u2014 the curse\u2026"
   _playSoundOnQuestion: 0
   _sound:
     _eventRef:
@@ -29403,10 +29397,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Project.Gameplay.Interactables.PropsQuestion
   _manager: {fileID: 1684804566}
-  _text: "\u0416\u0443\u0440\u043D\u0430\u043B 1: \u0420\u0430\u0431\u043E\u0442\u0430\u044E
-    \u0441 \u043E\u0431\u0440\u0430\u0437\u0446\u0430\u043C\u0438 \u0441\u0432\u043E\u0435\u0439
-    \u043A\u0440\u043E\u0432\u0438, \u043D\u0435 \u043C\u043E\u0433\u0443 \u043E\u043F\u0440\u0435\u0434\u0435\u043B\u0438\u0442\u044C
-    \u043F\u0440\u0438\u0447\u0438\u043D\u0443 \u043F\u0440\u043E\u043A\u043B\u044F\u0442\u0438\u044F."
+  _text: 'Journal 1: I''m working with samples of my blood, I can''t determine the
+    cause of the curse.'
   _playSoundOnQuestion: 0
   _sound:
     _eventRef:
@@ -38958,7 +38950,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Project.Gameplay.Basement.ChechikAgent
   _manager: {fileID: 1684804566}
   _appearCallDelay: 0.2
-  _appearText: "\u041A\u0430\u043A\u043E\u0433\u043E \u0445..."
+  _appearText: "What the hell\u2026"
   _appearSound:
     _eventRef:
       Guid:
@@ -39788,8 +39780,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Project.Gameplay.Interactables.PropsQuestion
   _manager: {fileID: 1684804566}
-  _text: "\u0424\u0438\u0433\u0443\u0440\u043A\u0430 \u0434\u0438\u0432\u0430\u043D\u0430...
-    \u041D\u0435 \u043A\u0440\u0443\u0442\u0438\u0442\u0441\u044F..."
+  _text: "A sofa figurine\u2026 doesn\u2019t rotate."
   _playSoundOnQuestion: 0
   _sound:
     _eventRef:
@@ -40303,17 +40294,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Project.Gameplay.Movement.SubtitleTrigger
   _delay: 0
   _queue:
-  - "\xAB\u041B\u044E\u0431\u0435\u0437\u043D\u044B\u0439 \u0441\u044B\u043D!"
-  - "\u041D\u0430\u043A\u043E\u043D\u0435\u0446-\u0442\u043E \u0432\u044B \u0441
-    \u0441\u0435\u0441\u0442\u0440\u0438\u0446\u0435\u0439 \u043E\u0434\u0443\u043C\u0430\u043B\u0438\u0441\u044C
-    \u0438 \u0432\u0441\u0442\u0443\u043F\u0430\u0435\u0442\u0435 \u0432 \u0437\u0430\u043A\u043E\u043D\u043D\u044B\u0439
-    \u0431\u0440\u0430\u043A."
-  - "\u0421\u0438\u0435 \u0440\u0435\u0448\u0435\u043D\u0438\u0435 \u0434\u043E\u0441\u0442\u043E\u0439\u043D\u043E
-    \u043F\u043E\u0445\u0432\u0430\u043B\u044B. \u041E\u0436\u0438\u0434\u0430\u044E
-    \u0441\u043A\u043E\u0440\u043E\u0433\u043E \u0438\u0437\u0432\u0435\u0441\u0442\u0438\u044F
-    \u043E \u0440\u043E\u0436\u0434\u0435\u043D\u0438\u0438 \u043F\u0435\u0440\u0432\u0435\u043D\u0446\u0430
-    \u2014 \u043D\u0430\u0434\u0435\u0436\u0434\u0430 \u0434\u0438\u043D\u0430\u0441\u0442\u0438\u0438
-    \u043D\u0430\u0448\u0435\u0439\xBB."
+  - Dear son!
+  - At last you and your sister have come to your senses and are entering into a
+    lawful marriage.
+  - "This decision is worthy of praise. I await early news of the birth of your firstborn
+    \u2014 the hope of our dynasty."
   _destroyAfterTrigger: 0
 --- !u!65 &1332620873
 BoxCollider:
@@ -40503,7 +40488,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Project.Gameplay.Interactables.PropsQuestion
   _manager: {fileID: 1684804566}
-  _text: "\u041E\u0431\u0440\u0430\u0437\u0446\u044B \u043A\u0440\u043E\u0432\u0438."
+  _text: Blood samples.
   _playSoundOnQuestion: 0
   _sound:
     _eventRef:
@@ -47455,9 +47440,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Project.Gameplay.Interactables.PropsQuestion
   _manager: {fileID: 1684804566}
-  _text: "\u0420\u0443\u0441\u0441\u043A\u043E-\u043A\u0438\u0442\u0430\u0439\u0441\u043A\u0438\u0439
-    \u0441\u043B\u043E\u0432\u0430\u0440\u044C, \u0438 \u043A \u043D\u0435\u043C\u0443
-    \u0447\u0442\u043E-\u0442\u043E \u043F\u0440\u0438\u043B\u0438\u043F\u043B\u043E."
+  _text: "Russian-Chinese dictionary\u2026 and something attached to it\u2026"
   _playSoundOnQuestion: 0
   _sound:
     _eventRef:
@@ -48026,9 +48009,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Project.Gameplay.Movement.SubtitleTrigger
   _delay: 0.5
   _queue:
-  - "\u0412\u0440\u0435\u043C\u044F \u0432\u0437\u044F\u043B\u043E \u0441\u0432\u043E\u0451...
-    \u041D\u0430\u0434\u043E \u043D\u0430\u0439\u0442\u0438 \u0434\u0440\u0443\u0433\u043E\u0439
-    \u043F\u0443\u0442\u044C."
+  - "Time took its toll\u2026 need to find another way."
   _destroyAfterTrigger: 1
 --- !u!1 &1591235546
 GameObject:
@@ -49064,8 +49045,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Project.Gameplay.Interactables.PropsDropWithQuestion
   _manager: {fileID: 1684804566}
   _requireItem: {fileID: 11400000, guid: ef0691babf617db4aa50f502be3d09e1, type: 2}
-  _text: "\u0425\u043C, \u0438 \u0442\u0443\u0442 \u043D\u0443\u0436\u0435\u043D
-    \u043A\u043B\u044E\u0447..."
+  _text: "Hmm, need a key here too\u2026"
   _playSoundOnQuestion: 0
   _sound:
     _eventRef:
@@ -51990,8 +51970,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Project.Gameplay.Interactables.PropsQuestion
   _manager: {fileID: 1684804566}
-  _text: "\u0416\u0443\u0440\u043D\u0430\u043B 3: \u041E\u0441\u0442\u0430\u043B\u0441\u044F
-    \u043F\u043E\u0441\u043B\u0435\u0434\u043D\u0438\u0439 \u0441\u043F\u043E\u0441\u043E\u0431."
+  _text: "Journal 3: there\u2019s only one method left."
   _playSoundOnQuestion: 0
   _sound:
     _eventRef:
@@ -52514,8 +52493,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Project.Gameplay.Interactables.PropsQuestion
   _manager: {fileID: 1684804566}
-  _text: "\u0427\u0430\u0441\u044B XIX \u0432\u0435\u043A\u0430. \u0421\u0442\u0430\u0440\u0438\u043D\u043D\u044B\u0439
-    \u0430\u043D\u0442\u0438\u043A\u0432\u0430\u0440\u0438\u0430\u0442."
+  _text: 19th century clock. Antique.
   _playSoundOnQuestion: 0
   _sound:
     _eventRef:
@@ -54591,9 +54569,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Project.Gameplay.Interactables.PropsQuestion
   _manager: {fileID: 1684804566}
-  _text: "\u041F\u043E\u0445\u043E\u0436\u0435, \u044D\u0442\u043E\u0439 \u0434\u0432\u0435\u0440\u044C\u044E
-    \u0443\u043F\u0440\u0430\u0432\u043B\u044F\u0435\u0442 \u0442\u0430 \u0448\u0442\u0443\u043A\u0430
-    \u0441\u043F\u0440\u0430\u0432\u0430"
+  _text: Looks like this door is controlled by that thing on the right.
   _playSoundOnQuestion: 0
   _sound:
     _eventRef:
@@ -57040,8 +57016,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Project.Gameplay.Interactables.PropsQuestion
   _manager: {fileID: 1684804566}
-  _text: "\u0412\u0435\u043B\u0438\u043A\u043E\u043B\u0435\u043F\u043D\u044B\u0439
-    \u0438\u043D\u0441\u0442\u0440\u0443\u043C\u0435\u043D\u0442..."
+  _text: Excellent tool...
   _playSoundOnQuestion: 0
   _sound:
     _eventRef:
@@ -67016,7 +66991,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Project.Gameplay.Interactables.PropsDropWithQuestion
   _manager: {fileID: 1684804566}
   _requireItem: {fileID: 11400000, guid: 52e7ceea43e98d944b3b4b897d965e1d, type: 2}
-  _text: "\u041D\u0430\u0434\u043E \u043D\u0430\u0439\u0442\u0438 \u043F\u043B\u0430\u0441\u0442\u0438\u043D\u043A\u0443"
+  _text: Need to find a vinyl record.
   _playSoundOnQuestion: 0
   _sound:
     _eventRef:
@@ -67696,6 +67671,14 @@ PrefabInstance:
       propertyPath: m_Center.z
       value: 8.708334e-15
       objectReference: {fileID: 0}
+    - target: {fileID: 4284099350348851271, guid: cc3b7b918a3770c418fbe1b941ea5fb0, type: 3}
+      propertyPath: _text
+      value: It looks like this door needs electricity to open.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4284099350348851271, guid: cc3b7b918a3770c418fbe1b941ea5fb0, type: 3}
+      propertyPath: _manager
+      value: 
+      objectReference: {fileID: 1684804566}
     - target: {fileID: 4694819140369481047, guid: cc3b7b918a3770c418fbe1b941ea5fb0, type: 3}
       propertyPath: _manager
       value: 
@@ -67938,9 +67921,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3020284034156913050, guid: 3585ec59aff11c04bbf26e562f3b36b3, type: 3}
       propertyPath: _text
-      value: "\u041F\u043E \u0432\u0441\u0435\u0439 \u0432\u0438\u0434\u0438\u043C\u043E\u0441\u0442\u0438,
-        \u0441\u044E\u0434\u0430 \u043D\u0443\u0436\u043D\u043E \u0437\u0430\u043B\u0438\u0442\u044C
-        \u0433\u043E\u0440\u044E\u0447\u0435\u0435."
+      value: Looks like fuel needs to be poured here.
       objectReference: {fileID: 0}
     - target: {fileID: 3020284034156913050, guid: 3585ec59aff11c04bbf26e562f3b36b3, type: 3}
       propertyPath: _manager

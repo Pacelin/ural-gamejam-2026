@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: SO_GramophonePlastinka2
   m_EditorClassIdentifier: Assembly-CSharp::Project.Gameplay.Inventory.InventoryItemConfig
   _icon: {fileID: 21300000, guid: f91deecf1ab4009419c1cbaa716f790d, type: 3}
-  _text: "\u0412\u0438\u043D\u0438\u043B\u043E\u0432\u0430\u044F \u043F\u043B\u0430\u0441\u0442\u0438\u043D\u043A\u0430"
+  _text: Vinyl record
   _pickupSound:
     _eventRef:
       Guid:
