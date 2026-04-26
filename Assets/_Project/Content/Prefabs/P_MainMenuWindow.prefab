@@ -1362,7 +1362,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Sound Effects
+  m_text: Sounds
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: cb886ef2401fd5e4b81743ade977c068, type: 2}
   m_sharedMaterial: {fileID: 2889994292042144857, guid: cb886ef2401fd5e4b81743ade977c068, type: 2}
