@@ -8,6 +8,7 @@ namespace Project.Gameplay.Interactables
 {
     public class PropsCollectable : InteractableObjectWithCursor
     {
+        [SerializeField] private int _index;
         [SerializeField] private SoundEvent _pickupSound;
         [SerializeField] private PropsEvents _afterPickup;
         
@@ -25,7 +26,7 @@ namespace Project.Gameplay.Interactables
 
         protected override void OnInteract()
         {
-            _collectables.Add();
+            _collectables.Add(_index);
             _pickupSound.PlayOneShot();
             _afterPickup.Trigger(SubtitlesService);
         }

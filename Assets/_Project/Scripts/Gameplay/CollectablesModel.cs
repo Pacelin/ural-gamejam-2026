@@ -9,10 +9,9 @@ namespace Project.Editor.Gameplay
 
         public int Current => _current;
         public int Required => _required;
-        public int LastCollected => _lastCollected;
+        public int LastSelected { get; set; }
         
         private int _current;
-        private int _lastCollected;
 
         private readonly HashSet<int> _collected;
         private readonly int _required;
@@ -29,7 +28,7 @@ namespace Project.Editor.Gameplay
         public void Add(int collectableIndex)
         {
             _collected.Add(collectableIndex);
-            _lastCollected = collectableIndex;
+            LastSelected = collectableIndex;
             _current++;
             OnChanged?.Invoke();
         }
