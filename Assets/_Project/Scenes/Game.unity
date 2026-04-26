@@ -2928,7 +2928,7 @@ PrefabInstance:
     - target: {fileID: 840650271660843570, guid: c10539ae55b4a0f46a9571c9b32116ee, type: 3}
       propertyPath: '_activeWhenOnPoint.Array.data[3]'
       value: 
-      objectReference: {fileID: 564754535}
+      objectReference: {fileID: 0}
     - target: {fileID: 947184946921640398, guid: c10539ae55b4a0f46a9571c9b32116ee, type: 3}
       propertyPath: m_LocalRotation.w
       value: 0.6272114
@@ -8743,83 +8743,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &564754535
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 564754536}
-  - component: {fileID: 564754538}
-  - component: {fileID: 564754537}
-  m_Layer: 0
-  m_Name: Put_Interact
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &564754536
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 564754535}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.50000024, y: 0.10000001, z: 0.35000283}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 697250908937428765}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &564754537
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 564754535}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.50000006, y: 2, z: 0.05}
-  m_Center: {x: 0.24999994, y: 1, z: 0.025}
---- !u!114 &564754538
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 564754535}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d047d8ee4eca4ad8bf1dcfe64695f13c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Project.Gameplay.Interactables.PropsDrop
-  _manager: {fileID: 1684804566}
-  _requireItem: {fileID: 11400000, guid: cc3a588e0c4669143830204f8936796b, type: 2}
-  _afterDrop:
-    _activate:
-    - {fileID: 697250908937428766}
-    _deactivate: []
-    _destroy:
-    - {fileID: 564754535}
-    _locks: []
-    _activators: []
-    _subtitleTrigger: {fileID: 0}
 --- !u!1001 &566117327
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11539,7 +11462,7 @@ PrefabInstance:
     - target: {fileID: 840650271660843570, guid: c10539ae55b4a0f46a9571c9b32116ee, type: 3}
       propertyPath: '_activeWhenOnPoint.Array.data[3]'
       value: 
-      objectReference: {fileID: 564754535}
+      objectReference: {fileID: 0}
     - target: {fileID: 947184946921640398, guid: c10539ae55b4a0f46a9571c9b32116ee, type: 3}
       propertyPath: m_LocalRotation.w
       value: 0.453943
@@ -12492,7 +12415,7 @@ PrefabInstance:
     - target: {fileID: 840650271660843570, guid: c10539ae55b4a0f46a9571c9b32116ee, type: 3}
       propertyPath: '_activeWhenOnPoint.Array.data[3]'
       value: 
-      objectReference: {fileID: 564754535}
+      objectReference: {fileID: 0}
     - target: {fileID: 947184946921640398, guid: c10539ae55b4a0f46a9571c9b32116ee, type: 3}
       propertyPath: m_LocalRotation.w
       value: 0.665031
@@ -17630,7 +17553,7 @@ PrefabInstance:
     - target: {fileID: 840650271660843570, guid: c10539ae55b4a0f46a9571c9b32116ee, type: 3}
       propertyPath: '_activeWhenOnPoint.Array.data[3]'
       value: 
-      objectReference: {fileID: 564754535}
+      objectReference: {fileID: 0}
     - target: {fileID: 947184946921640398, guid: c10539ae55b4a0f46a9571c9b32116ee, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -18132,7 +18055,7 @@ PrefabInstance:
     - target: {fileID: 840650271660843570, guid: c10539ae55b4a0f46a9571c9b32116ee, type: 3}
       propertyPath: '_activeWhenOnPoint.Array.data[3]'
       value: 
-      objectReference: {fileID: 564754535}
+      objectReference: {fileID: 0}
     - target: {fileID: 947184946921640398, guid: c10539ae55b4a0f46a9571c9b32116ee, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -29555,7 +29478,7 @@ PrefabInstance:
     - target: {fileID: 840650271660843570, guid: c10539ae55b4a0f46a9571c9b32116ee, type: 3}
       propertyPath: '_activeWhenOnPoint.Array.data[3]'
       value: 
-      objectReference: {fileID: 564754535}
+      objectReference: {fileID: 0}
     - target: {fileID: 947184946921640398, guid: c10539ae55b4a0f46a9571c9b32116ee, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -38614,7 +38537,7 @@ PrefabInstance:
     - target: {fileID: 840650271660843570, guid: c10539ae55b4a0f46a9571c9b32116ee, type: 3}
       propertyPath: '_activeWhenOnPoint.Array.data[3]'
       value: 
-      objectReference: {fileID: 564754535}
+      objectReference: {fileID: 0}
     - target: {fileID: 947184946921640398, guid: c10539ae55b4a0f46a9571c9b32116ee, type: 3}
       propertyPath: m_LocalRotation.w
       value: 0.79259825
@@ -39223,7 +39146,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 107435810247653454, guid: ff5b6ce143029b04d89e5ada33788d41, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3750345831147495620, guid: ff5b6ce143029b04d89e5ada33788d41, type: 3}
       propertyPath: m_IsActive
@@ -39289,9 +39212,6 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 6353717974883736895, guid: ff5b6ce143029b04d89e5ada33788d41, type: 3}
-      insertIndex: 4
-      addedObject: {fileID: 564754536}
-    - targetCorrespondingSourceObject: {fileID: 6353717974883736895, guid: ff5b6ce143029b04d89e5ada33788d41, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1046909095}
     - targetCorrespondingSourceObject: {fileID: 561515267942060647, guid: ff5b6ce143029b04d89e5ada33788d41, type: 3}
@@ -39302,11 +39222,6 @@ PrefabInstance:
 --- !u!4 &697250908937428765 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6353717974883736895, guid: ff5b6ce143029b04d89e5ada33788d41, type: 3}
-  m_PrefabInstance: {fileID: 697250908937428764}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &697250908937428766 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 107435810247653454, guid: ff5b6ce143029b04d89e5ada33788d41, type: 3}
   m_PrefabInstance: {fileID: 697250908937428764}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &697250908937428767 stripped
@@ -39342,6 +39257,10 @@ PrefabInstance:
     - target: {fileID: 3548171172551188207, guid: e1b64decd2b58a3478c8913641abf2c9, type: 3}
       propertyPath: m_Name
       value: Pickup_Chiffoner_Door
+      objectReference: {fileID: 0}
+    - target: {fileID: 3548171172551188207, guid: e1b64decd2b58a3478c8913641abf2c9, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3548171172551188207, guid: e1b64decd2b58a3478c8913641abf2c9, type: 3}
       propertyPath: m_StaticEditorFlags
