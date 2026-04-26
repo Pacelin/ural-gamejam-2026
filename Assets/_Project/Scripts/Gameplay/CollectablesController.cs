@@ -20,6 +20,7 @@ namespace Project.Editor.Gameplay
         {
             _model.OnChanged += OnModelChanged;
             _view.SetText(_model.Current, _model.Required);
+            _view.gameObject.SetActive(_model.Current > 0);
         }
 
         public void Dispose()
@@ -29,6 +30,7 @@ namespace Project.Editor.Gameplay
 
         private void OnModelChanged()
         {
+            _view.gameObject.SetActive(_model.Current > 0);
             _view.SetText(_model.Current, _model.Required);
             _view.Ping();
         }
