@@ -106,7 +106,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: E
+  m_text: U
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: cb886ef2401fd5e4b81743ade977c068, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: 466d3a51aa17ebd44ba66147eb653f84, type: 2}
@@ -287,7 +287,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u042F"
+  m_text: E
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: cb886ef2401fd5e4b81743ade977c068, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: 02a7a16ebf397344382178023b4f771f, type: 2}
@@ -468,7 +468,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u0421"
+  m_text: C
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: cb886ef2401fd5e4b81743ade977c068, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: 466d3a51aa17ebd44ba66147eb653f84, type: 2}
@@ -649,7 +649,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u042C"
+  m_text: S
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: cb886ef2401fd5e4b81743ade977c068, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: 02a7a16ebf397344382178023b4f771f, type: 2}
@@ -874,17 +874,23 @@ MonoBehaviour:
     - {fileID: 7365465631367216940}
     _destroy: []
     _locks: []
+    _activators: []
+    _subtitleTrigger: {fileID: 0}
   _onTake:
     _activate:
     - {fileID: 7365465631367216940}
     _deactivate: []
     _destroy: []
     _locks: []
+    _activators: []
+    _subtitleTrigger: {fileID: 0}
   _onComplete:
     _activate: []
     _deactivate: []
     _destroy: []
     _locks: []
+    _activators: []
+    _subtitleTrigger: {fileID: 0}
 --- !u!1 &7693874397850832748
 GameObject:
   m_ObjectHideFlags: 0
@@ -991,7 +997,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u041C"
+  m_text: R
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: cb886ef2401fd5e4b81743ade977c068, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: 02a7a16ebf397344382178023b4f771f, type: 2}

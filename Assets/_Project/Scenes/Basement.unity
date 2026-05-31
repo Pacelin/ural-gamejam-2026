@@ -68347,6 +68347,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2382866681724792477, guid: f280052b8d6e2644ea8e89961ff6a4bd, type: 3}
+      propertyPath: _manager
+      value: 
+      objectReference: {fileID: 1684804566}
     - target: {fileID: 5096951347609756356, guid: f280052b8d6e2644ea8e89961ff6a4bd, type: 3}
       propertyPath: m_Name
       value: MainCanvas
@@ -68355,7 +68359,7 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 1455132016669810394, guid: f280052b8d6e2644ea8e89961ff6a4bd, type: 3}
-      insertIndex: 2
+      insertIndex: 0
       addedObject: {fileID: 9190035325630148706}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f280052b8d6e2644ea8e89961ff6a4bd, type: 3}
